@@ -1,20 +1,19 @@
 package com.teammetallurgy.metallurgy.machines.crusher;
 
 import com.teammetallurgy.metallurgy.Metallurgy;
+import com.teammetallurgy.metallurgy.machines.BlockMetallurgy;
 
-import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-public class BlockCrusher extends BlockContainer
+public class BlockCrusher extends BlockMetallurgy
 {
 
     public BlockCrusher(int id)
     {
-        super(id, Material.rock);
+        super(id);
     }
 
     @Override
@@ -23,22 +22,8 @@ public class BlockCrusher extends BlockContainer
         return new TileEntityCrusher();
     }
 
-    @Override
-    public CreativeTabs getCreativeTabToDisplayOn()
+    protected void doOnActivate(World world, int x, int y, int z, EntityPlayer player)
     {
-        return Metallurgy.instance.creativeTabs;
-    }
-
-    @Override
-    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float xOffset, float yOffset, float zOffset)
-    {
-        if (player.isSneaking()) { return false; }
-
-        if (!world.isRemote)
-        {
-            player.openGui(Metallurgy.instance, 0, world, x, y, z);
-        }
-
-        return true;
+        player.openGui(Metallurgy.instance, 0, world, x, y, z);
     }
 }
