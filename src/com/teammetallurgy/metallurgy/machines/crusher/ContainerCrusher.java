@@ -1,7 +1,5 @@
 package com.teammetallurgy.metallurgy.machines.crusher;
 
-import com.teammetallurgy.metallurgy.machines.TileEntityMetallurgy;
-
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
@@ -10,9 +8,9 @@ import net.minecraft.inventory.Slot;
 public class ContainerCrusher extends Container
 {
 
-    private TileEntityMetallurgy crusher;
+    private TileEntityMetallurgySided crusher;
 
-    public ContainerCrusher(InventoryPlayer inventoryPlayer, TileEntityMetallurgy tileEntity)
+    public ContainerCrusher(InventoryPlayer inventoryPlayer, TileEntityMetallurgySided tileEntity)
     {
         this.crusher = tileEntity;
         addPlayersInventoryToContainer(inventoryPlayer, 8, 84);
@@ -37,7 +35,7 @@ public class ContainerCrusher extends Container
     @Override
     public boolean canInteractWith(EntityPlayer entityplayer)
     {
-        return true;
+        return this.crusher.isUseableByPlayer(entityplayer);
     }
 
 }
