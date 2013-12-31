@@ -1,5 +1,7 @@
 package com.teammetallurgy.metallurgy.machines.crusher;
 
+import com.teammetallurgy.metallurgy.machines.TileEntityMetallurgySided;
+
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntityFurnace;

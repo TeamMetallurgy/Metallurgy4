@@ -1,5 +1,7 @@
 package com.teammetallurgy.metallurgy.machines.crusher;
 
+import com.teammetallurgy.metallurgy.machines.TileEntityMetallurgySided;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
