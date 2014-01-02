@@ -1,0 +1,93 @@
+[
+	{
+		"name":"Sulfur",
+		"type":"Drop",
+		"ids":
+		{
+			"ore":905,
+			"oreMeta":7,
+			"item":29012
+		},
+		"blockLvl":1,
+		"dropName":"Sulfur",
+		"dropRate":[2,5],
+		"generation":[4,4,0,128,100,100],
+		"dimensions":"0 2-100000"
+	},
+	{
+		"name":"Phosphorite",
+		"type":"Drop",
+		"ids":
+		{
+			"ore":905,
+			"oreMeta":8,
+			"block":901,
+			"item":29011
+		},
+		"blockLvl":1,
+		"dropName":"Phosphorus",
+		"dropRate":[2,5],
+		"generation":[4,4,0,128,100,100],
+		"dimensions":"0 2-100000"
+	},
+	{
+		"name":"Saltpeter",
+		"type":"Drop",
+		"ids":
+		{
+			"ore":905,
+			"oreMeta":9,
+			"item":29013
+		},
+		"blockLvl":1,
+		"dropName":"Saltpeter",
+		"dropRate":[2,5],
+		"generation":[4,4,0,128,100,100],
+		"dimensions":"0 2-100000"
+	},
+	{
+		"name":"Magnesium",
+		"type":"Drop",
+		"ids":
+		{
+			"ore":905,
+			"oreMeta":10,
+			"item":29014
+		},
+		"blockLvl":1,
+		"dropName":"Magnesium",
+		"dropRate":[2,5],
+		"generation":[4,4,0,128,100,100],
+		"dimensions":"0 2-100000"
+	},
+	{
+		"name":"Bitumen",
+		"type":"Drop",
+		"ids":
+		{
+			"ore":905,
+			"oreMeta":11,
+			"item":29015
+		},
+		"blockLvl":1,
+		"dropName":"Bitumen",
+		"dropRate":[2,5],
+		"generation":[4,4,0,128,100,100],
+		"dimensions":"0 2-100000"
+	},
+	{
+		"name":"Potash",
+		"type":"Drop",
+		"ids":
+		{
+			"ore":905,
+			"oreMeta":12,
+			"item":29016
+		},
+		"blockLvl":1,
+		"dropName":"Potash",
+		"dropRate":[2,5],
+		"generation":[4,4,0,128,100,100],
+		"dimensions":"0 2-100000"
+	}
+]
