@@ -30,7 +30,7 @@
 			"brickMeta":3,
 			"item":26900
 		},
-		"abstratorXP"3,
+		"abstratorXP":3,
 		"blockLvl":1,
 		"equipment":[2,250,2,6,14,2,6,5,2,15],
 		"generation":[20,8,0,64,100,100],

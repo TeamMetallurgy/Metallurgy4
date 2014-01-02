@@ -212,7 +212,7 @@
 		"blockLvl":1,
 		"alloyRecipe":["Shadow Iron","Lemurite"],
 		"equipment":[2,400,3,6,5,3,6,5,4,20],
-		"dugeonLoot":[0,0],
+		"dugeonLoot":[0,0]
 	},
 	{
 		"name":"Inolashite",
@@ -229,7 +229,7 @@
 		"blockLvl":3,
 		"alloyRecipe":["Alduorite","Ceruclase"],
 		"equipment":[4,900,3,8,25,4,7,5,4,30],
-		"dugeonLoot":[0,0],
+		"dugeonLoot":[0,0]
 	},
 	{
 		"name":"Amordrine",
@@ -246,6 +246,6 @@
 		"blockLvl":3,
 		"alloyRecipe":["Kalendrite","Platinum"],
 		"equipment":[4,1300,3,14,50,4,7,5,4,32],
-		"dugeonLoot":[0,0],
+		"dugeonLoot":[0,0]
 	}
 ]
