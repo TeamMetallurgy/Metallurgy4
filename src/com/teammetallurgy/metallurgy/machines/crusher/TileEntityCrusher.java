@@ -12,10 +12,11 @@ public class TileEntityCrusher extends TileEntityMetallurgySided
     public int crusherBurnTime;
     public int currentItemBurnTime;
     public int crusherCookTime;
-
+    
     public TileEntityCrusher()
     {
         super(5);
+        setNumberOfDrawers(2);
     }
 
     @Override
