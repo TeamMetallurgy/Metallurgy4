@@ -6,6 +6,7 @@ import com.teammetallurgy.metallurgy.machines.TileEntityMetallurgySided;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
+import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
@@ -14,11 +15,14 @@ import net.minecraft.tileentity.TileEntityFurnace;
 public class ContainerCrusher extends Container
 {
 
-    private TileEntityMetallurgySided crusher;
+    protected TileEntityCrusher tileEntityCrusher;
+    private int lastCookTime;
+    private int lastBurnTime;
+    private int lastItemBurnTime;
 
     public ContainerCrusher(InventoryPlayer inventoryPlayer, TileEntityMetallurgySided tileEntity)
     {
-        this.crusher = tileEntity;
+        this.tileEntityCrusher = (TileEntityCrusher) tileEntity;
         addSlotToContainer(new SlotMetallurgy(tileEntity, 0, 80, 8));
         addSlotToContainer(new SlotMetallurgy(tileEntity, 1, 8, 42));
         addSlotToContainer(new SlotMetallurgy(tileEntity, 2, 62, 62));
@@ -44,9 +48,67 @@ public class ContainerCrusher extends Container
     }
 
     @Override
+    public void addCraftingToCrafters(ICrafting crafter)
+    {
+        super.addCraftingToCrafters(crafter);
+        crafter.sendProgressBarUpdate(this, 0, this.tileEntityCrusher.crusherCookTime);
+        crafter.sendProgressBarUpdate(this, 1, this.tileEntityCrusher.crusherBurnTime);
+        crafter.sendProgressBarUpdate(this, 2, this.tileEntityCrusher.currentItemBurnTime);
+    }
+
+    @Override
+    public void detectAndSendChanges()
+    {
+        super.detectAndSendChanges();
+
+        for (int i = 0; i < this.crafters.size(); ++i)
+        {
+            ICrafting icrafting = (ICrafting) this.crafters.get(i);
+
+            if (this.lastCookTime != this.tileEntityCrusher.crusherCookTime)
+            {
+                icrafting.sendProgressBarUpdate(this, 0, this.tileEntityCrusher.crusherCookTime);
+            }
+
+            if (this.lastBurnTime != this.tileEntityCrusher.crusherBurnTime)
+            {
+                icrafting.sendProgressBarUpdate(this, 1, this.tileEntityCrusher.crusherBurnTime);
+            }
+
+            if (this.lastItemBurnTime != this.tileEntityCrusher.currentItemBurnTime)
+            {
+                icrafting.sendProgressBarUpdate(this, 2, this.tileEntityCrusher.currentItemBurnTime);
+            }
+        }
+
+        this.lastCookTime = this.tileEntityCrusher.crusherCookTime;
+        this.lastBurnTime = this.tileEntityCrusher.crusherBurnTime;
+        this.lastItemBurnTime = this.tileEntityCrusher.currentItemBurnTime;
+    }
+
+    @Override
+    public void updateProgressBar(int id, int newValue)
+    {
+        if (id == 0)
+        {
+            this.tileEntityCrusher.crusherCookTime = newValue;
+        }
+
+        if (id == 1)
+        {
+            this.tileEntityCrusher.crusherBurnTime = newValue;
+        }
+
+        if (id == 2)
+        {
+            this.tileEntityCrusher.currentItemBurnTime = newValue;
+        }
+    }
+    
+    @Override
     public boolean canInteractWith(EntityPlayer entityplayer)
     {
-        return this.crusher.isUseableByPlayer(entityplayer);
+        return this.tileEntityCrusher.isUseableByPlayer(entityplayer);
     }
 
     @Override
@@ -62,12 +124,12 @@ public class ContainerCrusher extends Container
 
             int playerInventoryStartID = 30;
             int playerInventoryEndID = 39;
-            
+
             int machineInputID = 0;
             int machineFuelID = 1;
             int machineOutputStartID = 2;
             int machineInventoryEndID = 5;
-            
+
             if (slotID >= machineOutputStartID && slotID < machineInventoryEndID)
             {
                 if (!this.mergeItemStack(itemstack1, machineInventoryEndID, playerInventoryEndID, true)) { return null; }
