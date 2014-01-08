@@ -15,6 +15,8 @@ public abstract class TileEntityMetallurgySided extends TileEntityMetallurgy imp
     private static final int[] slots_sides = new int[] { 1 };
 
     protected ItemStack[] itemStacks;
+    private ItemStack[] drawers;
+    private int numberOfDrawers;
 
     public TileEntityMetallurgySided(int numberOfItemStacks)
     {
@@ -43,8 +45,17 @@ public abstract class TileEntityMetallurgySided extends TileEntityMetallurgy imp
     @Override
     protected void readCustomNBT(NBTTagCompound data)
     {
-        NBTTagList nbttaglist = data.getTagList("Items");
+        
         this.itemStacks = new ItemStack[this.getSizeInventory()];
+        this.drawers = new ItemStack[this.numberOfDrawers];
+        
+        readItemListFromNBT(data, "Items", this.itemStacks);
+        readItemListFromNBT(data, "Drawers", this.drawers);
+    }
+
+    private void readItemListFromNBT(NBTTagCompound data, String name, ItemStack[] stacks)
+    {
+        NBTTagList nbttaglist = data.getTagList(name);
 
         for (int i = 0; i < nbttaglist.tagCount(); ++i)
         {
@@ -53,7 +64,7 @@ public abstract class TileEntityMetallurgySided extends TileEntityMetallurgy imp
 
             if (b0 >= 0 && b0 < this.itemStacks.length)
             {
-                this.itemStacks[b0] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
+                stacks[b0] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
             }
         }
     }
@@ -61,20 +72,27 @@ public abstract class TileEntityMetallurgySided extends TileEntityMetallurgy imp
     @Override
     protected void writeCustomNBT(NBTTagCompound compound)
     {
+        writeItemListToNBT(compound, itemStacks, "Items");
+        writeItemListToNBT(compound, drawers, "Drawers");
+        
+    }
+
+    private void writeItemListToNBT(NBTTagCompound compound, ItemStack[] stacks, String name)
+    {
         NBTTagList nbttaglist = new NBTTagList();
 
-        for (int i = 0; i < this.itemStacks.length; ++i)
+        for (int i = 0; i < stacks.length; ++i)
         {
-            if (this.itemStacks[i] != null)
+            if (stacks[i] != null)
             {
-                NBTTagCompound nbttagcompound1 = new NBTTagCompound();
-                nbttagcompound1.setByte("Slot", (byte) i);
-                this.itemStacks[i].writeToNBT(nbttagcompound1);
-                nbttaglist.appendTag(nbttagcompound1);
+                NBTTagCompound tagCompound = new NBTTagCompound();
+                tagCompound.setByte("Slot", (byte) i);
+                stacks[i].writeToNBT(tagCompound);
+                nbttaglist.appendTag(tagCompound);
             }
         }
 
-        compound.setTag("Items", nbttaglist);
+        compound.setTag(name, nbttaglist);
     }
 
     @Override
@@ -183,4 +201,10 @@ public abstract class TileEntityMetallurgySided extends TileEntityMetallurgy imp
         return i != 0 || i != 1 || itemstack.itemID == Item.bucketEmpty.itemID;
     }
 
+    protected void setNumberOfDrawers(int drawers)
+    {
+        this.numberOfDrawers = drawers;
+        this.drawers = new ItemStack[drawers];
+    }
+    
 }

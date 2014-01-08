@@ -29,7 +29,7 @@ public abstract class BlockMetallurgy extends BlockContainer
 
         if (!world.isRemote)
         {
-            doOnActivate(world, x, y, z, player);
+            doOnActivate(world, x, y, z, player, side, xOffset, yOffset, zOffset);
         }
 
         return true;
@@ -43,6 +43,10 @@ public abstract class BlockMetallurgy extends BlockContainer
      * @param y
      * @param z
      * @param player
+     * @param side 
+     * @param xOffset 
+     * @param yOffset 
+     * @param zOffset 
      */
-    abstract protected void doOnActivate(World world, int x, int y, int z, EntityPlayer player);
+    abstract protected void doOnActivate(World world, int x, int y, int z, EntityPlayer player, int side, float xOffset, float yOffset, float zOffset);
 }

@@ -2,9 +2,11 @@ package com.teammetallurgy.metallurgy;
 
 import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
 import com.teammetallurgy.metallurgy.machines.crusher.BlockCrusher;
+import com.teammetallurgy.metallurgy.machines.crusher.TileEntityCrusher;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.tileentity.TileEntity;
 
 public class BlockList
 {
@@ -18,6 +20,12 @@ public class BlockList
         crusher = new BlockCrusher(id).setUnlocalizedName(blockName);
 
         registerBlock(crusher, blockName);
+        registerTileEntity(TileEntityCrusher.class, blockName);
+    }
+
+    private static void registerTileEntity(Class<TileEntityCrusher> clazz, String blockName)
+    {
+        GameRegistry.registerTileEntity(clazz, Metallurgy.MODID + ":" + blockName);
     }
 
     private static void registerBlock(Block block, String name)

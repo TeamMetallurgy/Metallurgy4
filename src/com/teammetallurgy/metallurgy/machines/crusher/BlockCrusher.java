@@ -1,12 +1,11 @@
 package com.teammetallurgy.metallurgy.machines.crusher;
 
-import com.teammetallurgy.metallurgy.Metallurgy;
-import com.teammetallurgy.metallurgy.machines.BlockMetallurgy;
-
-import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
+
+import com.teammetallurgy.metallurgy.Metallurgy;
+import com.teammetallurgy.metallurgy.machines.BlockMetallurgy;
 
 public class BlockCrusher extends BlockMetallurgy
 {
@@ -22,7 +21,8 @@ public class BlockCrusher extends BlockMetallurgy
         return new TileEntityCrusher();
     }
 
-    protected void doOnActivate(World world, int x, int y, int z, EntityPlayer player)
+    @Override
+    protected void doOnActivate(World world, int x, int y, int z, EntityPlayer player, int side, float xOffset, float yOffset, float zOffset)
     {
         player.openGui(Metallurgy.instance, 0, world, x, y, z);
     }
