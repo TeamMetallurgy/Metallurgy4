@@ -16,7 +16,7 @@ public class BlockList
     public static void init()
     {
         String blockName = "crusher";
-        int id = ConfigHandler.getBlock(blockName);
+        int id = ConfigHandler.getBlock(blockName,450);
 
         crusher = new BlockCrusher(id).setUnlocalizedName(blockName);
 
