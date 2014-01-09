@@ -26,8 +26,8 @@
 			"oreMeta":0,
 			"block":42,
 			"blockMeta":0,
-			"brick":900,
-			"brickMeta":3,
+			"brick":916,
+			"brickMeta":0,
 			"item":26900
 		},
 		"abstratorXP":3,
@@ -45,8 +45,8 @@
 			"oreMeta":0,
 			"block":41,
 			"blockMeta":0,
-			"brick":900,
-			"brickMeta":4,
+			"brick":916,
+			"brickMeta":1,
 			"item":26910
 		},
 		"abstratorXP":9,

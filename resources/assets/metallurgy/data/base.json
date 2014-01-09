@@ -8,8 +8,8 @@
 			"oreMeta":0,
 			"block":901,
 			"blockMeta":0,
-			"brick":901,
-			"brickMeta":8,
+			"brick":902,
+			"brickMeta":0,
 			"item":26250
 			},
 		"abstratorXP":1,
@@ -28,8 +28,8 @@
 			"oreMeta":1,
 			"block":901,
 			"blockMeta":1,
-			"brick":901,
-			"brickMeta":9,
+			"brick":902,
+			"brickMeta":1,
 			"item":26300
 		},
 		"abstratorXP":1,
@@ -47,8 +47,8 @@
 			"oreMeta":2,
 			"block":901,
 			"blockMeta":2,
-			"brick":901,
-			"brickMeta":10,
+			"brick":902,
+			"brickMeta":2,
 			"item":26350
 		},
 		"abstratorXP":3,
@@ -64,8 +64,8 @@
 		{
 			"block":901,
 			"blockMeta":3,
-			"brick":901,
-			"brickMeta":11,
+			"brick":902,
+			"brickMeta":3,
 			"item":26400
 		},
 		"abstratorXP":2,
@@ -81,8 +81,8 @@
 		{
 			"block":901,
 			"blockMeta":4,
-			"brick":901,
-			"brickMeta":12,
+			"brick":902,
+			"brickMeta":4,
 			"item":26250
 		},
 		"abstratorXP":8,
@@ -98,8 +98,8 @@
 		{
 			"block":901,
 			"blockMeta":5,
-			"brick":901,
-			"brickMeta":13,
+			"brick":902,
+			"brickMeta":5,
 			"item":26500
 		},
 		"abstratorXP":5,
@@ -115,8 +115,8 @@
 		{
 			"block":901,
 			"blockMeta":6,
-			"brick":901,
-			"brickMeta":14,
+			"brick":902,
+			"brickMeta":6,
 			"item":26550
 		},
 		"abstratorXP":9,
@@ -132,8 +132,8 @@
 		{
 			"block":901,
 			"blockMeta":7,
-			"brick":901,
-			"brickMeta":15,
+			"brick":902,
+			"brickMeta":7,
 			"item":26600
 		},
 		"abstratorXP":6,

@@ -4,12 +4,12 @@
 		"type":"Ore",
 		"ids":
 		{
-			"ore":903,
+			"ore":909,
 			"oreMeta":0,
-			"block":903,
-			"blockMeta":13,
-			"brick":904,
-			"brickMeta":10,
+			"block":910,
+			"blockMeta":0,
+			"brick":911,
+			"brickMeta":0,
 			"item":26900
 		},
 		"abstratorXP":1,
@@ -24,12 +24,12 @@
 		"type":"Ore",
 		"ids":
 		{
-			"ore":903,
+			"ore":909,
 			"oreMeta":1,
-			"block":903,
-			"blockMeta":14,
-			"brick":904,
-			"brickMeta":11,
+			"block":910,
+			"blockMeta":1,
+			"brick":911,
+			"brickMeta":1,
 			"item":26950
 		},
 		"abstratorXP":2,
@@ -44,12 +44,12 @@
 		"type":"Catalyst",
 		"ids":
 		{
-			"ore":903,
+			"ore":909,
 			"oreMeta":2,
-			"block":903,
-			"blockMeta":15,
-			"brick":904,
-			"brickMeta":12,
+			"block":910,
+			"blockMeta":2,
+			"brick":911,
+			"brickMeta":2,
 			"item":2700
 		},
 		"abstratorXP":2,
@@ -63,12 +63,12 @@
 		"type":"Ore",
 		"ids":
 		{
-			"ore":903,
+			"ore":909,
 			"oreMeta":3,
-			"block":904,
-			"blockMeta":0,
-			"brick":904,
-			"brickMeta":13,
+			"block":910,
+			"blockMeta":3,
+			"brick":911,
+			"brickMeta":3,
 			"item":27050
 		},
 		"abstratorXP":3,
@@ -83,12 +83,12 @@
 		"type":"Ore",
 		"ids":
 		{
-			"ore":903,
+			"ore":909,
 			"oreMeta":4,
-			"block":904,
-			"blockMeta":1,
-			"brick":904,
-			"brickMeta":14,
+			"block":910,
+			"blockMeta":4,
+			"brick":911,
+			"brickMeta":4,
 			"item":27100
 		},
 		"abstratorXP":3,
@@ -103,12 +103,12 @@
 		"type":"Ore",
 		"ids":
 		{
-			"ore":903,
+			"ore":909,
 			"oreMeta":5,
-			"block":904,
-			"blockMeta":2,
-			"brick":904,
-			"brickMeta":15,
+			"block":910,
+			"blockMeta":5,
+			"brick":911,
+			"brickMeta":5,
 			"item":27150
 		},
 		"abstratorXP":3,
@@ -123,12 +123,12 @@
 		"type":"Catalyst",
 		"ids":
 		{
-			"ore":903,
+			"ore":909,
 			"oreMeta":6,
-			"block":904,
-			"blockMeta":3,
-			"brick":905,
-			"brickMeta":0,
+			"block":910,
+			"blockMeta":6,
+			"brick":911,
+			"brickMeta":6,
 			"item":27200
 		},
 		"abstratorXP":3,
@@ -142,12 +142,12 @@
 		"type":"Ore",
 		"ids":
 		{
-			"ore":903,
+			"ore":909,
 			"oreMeta":7,
-			"block":904,
-			"blockMeta":4,
-			"brick":905,
-			"brickMeta":1,
+			"block":910,
+			"blockMeta":7,
+			"brick":911,
+			"brickMeta":7,
 			"item":27250
 		},
 		"abstratorXP":4,
@@ -162,12 +162,12 @@
 		"type":"Ore",
 		"ids":
 		{
-			"ore":903,
+			"ore":909,
 			"oreMeta":8,
-			"block":904,
-			"blockMeta":5,
-			"brick":905,
-			"brickMeta":2,
+			"block":910,
+			"blockMeta":8,
+			"brick":911,
+			"brickMeta":8,
 			"item":27300
 		},
 		"abstratorXP":5,
@@ -182,12 +182,12 @@
 		"type":"Ore",
 		"ids":
 		{
-			"ore":903,
+			"ore":909,
 			"oreMeta":9,
-			"block":904,
-			"blockMeta":6,
-			"brick":905,
-			"brickMeta":3,
+			"block":910,
+			"blockMeta":9,
+			"brick":911,
+			"brickMeta":9,
 			"item":27350
 		},
 		"abstratorXP":6,
@@ -202,10 +202,10 @@
 		"type":"Alloy",
 		"ids":
 		{
-			"block":904,
-			"blockMeta":7,
-			"brick":905,
-			"brickMeta":4,
+			"block":910,
+			"blockMeta":10,
+			"brick":911,
+			"brickMeta":10,
 			"item":27400
 		},
 		"abstratorXP":4,
@@ -219,10 +219,10 @@
 		"type":"Alloy",
 		"ids":
 		{
-			"block":904,
-			"blockMeta":8,
-			"brick":905,
-			"brickMeta":5,
+			"block":910,
+			"blockMeta":11,
+			"brick":911,
+			"brickMeta":11,
 			"item":27450
 		},
 		"abstratorXP":6,
@@ -236,10 +236,10 @@
 		"type":"Alloy",
 		"ids":
 		{
-			"block":904,
-			"blockMeta":9,
-			"brick":905,
-			"brickMeta":6,
+			"block":910,
+			"blockMeta":12,
+			"brick":911,
+			"brickMeta":12,
 			"item":27500
 		},
 		"abstratorXP":24,

@@ -4,8 +4,8 @@
 		"type":"Drop",
 		"ids":
 		{
-			"ore":905,
-			"oreMeta":7,
+			"ore":915,
+			"oreMeta":0,
 			"item":29012
 		},
 		"blockLvl":1,
@@ -19,9 +19,8 @@
 		"type":"Drop",
 		"ids":
 		{
-			"ore":905,
-			"oreMeta":8,
-			"block":901,
+			"ore":915,
+			"oreMeta":1,
 			"item":29011
 		},
 		"blockLvl":1,
@@ -35,8 +34,8 @@
 		"type":"Drop",
 		"ids":
 		{
-			"ore":905,
-			"oreMeta":9,
+			"ore":915,
+			"oreMeta":2,
 			"item":29013
 		},
 		"blockLvl":1,
@@ -50,8 +49,8 @@
 		"type":"Drop",
 		"ids":
 		{
-			"ore":905,
-			"oreMeta":10,
+			"ore":915,
+			"oreMeta":3,
 			"item":29014
 		},
 		"blockLvl":1,
@@ -65,8 +64,8 @@
 		"type":"Drop",
 		"ids":
 		{
-			"ore":905,
-			"oreMeta":11,
+			"ore":915,
+			"oreMeta":4,
 			"item":29015
 		},
 		"blockLvl":1,
@@ -80,8 +79,8 @@
 		"type":"Drop",
 		"ids":
 		{
-			"ore":905,
-			"oreMeta":12,
+			"ore":915,
+			"oreMeta":5,
 			"item":29016
 		},
 		"blockLvl":1,
