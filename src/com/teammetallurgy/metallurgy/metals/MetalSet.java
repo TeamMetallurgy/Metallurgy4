@@ -12,6 +12,7 @@ import net.minecraftforge.oredict.OreDictionary;
 
 import com.google.gson.Gson;
 import com.teammetallurgy.metallurgy.Metallurgy;
+import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
 import com.teammetallurgy.metallurgy.world.WorldGenMetals;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -46,6 +47,12 @@ public class MetalSet
 		
 		metals = new Gson().fromJson(reader, Metal[].class);
 		
+		int oreId = 0;
+		int blockId = 0;
+		int brickId = 0;
+		
+		String setTag = name.substring(0,1).toUpperCase() + name.substring(1);
+		
 		for (Metal metal : metals) 
 		{
 			
@@ -64,9 +71,16 @@ public class MetalSet
 				
 				try 
 				{
-					ore = getMetalBlock(metal.ids.get("ore"));
+					if (oreId == 0)
+					{
+						oreId = ConfigHandler.getBlock("ore" + setTag, metal.ids.get("ore"));
+					}
+					
+					ore = getMetalBlock(oreId);
+					
 					ore.addSubBlock(metal.ids.get("oreMeta"), metal.getName(), 0,texture+"_ore" );
 					MinecraftForge.setBlockHarvestLevel(ore, metal.ids.get("oreMeta"), "pickaxe", metal.blockLvl);
+					
 					OreDictionary.registerOre("ore"+tag, new ItemStack(ore,1,metal.ids.get("oreMeta")));
 					if (GameRegistry.findUniqueIdentifierFor(ore) == null)
 					{
@@ -91,9 +105,16 @@ public class MetalSet
 				
 				try 
 				{
-					block = getMetalBlock(metal.ids.get("block"));
+					if (blockId == 0)
+					{
+						blockId = ConfigHandler.getBlock("block" + setTag, metal.ids.get("block"));
+					}
+					
+					block = getMetalBlock(blockId);
+					
 					block.addSubBlock(metal.ids.get("blockMeta"), metal.getName(), 1,texture+"_block" );
 					MinecraftForge.setBlockHarvestLevel(block, metal.ids.get("blockMeta"), "pickaxe", metal.blockLvl);
+					
 					OreDictionary.registerOre("block"+tag, new ItemStack(block,1,metal.ids.get("blockMeta")));
 					if (GameRegistry.findUniqueIdentifierFor(block) == null)
 					{
@@ -113,7 +134,12 @@ public class MetalSet
 				
 				try 
 				{
-					brick = getMetalBlock(metal.ids.get("brick"));
+					if (brickId == 0)
+					{
+						brickId = ConfigHandler.getBlock("brick" + setTag, metal.ids.get("brick"));
+					}
+					
+					brick = getMetalBlock(brickId);
 					brick.addSubBlock(metal.ids.get("brickMeta"), metal.getName(), 2,texture+"_brick" );
 					MinecraftForge.setBlockHarvestLevel(brick, metal.ids.get("brickMeta"), "pickaxe", metal.blockLvl);
 					OreDictionary.registerOre("brick"+tag, new ItemStack(brick,1,metal.ids.get("brickMeta")));

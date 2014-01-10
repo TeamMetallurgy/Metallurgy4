@@ -34,10 +34,6 @@ public class WorldGenMetals implements IWorldGenerator
 			targetId = Block.whiteStone.blockID;
 		}
 		
-		vaildDimension(0);
-		
-		System.out.println(targetId);
-		
 		mineable = new WorldGenMinable(blockId, metaId, generation[1], targetId);
 	}
 	
