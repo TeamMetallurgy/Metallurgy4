@@ -12,6 +12,7 @@ import net.minecraftforge.oredict.OreDictionary;
 
 import com.google.gson.Gson;
 import com.teammetallurgy.metallurgy.Metallurgy;
+import com.teammetallurgy.metallurgy.world.WorldGenMetals;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -71,6 +72,11 @@ public class MetalSet
 					{
 						GameRegistry.registerBlock(ore,ItemMetalBlock.class, this.name  + ".ore");
 					}
+					
+					WorldGenMetals worldGen = new WorldGenMetals(metal.ids.get("ore"),
+							metal.ids.get("oreMeta"), metal.generation, metal.dimensions);
+					
+					GameRegistry.registerWorldGenerator(worldGen);
 					
 				} 
 				catch (Exception e) 
