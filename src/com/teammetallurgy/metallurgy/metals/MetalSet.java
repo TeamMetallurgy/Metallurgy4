@@ -66,6 +66,8 @@ public class MetalSet
 			String tag = metal.getName().replace(" ", "");
 			//tag = tag.substring(0,1) + tag.substring(1);
 			
+			int metaId = metal.ids.get("meta");
+			
 			if ( metal.ids.get("ore")!=null)
 			{
 				
@@ -78,17 +80,17 @@ public class MetalSet
 					
 					ore = getMetalBlock(oreId);
 					
-					ore.addSubBlock(metal.ids.get("oreMeta"), metal.getName(), 0,texture+"_ore" );
-					MinecraftForge.setBlockHarvestLevel(ore, metal.ids.get("oreMeta"), "pickaxe", metal.blockLvl);
+					ore.addSubBlock(metaId, metal.getName(), 0,texture+"_ore" );
+					MinecraftForge.setBlockHarvestLevel(ore, metaId, "pickaxe", metal.blockLvl);
 					
-					OreDictionary.registerOre("ore"+tag, new ItemStack(ore,1,metal.ids.get("oreMeta")));
+					OreDictionary.registerOre("ore"+tag, new ItemStack(ore,1,metaId));
 					if (GameRegistry.findUniqueIdentifierFor(ore) == null)
 					{
 						GameRegistry.registerBlock(ore,ItemMetalBlock.class, this.name  + ".ore");
 					}
 					
 					WorldGenMetals worldGen = new WorldGenMetals(metal.ids.get("ore"),
-							metal.ids.get("oreMeta"), metal.generation, metal.dimensions);
+							metaId, metal.generation, metal.dimensions);
 					
 					GameRegistry.registerWorldGenerator(worldGen);
 					
@@ -112,10 +114,10 @@ public class MetalSet
 					
 					block = getMetalBlock(blockId);
 					
-					block.addSubBlock(metal.ids.get("blockMeta"), metal.getName(), 1,texture+"_block" );
-					MinecraftForge.setBlockHarvestLevel(block, metal.ids.get("blockMeta"), "pickaxe", metal.blockLvl);
+					block.addSubBlock(metaId, metal.getName(), 1,texture+"_block" );
+					MinecraftForge.setBlockHarvestLevel(block, metaId, "pickaxe", metal.blockLvl);
 					
-					OreDictionary.registerOre("block"+tag, new ItemStack(block,1,metal.ids.get("blockMeta")));
+					OreDictionary.registerOre("block"+tag, new ItemStack(block,1,metaId));
 					if (GameRegistry.findUniqueIdentifierFor(block) == null)
 					{
 						GameRegistry.registerBlock(block,ItemMetalBlock.class, this.name  + ".block");
@@ -140,9 +142,9 @@ public class MetalSet
 					}
 					
 					brick = getMetalBlock(brickId);
-					brick.addSubBlock(metal.ids.get("brickMeta"), metal.getName(), 2,texture+"_brick" );
-					MinecraftForge.setBlockHarvestLevel(brick, metal.ids.get("brickMeta"), "pickaxe", metal.blockLvl);
-					OreDictionary.registerOre("brick"+tag, new ItemStack(brick,1,metal.ids.get("brickMeta")));
+					brick.addSubBlock(metaId, metal.getName(), 2,texture+"_brick" );
+					MinecraftForge.setBlockHarvestLevel(brick, metaId, "pickaxe", metal.blockLvl);
+					OreDictionary.registerOre("brick"+tag, new ItemStack(brick,1,metaId));
 					if (GameRegistry.findUniqueIdentifierFor(brick) == null)
 					{
 						GameRegistry.registerBlock(brick,ItemMetalBlock.class,this.name  + ".brick");
