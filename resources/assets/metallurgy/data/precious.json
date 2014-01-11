@@ -3,13 +3,13 @@
 		"name":"Zinc",
 		"type":"Catalyst",
 		"ids":
-			{
-				"ore":912,
-				"block":913,
-				"brick":914,
-				"meta":0,
-				"item":26650
-			},
+		{
+			"ore":912,
+			"block":913,
+			"brick":914,
+			"meta":0,
+			"item":26650
+		},
 		"abstratorXP":3,
 		"blockLvl":0,
 		"dugeonLoot":[40,4],
@@ -20,13 +20,13 @@
 		"name":"Silver",
 		"type":"Ore",
 		"ids":
-			{
-				"ore":912,
-				"block":913,
-				"brick":914,
-				"meta":1,
-				"item":26700
-			},
+		{
+			"ore":912,
+			"block":913,
+			"brick":914,
+			"meta":1,
+			"item":26700
+		},
 		"abstratorXP":20,
 		"blockLvl":1,
 		"equipment":[1,25,1,16,20,2,4,3,2,5],
@@ -38,13 +38,13 @@
 		"name":"Platinum",
 		"type":"Ore",
 		"ids":
-			{
-				"ore":912,
-				"block":913,
-				"brick":914,
-				"meta":2,
-				"item":26750
-			},
+		{
+			"ore":912,
+			"block":913,
+			"brick":914,
+			"meta":2,
+			"item":26750
+		},
 		"abstratorXP":50,
 		"blockLvl":2,
 		"equipment":[2,100,1,24,50,3,6,5,3,11],
@@ -56,12 +56,12 @@
 		"name":"Brass",
 		"type":"Alloy",
 		"ids":
-			{
-				"block":913,
-				"brick":914,
-				"meta":3,
-				"item":26800
-			},
+		{
+			"block":913,
+			"brick":914,
+			"meta":3,
+			"item":26800
+		},
 		"abstratorXP":18,
 		"blockLvl":0,
 		"alloyRecipe":["Copper","Zinc"],
@@ -72,12 +72,12 @@
 		"name":"Electrum",
 		"type":"Alloy",
 		"ids":
-			{
-				"block":913,
-				"brick":914,
-				"meta":4,
-				"item":26850
-			},
+		{
+			"block":913,
+			"brick":914,
+			"meta":4,
+			"item":26850
+		},
 		"abstratorXP":30,
 		"blockLvl":1,
 		"alloyRecipe":["Gold","Silver"],
