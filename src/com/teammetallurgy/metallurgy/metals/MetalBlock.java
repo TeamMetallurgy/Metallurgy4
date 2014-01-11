@@ -143,7 +143,8 @@ public class MetalBlock extends Block
 					blockType = ".brick";
 			}
 			
-			return "tile." + unlocalizedName + blockType;
+			String prefix = "tile." + Metallurgy.MODID.toLowerCase() + ".";
+			return   prefix + unlocalizedName + blockType;
 		}
 		else 
 		{
