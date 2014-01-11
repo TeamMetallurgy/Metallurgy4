@@ -5,11 +5,9 @@
 		"ids":
 		{
 			"ore":903,
-			"oreMeta":0,
 			"block":904,
-			"blockMeta":0,
 			"brick":905,
-			"brickMeta":0,
+			"meta":0,
 			"item":28350
 		},
 		"abstratorXP":6,
@@ -25,11 +23,9 @@
 		"ids":
 		{
 			"ore":903,
-			"oreMeta":1,
 			"block":904,
-			"blockMeta":1,
 			"brick":905,
-			"brickMeta":1,
+			"meta":1,
 			"item":28400
 		},
 		"abstratorXP":6,
@@ -44,9 +40,8 @@
 		"ids":
 		{
 			"block":904,
-			"blockMeta":2,
 			"brick":905,
-			"brickMeta":2,
+			"meta":2,
 			"item":28450
 		},
 		"abstratorXP":6,

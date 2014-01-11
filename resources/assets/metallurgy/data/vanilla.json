@@ -5,9 +5,8 @@
 		"ids":
 		{
 			"ore":16,
-			"oreMeta":0,
 			"block":173,
-			"blockMeta":0,
+			"meta":0,
 			"item":263
 		},
 		"abstratorXP":1,
@@ -23,11 +22,9 @@
 		"ids":
 		{
 			"ore":15,
-			"oreMeta":0,
 			"block":42,
-			"blockMeta":0,
 			"brick":916,
-			"brickMeta":0,
+			"meta":0,
 			"item":26900
 		},
 		"abstratorXP":3,
@@ -42,11 +39,9 @@
 		"ids":
 		{
 			"ore":14,
-			"oreMeta":0,
 			"block":41,
-			"blockMeta":0,
 			"brick":916,
-			"brickMeta":1,
+			"meta":1,
 			"item":26910
 		},
 		"abstratorXP":9,
@@ -61,9 +56,8 @@
 		"ids":
 		{
 			"ore":56,
-			"oreMeta":0,
 			"block":57,
-			"blockMeta":0,
+			"meta":0,
 			"item":26250
 		},
 		"abstratorXP":45,
@@ -80,9 +74,8 @@
 		"ids":
 		{
 			"ore":73,
-			"oreMeta":0,
 			"block":152,
-			"blockMeta":0,
+			"meta":0,
 			"item":75
 		},
 		"blockLvl":2,
@@ -97,9 +90,8 @@
 		"ids":
 		{
 			"ore":21,
-			"oreMeta":0,
 			"block":22,
-			"blockMeta":0,
+			"meta":0,
 			"item":95
 		},
 		"blockLvl":1,
@@ -114,9 +106,8 @@
 		"ids":
 		{
 			"ore":129,
-			"oreMeta":0,
 			"block":133,
-			"blockMeta":0,
+			"meta":0,
 			"item":132
 		},
 		"blockLvl":2,
@@ -131,9 +122,8 @@
 		"ids":
 		{
 			"ore":153,
-			"oreMeta":0,
 			"block":155,
-			"blockMeta":0,
+			"meta":0,
 			"item":150
 		},
 		"blockLvl":1,

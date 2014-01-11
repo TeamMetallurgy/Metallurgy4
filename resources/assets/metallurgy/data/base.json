@@ -3,15 +3,13 @@
 		"name":"Copper",
 		"type":"Ore",
 		"ids":
-			{
+		{
 			"ore":900,
-			"oreMeta":0,
 			"block":901,
-			"blockMeta":0,
 			"brick":902,
-			"brickMeta":0,
+			"meta":0,
 			"item":26250
-			},
+		},
 		"abstratorXP":1,
 		"blockLvl":1,
 		"equipment":[1,180,1,5,5,2,3,2,1,10],
@@ -25,11 +23,9 @@
 		"ids":
 		{
 			"ore":900,
-			"oreMeta":1,
 			"block":901,
-			"blockMeta":1,
 			"brick":902,
-			"brickMeta":1,
+			"meta":1,
 			"item":26300
 		},
 		"abstratorXP":1,
@@ -44,11 +40,9 @@
 		"ids":
 		{
 			"ore":900,
-			"oreMeta":2,
 			"block":901,
-			"blockMeta":2,
 			"brick":902,
-			"brickMeta":2,
+			"meta":2,
 			"item":26350
 		},
 		"abstratorXP":3,
@@ -63,9 +57,8 @@
 		"ids":
 		{
 			"block":901,
-			"blockMeta":3,
 			"brick":902,
-			"brickMeta":3,
+			"meta":3,
 			"item":26400
 		},
 		"abstratorXP":2,
@@ -80,9 +73,8 @@
 		"ids":
 		{
 			"block":901,
-			"blockMeta":4,
 			"brick":902,
-			"brickMeta":4,
+			"meta":4,
 			"item":26250
 		},
 		"abstratorXP":8,
@@ -97,9 +89,8 @@
 		"ids":
 		{
 			"block":901,
-			"blockMeta":5,
 			"brick":902,
-			"brickMeta":5,
+			"meta":5,
 			"item":26500
 		},
 		"abstratorXP":5,
@@ -114,9 +105,8 @@
 		"ids":
 		{
 			"block":901,
-			"blockMeta":6,
 			"brick":902,
-			"brickMeta":6,
+			"meta":6,
 			"item":26550
 		},
 		"abstratorXP":9,
@@ -131,9 +121,8 @@
 		"ids":
 		{
 			"block":901,
-			"blockMeta":7,
 			"brick":902,
-			"brickMeta":7,
+			"meta":7,
 			"item":26600
 		},
 		"abstratorXP":6,

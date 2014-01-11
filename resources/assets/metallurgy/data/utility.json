@@ -5,7 +5,7 @@
 		"ids":
 		{
 			"ore":915,
-			"oreMeta":0,
+			"meta":0,
 			"item":29012
 		},
 		"blockLvl":1,
@@ -20,7 +20,7 @@
 		"ids":
 		{
 			"ore":915,
-			"oreMeta":1,
+			"meta":1,
 			"item":29011
 		},
 		"blockLvl":1,
@@ -35,7 +35,7 @@
 		"ids":
 		{
 			"ore":915,
-			"oreMeta":2,
+			"meta":2,
 			"item":29013
 		},
 		"blockLvl":1,
@@ -50,7 +50,7 @@
 		"ids":
 		{
 			"ore":915,
-			"oreMeta":3,
+			"meta":3,
 			"item":29014
 		},
 		"blockLvl":1,
@@ -65,7 +65,7 @@
 		"ids":
 		{
 			"ore":915,
-			"oreMeta":4,
+			"meta":4,
 			"item":29015
 		},
 		"blockLvl":1,
@@ -80,7 +80,7 @@
 		"ids":
 		{
 			"ore":915,
-			"oreMeta":5,
+			"meta":5,
 			"item":29016
 		},
 		"blockLvl":1,

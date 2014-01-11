@@ -5,11 +5,9 @@
 		"ids":
 		{
 			"ore":906,
-			"oreMeta":0,
 			"block":907,
-			"blockMeta":0,
 			"brick":908,
-			"brickMeta":0,
+			"meta":0,
 			"item":27550
 		},
 		"abstratorXP":1,
@@ -25,11 +23,9 @@
 		"ids":
 		{
 			"ore":906,
-			"oreMeta":1,
 			"block":907,
-			"blockMeta":1,
 			"brick":908,
-			"brickMeta":1,
+			"meta":1,
 			"item":27600
 		},
 		"abstratorXP":2,
@@ -45,11 +41,9 @@
 		"ids":
 		{
 			"ore":906,
-			"oreMeta":2,
 			"block":907,
-			"blockMeta":2,
 			"brick":908,
-			"brickMeta":2,
+			"meta":2,
 			"item":27650
 		},
 		"abstratorXP":2,
@@ -64,9 +58,8 @@
 		"ids":
 		{
 			"block":907,
-			"blockMeta":3,
 			"brick":908,
-			"brickMeta":3,
+			"meta":3,
 			"item":27700
 		},
 		"abstratorXP":4,
@@ -81,11 +74,9 @@
 		"ids":
 		{
 			"ore":906,
-			"oreMeta":4,
 			"block":907,
-			"blockMeta":4,
 			"brick":908,
-			"brickMeta":4,
+			"meta":4,
 			"item":27750
 		},
 		"abstratorXP":3,
@@ -101,11 +92,9 @@
 		"ids":
 		{
 			"ore":906,
-			"oreMeta":5,
 			"block":907,
-			"blockMeta":5,
 			"brick":908,
-			"brickMeta":5,
+			"meta":5,
 			"item":27800
 		},
 		"abstratorXP":11,
@@ -121,11 +110,9 @@
 		"ids":
 		{
 			"ore":906,
-			"oreMeta":6,
 			"block":907,
-			"blockMeta":6,
 			"brick":908,
-			"brickMeta":6,
+			"meta":6,
 			"item":27850
 		},
 		"abstratorXP":15,
@@ -141,11 +128,9 @@
 		"ids":
 		{
 			"ore":906,
-			"oreMeta":7,
 			"block":907,
-			"blockMeta":7,
 			"brick":908,
-			"brickMeta":7,
+			"meta":7,
 			"item":27900
 		},
 		"abstratorXP":4,
@@ -161,11 +146,9 @@
 		"ids":
 		{
 			"ore":906,
-			"oreMeta":8,
 			"block":907,
-			"blockMeta":8,
 			"brick":908,
-			"brickMeta":8,
+			"meta":8,
 			"item":27950
 		},
 		"abstratorXP":2,
@@ -180,9 +163,8 @@
 		"ids":
 		{
 			"block":907,
-			"blockMeta":9,
 			"brick":908,
-			"brickMeta":9,
+			"meta":9,
 			"item":28000
 		},
 		"abstratorXP":9,
@@ -197,9 +179,8 @@
 		"ids":
 		{
 			"block":907,
-			"blockMeta":10,
 			"brick":908,
-			"brickMeta":10,
+			"meta":10,
 			"item":28050
 		},
 		"abstratorXP":6,
@@ -214,11 +195,9 @@
 		"ids":
 		{
 			"ore":906,
-			"oreMeta":11,
 			"block":907,
-			"blockMeta":11,
 			"brick":908,
-			"brickMeta":11,
+			"meta":11,
 			"item":28100
 		},
 		"abstratorXP":5,
@@ -234,9 +213,8 @@
 		"ids":
 		{
 			"block":907,
-			"blockMeta":12,
 			"brick":908,
-			"brickMeta":12,
+			"meta":12,
 			"item":28150
 		},
 		"abstratorXP":25,
@@ -251,11 +229,9 @@
 		"ids":
 		{
 			"ore":906,
-			"oreMeta":13,
 			"block":907,
-			"blockMeta":13,
 			"brick":908,
-			"brickMeta":13,
+			"meta":13,
 			"item":28200
 		},
 		"abstratorXP":6,
@@ -271,11 +247,9 @@
 		"ids":
 		{
 			"ore":906,
-			"oreMeta":14,
 			"block":907,
-			"blockMeta":14,
 			"brick":908,
-			"brickMeta":14,
+			"meta":14,
 			"item":28250
 		},
 		"abstratorXP":7,
@@ -291,9 +265,8 @@
 		"ids":
 		{
 			"block":907,
-			"blockMeta":15,
 			"brick":908,
-			"brickMeta":15,
+			"meta":15,
 			"item":28300
 		},
 		"abstratorXP":13,
