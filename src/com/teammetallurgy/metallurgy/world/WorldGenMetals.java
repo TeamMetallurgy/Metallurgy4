@@ -84,7 +84,7 @@ public class WorldGenMetals implements IWorldGenerator
 				if (range.length > 1)
 				{
 					
-					if (range[0] != "")
+					if (!(range[0].compareTo("") == 0))
 					{
 						int low = Integer.parseInt(range[0]);
 						int high = Integer.parseInt(range[1]);

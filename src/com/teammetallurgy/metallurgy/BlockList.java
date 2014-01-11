@@ -23,8 +23,14 @@ public class BlockList
         registerBlock(crusher, blockName);
         registerTileEntity(TileEntityCrusher.class, blockName);
         
-        MetalSet base = new MetalSet("base");
-        base.load();
+        String[] sets = {"base","ender","fantasy","nether","precious","utility"};
+        
+        for (int i=0; i < sets.length; i++)
+        {
+        	MetalSet base = new MetalSet(sets[i]);
+            base.load();
+        }
+      
     }
 
     private static void registerTileEntity(Class<TileEntityCrusher> clazz, String blockName)

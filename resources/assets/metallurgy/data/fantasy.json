@@ -233,8 +233,6 @@
 		"type":"Alloy",
 		"ids":
 		{
-			"ore":906,
-			"oreMeta":12,
 			"block":907,
 			"blockMeta":12,
 			"brick":908,
