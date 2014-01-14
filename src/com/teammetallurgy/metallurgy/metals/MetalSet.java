@@ -6,6 +6,7 @@ import java.io.Reader;
 import java.io.UnsupportedEncodingException;
 
 import net.minecraft.block.Block;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.oredict.OreDictionary;
@@ -49,6 +50,7 @@ public class MetalSet
         int oreId = 0;
         int blockId = 0;
         int brickId = 0;
+        int dustId = 0;
 
         String setTag = name.substring(0, 1).toUpperCase() + name.substring(1);
 
@@ -58,6 +60,7 @@ public class MetalSet
             MetalBlock ore;
             MetalBlock block;
             MetalBlock brick;
+            MetalItem item;
 
             String texture = metal.getName().replace(" ", "_");
             texture = Metallurgy.MODID + ":" + name + "/" + texture.toLowerCase();
@@ -156,6 +159,51 @@ public class MetalSet
 
             }
 
+            if (metal.ids.get("dust") != null)
+            {
+                try
+                {
+                    if (dustId == 0)
+                    {
+                        dustId = ConfigHandler.getItem("dust" + setTag, metal.ids.get("dust"));
+                    }
+
+                    item = getMetalItem(dustId);
+                    item.addSubItem(metaId, metal.getName(), 0, texture + "_dust");
+
+                    OreDictionary.registerOre("dust" + tag, new ItemStack(item, 1, metaId));
+                    if (GameRegistry.findUniqueIdentifierFor(item) == null)
+                    {
+                        GameRegistry.registerItem(item, this.name + ".dust");
+                    }
+
+                }
+                catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }
+
+        }
+
+    }
+
+    private MetalItem getMetalItem(int id) throws Exception
+    {
+        MetalItem metalItem;
+        Item item = Item.itemsList[id];
+        if (item == null)
+        {
+            metalItem = new MetalItem(id);
+            return metalItem;
+        }
+        else if (item instanceof MetalItem)
+        {
+            return (MetalItem) item;
+        }
+        else
+        {
+            throw new Exception("Invalid Metal Block");
         }
 
     }

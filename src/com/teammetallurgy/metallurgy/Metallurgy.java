@@ -26,6 +26,7 @@ public class Metallurgy
 
     public CreativeTabs creativeTabMachines = new CreativeTabs(MODID + ".Machines");
     public CreativeTabs creativeTabBlocks = new CreativeTabs(MODID + ".Blocks");
+    public CreativeTabs creativeTabItems = new CreativeTabs(MODID + ".Items");
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)

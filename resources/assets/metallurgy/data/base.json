@@ -8,7 +8,8 @@
 			"block":901,
 			"brick":902,
 			"meta":0,
-			"item":26250
+			"item":26250,
+			"dust":26250
 		},
 		"abstratorXP":1,
 		"blockLvl":1,

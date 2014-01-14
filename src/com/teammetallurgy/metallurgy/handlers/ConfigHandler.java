@@ -36,4 +36,13 @@ public class ConfigHandler
         return id;
     }
 
+    public static int getItem(String itemName, Integer defaultid)
+    {
+        int id = configuration.getItem(itemName, defaultid).getInt();
+
+        saveChanges();
+
+        return id;
+    }
+
 }
