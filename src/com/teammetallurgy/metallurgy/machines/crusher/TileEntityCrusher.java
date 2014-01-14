@@ -1,6 +1,7 @@
 package com.teammetallurgy.metallurgy.machines.crusher;
 
 import com.teammetallurgy.metallurgy.machines.TileEntityMetallurgySided;
+import com.teammetallurgy.metallurgy.recipes.CrusherRecipes;
 
 import net.minecraft.block.BlockFurnace;
 import net.minecraft.item.ItemStack;
@@ -173,7 +174,7 @@ public class TileEntityCrusher extends TileEntityMetallurgySided
 
     private ItemStack getSmeltingResult(ItemStack itemStack)
     {
-        return FurnaceRecipes.smelting().getSmeltingResult(itemStack);
+        return CrusherRecipes.getInstance().getCrushingResult(itemStack);
     }
 
     private boolean canAcceptStackRange(int start, int end, ItemStack itemstack)

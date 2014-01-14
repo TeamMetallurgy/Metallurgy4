@@ -104,7 +104,7 @@ public class ContainerCrusher extends Container
             this.tileEntityCrusher.currentItemBurnTime = newValue;
         }
     }
-    
+
     @Override
     public boolean canInteractWith(EntityPlayer entityplayer)
     {

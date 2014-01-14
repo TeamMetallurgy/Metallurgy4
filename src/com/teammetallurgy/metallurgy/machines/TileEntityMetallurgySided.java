@@ -45,10 +45,10 @@ public abstract class TileEntityMetallurgySided extends TileEntityMetallurgy imp
     @Override
     protected void readCustomNBT(NBTTagCompound data)
     {
-        
+
         this.itemStacks = new ItemStack[this.getSizeInventory()];
         this.drawers = new ItemStack[this.numberOfDrawers];
-        
+
         readItemListFromNBT(data, "Items", this.itemStacks);
         readItemListFromNBT(data, "Drawers", this.drawers);
     }
@@ -74,7 +74,7 @@ public abstract class TileEntityMetallurgySided extends TileEntityMetallurgy imp
     {
         writeItemListToNBT(compound, itemStacks, "Items");
         writeItemListToNBT(compound, drawers, "Drawers");
-        
+
     }
 
     private void writeItemListToNBT(NBTTagCompound compound, ItemStack[] stacks, String name)
@@ -206,5 +206,5 @@ public abstract class TileEntityMetallurgySided extends TileEntityMetallurgy imp
         this.numberOfDrawers = drawers;
         this.drawers = new ItemStack[drawers];
     }
-    
+
 }

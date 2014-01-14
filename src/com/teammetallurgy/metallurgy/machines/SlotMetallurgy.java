@@ -15,12 +15,11 @@ public class SlotMetallurgy extends Slot
         this.id = id;
         this.container = inventory;
     }
-    
+
     @Override
     public boolean isItemValid(ItemStack stack)
     {
         return container.isItemValidForSlot(id, stack);
     }
-    
-    
+
 }

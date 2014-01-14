@@ -16,7 +16,7 @@ public class GUICrusher extends GuiContainer
         super(crusher);
         this.crusher = crusher.tileEntityCrusher;
     }
-    
+
     @Override
     public void initGui()
     {
@@ -31,7 +31,7 @@ public class GUICrusher extends GuiContainer
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
         this.mc.getTextureManager().bindTexture(texture);
         this.drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
-        
+
         int i1;
         if (this.crusher.isBurning())
         {

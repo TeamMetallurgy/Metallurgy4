@@ -12,9 +12,9 @@ public class ConfigHandler
     public static void setFile(File file)
     {
         configuration = new Configuration(file);
-        
+
         configuration.load();
-        
+
         saveChanges();
     }
 
@@ -27,12 +27,12 @@ public class ConfigHandler
         }
     }
 
-    public static int getBlock(String blockName,int defaultid)
+    public static int getBlock(String blockName, int defaultid)
     {
         int id = configuration.getBlock(blockName, defaultid).getInt();
 
         saveChanges();
-        
+
         return id;
     }
 

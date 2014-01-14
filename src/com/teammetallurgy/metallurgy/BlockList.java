@@ -16,21 +16,21 @@ public class BlockList
     public static void init()
     {
         String blockName = "crusher";
-        int id = ConfigHandler.getBlock(blockName,450);
+        int id = ConfigHandler.getBlock(blockName, 450);
 
         crusher = new BlockCrusher(id).setUnlocalizedName(blockName);
 
         registerBlock(crusher, blockName);
         registerTileEntity(TileEntityCrusher.class, blockName);
-        
-        String[] sets = {"base","ender","fantasy","nether","precious","utility"};
-        
-        for (int i=0; i < sets.length; i++)
+
+        String[] sets = { "base", "ender", "fantasy", "nether", "precious", "utility" };
+
+        for (int i = 0; i < sets.length; i++)
         {
-        	MetalSet base = new MetalSet(sets[i]);
+            MetalSet base = new MetalSet(sets[i]);
             base.load();
         }
-      
+
     }
 
     private static void registerTileEntity(Class<TileEntityCrusher> clazz, String blockName)

@@ -19,7 +19,7 @@ public abstract class BlockMetallurgy extends BlockContainer
     @Override
     public CreativeTabs getCreativeTabToDisplayOn()
     {
-        return Metallurgy.instance.creativeTabs;
+        return Metallurgy.instance.creativeTabMachines;
     }
 
     @Override
@@ -43,10 +43,10 @@ public abstract class BlockMetallurgy extends BlockContainer
      * @param y
      * @param z
      * @param player
-     * @param side 
-     * @param xOffset 
-     * @param yOffset 
-     * @param zOffset 
+     * @param side
+     * @param xOffset
+     * @param yOffset
+     * @param zOffset
      */
     abstract protected void doOnActivate(World world, int x, int y, int z, EntityPlayer player, int side, float xOffset, float yOffset, float zOffset);
 }

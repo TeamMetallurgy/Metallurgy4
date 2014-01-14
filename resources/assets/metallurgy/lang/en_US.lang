@@ -1,4 +1,5 @@
-itemGroup.Metallurgy=Metallurgy
+itemGroup.Metallurgy.Machines=Metallurgy Machines
+itemGroup.Metallurgy.Blcoks=Metallurgy Blocks
 
 tile.crusher.name=Crusher
 container.crusher=Crusher

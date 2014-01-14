@@ -24,7 +24,8 @@ public class Metallurgy
     @Mod.Instance(MODID)
     public static Metallurgy instance;
 
-    public CreativeTabs creativeTabs = new CreativeTabs(MODID);
+    public CreativeTabs creativeTabMachines = new CreativeTabs(MODID + ".Machines");
+    public CreativeTabs creativeTabBlocks = new CreativeTabs(MODID + ".Blocks");
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
