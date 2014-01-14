@@ -89,40 +89,6 @@ public class TileEntityCrusher extends TileEntityMetallurgySided
         return CrusherRecipes.getInstance().getCrushingResult(itemStack);
     }
 
-    private boolean canAcceptStackRange(int start, int end, ItemStack itemstack)
-    {
-        Boolean retVal = false;
-
-        for (int i = start; i <= end; i++)
-        {
-            boolean itemEqual = this.itemStacks[i].isItemEqual(itemstack);
-
-            if (itemEqual)
-            {
-                int stackSize = this.itemStacks[i].stackSize + itemstack.stackSize;
-
-                retVal |= stackSize <= getInventoryStackLimit() && stackSize <= itemstack.getMaxStackSize();
-            }
-            else
-            {
-                retVal |= false;
-            }
-        }
-
-        return retVal;
-    }
-
-    private boolean slotsAreEmtpty(int start, int end)
-    {
-        Boolean retVal = false;
-        for (int i = start; i <= end; i++)
-        {
-            retVal |= this.itemStacks[i] == null;
-        }
-
-        return retVal;
-    }
-
     @Override
     public boolean isItemValidForSlot(int i, ItemStack itemstack)
     {

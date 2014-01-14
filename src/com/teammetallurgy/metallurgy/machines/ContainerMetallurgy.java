@@ -12,7 +12,6 @@ public abstract class ContainerMetallurgy extends Container
     private int lastBurnTime;
     private int lastItemBurnTime;
 
- 
     @Override
     public void addCraftingToCrafters(ICrafting crafter)
     {
@@ -26,27 +25,27 @@ public abstract class ContainerMetallurgy extends Container
     public void detectAndSendChanges()
     {
         super.detectAndSendChanges();
-    
+
         for (int i = 0; i < this.crafters.size(); ++i)
         {
             ICrafting icrafting = (ICrafting) this.crafters.get(i);
-    
+
             if (this.lastCookTime != this.tileEntity.cookTime)
             {
                 icrafting.sendProgressBarUpdate(this, 0, this.tileEntity.cookTime);
             }
-    
+
             if (this.lastBurnTime != this.tileEntity.burnTime)
             {
                 icrafting.sendProgressBarUpdate(this, 1, this.tileEntity.burnTime);
             }
-    
+
             if (this.lastItemBurnTime != this.tileEntity.currentItemBurnTime)
             {
                 icrafting.sendProgressBarUpdate(this, 2, this.tileEntity.currentItemBurnTime);
             }
         }
-    
+
         this.lastCookTime = this.tileEntity.cookTime;
         this.lastBurnTime = this.tileEntity.burnTime;
         this.lastItemBurnTime = this.tileEntity.currentItemBurnTime;
@@ -59,12 +58,12 @@ public abstract class ContainerMetallurgy extends Container
         {
             this.tileEntity.cookTime = newValue;
         }
-    
+
         if (id == 1)
         {
             this.tileEntity.burnTime = newValue;
         }
-    
+
         if (id == 2)
         {
             this.tileEntity.currentItemBurnTime = newValue;

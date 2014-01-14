@@ -5,6 +5,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntityFurnace;
 
 import com.teammetallurgy.metallurgy.machines.TileEntityMetallurgySided;
+import com.teammetallurgy.metallurgy.recipes.AlloyerRecipes;
 import com.teammetallurgy.metallurgy.recipes.CrusherRecipes;
 
 public class TileEntityAlloyer extends TileEntityMetallurgySided
@@ -38,7 +39,7 @@ public class TileEntityAlloyer extends TileEntityMetallurgySided
     {
         if (this.canProcessItem())
         {
-            ItemStack itemstack = getSmeltingResult(this.itemStacks[0]);
+            ItemStack itemstack = getSmeltingResult(this.itemStacks[0], this.itemStacks[2]);
 
             if (this.itemStacks[3] == null)
             {
@@ -55,61 +56,34 @@ public class TileEntityAlloyer extends TileEntityMetallurgySided
             {
                 this.itemStacks[0] = null;
             }
+
+            --this.itemStacks[2].stackSize;
+
+            if (this.itemStacks[2].stackSize <= 0)
+            {
+                this.itemStacks[2] = null;
+            }
         }
     }
 
     @Override
     protected boolean canProcessItem()
     {
-        if (this.itemStacks[0] == null)
+        if (this.itemStacks[0] == null || this.itemStacks[2] == null)
         {
             return false;
         }
         else
         {
-            ItemStack itemstack = getSmeltingResult(this.itemStacks[0]);
+            ItemStack itemstack = getSmeltingResult(this.itemStacks[0], this.itemStacks[2]);
             if (itemstack == null) return false;
             if (slotsAreEmtpty(3, 3)) return true;
             return canAcceptStackRange(3, 3, itemstack);
         }
     }
 
-    private ItemStack getSmeltingResult(ItemStack itemStack)
+    private ItemStack getSmeltingResult(ItemStack itemStack, ItemStack otherItemStack)
     {
-        return CrusherRecipes.getInstance().getCrushingResult(itemStack);
-    }
-
-    private boolean canAcceptStackRange(int start, int end, ItemStack itemstack)
-    {
-        Boolean retVal = false;
-
-        for (int i = start; i <= end; i++)
-        {
-            boolean itemEqual = this.itemStacks[i].isItemEqual(itemstack);
-
-            if (itemEqual)
-            {
-                int stackSize = this.itemStacks[i].stackSize + itemstack.stackSize;
-
-                retVal |= stackSize <= getInventoryStackLimit() && stackSize <= itemstack.getMaxStackSize();
-            }
-            else
-            {
-                retVal |= false;
-            }
-        }
-
-        return retVal;
-    }
-
-    private boolean slotsAreEmtpty(int start, int end)
-    {
-        Boolean retVal = false;
-        for (int i = start; i <= end; i++)
-        {
-            retVal |= this.itemStacks[i] == null;
-        }
-
-        return retVal;
+        return AlloyerRecipes.getInstance().getAlloyResult(itemStack, otherItemStack);
     }
 }

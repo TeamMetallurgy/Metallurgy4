@@ -4,16 +4,19 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.io.UnsupportedEncodingException;
+import java.util.List;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.oredict.OreDictionary;
 
 import com.google.gson.Gson;
 import com.teammetallurgy.metallurgy.Metallurgy;
 import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
+import com.teammetallurgy.metallurgy.recipes.AlloyerRecipes;
 import com.teammetallurgy.metallurgy.world.WorldGenMetals;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -61,7 +64,6 @@ public class MetalSet
             MetalBlock ore;
             MetalBlock block;
             MetalBlock brick;
-            MetalItem item;
             MetalItem dust;
             MetalItem ingot;
 
@@ -189,7 +191,7 @@ public class MetalSet
                 try
                 {
                     String identifier = "ingot";
-                    
+
                     if (ingotId == 0)
                     {
                         ingotId = ConfigHandler.getItem(identifier + setTag, metal.ids.get(identifier));
@@ -204,6 +206,37 @@ public class MetalSet
                 catch (Exception e)
                 {
                     e.printStackTrace();
+                }
+            }
+
+            if (metal.alloyRecipe != null && metal.alloyRecipe.length == 2)
+            {
+                String ore1 = metal.alloyRecipe[0];
+                String ore2 = metal.alloyRecipe[1];
+
+                ore1.replace(" ", "");
+                ore2.replace(" ", "");
+
+                ore1 = "dust" + ore1;
+                ore2 = "dust" + ore2;
+
+                List<ItemStack> retList = OreDictionary.getOres(ore1);
+                if (retList.size() > 0)
+                {
+                    ItemStack itemStack = retList.get(0).copy();
+                    List<ItemStack> retList2 = OreDictionary.getOres(ore2);
+                    if (retList2.size() > 0)
+                    {
+                        ItemStack otherItemStack = retList2.get(0).copy();
+                        List<ItemStack> output = OreDictionary.getOres("dust" + tag);
+                        if (output.size() > 0)
+                        {
+                            ItemStack outputStack = output.get(0).copy();
+
+                            outputStack.stackSize = 2;
+                            AlloyerRecipes.getInstance().addRecipe(itemStack, otherItemStack, outputStack);
+                        }
+                    }
                 }
             }
         }

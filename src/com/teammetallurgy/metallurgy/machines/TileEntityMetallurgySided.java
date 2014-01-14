@@ -287,4 +287,38 @@ public abstract class TileEntityMetallurgySided extends TileEntityMetallurgy imp
     {
         return this.cookTime * i / MAXCOOKTIME;
     }
+
+    protected boolean canAcceptStackRange(int start, int end, ItemStack itemstack)
+    {
+        Boolean retVal = false;
+
+        for (int i = start; i <= end; i++)
+        {
+            boolean itemEqual = this.itemStacks[i].isItemEqual(itemstack);
+
+            if (itemEqual)
+            {
+                int stackSize = this.itemStacks[i].stackSize + itemstack.stackSize;
+
+                retVal |= stackSize <= getInventoryStackLimit() && stackSize <= itemstack.getMaxStackSize();
+            }
+            else
+            {
+                retVal |= false;
+            }
+        }
+
+        return retVal;
+    }
+
+    protected boolean slotsAreEmtpty(int start, int end)
+    {
+        Boolean retVal = false;
+        for (int i = start; i <= end; i++)
+        {
+            retVal |= this.itemStacks[i] == null;
+        }
+
+        return retVal;
+    }
 }

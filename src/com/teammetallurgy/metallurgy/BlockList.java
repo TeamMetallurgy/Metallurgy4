@@ -32,15 +32,14 @@ public class BlockList
 
         registerBlock(crusher, blockName);
         registerTileEntity(TileEntityCrusher.class, blockName);
-        
+
         blockName = "alloyer";
         id = ConfigHandler.getBlock(blockName, defaultId++);
-        
+
         alloyer = new BlockAlloyer(id).setUnlocalizedName(blockName);
-        
+
         registerBlock(alloyer, blockName);
         registerTileEntity(TileEntityAlloyer.class, blockName);
-        
 
         String[] sets = { "base", "ender", "fantasy", "nether", "precious", "utility" };
 

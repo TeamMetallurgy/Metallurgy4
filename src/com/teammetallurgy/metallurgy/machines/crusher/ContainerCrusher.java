@@ -9,6 +9,7 @@ import net.minecraft.tileentity.TileEntityFurnace;
 import com.teammetallurgy.metallurgy.machines.ContainerMetallurgy;
 import com.teammetallurgy.metallurgy.machines.SlotMetallurgy;
 import com.teammetallurgy.metallurgy.machines.TileEntityMetallurgySided;
+import com.teammetallurgy.metallurgy.recipes.AlloyerRecipes;
 import com.teammetallurgy.metallurgy.recipes.CrusherRecipes;
 
 public class ContainerCrusher extends ContainerMetallurgy
@@ -52,46 +53,20 @@ public class ContainerCrusher extends ContainerMetallurgy
             ItemStack itemstack1 = slot.getStack();
             itemstack = itemstack1.copy();
 
-            int playerInventoryStartID = 30;
-            int playerInventoryEndID = 39;
-
-            int machineInputID = 0;
             int machineFuelID = 1;
-            int machineOutputStartID = 2;
-            int machineInventoryEndID = 5;
+            int machineInventoryEndID = 4;
 
-            if (slotID >= machineOutputStartID && slotID < machineInventoryEndID)
+            if (slotID > machineInventoryEndID)
             {
-                if (!this.mergeItemStack(itemstack1, machineInventoryEndID, playerInventoryEndID, true)) { return null; }
-
-                slot.onSlotChange(itemstack1, itemstack);
-            }
-            else
-            {
-
-                if (slotID != machineFuelID && slotID != machineInputID)
+                if (TileEntityFurnace.isItemFuel(itemstack1))
                 {
-                    if (CrusherRecipes.getInstance().getCrushingResult(itemstack1) != null)
-                    {
-                        if (!this.mergeItemStack(itemstack1, machineInputID, machineFuelID, false)) { return null; }
-                    }
-                    else if (TileEntityFurnace.isItemFuel(itemstack1))
-                    {
-                        if (!this.mergeItemStack(itemstack1, machineFuelID, machineOutputStartID, false)) { return null; }
-                    }
-                    else
-                    {
-                        if (slotID >= machineInventoryEndID && slotID < playerInventoryStartID)
-                        {
-                            if (!this.mergeItemStack(itemstack1, playerInventoryStartID, playerInventoryEndID, false)) { return null; }
-                        }
-                        else if (slotID >= playerInventoryStartID && slotID < playerInventoryEndID && !this.mergeItemStack(itemstack1, machineInventoryEndID, playerInventoryStartID, false)) { return null; }
-                    }
+                    if (!this.mergeItemStack(itemstack1, machineFuelID, machineFuelID + 1, false)) { return null; }
                 }
-                else if (!this.mergeItemStack(itemstack1, machineInventoryEndID, playerInventoryEndID, false)) { return null; }
+                else if (!mergeItemStack(itemstack1, 0, machineInventoryEndID, false)) { return null; }
             }
+            else if (!mergeItemStack(itemstack1, machineInventoryEndID + 1, inventorySlots.size(), false)) { return null; }
 
-            if (itemstack1.stackSize == machineInputID)
+            if (itemstack1.stackSize == 0)
             {
                 slot.putStack((ItemStack) null);
             }
