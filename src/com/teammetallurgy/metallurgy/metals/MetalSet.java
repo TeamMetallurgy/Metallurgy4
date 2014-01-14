@@ -51,6 +51,7 @@ public class MetalSet
         int blockId = 0;
         int brickId = 0;
         int dustId = 0;
+        int ingotId = 0;
 
         String setTag = name.substring(0, 1).toUpperCase() + name.substring(1);
 
@@ -61,6 +62,8 @@ public class MetalSet
             MetalBlock block;
             MetalBlock brick;
             MetalItem item;
+            MetalItem dust;
+            MetalItem ingot;
 
             String texture = metal.getName().replace(" ", "_");
             texture = Metallurgy.MODID + ":" + name + "/" + texture.toLowerCase();
@@ -161,21 +164,18 @@ public class MetalSet
 
             if (metal.ids.get("dust") != null)
             {
+                String identifier = "dust";
                 try
                 {
                     if (dustId == 0)
                     {
-                        dustId = ConfigHandler.getItem("dust" + setTag, metal.ids.get("dust"));
+                        dustId = ConfigHandler.getItem(identifier + setTag, metal.ids.get(identifier));
                     }
 
-                    item = getMetalItem(dustId);
-                    item.addSubItem(metaId, metal.getName(), 0, texture + "_dust");
+                    dust = getMetalItem(dustId);
+                    dust.addSubItem(metaId, metal.getName(), 0, texture + "_" + identifier);
 
-                    OreDictionary.registerOre("dust" + tag, new ItemStack(item, 1, metaId));
-                    if (GameRegistry.findUniqueIdentifierFor(item) == null)
-                    {
-                        GameRegistry.registerItem(item, this.name + ".dust");
-                    }
+                    registerItem(dust, tag, metaId, identifier);
 
                 }
                 catch (Exception e)
@@ -184,14 +184,45 @@ public class MetalSet
                 }
             }
 
+            if (metal.ids.get("ingot") != null)
+            {
+                try
+                {
+                    String identifier = "ingot";
+                    
+                    if (ingotId == 0)
+                    {
+                        ingotId = ConfigHandler.getItem(identifier + setTag, metal.ids.get(identifier));
+                    }
+
+                    ingot = getMetalItem(ingotId);
+                    ingot.addSubItem(metaId, metal.getName(), 1, texture + "_" + identifier);
+
+                    registerItem(ingot, tag, metaId, identifier);
+
+                }
+                catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }
         }
 
+    }
+
+    private void registerItem(MetalItem item, String tag, int metaId, String intentifier)
+    {
+        OreDictionary.registerOre(intentifier + tag, new ItemStack(item, 1, metaId));
+        if (GameRegistry.findUniqueIdentifierFor(item) == null)
+        {
+            GameRegistry.registerItem(item, this.name + "." + intentifier);
+        }
     }
 
     private MetalItem getMetalItem(int id) throws Exception
     {
         MetalItem metalItem;
-        Item item = Item.itemsList[id];
+        Item item = Item.itemsList[id + 256];
         if (item == null)
         {
             metalItem = new MetalItem(id);

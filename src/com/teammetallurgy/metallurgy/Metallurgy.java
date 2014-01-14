@@ -46,6 +46,6 @@ public class Metallurgy
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
-
+        Utils.injectOreDictionaryRecipes();
     }
 }

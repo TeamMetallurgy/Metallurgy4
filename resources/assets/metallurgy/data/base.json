@@ -9,7 +9,8 @@
 			"brick":902,
 			"meta":0,
 			"item":26250,
-			"dust":26250
+			"dust":26251,
+			"ingot":26252
 		},
 		"abstratorXP":1,
 		"blockLvl":1,
@@ -27,7 +28,9 @@
 			"block":901,
 			"brick":902,
 			"meta":1,
-			"item":26300
+			"item":26250,
+			"dust":26251,
+			"ingot":26252
 		},
 		"abstratorXP":1,
 		"blockLvl":1,
@@ -44,7 +47,9 @@
 			"block":901,
 			"brick":902,
 			"meta":2,
-			"item":26350
+			"item":26250,
+			"dust":26251,
+			"ingot":26252
 		},
 		"abstratorXP":3,
 		"blockLvl":2,
@@ -60,7 +65,9 @@
 			"block":901,
 			"brick":902,
 			"meta":3,
-			"item":26400
+			"item":26250,
+			"dust":26251,
+			"ingot":26252
 		},
 		"abstratorXP":2,
 		"blockLvl":2,
@@ -76,7 +83,9 @@
 			"block":901,
 			"brick":902,
 			"meta":4,
-			"item":26250
+			"item":26250,
+			"dust":26251,
+			"ingot":26252
 		},
 		"abstratorXP":8,
 		"blockLvl":2,
@@ -92,7 +101,9 @@
 			"block":901,
 			"brick":902,
 			"meta":5,
-			"item":26500
+			"item":26250,
+			"dust":26251,
+			"ingot":26252
 		},
 		"abstratorXP":5,
 		"blockLvl":2,
@@ -108,7 +119,9 @@
 			"block":901,
 			"brick":902,
 			"meta":6,
-			"item":26550
+			"item":26250,
+			"dust":26251,
+			"ingot":26252
 		},
 		"abstratorXP":9,
 		"blockLvl":2,
@@ -124,7 +137,9 @@
 			"block":901,
 			"brick":902,
 			"meta":7,
-			"item":26600
+			"item":26250,
+			"dust":26251,
+			"ingot":26252
 		},
 		"abstratorXP":6,
 		"blockLvl":2,

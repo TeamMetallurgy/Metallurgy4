@@ -36,7 +36,7 @@ public class MetalItem extends Item
     {
         names.put(meta, name);
 
-        if (itemType < 0 || itemType > 0)
+        if (itemType < 0 || itemType > 1)
         {
             itemType = 0;
         }
