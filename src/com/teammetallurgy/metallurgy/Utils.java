@@ -46,7 +46,7 @@ public class Utils
 
     private static void injectCrusherDustRecipe(ItemStack oreItem, String replacement, String name)
     {
-        if (replacement.equals("") || replacement.equals("dust")) { return; }
+        if (replacement.equals("dust")) { return; }
 
         List<ItemStack> retList = OreDictionary.getOres(name);
         if (retList.size() > 0)
