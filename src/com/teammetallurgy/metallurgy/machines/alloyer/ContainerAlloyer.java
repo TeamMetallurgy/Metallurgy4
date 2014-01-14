@@ -1,4 +1,4 @@
-package com.teammetallurgy.metallurgy.machines.crusher;
+package com.teammetallurgy.metallurgy.machines.alloyer;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -11,17 +11,16 @@ import com.teammetallurgy.metallurgy.machines.SlotMetallurgy;
 import com.teammetallurgy.metallurgy.machines.TileEntityMetallurgySided;
 import com.teammetallurgy.metallurgy.recipes.CrusherRecipes;
 
-public class ContainerCrusher extends ContainerMetallurgy
+public class ContainerAlloyer extends ContainerMetallurgy
 {
 
-    public ContainerCrusher(InventoryPlayer inventoryPlayer, TileEntityMetallurgySided tileEntity)
+    public ContainerAlloyer(InventoryPlayer inventoryPlayer, TileEntityMetallurgySided tileEntity)
     {
         this.tileEntity = tileEntity;
-        addSlotToContainer(new SlotMetallurgy(tileEntity, 0, 80, 8));
+        addSlotToContainer(new SlotMetallurgy(tileEntity, 0, 62, 8));
         addSlotToContainer(new SlotMetallurgy(tileEntity, 1, 8, 42));
-        addSlotToContainer(new SlotMetallurgy(tileEntity, 2, 62, 62));
+        addSlotToContainer(new SlotMetallurgy(tileEntity, 2, 98, 8));
         addSlotToContainer(new SlotMetallurgy(tileEntity, 3, 80, 62));
-        addSlotToContainer(new SlotMetallurgy(tileEntity, 4, 98, 62));
         addPlayersInventoryToContainer(inventoryPlayer, 8, 84);
     }
 

@@ -2,6 +2,8 @@ package com.teammetallurgy.metallurgy.handlers;
 
 import com.teammetallurgy.metallurgy.machines.TileEntityMetallurgy;
 import com.teammetallurgy.metallurgy.machines.TileEntityMetallurgySided;
+import com.teammetallurgy.metallurgy.machines.alloyer.ContainerAlloyer;
+import com.teammetallurgy.metallurgy.machines.alloyer.GUIAlloyer;
 import com.teammetallurgy.metallurgy.machines.crusher.ContainerCrusher;
 import com.teammetallurgy.metallurgy.machines.crusher.GUICrusher;
 
@@ -25,6 +27,8 @@ public class GUIHandler implements IGuiHandler
             {
                 case 0:
                     return new ContainerCrusher(player.inventory, (TileEntityMetallurgySided) te);
+                case 1:
+                    return new ContainerAlloyer(player.inventory, (TileEntityMetallurgySided) te);
             }
         }
         return null;
@@ -42,6 +46,8 @@ public class GUIHandler implements IGuiHandler
             {
                 case 0:
                     return new GUICrusher(new ContainerCrusher(player.inventory, (TileEntityMetallurgySided) te));
+                case 1:
+                    return new GUIAlloyer(new ContainerAlloyer(player.inventory, (TileEntityMetallurgySided) te));
             }
         }
         return null;

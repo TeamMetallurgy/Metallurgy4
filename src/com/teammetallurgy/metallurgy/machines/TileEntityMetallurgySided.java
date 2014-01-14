@@ -6,28 +6,28 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
+import net.minecraft.tileentity.TileEntityFurnace;
 
 public abstract class TileEntityMetallurgySided extends TileEntityMetallurgy implements ISidedInventory
 {
 
-    private static final int[] slots_top = new int[] { 0 };
+    private static int[] slots_top;
     private static int[] slots_bottom;
-    private static final int[] slots_sides = new int[] { 1 };
+    private static int[] slots_sides;
+
+    protected static final int MAXCOOKTIME = 200;
 
     protected ItemStack[] itemStacks;
-    private ItemStack[] drawers;
-    private int numberOfDrawers;
+    public int burnTime;
+    public int currentItemBurnTime;
+    public int cookTime;
 
-    public TileEntityMetallurgySided(int numberOfItemStacks)
+    public TileEntityMetallurgySided(int numberOfItemStacks, int[] slotsTop, int[] slotsSide, int[] slotsBottom)
     {
         itemStacks = new ItemStack[numberOfItemStacks];
-
-        slots_bottom = new int[numberOfItemStacks];
-
-        for (int i = 0; i < slots_bottom.length; i++)
-        {
-            slots_bottom[i] = i;
-        }
+        slots_top = slotsTop;
+        slots_bottom = slotsBottom;
+        slots_sides = slotsSide;
     }
 
     @Override
@@ -45,12 +45,12 @@ public abstract class TileEntityMetallurgySided extends TileEntityMetallurgy imp
     @Override
     protected void readCustomNBT(NBTTagCompound data)
     {
-
         this.itemStacks = new ItemStack[this.getSizeInventory()];
-        this.drawers = new ItemStack[this.numberOfDrawers];
 
         readItemListFromNBT(data, "Items", this.itemStacks);
-        readItemListFromNBT(data, "Drawers", this.drawers);
+        this.burnTime = data.getShort("BurnTime");
+        this.cookTime = data.getShort("CookTime");
+        this.currentItemBurnTime = TileEntityFurnace.getItemBurnTime(this.itemStacks[1]);
     }
 
     private void readItemListFromNBT(NBTTagCompound data, String name, ItemStack[] stacks)
@@ -73,7 +73,9 @@ public abstract class TileEntityMetallurgySided extends TileEntityMetallurgy imp
     protected void writeCustomNBT(NBTTagCompound compound)
     {
         writeItemListToNBT(compound, itemStacks, "Items");
-        writeItemListToNBT(compound, drawers, "Drawers");
+
+        compound.setShort("BurnTime", (short) this.burnTime);
+        compound.setShort("CookTime", (short) this.cookTime);
 
     }
 
@@ -198,13 +200,91 @@ public abstract class TileEntityMetallurgySided extends TileEntityMetallurgy imp
     @Override
     public boolean canExtractItem(int i, ItemStack itemstack, int j)
     {
-        return i != 0 || i != 1 || itemstack.itemID == Item.bucketEmpty.itemID;
+        return i != 1 || itemstack.itemID == Item.bucketEmpty.itemID;
     }
 
-    protected void setNumberOfDrawers(int drawers)
+    @Override
+    public void updateEntity()
     {
-        this.numberOfDrawers = drawers;
-        this.drawers = new ItemStack[drawers];
+        boolean burning = this.burnTime > 0;
+        boolean changed = false;
+
+        if (this.burnTime > 0)
+        {
+            --this.burnTime;
+        }
+
+        if (!this.worldObj.isRemote)
+        {
+            if (this.burnTime == 0 && this.canProcessItem())
+            {
+                this.currentItemBurnTime = this.burnTime = TileEntityFurnace.getItemBurnTime(this.itemStacks[1]);
+
+                if (this.burnTime > 0)
+                {
+                    changed = true;
+
+                    if (this.itemStacks[1] != null)
+                    {
+                        --this.itemStacks[1].stackSize;
+
+                        if (this.itemStacks[1].stackSize == 0)
+                        {
+                            this.itemStacks[1] = this.itemStacks[1].getItem().getContainerItemStack(itemStacks[1]);
+                        }
+                    }
+                }
+            }
+
+            if (this.isBurning() && this.canProcessItem())
+            {
+                ++this.cookTime;
+
+                if (this.cookTime == MAXCOOKTIME)
+                {
+                    this.cookTime = 0;
+                    this.processItem();
+                    changed = true;
+                }
+            }
+            else
+            {
+                this.cookTime = 0;
+            }
+
+            if (burning != this.burnTime > 0)
+            {
+                changed = true;
+            }
+        }
+
+        if (changed)
+        {
+            this.onInventoryChanged();
+        }
     }
 
+    protected abstract void processItem();
+
+    protected abstract boolean canProcessItem();
+
+    public boolean isBurning()
+    {
+        return this.burnTime > 0;
+    }
+
+    public int getBurnTimeRemainingScaled(int i)
+    {
+        if (this.currentItemBurnTime == 0)
+        {
+            this.currentItemBurnTime = MAXCOOKTIME;
+        }
+
+        return this.burnTime * i / this.currentItemBurnTime;
+    }
+
+    public int getCookProgressScaled(int i)
+    {
+        return this.cookTime * i / MAXCOOKTIME;
+    }
 }
