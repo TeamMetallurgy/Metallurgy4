@@ -49,6 +49,8 @@
 	<!-- Clear build directory -->
 	<target name="clean">
 		<delete dir="${build.dir}"/>
+		<delete dir="${download.dir}"/>
+		<delete dir="${jar.dir}"/>
 	</target>
 
 	<!-- Set full version -->
@@ -189,7 +191,6 @@
 		
 		<!-- Reset src dir to post-forge-install state -->
 		<delete dir="${mcpsrc.dir}/minecraft/com/teammetallurgy"/>
-		<delete dir="${classes.dir}/com/teammetallurgy"/>
 		
 	</target>
 
@@ -202,7 +203,7 @@
 
 	</target>
 	
-	<target name="deobf" depends="reobf">
+	<target name="deobf" depends="package">
 		<copy todir="${deopf.dir}">
 			<fileset dir="${resources.dir}" />
 			<fileset dir="${mcp.dir}/bin/minecraft/">
@@ -214,6 +215,6 @@
 	</target>
 
 	<!-- Default target to run -->
-	<target name="main" depends="package"/>
+	<target name="main" depends="deobf"/>
 
 </project>
