@@ -45,9 +45,12 @@ public class BlockList
 
         for (int i = 0; i < sets.length; i++)
         {
-            MetalSet base = new MetalSet(sets[i]);
-            base.load();
-            setList.put(sets[i], base);
+            if (ConfigHandler.setEnabled(sets[i]))
+            {
+                MetalSet base = new MetalSet(sets[i]);
+                base.load();
+                setList.put(sets[i], base);
+            }
         }
     }
 
