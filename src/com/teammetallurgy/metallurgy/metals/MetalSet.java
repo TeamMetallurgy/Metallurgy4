@@ -39,7 +39,7 @@ public class MetalSet
         String path = "assets/metallurgy/data/";
 
         URL resource = Resources.getResource(path + name + ".json");
-        
+
         Reader reader = null;
         Metal[] metals = null;
         try
@@ -102,9 +102,12 @@ public class MetalSet
                         GameRegistry.registerBlock(ore, ItemMetalBlock.class, this.name + ".ore");
                     }
 
-                    WorldGenMetals worldGen = new WorldGenMetals(metal.ids.get("ore"), metaId, metal.generation, metal.dimensions);
+                    if (ConfigHandler.generates(tag))
+                    {
+                        WorldGenMetals worldGen = new WorldGenMetals(metal.ids.get("ore"), metaId, metal.generation, metal.dimensions);
 
-                    GameRegistry.registerWorldGenerator(worldGen);
+                        GameRegistry.registerWorldGenerator(worldGen);
+                    }
 
                 }
                 catch (Exception e)

@@ -45,4 +45,22 @@ public class ConfigHandler
         return id;
     }
 
+    public static boolean generates(String name)
+    {
+        boolean b = configuration.get("Generators", name, true).getBoolean(true);
+
+        saveChanges();
+
+        return b;
+    }
+
+    public static boolean setEnabled(String setName)
+    {
+        boolean b = configuration.get("Sets", setName, true).getBoolean(true);
+
+        saveChanges();
+
+        return b;
+    }
+
 }
