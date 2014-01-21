@@ -8,7 +8,9 @@
 			"block":910,
 			"brick":911,
 			"meta":0,
-			"item":26900
+			"item":26900,
+			"dust":26901,
+			"ingot":26902
 		},
 		"abstratorXP":1,
 		"blockLvl":1,
@@ -26,7 +28,9 @@
 			"block":910,
 			"brick":911,
 			"meta":1,
-			"item":26950
+			"item":26900,
+			"dust":26901,
+			"ingot":26902
 		},
 		"abstratorXP":2,
 		"blockLvl":1,
@@ -44,7 +48,9 @@
 			"block":910,
 			"brick":911,
 			"meta":2,
-			"item":2700
+			"item":26900,
+			"dust":26901,
+			"ingot":26902
 		},
 		"abstratorXP":2,
 		"blockLvl":1,
@@ -61,7 +67,9 @@
 			"block":910,
 			"brick":911,
 			"meta":3,
-			"item":27050
+			"item":26900,
+			"dust":26901,
+			"ingot":26902
 		},
 		"abstratorXP":3,
 		"blockLvl":2,
@@ -79,7 +87,9 @@
 			"block":910,
 			"brick":911,
 			"meta":4,
-			"item":27100
+			"item":26900,
+			"dust":26901,
+			"ingot":26902
 		},
 		"abstratorXP":3,
 		"blockLvl":2,
@@ -97,7 +107,9 @@
 			"block":910,
 			"brick":911,
 			"meta":5,
-			"item":27150
+			"item":26900,
+			"dust":26901,
+			"ingot":26902
 		},
 		"abstratorXP":3,
 		"blockLvl":2,
@@ -115,7 +127,9 @@
 			"block":910,
 			"brick":911,
 			"meta":6,
-			"item":27200
+			"item":26900,
+			"dust":26901,
+			"ingot":26902
 		},
 		"abstratorXP":3,
 		"blockLvl":2,
@@ -132,7 +146,9 @@
 			"block":910,
 			"brick":911,
 			"meta":7,
-			"item":27250
+			"item":26900,
+			"dust":26901,
+			"ingot":26902
 		},
 		"abstratorXP":4,
 		"blockLvl":3,
@@ -150,7 +166,9 @@
 			"block":910,
 			"brick":911,
 			"meta":8,
-			"item":27300
+			"item":26900,
+			"dust":26901,
+			"ingot":26902
 		},
 		"abstratorXP":5,
 		"blockLvl":4,
@@ -168,7 +186,9 @@
 			"block":910,
 			"brick":911,
 			"meta":9,
-			"item":27350
+			"item":26900,
+			"dust":26901,
+			"ingot":26902
 		},
 		"abstratorXP":6,
 		"blockLvl":5,
@@ -185,7 +205,9 @@
 			"block":910,
 			"brick":911,
 			"meta":10,
-			"item":27400
+			"item":26900,
+			"dust":26901,
+			"ingot":26902
 		},
 		"abstratorXP":4,
 		"blockLvl":1,
@@ -201,7 +223,9 @@
 			"block":910,
 			"brick":911,
 			"meta":11,
-			"item":27450
+			"item":26900,
+			"dust":26901,
+			"ingot":26902
 		},
 		"abstratorXP":6,
 		"blockLvl":3,
@@ -217,7 +241,9 @@
 			"block":910,
 			"brick":911,
 			"meta":12,
-			"item":27500
+			"item":26900,
+			"dust":26901,
+			"ingot":26902
 		},
 		"abstratorXP":24,
 		"blockLvl":3,
