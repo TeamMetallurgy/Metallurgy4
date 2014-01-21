@@ -1,10 +1,14 @@
 package com.teammetallurgy.metallurgy.metals;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.io.UnsupportedEncodingException;
+import java.net.URL;
 import java.util.List;
+
+import javax.annotation.Resource;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -12,6 +16,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.oredict.OreDictionary;
 
+import com.google.common.io.Resources;
 import com.google.gson.Gson;
 import com.teammetallurgy.metallurgy.Metallurgy;
 import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
@@ -31,17 +36,19 @@ public class MetalSet
 
     public void load()
     {
-        String path = "/assets/metallurgy/data/";
-        InputStream dataStream = ClassLoader.class.getResourceAsStream(path + name + ".json");
+        String path = "assets/metallurgy/data/";
+
+        URL resource = Resources.getResource(path + name + ".json");
+        
         Reader reader = null;
         Metal[] metals = null;
         try
         {
-
+            InputStream dataStream = resource.openStream();
             reader = new InputStreamReader(dataStream, "UTF-8");
 
         }
-        catch (UnsupportedEncodingException e)
+        catch (IOException e)
         {
             e.getLocalizedMessage();
             e.printStackTrace();
