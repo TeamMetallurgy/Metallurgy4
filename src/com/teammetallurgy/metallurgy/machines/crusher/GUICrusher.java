@@ -1,18 +1,18 @@
 package com.teammetallurgy.metallurgy.machines.crusher;
 
-import org.lwjgl.opengl.GL11;
-
-import com.teammetallurgy.metallurgy.machines.ContainerMetallurgy;
-import com.teammetallurgy.metallurgy.machines.TileEntityMetallurgySided;
-
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.util.ResourceLocation;
 
+import org.lwjgl.opengl.GL11;
+
+import com.teammetallurgy.metallurgy.machines.ContainerMetallurgy;
+import com.teammetallurgy.metallurgy.machines.TileEntityMetallurgy;
+
 public class GUICrusher extends GuiContainer
 {
     private static final ResourceLocation texture = new ResourceLocation("metallurgy:textures/gui/crusher.png");
-    private TileEntityMetallurgySided tileEntity;
+    private TileEntityMetallurgy tileEntity;
 
     public GUICrusher(ContainerMetallurgy container)
     {

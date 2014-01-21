@@ -21,6 +21,7 @@ public class ItemMetalBlock extends ItemBlock
         return meta;
     }
 
+    @Override
     public String getUnlocalizedName(ItemStack itemStack)
     {
         Block block = Block.blocksList[this.getBlockID()];

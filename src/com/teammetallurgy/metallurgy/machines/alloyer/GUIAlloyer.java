@@ -7,12 +7,12 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
 import com.teammetallurgy.metallurgy.machines.ContainerMetallurgy;
-import com.teammetallurgy.metallurgy.machines.TileEntityMetallurgySided;
+import com.teammetallurgy.metallurgy.machines.TileEntityMetallurgy;
 
 public class GUIAlloyer extends GuiContainer
 {
     private static final ResourceLocation texture = new ResourceLocation("metallurgy:textures/gui/alloyer.png");
-    private TileEntityMetallurgySided tileEntity;
+    private TileEntityMetallurgy tileEntity;
 
     public GUIAlloyer(ContainerMetallurgy container)
     {

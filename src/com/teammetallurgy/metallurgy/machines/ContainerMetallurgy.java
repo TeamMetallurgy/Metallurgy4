@@ -7,7 +7,7 @@ import net.minecraft.inventory.ICrafting;
 public abstract class ContainerMetallurgy extends Container
 {
 
-    public TileEntityMetallurgySided tileEntity;
+    public TileEntityMetallurgy tileEntity;
     private int lastCookTime;
     private int lastBurnTime;
     private int lastItemBurnTime;

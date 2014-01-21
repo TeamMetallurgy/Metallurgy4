@@ -7,9 +7,9 @@ public class SlotMetallurgy extends Slot
 {
 
     private int id;
-    private TileEntityMetallurgySided container;
+    private TileEntityMetallurgy container;
 
-    public SlotMetallurgy(TileEntityMetallurgySided inventory, int id, int x, int y)
+    public SlotMetallurgy(TileEntityMetallurgy inventory, int id, int x, int y)
     {
         super(inventory, id, x, y);
         this.id = id;

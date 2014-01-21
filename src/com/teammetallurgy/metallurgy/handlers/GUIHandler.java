@@ -1,15 +1,15 @@
 package com.teammetallurgy.metallurgy.handlers;
 
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
+
 import com.teammetallurgy.metallurgy.machines.TileEntityMetallurgy;
-import com.teammetallurgy.metallurgy.machines.TileEntityMetallurgySided;
 import com.teammetallurgy.metallurgy.machines.alloyer.ContainerAlloyer;
 import com.teammetallurgy.metallurgy.machines.alloyer.GUIAlloyer;
 import com.teammetallurgy.metallurgy.machines.crusher.ContainerCrusher;
 import com.teammetallurgy.metallurgy.machines.crusher.GUICrusher;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
 import cpw.mods.fml.common.network.IGuiHandler;
 
 public class GUIHandler implements IGuiHandler
@@ -26,9 +26,9 @@ public class GUIHandler implements IGuiHandler
             switch (ID)
             {
                 case 0:
-                    return new ContainerCrusher(player.inventory, (TileEntityMetallurgySided) te);
+                    return new ContainerCrusher(player.inventory, te);
                 case 1:
-                    return new ContainerAlloyer(player.inventory, (TileEntityMetallurgySided) te);
+                    return new ContainerAlloyer(player.inventory, te);
             }
         }
         return null;
@@ -45,9 +45,9 @@ public class GUIHandler implements IGuiHandler
             switch (ID)
             {
                 case 0:
-                    return new GUICrusher(new ContainerCrusher(player.inventory, (TileEntityMetallurgySided) te));
+                    return new GUICrusher(new ContainerCrusher(player.inventory, te));
                 case 1:
-                    return new GUIAlloyer(new ContainerAlloyer(player.inventory, (TileEntityMetallurgySided) te));
+                    return new GUIAlloyer(new ContainerAlloyer(player.inventory, te));
             }
         }
         return null;

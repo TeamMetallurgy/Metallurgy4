@@ -1,12 +1,12 @@
 package com.teammetallurgy.metallurgy.machines;
 
-import com.teammetallurgy.metallurgy.Metallurgy;
-
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
+
+import com.teammetallurgy.metallurgy.Metallurgy;
 
 public abstract class BlockMetallurgy extends BlockContainer
 {

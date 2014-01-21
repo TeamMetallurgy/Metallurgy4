@@ -8,14 +8,12 @@ import net.minecraft.tileentity.TileEntityFurnace;
 
 import com.teammetallurgy.metallurgy.machines.ContainerMetallurgy;
 import com.teammetallurgy.metallurgy.machines.SlotMetallurgy;
-import com.teammetallurgy.metallurgy.machines.TileEntityMetallurgySided;
-import com.teammetallurgy.metallurgy.recipes.AlloyerRecipes;
-import com.teammetallurgy.metallurgy.recipes.CrusherRecipes;
+import com.teammetallurgy.metallurgy.machines.TileEntityMetallurgy;
 
 public class ContainerCrusher extends ContainerMetallurgy
 {
 
-    public ContainerCrusher(InventoryPlayer inventoryPlayer, TileEntityMetallurgySided tileEntity)
+    public ContainerCrusher(InventoryPlayer inventoryPlayer, TileEntityMetallurgy tileEntity)
     {
         this.tileEntity = tileEntity;
         addSlotToContainer(new SlotMetallurgy(tileEntity, 0, 80, 8));

@@ -1,12 +1,10 @@
 package com.teammetallurgy.metallurgy.machines.alloyer;
 
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntityFurnace;
 
 import com.teammetallurgy.metallurgy.machines.TileEntityMetallurgySided;
 import com.teammetallurgy.metallurgy.recipes.AlloyerRecipes;
-import com.teammetallurgy.metallurgy.recipes.CrusherRecipes;
 
 public class TileEntityAlloyer extends TileEntityMetallurgySided
 {

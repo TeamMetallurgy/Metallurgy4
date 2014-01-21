@@ -4,19 +4,16 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.tileentity.TileEntityFurnace;
 
 import com.teammetallurgy.metallurgy.machines.ContainerMetallurgy;
 import com.teammetallurgy.metallurgy.machines.SlotMetallurgy;
-import com.teammetallurgy.metallurgy.machines.TileEntityMetallurgySided;
-import com.teammetallurgy.metallurgy.recipes.AlloyerRecipes;
-import com.teammetallurgy.metallurgy.recipes.CrusherRecipes;
+import com.teammetallurgy.metallurgy.machines.TileEntityMetallurgy;
 
 public class ContainerAlloyer extends ContainerMetallurgy
 {
 
-    public ContainerAlloyer(InventoryPlayer inventoryPlayer, TileEntityMetallurgySided tileEntity)
+    public ContainerAlloyer(InventoryPlayer inventoryPlayer, TileEntityMetallurgy tileEntity)
     {
         this.tileEntity = tileEntity;
         addSlotToContainer(new SlotMetallurgy(tileEntity, 0, 62, 8));

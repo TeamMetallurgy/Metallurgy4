@@ -2,11 +2,11 @@ package com.teammetallurgy.metallurgy;
 
 import java.util.List;
 
-import com.teammetallurgy.metallurgy.recipes.CrusherRecipes;
-
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.oredict.OreDictionary;
+
+import com.teammetallurgy.metallurgy.recipes.CrusherRecipes;
 
 public class Utils
 {

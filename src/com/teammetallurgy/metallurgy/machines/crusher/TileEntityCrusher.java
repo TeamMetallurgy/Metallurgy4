@@ -1,6 +1,5 @@
 package com.teammetallurgy.metallurgy.machines.crusher;
 
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntityFurnace;
 
@@ -27,6 +26,7 @@ public class TileEntityCrusher extends TileEntityMetallurgySided
         return 64;
     }
 
+    @Override
     protected void processItem()
     {
         if (this.canProcessItem())
@@ -69,6 +69,7 @@ public class TileEntityCrusher extends TileEntityMetallurgySided
         }
     }
 
+    @Override
     protected boolean canProcessItem()
     {
         if (this.itemStacks[0] == null)
