@@ -1,0 +1,206 @@
+<!-- Originally built on BuildCraft build.xml -->
+<project name="Metallurgy" default="main">
+	<property environment="env"/>
+	<!-- Properties -->
+
+	<property name="build.dir" value="build"/>
+	<property name="src.dir" value="src"/>
+	<property name="libs.dir" value="libs"/>
+
+	
+	<property name="resources.dir" value="resources"/>
+
+	<property name="download.dir" value="download"/>
+
+	<property name="classes.dir" value="${build.dir}/classes"/>
+	<property name="jar.dir" value="bin"/>
+
+	<property name="forge.dir" value="${build.dir}/forge"/>
+	<property name="mcp.dir" value="${forge.dir}/mcp"/>
+
+	<property name="mcpsrc.dir" value="${mcp.dir}/src"/>
+
+	<property name="mc.version" value="1.6.4"/>
+	<property name="forge.version" value="9.11.1.965"/>
+
+    <property name="version.major" value="0"/>
+    <property name="version.minor" value="0"/>
+
+	<property name="forge.name" value="forge-${mc.version}-${forge.version}-src.zip"/>
+
+	<available property="forge-exists" file="${download.dir}/${forge.name}"/>
+	<available file=".git" type="dir" property="git.present"/>
+
+	<condition property="out-of-date">
+		<not>
+			<and>
+				<available file="${download.dir}/${forge.name}"/>
+				<available file="${mcpsrc.dir}"/>
+			</and>
+		</not>
+	</condition>
+
+	<mkdir dir="${download.dir}"/>
+
+	<!-- Targets -->
+
+	<!-- Clear build directory -->
+	<target name="clean">
+		<delete dir="${build.dir}"/>
+	</target>
+
+	<!-- Set full version -->
+	<target name="initialize-version" depends="version-provided,version-not-provided,git-revision">
+		<property name="project.version.full" value="${build.number}.${git.revision}"/>
+	</target>
+
+	<!-- Set unknown build number -->
+	<target name="version-not-provided" unless="env.BUILD_NUMBER">
+		<property name="build.number" value="DEV"/>
+	</target>
+
+	<!-- Set build number from environment -->
+	<target name="version-provided" if="env.BUILD_NUMBER">
+		<property name="build.number" value="${env.BUILD_NUMBER}"/>
+	</target>
+
+	<target name="git-revision" if="git.present">
+		<exec executable="git" dir="${src.dir}" outputproperty="git.revision" failifexecutionfails="false" errorproperty="">
+			<arg value="describe"/>
+			<arg line="--match &quot;[^(jenkins)]*&quot;"/>
+			<arg value="--tags"/>
+		</exec>
+		<loadresource property="git.clean.revision">
+			<propertyresource name="git.revision"/>
+			<filterchain>
+				<tokenfilter>
+					<filetokenizer/>
+					<replaceregex pattern="-[a-z0-9]+$" replace=""/>
+					<replacestring from="-" to="."/>
+				</tokenfilter>
+			</filterchain>
+		</loadresource>
+
+		<condition property="project.version" value="${git.clean.revision}" else="0.0.0">
+			<and>
+				<isset property="git.clean.revision"/>
+				<length string="${git.clean.revision}" trim="yes" length="0" when="greater"/>
+			</and>
+		</condition>
+		<condition property="project.complete.version" value="${git.revision}" else="0.0.0">
+			<and>
+				<isset property="git.revision"/>
+				<length string="${git.revision}" trim="yes" length="0" when="greater"/>
+			</and>
+		</condition>
+		<echo>version ${project.complete.version} (${project.version})</echo>
+	</target>
+
+	<!-- Download necessary files -->
+	<target name="download-files">
+		<antcall target="download-forge"/> 
+	</target>
+
+	<!-- Download forge (if it doesn't exist) -->
+	<target name="download-forge" unless="forge-exists">
+		<get src="http://files.minecraftforge.net/maven/net/minecraftforge/forge/${mc.version}-${forge.version}/${forge.name}" dest="${download.dir}" usetimestamp="True"/>
+	</target>
+
+	<!-- Setup mcp and forge -->
+	<target name="setup" depends="download-files,setup-forge">
+		
+		<delete failonerror="false">
+			<fileset dir="${libs.dir}" includes="*.zip"/>
+			<fileset dir="${libs.dir}" includes="*.jar"/>
+		</delete>	
+	</target>
+	
+	<target name="setup-forge" if="out-of-date">
+		<delete dir="${forge.dir}" failonerror="false"/>
+				
+		<unzip dest="${forge.dir}/.." src="${download.dir}/${forge.name}"/>
+
+		<!-- Fix executable permissions -->
+		<chmod dir="${forge.dir}" perm="ugo+rx" includes="**.sh"/>
+
+
+		<!-- Install forge -->
+		<exec dir="${forge.dir}" executable="${forge.dir}/fml/python/python_fml" osfamily="windows">
+			<arg line="install.py --no-assets"/>
+		</exec>
+
+		<exec dir="${forge.dir}" executable="python" osfamily="unix">
+			<arg line="install.py --no-assets"/>
+		</exec>
+	</target>
+
+	<target name="copy-src">
+		<!-- Copy sources -->
+		<copy todir="${mcpsrc.dir}/minecraft">
+			<fileset dir="${src.dir}"/>
+		</copy>
+	</target>
+
+	<target name="compile" depends="initialize-version,setup,copy-src">
+
+		<delete dir="${classes.dir}"/>
+		<mkdir dir="${classes.dir}"/>
+
+		<!-- Recompile -->
+		<exec dir="${mcp.dir}" executable="cmd" osfamily="windows">
+			<arg line="/c recompile.bat"/>
+		</exec>
+
+		<exec dir="${mcp.dir}" executable="sh" osfamily="unix">
+			<arg value="recompile.sh"/>
+		</exec>
+
+		<!-- Check for failure -->
+		<fail message="MCP failed to build">
+			<condition>
+				<resourcecontains resource="${mcp.dir}/logs/client_compile.log" substring="error:"/>
+			</condition>
+		</fail>
+
+	</target>
+
+	<target name="reobf" depends="compile">
+
+		<!-- Reobfuscate -->
+		<exec dir="${mcp.dir}" executable="cmd" osfamily="windows">
+			<arg line="/c reobfuscate_srg.bat"/>
+		</exec>
+
+		<exec dir="${mcp.dir}" executable="sh" osfamily="unix">
+			<arg value="reobfuscate_srg.sh"/>
+		</exec>
+
+		<!-- Copy classes -->
+		<copy todir="${classes.dir}">
+			<fileset dir="${mcp.dir}/reobf/minecraft"/>
+		</copy>
+
+		<!-- Copy resources -->
+		<copy todir="${classes.dir}">
+			<fileset dir="${resources.dir}" />
+		</copy>
+
+		<!-- Reset src dir to post-forge-install state -->
+		<delete dir="${mcpsrc.dir}/minecraft/com/teammetallurgy"/>
+		<delete dir="${classes.dir}/com/teammetallurgy"/>
+		
+	</target>
+
+	<!-- Package the compiled files -->
+	<target name="package" depends="reobf">
+
+		<delete dir="${jar.dir}"/>
+		<mkdir dir="${jar.dir}"/>
+		<jar destfile="${jar.dir}/Metallurgy4-${mc.version}-${project.version}.jar" basedir="${classes.dir}"/>
+
+	</target>
+
+	<!-- Default target to run -->
+	<target name="main" depends="package"/>
+
+</project>
