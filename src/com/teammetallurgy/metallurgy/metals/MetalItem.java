@@ -101,6 +101,9 @@ public class MetalItem extends Item
                 case 0:
                     itemType = ".dust";
                     break;
+                case 1:
+                    itemType = ".ingot";
+                    break;
             }
 
             String prefix = "item." + Metallurgy.MODID.toLowerCase() + ".";
