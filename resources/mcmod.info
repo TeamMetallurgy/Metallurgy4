@@ -1,0 +1,21 @@
+[
+{
+  "modid": "Metallurgy",
+  "name": "Metallurgy 4 Core",
+  "description": "The Metallurgy core",
+  "credits": "",
+  "logoFile": "",
+  "version": "0.0.1",
+  "mcversion": "1.6.4",
+  "url": "",
+  "updateUrl": "",
+  "authors": [
+    "Team Metallurgy"
+  ],
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]

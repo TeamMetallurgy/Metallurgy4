@@ -13,6 +13,8 @@
 	<property name="download.dir" value="download"/>
 
 	<property name="classes.dir" value="${build.dir}/classes"/>
+	<property name="deopf.dir" value="${build.dir}/deopf"/>
+	
 	<property name="jar.dir" value="bin"/>
 
 	<property name="forge.dir" value="${build.dir}/forge"/>
@@ -184,7 +186,7 @@
 		<copy todir="${classes.dir}">
 			<fileset dir="${resources.dir}" />
 		</copy>
-
+		
 		<!-- Reset src dir to post-forge-install state -->
 		<delete dir="${mcpsrc.dir}/minecraft/com/teammetallurgy"/>
 		<delete dir="${classes.dir}/com/teammetallurgy"/>
@@ -198,6 +200,17 @@
 		<mkdir dir="${jar.dir}"/>
 		<jar destfile="${jar.dir}/Metallurgy4-${mc.version}-${project.version}.jar" basedir="${classes.dir}"/>
 
+	</target>
+	
+	<target name="deobf" depends="reobf">
+		<copy todir="${deopf.dir}">
+			<fileset dir="${resources.dir}" />
+			<fileset dir="${mcp.dir}/bin/minecraft/">
+				<include name="com/**"/>
+			</fileset>
+		</copy>
+		
+		<jar destfile="${jar.dir}/Metallurgy4-${mc.version}-${project.version}-deobf.jar" basedir="${deopf.dir}"/>
 	</target>
 
 	<!-- Default target to run -->
