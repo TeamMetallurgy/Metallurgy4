@@ -3,3 +3,277 @@ itemGroup.Metallurgy.Blcoks=Metallurgy Blocks
 
 tile.crusher.name=Crusher
 container.crusher=Crusher
+
+tile.metallurgy.copper.ore.name=Copper Ore
+tile.metallurgy.copper.block.name=Copper Block
+tile.metallurgy.copper.brick.name=Copper Brick
+item.metallurgy.copper.dust.name=Copper Dust
+item.metallurgy.copper.ingot.name=Copper Ingot
+
+tile.metallurgy.tin.ore.name=Tin Ore
+tile.metallurgy.tin.block.name=Tin Block
+tile.metallurgy.tin.brick.name=Tin Brick
+item.metallurgy.tin.dust.name=Tin Dust
+item.metallurgy.tin.ingot.name=Tin Ingot
+
+tile.metallurgy.manganese.ore.name=Manganese Ore
+tile.metallurgy.manganese.block.name=Manganese Block
+tile.metallurgy.manganese.brick.name=Manganese Brick
+item.metallurgy.manganese.dust.name=Manganese Dust
+item.metallurgy.manganese.ingot.name=Manganese Ingot
+
+tile.metallurgy.bronze.block.name=Bronze Block
+tile.metallurgy.bronze.brick.name=Bronze Brick
+item.metallurgy.bronze.dust.name=Bronze Dust
+item.metallurgy.bronze.ingot.name=Bronze Ingot
+
+tile.metallurgy.hepatizon.block.name=Hepatizon Block
+tile.metallurgy.hepatizon.brick.name=Hepatizon Brick
+item.metallurgy.hepatizon.dust.name=Hepatizon Dust
+item.metallurgy.hepatizon.ingot.name=Hepatizon Ingot
+
+tile.metallurgy.damascus.steel.block.name=Damascus Steel Block
+tile.metallurgy.damascus.steel.brick.name=Damascus Steel Brick
+item.metallurgy.damascus.steel.dust.name=Damascus Steel Dust
+item.metallurgy.damascus.steel.ingot.name=Damascus Steel Ingot
+
+tile.metallurgy.angmallen.block.name=Angmallen Block
+tile.metallurgy.angmallen.brick.name=Angmallen Brick
+item.metallurgy.angmallen.dust.name=Angmallen Dust
+item.metallurgy.angmallen.ingot.name=Angmallen Ingot
+
+tile.metallurgy.steel.ore.name=Steel Ore
+tile.metallurgy.steel.block.name=Steel Block
+tile.metallurgy.steel.brick.name=Steel Brick
+item.metallurgy.steel.dust.name=Steel Dust
+item.metallurgy.steel.ingot.name=Steel Ingot
+
+tile.metallurgy.eximite.ore.name=Eximite Ore
+tile.metallurgy.eximite.block.name=Eximite Block
+tile.metallurgy.eximite.brick.name=Eximite Brick
+item.metallurgy.eximite.dust.name=Eximite Dust
+item.metallurgy.eximite.ingot.name=Eximite Ingot
+
+tile.metallurgy.meutoite.ore.name=Meutoite Ore
+tile.metallurgy.meutoite.block.name=Meutoite Block
+tile.metallurgy.meutoite.brick.name=Meutoite Brick
+item.metallurgy.meutoite.dust.name=Meutoite Dust
+item.metallurgy.meutoite.ingot.name=Meutoite Ingot
+
+tile.metallurgy.desichalkos.block.name=Desichalkos Block
+tile.metallurgy.desichalkos.brick.name=Desichalkos Brick
+item.metallurgy.desichalkos.dust.name=Desichalkos Dust
+item.metallurgy.desichalkos.ingot.name=Desichalkos Ingot
+
+tile.metallurgy.prometheum.ore.name=Prometheum Ore
+tile.metallurgy.prometheum.block.name=Prometheum Block
+tile.metallurgy.prometheum.brick.name=Prometheum Brick
+item.metallurgy.prometheum.dust.name=Prometheum Dust
+item.metallurgy.prometheum.ingot.name=Prometheum Ingot
+
+tile.metallurgy.deep.iron.ore.name=Deep Iron Ore
+tile.metallurgy.deep.iron.block.name=Deep Iron Block
+tile.metallurgy.deep.iron.brick.name=Deep Iron Brick
+item.metallurgy.deep.iron.dust.name=Deep Iron Dust
+item.metallurgy.deep.iron.ingot.name=Deep Iron Ingot
+
+tile.metallurgy.infuscolium.ore.name=Infuscolium Ore
+tile.metallurgy.infuscolium.block.name=Infuscolium Block
+tile.metallurgy.infuscolium.brick.name=Infuscolium Brick
+item.metallurgy.infuscolium.dust.name=Infuscolium Dust
+item.metallurgy.infuscolium.ingot.name=Infuscolium Ingot
+
+tile.metallurgy.black.steel.ore.name=Black Steel Ore
+tile.metallurgy.black.steel.block.name=Black Steel Block
+tile.metallurgy.black.steel.brick.name=Black Steel Brick
+item.metallurgy.black.steel.dust.name=Black Steel Dust
+item.metallurgy.black.steel.ingot.name=Black Steel Ingot
+
+tile.metallurgy.oureclase.ore.name=Oureclase Ore
+tile.metallurgy.oureclase.block.name=Oureclase Block
+tile.metallurgy.oureclase.brick.name=Oureclase Brick
+item.metallurgy.oureclase.dust.name=Oureclase Dust
+item.metallurgy.oureclase.ingot.name=Oureclase Ingot
+
+tile.metallurgy.astral.silver.ore.name=Astral Silver Ore
+tile.metallurgy.astral.silver.block.name=Astral Silver Block
+tile.metallurgy.astral.silver.brick.name=Astral Silver Brick
+item.metallurgy.astral.silver.dust.name=Astral Silver Dust
+item.metallurgy.astral.silver.ingot.name=Astral Silver Ingot
+
+tile.metallurgy.carmot.ore.name=Carmot Ore
+tile.metallurgy.carmot.block.name=Carmot Block
+tile.metallurgy.carmot.brick.name=Carmot Brick
+item.metallurgy.carmot.dust.name=Carmot Dust
+item.metallurgy.carmot.ingot.name=Carmot Ingot
+
+tile.metallurgy.mithril.ore.name=Mithril Ore
+tile.metallurgy.mithril.block.name=Mithril Block
+tile.metallurgy.mithril.brick.name=Mithril Brick
+item.metallurgy.mithril.dust.name=Mithril Dust
+item.metallurgy.mithril.ingot.name=Mithril Ingot
+
+tile.metallurgy.rubracium.ore.name=Rubracium Ore
+tile.metallurgy.rubracium.block.name=Rubracium Block
+tile.metallurgy.rubracium.brick.name=Rubracium Brick
+item.metallurgy.rubracium.dust.name=Rubracium Dust
+item.metallurgy.rubracium.ingot.name=Rubracium Ingot
+
+tile.metallurgy.quicksilver.block.name=Quicksilver Block
+tile.metallurgy.quicksilver.brick.name=Quicksilver Brick
+item.metallurgy.quicksilver.dust.name=Quicksilver Dust
+item.metallurgy.quicksilver.ingot.name=Quicksilver Ingot
+
+tile.metallurgy.haderoth.block.name=Haderoth Block
+tile.metallurgy.haderoth.brick.name=Haderoth Brick
+item.metallurgy.haderoth.dust.name=Haderoth Dust
+item.metallurgy.haderoth.ingot.name=Haderoth Ingot
+
+tile.metallurgy.orichalcum.ore.name=Orichalcum Ore
+tile.metallurgy.orichalcum.block.name=Orichalcum Block
+tile.metallurgy.orichalcum.brick.name=Orichalcum Brick
+item.metallurgy.orichalcum.dust.name=Orichalcum Dust
+item.metallurgy.orichalcum.ingot.name=Orichalcum Ingot
+
+tile.metallurgy.celenegil.block.name=Celenegil Block
+tile.metallurgy.celenegil.brick.name=Celenegil Brick
+item.metallurgy.celenegil.dust.name=Celenegil Dust
+item.metallurgy.celenegil.ingot.name=Celenegil Ingot
+
+tile.metallurgy.adamantine.ore.name=Adamantine Ore
+tile.metallurgy.adamantine.block.name=Adamantine Block
+tile.metallurgy.adamantine.brick.name=Adamantine Brick
+item.metallurgy.adamantine.dust.name=Adamantine Dust
+item.metallurgy.adamantine.ingot.name=Adamantine Ingot
+
+tile.metallurgy.atlarus.ore.name=Atlarus Ore
+tile.metallurgy.atlarus.block.name=Atlarus Block
+tile.metallurgy.atlarus.brick.name=Atlarus Brick
+item.metallurgy.atlarus.dust.name=Atlarus Dust
+item.metallurgy.atlarus.ingot.name=Atlarus Ingot
+
+tile.metallurgy.tartarite.block.name=Tartarite Block
+tile.metallurgy.tartarite.brick.name=Tartarite Brick
+item.metallurgy.tartarite.dust.name=Tartarite Dust
+item.metallurgy.tartarite.ingot.name=Tartarite Ingot
+
+tile.metallurgy.ignatius.ore.name=Ignatius Ore
+tile.metallurgy.ignatius.block.name=Ignatius Block
+tile.metallurgy.ignatius.brick.name=Ignatius Brick
+item.metallurgy.ignatius.dust.name=Ignatius Dust
+item.metallurgy.ignatius.ingot.name=Ignatius Ingot
+
+tile.metallurgy.shadow.iron.ore.name=Shadow Iron Ore
+tile.metallurgy.shadow.iron.block.name=Shadow Iron Block
+tile.metallurgy.shadow.iron.brick.name=Shadow Iron Brick
+item.metallurgy.shadow.iron.dust.name=Shadow Iron Dust
+item.metallurgy.shadow.iron.ingot.name=Shadow Iron Ingot
+
+tile.metallurgy.lemurite.ore.name=Lemurite Ore
+tile.metallurgy.lemurite.block.name=Lemurite Block
+tile.metallurgy.lemurite.brick.name=Lemurite Brick
+item.metallurgy.lemurite.dust.name=Lemurite Dust
+item.metallurgy.lemurite.ingot.name=Lemurite Ingot
+
+tile.metallurgy.midasium.ore.name=Midasium Ore
+tile.metallurgy.midasium.block.name=Midasium Block
+tile.metallurgy.midasium.brick.name=Midasium Brick
+item.metallurgy.midasium.dust.name=Midasium Dust
+item.metallurgy.midasium.ingot.name=Midasium Ingot
+
+tile.metallurgy.vyroxeres.ore.name=Vyroxeres Ore
+tile.metallurgy.vyroxeres.block.name=Vyroxeres Block
+tile.metallurgy.vyroxeres.brick.name=Vyroxeres Brick
+item.metallurgy.vyroxeres.dust.name=Vyroxeres Dust
+item.metallurgy.vyroxeres.ingot.name=Vyroxeres Ingot
+
+tile.metallurgy.ceruclase.ore.name=Ceruclase Ore
+tile.metallurgy.ceruclase.block.name=Ceruclase Block
+tile.metallurgy.ceruclase.brick.name=Ceruclase Brick
+item.metallurgy.ceruclase.dust.name=Ceruclase Dust
+item.metallurgy.ceruclase.ingot.name=Ceruclase Ingot
+
+tile.metallurgy.alduorite.ore.name=Alduorite Ore
+tile.metallurgy.alduorite.block.name=Alduorite Block
+tile.metallurgy.alduorite.brick.name=Alduorite Brick
+item.metallurgy.alduorite.dust.name=Alduorite Dust
+item.metallurgy.alduorite.ingot.name=Alduorite Ingot
+
+tile.metallurgy.kalendrite.ore.name=Kalendrite Ore
+tile.metallurgy.kalendrite.block.name=Kalendrite Block
+tile.metallurgy.kalendrite.brick.name=Kalendrite Brick
+item.metallurgy.kalendrite.dust.name=Kalendrite Dust
+item.metallurgy.kalendrite.ingot.name=Kalendrite Ingot
+
+tile.metallurgy.vulcanite.ore.name=Vulcanite Ore
+tile.metallurgy.vulcanite.block.name=Vulcanite Block
+tile.metallurgy.vulcanite.brick.name=Vulcanite Brick
+item.metallurgy.vulcanite.dust.name=Vulcanite Dust
+item.metallurgy.vulcanite.ingot.name=Vulcanite Ingot
+
+tile.metallurgy.sanguinite.ore.name=Sanguinite Ore
+tile.metallurgy.sanguinite.block.name=Sanguinite Block
+tile.metallurgy.sanguinite.brick.name=Sanguinite Brick
+item.metallurgy.sanguinite.dust.name=Sanguinite Dust
+item.metallurgy.sanguinite.ingot.name=Sanguinite Ingot
+
+tile.metallurgy.shadow.steel.block.name=Shadow Steel Block
+tile.metallurgy.shadow.steel.brick.name=Shadow Steel Brick
+item.metallurgy.shadow.steel.dust.name=Shadow Steel Dust
+item.metallurgy.shadow.steel.ingot.name=Shadow Steel Ingot
+
+tile.metallurgy.inolashite.block.name=Inolashite Block
+tile.metallurgy.inolashite.brick.name=Inolashite Brick
+item.metallurgy.inolashite.dust.name=Inolashite Dust
+item.metallurgy.inolashite.ingot.name=Inolashite Ingot
+
+tile.metallurgy.amordrine.block.name=Amordrine Block
+tile.metallurgy.amordrine.brick.name=Amordrine Brick
+item.metallurgy.amordrine.dust.name=Amordrine Dust
+item.metallurgy.amordrine.ingot.name=Amordrine Ingot
+
+tile.metallurgy.zinc.ore.name=Zinc Ore
+tile.metallurgy.zinc.block.name=Zinc Block
+tile.metallurgy.zinc.brick.name=Zinc Brick
+item.metallurgy.zinc.dust.name=Zinc Dust
+item.metallurgy.zinc.ingot.name=Zinc Ingot
+
+tile.metallurgy.silver.ore.name=Silver Ore
+tile.metallurgy.silver.block.name=Silver Block
+tile.metallurgy.silver.brick.name=Silver Brick
+item.metallurgy.silver.dust.name=Silver Dust
+item.metallurgy.silver.ingot.name=Silver Ingot
+
+tile.metallurgy.platinum.ore.name=Platinum Ore
+tile.metallurgy.platinum.block.name=Platinum Block
+tile.metallurgy.platinum.brick.name=Platinum Brick
+item.metallurgy.platinum.dust.name=Platinum Dust
+item.metallurgy.platinum.ingot.name=Platinum Ingot
+
+tile.metallurgy.brass.block.name=Brass Block
+tile.metallurgy.brass.brick.name=Brass Brick
+item.metallurgy.brass.dust.name=Brass Dust
+item.metallurgy.brass.ingot.name=Brass Ingot
+
+tile.metallurgy.electrum.block.name=Electrum Block
+tile.metallurgy.electrum.brick.name=Electrum Brick
+item.metallurgy.electrum.dust.name=Electrum Dust
+item.metallurgy.electrum.ingot.name=Electrum Ingot
+
+tile.metallurgy.sulfur.ore.name=Sulfur Ore
+item.metallurgy.sulfur.name=Sulfur
+
+tile.metallurgy.phosphorite.ore.name=Phosphorite Ore
+item.metallurgy.phosphorus.name=Phosphorus
+
+tile.metallurgy.saltpeter.ore.name=Saltpeter Ore
+item.metallurgy.saltpeter.name=Saltpeter
+
+tile.metallurgy.magnesium.ore.name=Magnesium Ore
+item.metallurgy.magnesium.name=Magnesium
+
+tile.metallurgy.bitumen.ore.name=Bitumen Ore
+item.metallurgy.bitumen.name=Bitumen
+
+tile.metallurgy.potash.ore.name=Potash Ore
+item.metallurgy.potash.name=Potash
