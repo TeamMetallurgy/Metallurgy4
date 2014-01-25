@@ -29,10 +29,14 @@ public class MetalSet
 {
     private String name;
     private Metal[] metals = null;
+    
+    private Metal defaultInfo;
+    private String setTag;
 
     public MetalSet(String setName)
     {
         this.name = setName;
+        this.setTag = name.substring(0, 1).toUpperCase() + name.substring(1);
     }
 
     public void load()
@@ -63,35 +67,17 @@ public class MetalSet
         int ingotId = 0;
         
         // Getting Default IDs
-        Metal defaultInfo = getDefaultInfo();
+        defaultInfo = getDefaultInfo();
         
-        if (defaultInfo.ids.get("ore") != null)
-        {
-            oreId = defaultInfo.ids.get("ore");
-        }
+        // Getting Block IDs
+        oreId = getSetConfigBlockId("ore");
+        blockId =  getSetConfigBlockId("block");
+        brickId = getSetConfigBlockId("brick");
         
-        if (defaultInfo.ids.get("block") != null)
-        {
-            blockId = defaultInfo.ids.get("block");
-        }
+        // Getting Item IDs
+        dustId = getSetConfigItemId("dust");
+        ingotId = getSetConfigItemId("ingot");
         
-        if (defaultInfo.ids.get("brick") != null)
-        {
-            brickId = defaultInfo.ids.get("brick");
-        }
-        
-        if (defaultInfo.ids.get("dust") != null)
-        {
-            dustId = defaultInfo.ids.get("dust");
-        }
-       
-        if (defaultInfo.ids.get("ingot") != null)
-        {
-            ingotId = defaultInfo.ids.get("ingot");
-        }
-
-        String setTag = name.substring(0, 1).toUpperCase() + name.substring(1);
-
         for (Metal metal : metals)
         {
             
@@ -351,5 +337,45 @@ public class MetalSet
         }
     	
         return null;
+    }
+    
+    /**
+     * Retrieves the default MetalSet Block Id from configuration file using an identifier.
+     * 
+     * @param identifier
+     *          Identifier, Like ore, block and brick.
+     * @return
+     *          Block ID, in case the default info is invalid it would return 0.
+     */
+    private int getSetConfigBlockId(String identifier)
+    {
+        if (defaultInfo.ids.get(identifier) != null)
+        {
+            return ConfigHandler.getBlock(identifier + setTag, defaultInfo.ids.get(identifier));
+        }
+        else
+        {
+            return 0;
+        }
+    }
+    
+    /**
+     * Retrieves the default MetalSet Item Id from configuration file using an identifier.
+     * 
+     * @param identifier
+     *          Identifier, Like dust and ingot.
+     * @return
+     *          Item ID, in case the default info is invalid it would return 0.
+     */
+    private int getSetConfigItemId(String identifier)
+    {
+        if (defaultInfo.ids.get(identifier) != null)
+        {
+            return ConfigHandler.getItem(identifier + setTag, defaultInfo.ids.get(identifier));
+        }
+        else
+        {
+            return 0;
+        }
     }
 }
