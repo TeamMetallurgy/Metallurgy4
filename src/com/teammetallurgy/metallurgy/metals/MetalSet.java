@@ -102,10 +102,6 @@ public class MetalSet
 
             if (metal.ids.get("ore") != null)
             {
-
-                try
-                {
-                    
                     String identifier = "ore";
                     
                     if (oreId == 0)
@@ -122,20 +118,10 @@ public class MetalSet
 
                         GameRegistry.registerWorldGenerator(worldGen);
                     }
-
-                }
-                catch (Exception e)
-                {
-                    e.printStackTrace();
-                }
-
             }
 
             if (metal.ids.get("block") != null)
             {
-
-                try
-                {
                     String identifier = "block";
                     
                     if (blockId == 0)
@@ -145,20 +131,10 @@ public class MetalSet
 
                     block = createBlock(blockId, metaId, metal.blockLvl, tag, texture, identifier);
                     block.addSubBlock(metaId, metal.getName(), 1, texture + "_" + identifier);
-
-                }
-                catch (Exception e)
-                {
-                    e.printStackTrace();
-                }
-
             }
 
             if (metal.ids.get("brick") != null)
             {
-
-                try
-                {
                     String identifier = "brick";
                     
                     if (brickId == 0)
@@ -168,20 +144,12 @@ public class MetalSet
 
                     brick = createBlock(brickId, metaId, metal.blockLvl, tag, texture, identifier);
                     brick.addSubBlock(metaId, metal.getName(), 2, texture + "_" + identifier);
-
-                }
-                catch (Exception e)
-                {
-                    e.printStackTrace();
-                }
-
             }
 
             if (metal.ids.get("dust") != null)
             {
                 String identifier = "dust";
-                try
-                {
+
                     if (dustId == 0)
                     {
                         dustId = ConfigHandler.getItem(identifier + setTag, metal.ids.get(identifier));
@@ -192,17 +160,11 @@ public class MetalSet
 
                     registerItem(dust, tag, metaId, identifier);
 
-                }
-                catch (Exception e)
-                {
-                    e.printStackTrace();
-                }
             }
 
             if (metal.ids.get("ingot") != null)
             {
-                try
-                {
+
                     String identifier = "ingot";
 
                     if (ingotId == 0)
@@ -215,11 +177,6 @@ public class MetalSet
 
                     registerItem(ingot, tag, metaId, identifier);
 
-                }
-                catch (Exception e)
-                {
-                    e.printStackTrace();
-                }
             }
 
             if (metal.alloyRecipe != null && metal.alloyRecipe.length == 2)
