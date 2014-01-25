@@ -102,81 +102,79 @@ public class MetalSet
 
             if (metal.ids.get("ore") != null)
             {
-                    String identifier = "ore";
-                    
-                    if (oreId == 0)
-                    {
-                        oreId = ConfigHandler.getBlock(identifier + setTag, metal.ids.get(identifier));
-                    }
-                    
-                    ore = createBlock(oreId, metaId, metal.blockLvl, tag, texture, identifier);
-                    ore.addSubBlock(metaId, metal.getName(), 0, texture + "_" + identifier);
+                String identifier = "ore";
+                
+                if (oreId == 0)
+                {
+                    oreId = ConfigHandler.getBlock(identifier + setTag, metal.ids.get(identifier));
+                }
+                
+                ore = createBlock(oreId, metaId, metal.blockLvl, tag, texture, identifier);
+                ore.addSubBlock(metaId, metal.getName(), 0, texture + "_" + identifier);
 
-                    if (ConfigHandler.generates(tag))
-                    {
-                        WorldGenMetals worldGen = new WorldGenMetals(oreId, metaId, metal.generation, metal.dimensions);
+                if (ConfigHandler.generates(tag))
+                {
+                    WorldGenMetals worldGen = new WorldGenMetals(oreId, metaId, metal.generation, metal.dimensions);
 
-                        GameRegistry.registerWorldGenerator(worldGen);
-                    }
+                    GameRegistry.registerWorldGenerator(worldGen);
+                }
             }
 
             if (metal.ids.get("block") != null)
             {
-                    String identifier = "block";
-                    
-                    if (blockId == 0)
-                    {
-                        blockId = ConfigHandler.getBlock(identifier + setTag, metal.ids.get(identifier));
-                    }
+                String identifier = "block";
+                
+                if (blockId == 0)
+                {
+                    blockId = ConfigHandler.getBlock(identifier + setTag, metal.ids.get(identifier));
+                }
 
-                    block = createBlock(blockId, metaId, metal.blockLvl, tag, texture, identifier);
-                    block.addSubBlock(metaId, metal.getName(), 1, texture + "_" + identifier);
+                block = createBlock(blockId, metaId, metal.blockLvl, tag, texture, identifier);
+                block.addSubBlock(metaId, metal.getName(), 1, texture + "_" + identifier);
             }
 
             if (metal.ids.get("brick") != null)
             {
-                    String identifier = "brick";
-                    
-                    if (brickId == 0)
-                    {
-                        brickId = ConfigHandler.getBlock(identifier + setTag, metal.ids.get(identifier));
-                    }
+                String identifier = "brick";
+                
+                if (brickId == 0)
+                {
+                    brickId = ConfigHandler.getBlock(identifier + setTag, metal.ids.get(identifier));
+                }
 
-                    brick = createBlock(brickId, metaId, metal.blockLvl, tag, texture, identifier);
-                    brick.addSubBlock(metaId, metal.getName(), 2, texture + "_" + identifier);
+                brick = createBlock(brickId, metaId, metal.blockLvl, tag, texture, identifier);
+                brick.addSubBlock(metaId, metal.getName(), 2, texture + "_" + identifier);
             }
 
             if (metal.ids.get("dust") != null)
             {
                 String identifier = "dust";
 
-                    if (dustId == 0)
-                    {
-                        dustId = ConfigHandler.getItem(identifier + setTag, metal.ids.get(identifier));
-                    }
+                if (dustId == 0)
+                {
+                    dustId = ConfigHandler.getItem(identifier + setTag, metal.ids.get(identifier));
+                }
 
-                    dust = getMetalItem(dustId);
-                    dust.addSubItem(metaId, metal.getName(), 0, texture + "_" + identifier);
+                dust = getMetalItem(dustId);
+                dust.addSubItem(metaId, metal.getName(), 0, texture + "_" + identifier);
 
-                    registerItem(dust, tag, metaId, identifier);
+                registerItem(dust, tag, metaId, identifier);
 
             }
 
             if (metal.ids.get("ingot") != null)
             {
+                String identifier = "ingot";
 
-                    String identifier = "ingot";
+                if (ingotId == 0)
+                {
+                    ingotId = ConfigHandler.getItem(identifier + setTag, metal.ids.get(identifier));
+                }
 
-                    if (ingotId == 0)
-                    {
-                        ingotId = ConfigHandler.getItem(identifier + setTag, metal.ids.get(identifier));
-                    }
+                ingot = getMetalItem(ingotId);
+                ingot.addSubItem(metaId, metal.getName(), 1, texture + "_" + identifier);
 
-                    ingot = getMetalItem(ingotId);
-                    ingot.addSubItem(metaId, metal.getName(), 1, texture + "_" + identifier);
-
-                    registerItem(ingot, tag, metaId, identifier);
-
+                registerItem(ingot, tag, metaId, identifier);
             }
 
             if (metal.alloyRecipe != null && metal.alloyRecipe.length == 2)
