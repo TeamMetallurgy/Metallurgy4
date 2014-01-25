@@ -32,6 +32,12 @@ public class MetalSet
     
     private Metal defaultInfo;
     private String setTag;
+    
+    private int oreId = 0;
+    private int blockId = 0;
+    private int brickId = 0;
+    private int dustId = 0;
+    private int ingotId = 0;
 
     public MetalSet(String setName)
     {
@@ -59,12 +65,6 @@ public class MetalSet
         }
 
         metals = new Gson().fromJson(reader, Metal[].class);
-        
-        int oreId = 0;
-        int blockId = 0;
-        int brickId = 0;
-        int dustId = 0;
-        int ingotId = 0;
         
         // Getting Default IDs
         defaultInfo = getDefaultInfo();
@@ -105,25 +105,20 @@ public class MetalSet
 
                 try
                 {
+                    
+                    String identifier = "ore";
+                    
                     if (oreId == 0)
                     {
-                        oreId = ConfigHandler.getBlock("ore" + setTag, metal.ids.get("ore"));
+                        oreId = ConfigHandler.getBlock(identifier + setTag, metal.ids.get(identifier));
                     }
-
-                    ore = getMetalBlock(oreId);
-
-                    ore.addSubBlock(metaId, metal.getName(), 0, texture + "_ore");
-                    MinecraftForge.setBlockHarvestLevel(ore, metaId, "pickaxe", metal.blockLvl);
-
-                    OreDictionary.registerOre("ore" + tag, new ItemStack(ore, 1, metaId));
-                    if (GameRegistry.findUniqueIdentifierFor(ore) == null)
-                    {
-                        GameRegistry.registerBlock(ore, ItemMetalBlock.class, this.name + ".ore");
-                    }
+                    
+                    ore = createBlock(oreId, metaId, metal.blockLvl, tag, texture, identifier);
+                    ore.addSubBlock(metaId, metal.getName(), 0, texture + "_" + identifier);
 
                     if (ConfigHandler.generates(tag))
                     {
-                        WorldGenMetals worldGen = new WorldGenMetals(metal.ids.get("ore"), metaId, metal.generation, metal.dimensions);
+                        WorldGenMetals worldGen = new WorldGenMetals(oreId, metaId, metal.generation, metal.dimensions);
 
                         GameRegistry.registerWorldGenerator(worldGen);
                     }
@@ -141,21 +136,15 @@ public class MetalSet
 
                 try
                 {
+                    String identifier = "block";
+                    
                     if (blockId == 0)
                     {
-                        blockId = ConfigHandler.getBlock("block" + setTag, metal.ids.get("block"));
+                        blockId = ConfigHandler.getBlock(identifier + setTag, metal.ids.get(identifier));
                     }
 
-                    block = getMetalBlock(blockId);
-
-                    block.addSubBlock(metaId, metal.getName(), 1, texture + "_block");
-                    MinecraftForge.setBlockHarvestLevel(block, metaId, "pickaxe", metal.blockLvl);
-
-                    OreDictionary.registerOre("block" + tag, new ItemStack(block, 1, metaId));
-                    if (GameRegistry.findUniqueIdentifierFor(block) == null)
-                    {
-                        GameRegistry.registerBlock(block, ItemMetalBlock.class, this.name + ".block");
-                    }
+                    block = createBlock(blockId, metaId, metal.blockLvl, tag, texture, identifier);
+                    block.addSubBlock(metaId, metal.getName(), 1, texture + "_" + identifier);
 
                 }
                 catch (Exception e)
@@ -170,19 +159,15 @@ public class MetalSet
 
                 try
                 {
+                    String identifier = "brick";
+                    
                     if (brickId == 0)
                     {
-                        brickId = ConfigHandler.getBlock("brick" + setTag, metal.ids.get("brick"));
+                        brickId = ConfigHandler.getBlock(identifier + setTag, metal.ids.get(identifier));
                     }
 
-                    brick = getMetalBlock(brickId);
-                    brick.addSubBlock(metaId, metal.getName(), 2, texture + "_brick");
-                    MinecraftForge.setBlockHarvestLevel(brick, metaId, "pickaxe", metal.blockLvl);
-                    OreDictionary.registerOre("brick" + tag, new ItemStack(brick, 1, metaId));
-                    if (GameRegistry.findUniqueIdentifierFor(brick) == null)
-                    {
-                        GameRegistry.registerBlock(brick, ItemMetalBlock.class, this.name + ".brick");
-                    }
+                    brick = createBlock(brickId, metaId, metal.blockLvl, tag, texture, identifier);
+                    brick.addSubBlock(metaId, metal.getName(), 2, texture + "_" + identifier);
 
                 }
                 catch (Exception e)
@@ -280,7 +265,7 @@ public class MetalSet
         }
     }
 
-    private MetalItem getMetalItem(int id) throws Exception
+    private MetalItem getMetalItem(int id)
     {
         MetalItem metalItem;
         Item item = Item.itemsList[id + 256];
@@ -295,12 +280,12 @@ public class MetalSet
         }
         else
         {
-            throw new Exception("Invalid Metal Block");
+            throw new RuntimeException("Invalid metal item, possibly an ID conflict, Item ID: " + id);
         }
 
     }
 
-    private MetalBlock getMetalBlock(int id) throws Exception
+    private MetalBlock getMetalBlock(int id)
     {
         MetalBlock metalBlock;
         Block block = Block.blocksList[id];
@@ -315,9 +300,26 @@ public class MetalSet
         }
         else
         {
-            throw new Exception("Invalid Metal Block");
+            throw new RuntimeException("Invalid metal block, possibly an ID conflict, Block ID: " + id);
         }
 
+    }
+    
+    private MetalBlock createBlock (int id, int meta, int harvestLvl,
+            String tag, String texture, String identifier)
+    {
+        MetalBlock metalBlock = getMetalBlock(id);
+
+        MinecraftForge.setBlockHarvestLevel(metalBlock, meta, "pickaxe", harvestLvl);
+
+        OreDictionary.registerOre(identifier + tag, new ItemStack(metalBlock, 1, meta));
+        
+        if (GameRegistry.findUniqueIdentifierFor(metalBlock) == null)
+        {
+            GameRegistry.registerBlock(metalBlock, ItemMetalBlock.class, this.name + "." + identifier);
+        }
+        
+        return metalBlock;
     }
     
     /**
