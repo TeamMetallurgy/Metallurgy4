@@ -1,5 +1,17 @@
 [
 	{
+		"type":"Default",
+		"ids":
+		{
+			"ore":912,
+			"block":913,
+			"brick":914,
+			"item":26650,
+			"dust":26651,
+			"ingot":26652
+		}
+	},
+	{
 		"name":"Zinc",
 		"type":"Catalyst",
 		"ids":

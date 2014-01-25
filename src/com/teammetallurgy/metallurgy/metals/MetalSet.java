@@ -28,6 +28,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class MetalSet
 {
     private String name;
+    private Metal[] metals = null;
 
     public MetalSet(String setName)
     {
@@ -41,7 +42,6 @@ public class MetalSet
         URL resource = Resources.getResource(path + name + ".json");
 
         Reader reader = null;
-        Metal[] metals = null;
         try
         {
             InputStream dataStream = resource.openStream();
@@ -55,18 +55,51 @@ public class MetalSet
         }
 
         metals = new Gson().fromJson(reader, Metal[].class);
-
+        
         int oreId = 0;
         int blockId = 0;
         int brickId = 0;
         int dustId = 0;
         int ingotId = 0;
+        
+        // Getting Default IDs
+        Metal defaultInfo = getDefaultInfo();
+        
+        if (defaultInfo.ids.get("ore") != null)
+        {
+            oreId = defaultInfo.ids.get("ore");
+        }
+        
+        if (defaultInfo.ids.get("block") != null)
+        {
+            blockId = defaultInfo.ids.get("block");
+        }
+        
+        if (defaultInfo.ids.get("brick") != null)
+        {
+            brickId = defaultInfo.ids.get("brick");
+        }
+        
+        if (defaultInfo.ids.get("dust") != null)
+        {
+            dustId = defaultInfo.ids.get("dust");
+        }
+       
+        if (defaultInfo.ids.get("ingot") != null)
+        {
+            ingotId = defaultInfo.ids.get("ingot");
+        }
 
         String setTag = name.substring(0, 1).toUpperCase() + name.substring(1);
 
         for (Metal metal : metals)
         {
-
+            
+            if (metal.type == Metal.MetalType.Default)
+            {
+                continue;
+            }
+            
             MetalBlock ore;
             MetalBlock block;
             MetalBlock brick;
@@ -299,5 +332,24 @@ public class MetalSet
             throw new Exception("Invalid Metal Block");
         }
 
+    }
+    
+    /**
+     * Gets the default information from metal from JSON
+     * 
+     * @return
+     *          Default info, if not found returns null
+     */
+    public Metal getDefaultInfo() {
+    	
+        for (Metal metal : metals)
+        {
+            if ( metal.type == Metal.MetalType.Default)
+            {
+                return metal;
+            }
+        }
+    	
+        return null;
     }
 }

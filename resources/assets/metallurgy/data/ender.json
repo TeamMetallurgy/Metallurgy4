@@ -1,5 +1,17 @@
 [
 	{
+		"type":"Default",
+		"ids":
+		{
+			"ore":903,
+			"block":904,
+			"brick":905,
+			"item":28350,
+			"dust":26351,
+			"ingot":26352
+		}
+	},
+	{
 		"name":"Eximite",
 		"type":"Ore",
 		"ids":

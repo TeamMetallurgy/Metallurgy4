@@ -1,5 +1,17 @@
 [
 	{
+		"type":"Default",
+		"ids":
+		{
+			"ore":909,
+			"block":910,
+			"brick":911,
+			"item":26900,
+			"dust":26901,
+			"ingot":26902
+		}
+	},
+	{
 		"name":"Ignatius",
 		"type":"Ore",
 		"ids":

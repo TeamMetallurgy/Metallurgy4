@@ -1,5 +1,13 @@
 [
 	{
+		"type":"Default",
+		"ids":
+		{
+			"ore":915,
+			"item":29000
+		}
+	},
+	{
 		"name":"Sulfur",
 		"type":"Drop",
 		"ids":

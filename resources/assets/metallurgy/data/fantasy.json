@@ -1,5 +1,17 @@
 [
 	{
+		"type":"Default",
+		"ids":
+		{
+			"ore":906,
+			"block":907,
+			"brick":908,
+			"item":27550,
+			"dust":27551,
+			"ingot":27552
+		}
+	},
+	{
 		"name":"Prometheum",
 		"type":"Ore",
 		"ids":

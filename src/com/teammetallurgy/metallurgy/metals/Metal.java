@@ -6,7 +6,7 @@ public class Metal
 {
     public enum MetalType
     {
-        Respawn, Ore, Catalyst, Alloy, Drop
+        Respawn, Ore, Catalyst, Alloy, Drop, Default
     };
 
     private String name;

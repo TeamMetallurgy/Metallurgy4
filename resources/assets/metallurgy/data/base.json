@@ -1,5 +1,17 @@
 [
 	{
+		"type":"Default",
+		"ids":
+		{
+			"ore":900,
+			"block":901,
+			"brick":902,
+			"item":26250,
+			"dust":26251,
+			"ingot":26252
+		}
+	},
+	{
 		"name":"Copper",
 		"type":"Ore",
 		"ids":
