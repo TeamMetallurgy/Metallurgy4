@@ -171,7 +171,7 @@ public class MetalSet
                 brick.addSubBlock(metaId, metal.getName(), 2, texture + "_" + identifier);
             }
 
-            if (metal.ids.get("dust") != null)
+            if (metal.ids.get("dust") != null && metal.type != Metal.MetalType.Drop)
             {
                 String identifier = "dust";
                 
@@ -189,7 +189,7 @@ public class MetalSet
 
             }
 
-            if (metal.ids.get("ingot") != null)
+            if (metal.ids.get("ingot") != null && metal.type != Metal.MetalType.Drop)
             {
                 String identifier = "ingot";
 
@@ -219,14 +219,18 @@ public class MetalSet
 
                 item = getMetalItem(itemId);
                 
+                // Some items have different names than the ores
                 String itemName = metal.dropName;
+                String itemTexture = metal.dropName.replace(" ", "_");
+                itemTexture = Metallurgy.MODID + ":" + name + "/" + itemTexture.toLowerCase();
                 
                 if (itemName.compareTo("") == 0) 
                 {
                     itemName = metal.getName();
+                    itemTexture = texture;
                 }
                 
-                item.addSubItem(metaId, itemName, 2, texture + "_" + identifier);
+                item.addSubItem(metaId, itemName, 2, itemTexture);
 
                 registerItem(item, tag, metaId, identifier);
 
