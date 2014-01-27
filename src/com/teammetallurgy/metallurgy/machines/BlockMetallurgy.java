@@ -4,6 +4,7 @@ import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 import com.teammetallurgy.metallurgy.Metallurgy;
@@ -33,6 +34,16 @@ public abstract class BlockMetallurgy extends BlockContainer
         }
 
         return true;
+    }
+
+    @Override
+    public void breakBlock(World world, int x, int y, int z, int oldID, int oldMeta)
+    {
+        TileEntityMetallurgy blockTileEntity = (TileEntityMetallurgy) world.getBlockTileEntity(x, y, z);
+        if (blockTileEntity != null)
+        {
+            blockTileEntity.dropContents();
+        }
     }
 
     /**

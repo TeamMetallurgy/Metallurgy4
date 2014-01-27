@@ -80,8 +80,9 @@ public class TileEntityAlloyer extends TileEntityMetallurgySided
         }
     }
 
-    private ItemStack getSmeltingResult(ItemStack itemStack, ItemStack otherItemStack)
+    @Override
+    protected ItemStack getSmeltingResult(ItemStack... itemStack)
     {
-        return AlloyerRecipes.getInstance().getAlloyResult(itemStack, otherItemStack);
+        return AlloyerRecipes.getInstance().getAlloyResult(itemStack[0], itemStack[1]);
     }
 }

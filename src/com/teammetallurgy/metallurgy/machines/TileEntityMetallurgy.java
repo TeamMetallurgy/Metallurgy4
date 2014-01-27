@@ -1,24 +1,33 @@
 package com.teammetallurgy.metallurgy.machines;
 
+import java.util.Random;
+
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.network.INetworkManager;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.Packet132TileEntityData;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.tileentity.TileEntityFurnace;
+import net.minecraft.world.World;
 
 public abstract class TileEntityMetallurgy extends TileEntity implements IInventory
 {
 
     protected static final int MAXCOOKTIME = 200;
+
     protected ItemStack[] itemStacks;
     public int burnTime;
     public int currentItemBurnTime;
     public int cookTime;
+
+    private Random random = new Random();
 
     @Override
     public Packet getDescriptionPacket()
@@ -319,5 +328,45 @@ public abstract class TileEntityMetallurgy extends TileEntity implements IInvent
         }
 
         return retVal;
+    }
+
+    abstract protected ItemStack getSmeltingResult(ItemStack... itemStack);
+
+    public void dropContents()
+    {
+
+        World world = this.worldObj;
+        for (ItemStack stack : this.itemStacks)
+        {
+            if (stack != null)
+            {
+                float f = this.random.nextFloat() * 0.8F + 0.1F;
+                float f1 = this.random.nextFloat() * 0.8F + 0.1F;
+                EntityItem entityitem;
+
+                for (float f2 = this.random.nextFloat() * 0.8F + 0.1F; stack.stackSize > 0; world.spawnEntityInWorld(entityitem))
+                {
+                    int k1 = this.random.nextInt(21) + 10;
+
+                    if (k1 > stack.stackSize)
+                    {
+                        k1 = stack.stackSize;
+                    }
+
+                    stack.stackSize -= k1;
+                    entityitem = new EntityItem(world, (double) ((float) this.xCoord + f), (double) ((float) this.yCoord + f1), (double) ((float) this.zCoord + f2), new ItemStack(stack.itemID, k1, stack.getItemDamage()));
+                    float f3 = 0.05F;
+                    entityitem.motionX = (double) ((float) this.random.nextGaussian() * f3);
+                    entityitem.motionY = (double) ((float) this.random.nextGaussian() * f3 + 0.2F);
+                    entityitem.motionZ = (double) ((float) this.random.nextGaussian() * f3);
+
+                    if (stack.hasTagCompound())
+                    {
+                        entityitem.getEntityItem().setTagCompound((NBTTagCompound) stack.getTagCompound().copy());
+                    }
+                }
+            }
+        }
+
     }
 }

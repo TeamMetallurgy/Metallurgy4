@@ -9,6 +9,8 @@ import com.teammetallurgy.metallurgy.machines.alloyer.ContainerAlloyer;
 import com.teammetallurgy.metallurgy.machines.alloyer.GUIAlloyer;
 import com.teammetallurgy.metallurgy.machines.crusher.ContainerCrusher;
 import com.teammetallurgy.metallurgy.machines.crusher.GUICrusher;
+import com.teammetallurgy.metallurgy.machines.forge.ContainerForge;
+import com.teammetallurgy.metallurgy.machines.forge.GUIForge;
 
 import cpw.mods.fml.common.network.IGuiHandler;
 
@@ -29,6 +31,8 @@ public class GUIHandler implements IGuiHandler
                     return new ContainerCrusher(player.inventory, te);
                 case 1:
                     return new ContainerAlloyer(player.inventory, te);
+                case 2:
+                    return new ContainerForge(player.inventory, te);
             }
         }
         return null;
@@ -48,6 +52,8 @@ public class GUIHandler implements IGuiHandler
                     return new GUICrusher(new ContainerCrusher(player.inventory, te));
                 case 1:
                     return new GUIAlloyer(new ContainerAlloyer(player.inventory, te));
+                case 2:
+                    return new GUIForge(new ContainerForge(player.inventory, te));
             }
         }
         return null;

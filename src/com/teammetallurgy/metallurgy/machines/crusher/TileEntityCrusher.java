@@ -85,9 +85,10 @@ public class TileEntityCrusher extends TileEntityMetallurgySided
         }
     }
 
-    private ItemStack getSmeltingResult(ItemStack itemStack)
+    @Override
+    protected ItemStack getSmeltingResult(ItemStack... itemStack)
     {
-        return CrusherRecipes.getInstance().getCrushingResult(itemStack);
+        return CrusherRecipes.getInstance().getCrushingResult(itemStack[0]);
     }
 
     @Override

@@ -11,6 +11,8 @@ import com.teammetallurgy.metallurgy.machines.alloyer.BlockAlloyer;
 import com.teammetallurgy.metallurgy.machines.alloyer.TileEntityAlloyer;
 import com.teammetallurgy.metallurgy.machines.crusher.BlockCrusher;
 import com.teammetallurgy.metallurgy.machines.crusher.TileEntityCrusher;
+import com.teammetallurgy.metallurgy.machines.forge.BlockForge;
+import com.teammetallurgy.metallurgy.machines.forge.TileEntityForge;
 import com.teammetallurgy.metallurgy.metals.MetalSet;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -19,6 +21,7 @@ public class BlockList
 {
     private static Block crusher;
     private static Block alloyer;
+    private static Block forge;
 
     private static Map<String, MetalSet> setList = new HashMap<String, MetalSet>();
 
@@ -40,6 +43,14 @@ public class BlockList
 
         registerBlock(alloyer, blockName);
         registerTileEntity(TileEntityAlloyer.class, blockName);
+
+        blockName = "forge";
+        id = ConfigHandler.getBlock(blockName, defaultId++);
+
+        forge = new BlockForge(id).setUnlocalizedName(blockName);
+
+        registerBlock(forge, blockName);
+        registerTileEntity(TileEntityForge.class, blockName);
 
         String[] sets = { "base", "ender", "fantasy", "nether", "precious", "utility" };
 

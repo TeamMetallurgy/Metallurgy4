@@ -4,6 +4,12 @@ itemGroup.Metallurgy.Blcoks=Metallurgy Blocks
 tile.crusher.name=Crusher
 container.crusher=Crusher
 
+tile.alloyer.name=Alloyer
+container.alloyer=Alloyer
+
+tile.forge.name=Forge
+container.forge=Forge
+
 tile.metallurgy.copper.ore.name=Copper Ore
 tile.metallurgy.copper.block.name=Copper Block
 tile.metallurgy.copper.brick.name=Copper Brick
