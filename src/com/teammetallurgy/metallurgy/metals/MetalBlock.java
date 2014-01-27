@@ -3,6 +3,7 @@ package com.teammetallurgy.metallurgy.metals;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -41,7 +42,7 @@ public class MetalBlock extends Block
      *            Meta/Damage ID
      * @param name
      *            Block name
-     * @param type
+     * @param blockType
      *            0:Ore, 1:Block, 2:Brick
      * @param texture
      *            Texture
@@ -58,7 +59,7 @@ public class MetalBlock extends Block
      *            Meta/Damage ID
      * @param name
      *            Block Name
-     * @param type
+     * @param blockType
      *            0:Ore, 1:Block, 2:Brick
      * @param texture
      *            Texture
@@ -117,6 +118,19 @@ public class MetalBlock extends Block
 
     }
 
+    @Override
+    public int idDropped (int meta, Random par2Random, int par3)
+    {
+        int id = this.blockID ;
+        
+        if (this.drops.get(meta) != null && this.drops.get(meta)!= 0)
+        {
+            id = this.drops.get(meta) + 256;
+        }
+        
+        return id;
+    }
+    
     @Override
     public int damageDropped(int meta)
     {

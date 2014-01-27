@@ -36,7 +36,7 @@ public class MetalItem extends Item
     {
         names.put(meta, name);
 
-        if (itemType < 0 || itemType > 1)
+        if (itemType < 0 || itemType > 2)
         {
             itemType = 0;
         }
@@ -103,6 +103,10 @@ public class MetalItem extends Item
                     break;
                 case 1:
                     itemType = ".ingot";
+                    break;
+                case 2:
+                    // for item/drop
+                    itemType = "";
                     break;
             }
 

@@ -33,11 +33,12 @@ public class MetalSet
     private Metal defaultInfo;
     private String setTag;
     
-    private int oreId = 0;
-    private int blockId = 0;
-    private int brickId = 0;
-    private int dustId = 0;
-    private int ingotId = 0;
+    private int defaultOreId = 0;
+    private int defaultBlockId = 0;
+    private int defaultBrickId = 0;
+    private int defaultDustId = 0;
+    private int defaultIngotId = 0;
+    private int defaultItemId = 0;
 
     public MetalSet(String setName)
     {
@@ -70,13 +71,14 @@ public class MetalSet
         defaultInfo = getDefaultInfo();
         
         // Getting Block IDs
-        oreId = getSetConfigBlockId("ore");
-        blockId =  getSetConfigBlockId("block");
-        brickId = getSetConfigBlockId("brick");
+        defaultOreId = getSetConfigBlockId("ore");
+        defaultBlockId =  getSetConfigBlockId("block");
+        defaultBrickId = getSetConfigBlockId("brick");
         
         // Getting Item IDs
-        dustId = getSetConfigItemId("dust");
-        ingotId = getSetConfigItemId("ingot");
+        defaultDustId = getSetConfigItemId("dust");
+        defaultIngotId = getSetConfigItemId("ingot");
+        defaultItemId = getSetConfigItemId("item");
         
         for (Metal metal : metals)
         {
@@ -91,12 +93,13 @@ public class MetalSet
             MetalBlock brick;
             MetalItem dust;
             MetalItem ingot;
+            MetalItem item;
 
             String texture = metal.getName().replace(" ", "_");
             texture = Metallurgy.MODID + ":" + name + "/" + texture.toLowerCase();
 
             String tag = metal.getName().replace(" ", "");
-            // tag = tag.substring(0,1) + tag.substring(1);
+            String  configTag = tag.substring(0,1) + tag.substring(1);
 
             int metaId = metal.ids.get("meta");
 
@@ -104,13 +107,31 @@ public class MetalSet
             {
                 String identifier = "ore";
                 
+                int oreId = defaultOreId;
+                
+                // if there is no set defaultid
+                
                 if (oreId == 0)
                 {
-                    oreId = ConfigHandler.getBlock(identifier + setTag, metal.ids.get(identifier));
+                    oreId = ConfigHandler.getBlock(identifier + configTag, metal.ids.get(identifier));
                 }
                 
-                ore = createBlock(oreId, metaId, metal.blockLvl, tag, texture, identifier);
-                ore.addSubBlock(metaId, metal.getName(), 0, texture + "_" + identifier);
+                if (metal.type != Metal.MetalType.Respawn)
+                {
+                    ore = createBlock(oreId, metaId, metal.blockLvl, tag, texture, identifier);
+                    
+                    int itemId = defaultItemId;
+                    
+                    if (metal.type == Metal.MetalType.Drop)
+                    {
+                        ore.addSubBlock(metaId, metal.getName(), 0, texture + "_" + identifier, itemId);
+                    }
+                    else
+                    {
+                        ore.addSubBlock(metaId, metal.getName(), 0, texture + "_" + identifier);
+                    }
+                    
+                }
 
                 if (ConfigHandler.generates(tag))
                 {
@@ -124,9 +145,11 @@ public class MetalSet
             {
                 String identifier = "block";
                 
+                int blockId = defaultBlockId;
+                
                 if (blockId == 0)
                 {
-                    blockId = ConfigHandler.getBlock(identifier + setTag, metal.ids.get(identifier));
+                    blockId = ConfigHandler.getBlock(identifier + configTag, metal.ids.get(identifier));
                 }
 
                 block = createBlock(blockId, metaId, metal.blockLvl, tag, texture, identifier);
@@ -137,9 +160,11 @@ public class MetalSet
             {
                 String identifier = "brick";
                 
+                int brickId = defaultBrickId;
+                
                 if (brickId == 0)
                 {
-                    brickId = ConfigHandler.getBlock(identifier + setTag, metal.ids.get(identifier));
+                    brickId = ConfigHandler.getBlock(identifier + configTag, metal.ids.get(identifier));
                 }
 
                 brick = createBlock(brickId, metaId, metal.blockLvl, tag, texture, identifier);
@@ -149,10 +174,12 @@ public class MetalSet
             if (metal.ids.get("dust") != null)
             {
                 String identifier = "dust";
+                
+                int dustId = defaultDustId;
 
                 if (dustId == 0)
                 {
-                    dustId = ConfigHandler.getItem(identifier + setTag, metal.ids.get(identifier));
+                    dustId = ConfigHandler.getItem(identifier + configTag, metal.ids.get(identifier));
                 }
 
                 dust = getMetalItem(dustId);
@@ -166,9 +193,11 @@ public class MetalSet
             {
                 String identifier = "ingot";
 
+                int ingotId = defaultIngotId;
+                
                 if (ingotId == 0)
                 {
-                    ingotId = ConfigHandler.getItem(identifier + setTag, metal.ids.get(identifier));
+                    ingotId = ConfigHandler.getItem(identifier + configTag, metal.ids.get(identifier));
                 }
 
                 ingot = getMetalItem(ingotId);
@@ -177,6 +206,32 @@ public class MetalSet
                 registerItem(ingot, tag, metaId, identifier);
             }
 
+            if (metal.ids.get("item") != null && metal.type == Metal.MetalType.Drop)
+            {
+                String identifier = "item";
+                
+                int itemId = defaultItemId;
+
+                if (itemId == 0)
+                {
+                    itemId = ConfigHandler.getItem(identifier + configTag, metal.ids.get(identifier));
+                }
+
+                item = getMetalItem(itemId);
+                
+                String itemName = metal.dropName;
+                
+                if (itemName.compareTo("") == 0) 
+                {
+                    itemName = metal.getName();
+                }
+                
+                item.addSubItem(metaId, itemName, 2, texture + "_" + identifier);
+
+                registerItem(item, tag, metaId, identifier);
+
+            }
+            
             if (metal.alloyRecipe != null && metal.alloyRecipe.length == 2)
             {
                 String ore1 = metal.alloyRecipe[0];
