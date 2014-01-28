@@ -42,6 +42,7 @@ public class Metallurgy
         ConfigHandler.setFile(event.getSuggestedConfigurationFile());
 
         BlockList.init();
+        ItemList.init();
     }
 
     @Mod.EventHandler

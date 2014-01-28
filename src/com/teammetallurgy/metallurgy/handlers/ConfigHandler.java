@@ -91,4 +91,12 @@ public class ConfigHandler
         return getName("World_Regen", "regen_key", "DEFAULT");
     }
 
+    public static boolean itemEnabled(String itemName)
+    {
+        boolean b = configuration.get(Configuration.CATEGORY_ITEM, itemName, true).getBoolean(true);
+
+        saveChanges();
+        return b;
+    }
+
 }

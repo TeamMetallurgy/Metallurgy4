@@ -33,18 +33,18 @@ public class WorldTicker implements ITickHandler
         this.timeThisTick = System.currentTimeMillis();
 
         int count = 0;
-        ArrayList<ChunkLoc> chunks = (ArrayList) chunksToGenerate.get(Integer.valueOf(dim));
+        ArrayList<ChunkLoc> chunks = chunksToGenerate.get(Integer.valueOf(dim));
         if ((chunks != null) && (chunks.size() > 0))
         {
             for (int a = 0; a < 10; a++)
             {
-                chunks = (ArrayList) chunksToGenerate.get(Integer.valueOf(dim));
+                chunks = chunksToGenerate.get(Integer.valueOf(dim));
                 if ((chunks == null) || (chunks.size() <= 0))
                 {
                     break;
                 }
                 count++;
-                ChunkLoc loc = (ChunkLoc) chunks.get(0);
+                ChunkLoc loc = chunks.get(0);
                 long worldSeed = world.getSeed();
                 Random fmlRandom = new Random(worldSeed);
                 long xSeed = fmlRandom.nextLong() >> 3;
@@ -54,10 +54,11 @@ public class WorldTicker implements ITickHandler
                 chunks.remove(0);
                 chunksToGenerate.put(Integer.valueOf(dim), chunks);
             }
-        }
-        if (count > 0)
-        {
-            LogHandler.log("Regenerated " + count + " chunks. " + Math.max(0, chunks.size()) + " chunks left");
+
+            if (count > 0)
+            {
+                LogHandler.log("Regenerated " + count + " chunks. " + Math.max(0, chunks.size()) + " chunks left");
+            }
         }
     }
 
