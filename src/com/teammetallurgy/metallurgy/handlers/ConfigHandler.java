@@ -63,4 +63,32 @@ public class ConfigHandler
         return b;
     }
 
+    private static String getName(String categories, String key, String defaultValue)
+    {
+        String string = configuration.get(categories, key, defaultValue).toString();
+
+        saveChanges();
+
+        return string;
+    }
+
+    private static boolean getBoolean(String categories, String key, boolean defaultValue)
+    {
+        boolean b = configuration.get(categories, key, defaultValue).getBoolean(defaultValue);
+
+        saveChanges();
+
+        return b;
+    }
+
+    public static boolean regen()
+    {
+        return getBoolean("World_Regen", "regenOres", false);
+    }
+
+    public static String regenKey()
+    {
+        return getName("World_Regen", "regen_key", "DEFAULT");
+    }
+
 }

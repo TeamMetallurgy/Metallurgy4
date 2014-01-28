@@ -1,13 +1,17 @@
 package com.teammetallurgy.metallurgy;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.common.MinecraftForge;
 
 import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
+import com.teammetallurgy.metallurgy.handlers.EventHandler;
 import com.teammetallurgy.metallurgy.handlers.GUIHandler;
 import com.teammetallurgy.metallurgy.handlers.LogHandler;
 import com.teammetallurgy.metallurgy.handlers.PacketHandler;
+import com.teammetallurgy.metallurgy.networking.CommonProxy;
 
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -23,6 +27,9 @@ public class Metallurgy
 
     @Mod.Instance(MODID)
     public static Metallurgy instance;
+    
+    @SidedProxy(clientSide = "com.teammetallurgy.metallurgy.networking.ClientProxy", serverSide = "com.teammetallurgy.metallurgy.networking.CommonProxy")
+    public static CommonProxy proxy;
 
     public CreativeTabs creativeTabMachines = new CreativeTabs(MODID + ".Machines");
     public CreativeTabs creativeTabBlocks = new CreativeTabs(MODID + ".Blocks");
@@ -41,6 +48,9 @@ public class Metallurgy
     public void init(FMLInitializationEvent event)
     {
         NetworkRegistry.instance().registerGuiHandler(instance, new GUIHandler());
+        proxy.registerTickHandlers();
+        MinecraftForge.EVENT_BUS.register(new EventHandler());
+        
     }
 
     @Mod.EventHandler

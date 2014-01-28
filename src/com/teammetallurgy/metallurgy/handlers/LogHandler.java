@@ -12,4 +12,12 @@ public class LogHandler
         log = logger;
     }
 
+    public static void log(String message)
+    {
+        if (log != null)
+        {
+            log.warning(message);
+        }
+    }
+
 }
