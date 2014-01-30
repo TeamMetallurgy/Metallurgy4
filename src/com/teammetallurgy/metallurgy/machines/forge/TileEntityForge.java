@@ -6,6 +6,9 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.common.ForgeDirection;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidContainerRegistry;
+import net.minecraftforge.fluids.FluidEvent;
+import net.minecraftforge.fluids.FluidEvent.FluidDrainingEvent;
+import net.minecraftforge.fluids.FluidEvent.FluidFillingEvent;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
@@ -63,7 +66,7 @@ public class TileEntityForge extends TileEntityMetallurgySided implements IFluid
             }
 
             this.tank.drain(100, true);
-            
+
             this.worldObj.markBlockForUpdate(this.xCoord, this.yCoord, this.zCoord);
         }
     }
@@ -118,20 +121,28 @@ public class TileEntityForge extends TileEntityMetallurgySided implements IFluid
     @Override
     public int fill(ForgeDirection from, FluidStack resource, boolean doFill)
     {
+        FluidFillingEvent fluidFillingEvent = new FluidEvent.FluidFillingEvent(resource, this.worldObj, this.xCoord, this.yCoord, this.zCoord, tank);
+        FluidEvent.fireEvent(fluidFillingEvent);
+
+        this.worldObj.markBlockForUpdate(this.xCoord, this.yCoord, this.zCoord);
         return this.tank.fill(resource, doFill);
     }
 
     @Override
     public FluidStack drain(ForgeDirection from, FluidStack resource, boolean doDrain)
     {
-        if (resource == null || !resource.isFluidEqual(this.tank.getFluid())) { return null; }
+        FluidDrainingEvent fluidDrainingEvent = new FluidEvent.FluidDrainingEvent(resource, this.worldObj, this.xCoord, this.yCoord, this.zCoord, tank);
+        FluidEvent.fireEvent(fluidDrainingEvent);
 
-        return this.tank.drain(resource.amount, doDrain);
+        if (resource == null || !resource.isFluidEqual(this.tank.getFluid())) { return null; }
+        return this.drain(from, resource.amount, doDrain);
     }
 
     @Override
     public FluidStack drain(ForgeDirection from, int maxDrain, boolean doDrain)
     {
+
+        this.worldObj.markBlockForUpdate(this.xCoord, this.yCoord, this.zCoord);
         return this.tank.drain(maxDrain, doDrain);
     }
 
