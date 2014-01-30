@@ -45,6 +45,7 @@ public abstract class BlockMetallurgy extends BlockContainer
         {
             blockTileEntity.dropContents();
         }
+        world.removeBlockTileEntity(x, y, z);
     }
 
     /**
