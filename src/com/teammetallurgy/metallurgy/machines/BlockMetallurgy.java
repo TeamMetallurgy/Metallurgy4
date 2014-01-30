@@ -28,6 +28,7 @@ public abstract class BlockMetallurgy extends BlockContainer
     {
         if (player.isSneaking()) { return false; }
 
+        world.markBlockForUpdate(x, y, z);
         if (!world.isRemote)
         {
             doOnActivate(world, x, y, z, player, side, xOffset, yOffset, zOffset);
