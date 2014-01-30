@@ -49,7 +49,7 @@ public class FluidWidget
 
         for (int col = 0; col < this.w / 16; col++)
         {
-            for (int row = 0; row < this.h / 16; row++)
+            for (int row = 0; row <= this.h / 16; row++)
             {
                 gui.drawTexturedModelRectFromIcon(guiX + this.x + col * 16, guiY + this.y + row * 16, liquidIcon, 16, 16);
             }

@@ -1,15 +1,19 @@
 package com.teammetallurgy.metallurgy;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.oredict.OreDictionary;
 
+import com.teammetallurgy.metallurgy.recipes.AlloyerRecipes;
 import com.teammetallurgy.metallurgy.recipes.CrusherRecipes;
 
 public class Utils
 {
+    public static HashMap<String, String[]> alloys = new HashMap<String, String[]>();
 
     public static void injectOreDictionaryRecipes()
     {
@@ -32,6 +36,37 @@ public class Utils
                 injectFurnaceDustRecipe(oreItem, replacement, name.replace(replacement, "ingot"));
             }
         }
+
+        for (String tag : alloys.keySet())
+        {
+            injectAlloyRecipe(tag, alloys.get(tag));
+        }
+    }
+
+    private static void injectAlloyRecipe(String tag, String[] materials)
+    {
+        String ore1 = materials[0];
+        String ore2 = materials[1];
+
+        List<ItemStack> retList = OreDictionary.getOres(ore1);
+        if (retList.size() > 0)
+        {
+            ItemStack itemStack = retList.get(0).copy();
+            List<ItemStack> retList2 = OreDictionary.getOres(ore2);
+            if (retList2.size() > 0)
+            {
+                ItemStack otherItemStack = retList2.get(0).copy();
+                List<ItemStack> output = OreDictionary.getOres("dust" + tag);
+                if (output.size() > 0)
+                {
+                    ItemStack outputStack = output.get(0).copy();
+
+                    outputStack.stackSize = 2;
+                    AlloyerRecipes.getInstance().addRecipe(itemStack, otherItemStack, outputStack);
+                }
+            }
+        }
+
     }
 
     private static void injectFurnaceDustRecipe(ItemStack oreItem, String replacement, String name)

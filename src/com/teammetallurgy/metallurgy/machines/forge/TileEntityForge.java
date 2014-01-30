@@ -121,7 +121,7 @@ public class TileEntityForge extends TileEntityMetallurgySided implements IFluid
     @Override
     public int fill(ForgeDirection from, FluidStack resource, boolean doFill)
     {
-        FluidFillingEvent fluidFillingEvent = new FluidEvent.FluidFillingEvent(resource, this.worldObj, this.xCoord, this.yCoord, this.zCoord, tank);
+        FluidFillingEvent fluidFillingEvent = new FluidEvent.FluidFillingEvent(resource, this.worldObj, this.xCoord, this.yCoord, this.zCoord, this.tank);
         FluidEvent.fireEvent(fluidFillingEvent);
 
         this.worldObj.markBlockForUpdate(this.xCoord, this.yCoord, this.zCoord);
@@ -131,7 +131,7 @@ public class TileEntityForge extends TileEntityMetallurgySided implements IFluid
     @Override
     public FluidStack drain(ForgeDirection from, FluidStack resource, boolean doDrain)
     {
-        FluidDrainingEvent fluidDrainingEvent = new FluidEvent.FluidDrainingEvent(resource, this.worldObj, this.xCoord, this.yCoord, this.zCoord, tank);
+        FluidDrainingEvent fluidDrainingEvent = new FluidEvent.FluidDrainingEvent(resource, this.worldObj, this.xCoord, this.yCoord, this.zCoord, this.tank);
         FluidEvent.fireEvent(fluidDrainingEvent);
 
         if (resource == null || !resource.isFluidEqual(this.tank.getFluid())) { return null; }

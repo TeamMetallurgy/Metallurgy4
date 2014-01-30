@@ -4,11 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
-import java.io.UnsupportedEncodingException;
 import java.net.URL;
-import java.util.List;
-
-import javax.annotation.Resource;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -19,8 +15,8 @@ import net.minecraftforge.oredict.OreDictionary;
 import com.google.common.io.Resources;
 import com.google.gson.Gson;
 import com.teammetallurgy.metallurgy.Metallurgy;
+import com.teammetallurgy.metallurgy.Utils;
 import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
-import com.teammetallurgy.metallurgy.recipes.AlloyerRecipes;
 import com.teammetallurgy.metallurgy.world.WorldGenMetals;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -29,10 +25,10 @@ public class MetalSet
 {
     private String name;
     private Metal[] metals = null;
-    
+
     private Metal defaultInfo;
     private String setTag;
-    
+
     private int defaultOreId = 0;
     private int defaultBlockId = 0;
     private int defaultBrickId = 0;
@@ -66,28 +62,28 @@ public class MetalSet
         }
 
         metals = new Gson().fromJson(reader, Metal[].class);
-        
+
         // Getting Default IDs
         defaultInfo = getDefaultInfo();
-        
+
         // Getting Block IDs
         defaultOreId = getSetConfigBlockId("ore");
-        defaultBlockId =  getSetConfigBlockId("block");
+        defaultBlockId = getSetConfigBlockId("block");
         defaultBrickId = getSetConfigBlockId("brick");
-        
+
         // Getting Item IDs
         defaultDustId = getSetConfigItemId("dust");
         defaultIngotId = getSetConfigItemId("ingot");
         defaultItemId = getSetConfigItemId("item");
-        
+
         for (Metal metal : metals)
         {
-            
+
             if (metal.type == Metal.MetalType.Default)
             {
                 continue;
             }
-            
+
             MetalBlock ore;
             MetalBlock block;
             MetalBlock brick;
@@ -99,29 +95,29 @@ public class MetalSet
             texture = Metallurgy.MODID + ":" + name + "/" + texture.toLowerCase();
 
             String tag = metal.getName().replace(" ", "");
-            String  configTag = tag.substring(0,1) + tag.substring(1);
+            String configTag = tag.substring(0, 1) + tag.substring(1);
 
             int metaId = metal.ids.get("meta");
 
             if (metal.ids.get("ore") != null)
             {
                 String identifier = "ore";
-                
+
                 int oreId = defaultOreId;
-                
+
                 // if there is no set defaultid
-                
+
                 if (oreId == 0)
                 {
                     oreId = ConfigHandler.getBlock(identifier + configTag, metal.ids.get(identifier));
                 }
-                
+
                 if (metal.type != Metal.MetalType.Respawn)
                 {
                     ore = createBlock(oreId, metaId, metal.blockLvl, tag, texture, identifier);
-                    
+
                     int itemId = defaultItemId;
-                    
+
                     if (metal.type == Metal.MetalType.Drop)
                     {
                         ore.addSubBlock(metaId, metal.getName(), 0, texture + "_" + identifier, itemId);
@@ -130,7 +126,7 @@ public class MetalSet
                     {
                         ore.addSubBlock(metaId, metal.getName(), 0, texture + "_" + identifier);
                     }
-                    
+
                 }
 
                 if (ConfigHandler.generates(tag))
@@ -144,9 +140,9 @@ public class MetalSet
             if (metal.ids.get("block") != null)
             {
                 String identifier = "block";
-                
+
                 int blockId = defaultBlockId;
-                
+
                 if (blockId == 0)
                 {
                     blockId = ConfigHandler.getBlock(identifier + configTag, metal.ids.get(identifier));
@@ -159,9 +155,9 @@ public class MetalSet
             if (metal.ids.get("brick") != null)
             {
                 String identifier = "brick";
-                
+
                 int brickId = defaultBrickId;
-                
+
                 if (brickId == 0)
                 {
                     brickId = ConfigHandler.getBlock(identifier + configTag, metal.ids.get(identifier));
@@ -174,7 +170,7 @@ public class MetalSet
             if (metal.ids.get("dust") != null && metal.type != Metal.MetalType.Drop)
             {
                 String identifier = "dust";
-                
+
                 int dustId = defaultDustId;
 
                 if (dustId == 0)
@@ -194,7 +190,7 @@ public class MetalSet
                 String identifier = "ingot";
 
                 int ingotId = defaultIngotId;
-                
+
                 if (ingotId == 0)
                 {
                     ingotId = ConfigHandler.getItem(identifier + configTag, metal.ids.get(identifier));
@@ -209,7 +205,7 @@ public class MetalSet
             if (metal.ids.get("item") != null && metal.type == Metal.MetalType.Drop)
             {
                 String identifier = "item";
-                
+
                 int itemId = defaultItemId;
 
                 if (itemId == 0)
@@ -218,24 +214,24 @@ public class MetalSet
                 }
 
                 item = getMetalItem(itemId);
-                
+
                 // Some items have different names than the ores
                 String itemName = metal.dropName;
                 String itemTexture = metal.dropName.replace(" ", "_");
                 itemTexture = Metallurgy.MODID + ":" + name + "/" + itemTexture.toLowerCase();
-                
-                if (itemName.compareTo("") == 0) 
+
+                if (itemName.compareTo("") == 0)
                 {
                     itemName = metal.getName();
                     itemTexture = texture;
                 }
-                
+
                 item.addSubItem(metaId, itemName, 2, itemTexture);
 
                 registerItem(item, tag, metaId, identifier);
 
             }
-            
+
             if (metal.alloyRecipe != null && metal.alloyRecipe.length == 2)
             {
                 String ore1 = metal.alloyRecipe[0];
@@ -247,24 +243,7 @@ public class MetalSet
                 ore1 = "dust" + ore1;
                 ore2 = "dust" + ore2;
 
-                List<ItemStack> retList = OreDictionary.getOres(ore1);
-                if (retList.size() > 0)
-                {
-                    ItemStack itemStack = retList.get(0).copy();
-                    List<ItemStack> retList2 = OreDictionary.getOres(ore2);
-                    if (retList2.size() > 0)
-                    {
-                        ItemStack otherItemStack = retList2.get(0).copy();
-                        List<ItemStack> output = OreDictionary.getOres("dust" + tag);
-                        if (output.size() > 0)
-                        {
-                            ItemStack outputStack = output.get(0).copy();
-
-                            outputStack.stackSize = 2;
-                            AlloyerRecipes.getInstance().addRecipe(itemStack, otherItemStack, outputStack);
-                        }
-                    }
-                }
+                Utils.alloys.put(tag, new String[] { ore1, ore2 });
             }
         }
 
@@ -318,50 +297,46 @@ public class MetalSet
         }
 
     }
-    
-    private MetalBlock createBlock (int id, int meta, int harvestLvl,
-            String tag, String texture, String identifier)
+
+    private MetalBlock createBlock(int id, int meta, int harvestLvl, String tag, String texture, String identifier)
     {
         MetalBlock metalBlock = getMetalBlock(id);
 
         MinecraftForge.setBlockHarvestLevel(metalBlock, meta, "pickaxe", harvestLvl);
 
         OreDictionary.registerOre(identifier + tag, new ItemStack(metalBlock, 1, meta));
-        
+
         if (GameRegistry.findUniqueIdentifierFor(metalBlock) == null)
         {
             GameRegistry.registerBlock(metalBlock, ItemMetalBlock.class, this.name + "." + identifier);
         }
-        
+
         return metalBlock;
     }
-    
+
     /**
      * Gets the default information from metal from JSON
      * 
-     * @return
-     *          Default info, if not found returns null
+     * @return Default info, if not found returns null
      */
-    public Metal getDefaultInfo() {
-    	
+    public Metal getDefaultInfo()
+    {
+
         for (Metal metal : metals)
         {
-            if ( metal.type == Metal.MetalType.Default)
-            {
-                return metal;
-            }
+            if (metal.type == Metal.MetalType.Default) { return metal; }
         }
-    	
+
         return null;
     }
-    
+
     /**
-     * Retrieves the default MetalSet Block Id from configuration file using an identifier.
+     * Retrieves the default MetalSet Block Id from configuration file using an
+     * identifier.
      * 
      * @param identifier
-     *          Identifier, Like ore, block and brick.
-     * @return
-     *          Block ID, in case the default info is invalid it would return 0.
+     *            Identifier, Like ore, block and brick.
+     * @return Block ID, in case the default info is invalid it would return 0.
      */
     private int getSetConfigBlockId(String identifier)
     {
@@ -374,14 +349,14 @@ public class MetalSet
             return 0;
         }
     }
-    
+
     /**
-     * Retrieves the default MetalSet Item Id from configuration file using an identifier.
+     * Retrieves the default MetalSet Item Id from configuration file using an
+     * identifier.
      * 
      * @param identifier
-     *          Identifier, Like dust and ingot.
-     * @return
-     *          Item ID, in case the default info is invalid it would return 0.
+     *            Identifier, Like dust and ingot.
+     * @return Item ID, in case the default info is invalid it would return 0.
      */
     private int getSetConfigItemId(String identifier)
     {
