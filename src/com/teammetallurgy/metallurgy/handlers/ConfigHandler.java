@@ -36,7 +36,16 @@ public class ConfigHandler
         return id;
     }
 
-    public static int getItem(String itemName, Integer defaultid)
+    public static int getBlock(String category, String blockName, int defaultid)
+    {
+        int id = configuration.getBlock(category, blockName, defaultid).getInt();
+
+        saveChanges();
+
+        return id;
+    }
+
+    public static int getItem(String itemName, int defaultid)
     {
         int id = configuration.getItem(itemName, defaultid).getInt();
 

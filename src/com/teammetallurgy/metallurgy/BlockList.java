@@ -28,29 +28,22 @@ public class BlockList
     public static void init()
     {
         String blockName = "crusher";
-        int defaultId = 450;
-        int id = ConfigHandler.getBlock(blockName, defaultId++);
 
-        crusher = new BlockCrusher(id).setUnlocalizedName(blockName);
+        crusher = new BlockCrusher(getId(blockName)).setUnlocalizedName(blockName);
 
-        registerBlock(crusher, blockName);
-        registerTileEntity(TileEntityCrusher.class, blockName);
+        registerBlockWithTileEntity(crusher, TileEntityCrusher.class, blockName);
 
         blockName = "alloyer";
-        id = ConfigHandler.getBlock(blockName, defaultId++);
 
-        alloyer = new BlockAlloyer(id).setUnlocalizedName(blockName);
+        alloyer = new BlockAlloyer(getId(blockName)).setUnlocalizedName(blockName);
 
-        registerBlock(alloyer, blockName);
-        registerTileEntity(TileEntityAlloyer.class, blockName);
+        registerBlockWithTileEntity(alloyer, TileEntityAlloyer.class, blockName);
 
         blockName = "forge";
-        id = ConfigHandler.getBlock(blockName, defaultId++);
 
-        forge = new BlockForge(id).setUnlocalizedName(blockName);
+        forge = new BlockForge(getId(blockName)).setUnlocalizedName(blockName);
 
-        registerBlock(forge, blockName);
-        registerTileEntity(TileEntityForge.class, blockName);
+        registerBlockWithTileEntity(forge, TileEntityForge.class, blockName);
 
         String[] sets = { "base", "ender", "fantasy", "nether", "precious", "utility" };
 
@@ -63,6 +56,18 @@ public class BlockList
                 setList.put(sets[i], base);
             }
         }
+    }
+
+    private static int getId(String blockName)
+    {
+        int defaultId = 450;
+        return ConfigHandler.getBlock("Machines", blockName, defaultId++);
+    }
+
+    private static void registerBlockWithTileEntity(Block block, Class<? extends TileEntity> teClass, String blockName)
+    {
+        registerBlock(block, blockName);
+        registerTileEntity(teClass, blockName);
     }
 
     public static MetalSet getSet(String name)
