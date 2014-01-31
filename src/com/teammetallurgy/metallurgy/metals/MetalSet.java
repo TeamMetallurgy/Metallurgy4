@@ -95,11 +95,11 @@ public class MetalSet
             texture = Metallurgy.MODID + ":" + name + "/" + texture.toLowerCase();
 
             String tag = metal.getName().replace(" ", "");
-            String configTag = tag.substring(0, 1) + tag.substring(1);
+            String configTag = tag.substring(0, 1).toUpperCase() + tag.substring(1);
 
             int metaId = metal.ids.get("meta");
 
-            if (metal.ids.get("ore") != null)
+            if ((metal.ids.get("ore") != null || defaultOreId != 0) && metal.type != Metal.MetalType.Alloy)
             {
                 String identifier = "ore";
 
@@ -137,7 +137,8 @@ public class MetalSet
                 }
             }
 
-            if (metal.ids.get("block") != null)
+            if ((metal.ids.get("block") != null || defaultBlockId != 0) && (metal.type != Metal.MetalType.Drop
+                    || metal.type != Metal.MetalType.Respawn))
             {
                 String identifier = "block";
 
@@ -152,7 +153,8 @@ public class MetalSet
                 block.addSubBlock(metaId, metal.getName(), 1, texture + "_" + identifier);
             }
 
-            if (metal.ids.get("brick") != null)
+            if ((metal.ids.get("brick") != null || defaultBrickId != 0) && (metal.type != Metal.MetalType.Drop
+                    || metal.type != Metal.MetalType.Respawn))
             {
                 String identifier = "brick";
 
@@ -167,7 +169,7 @@ public class MetalSet
                 brick.addSubBlock(metaId, metal.getName(), 2, texture + "_" + identifier);
             }
 
-            if (metal.ids.get("dust") != null && metal.type != Metal.MetalType.Drop)
+            if ((metal.ids.get("dust") != null || defaultDustId !=0) && metal.type != Metal.MetalType.Drop)
             {
                 String identifier = "dust";
 
@@ -185,7 +187,7 @@ public class MetalSet
 
             }
 
-            if (metal.ids.get("ingot") != null && metal.type != Metal.MetalType.Drop)
+            if ((metal.ids.get("ingot") != null || defaultIngotId != 0) && metal.type != Metal.MetalType.Drop)
             {
                 String identifier = "ingot";
 
@@ -202,7 +204,7 @@ public class MetalSet
                 registerItem(ingot, tag, metaId, identifier);
             }
 
-            if (metal.ids.get("item") != null && metal.type == Metal.MetalType.Drop)
+            if ((metal.ids.get("item") != null || defaultItemId != 0) && metal.type == Metal.MetalType.Drop)
             {
                 String identifier = "item";
 
