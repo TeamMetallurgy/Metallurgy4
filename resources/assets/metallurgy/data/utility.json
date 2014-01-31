@@ -12,9 +12,7 @@
 		"type":"Drop",
 		"ids":
 		{
-			"ore":915,
-			"meta":0,
-			"item":29012
+			"meta":0
 		},
 		"blockLvl":1,
 		"dropName":"Sulfur",
@@ -27,9 +25,7 @@
 		"type":"Drop",
 		"ids":
 		{
-			"ore":915,
-			"meta":1,
-			"item":29011
+			"meta":1
 		},
 		"blockLvl":1,
 		"dropName":"Phosphorus",
@@ -42,9 +38,7 @@
 		"type":"Drop",
 		"ids":
 		{
-			"ore":915,
-			"meta":2,
-			"item":29013
+			"meta":2
 		},
 		"blockLvl":1,
 		"dropName":"Saltpeter",
@@ -57,9 +51,7 @@
 		"type":"Drop",
 		"ids":
 		{
-			"ore":915,
-			"meta":3,
-			"item":29014
+			"meta":3
 		},
 		"blockLvl":1,
 		"dropName":"Magnesium",
@@ -72,9 +64,7 @@
 		"type":"Drop",
 		"ids":
 		{
-			"ore":915,
-			"meta":4,
-			"item":29015
+			"meta":4
 		},
 		"blockLvl":1,
 		"dropName":"Bitumen",
@@ -87,9 +77,7 @@
 		"type":"Drop",
 		"ids":
 		{
-			"ore":915,
-			"meta":5,
-			"item":29016
+			"meta":5
 		},
 		"blockLvl":1,
 		"dropName":"Potash",

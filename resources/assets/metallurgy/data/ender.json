@@ -16,11 +16,7 @@
 		"type":"Ore",
 		"ids":
 		{
-			"ore":903,
-			"block":904,
-			"brick":905,
-			"meta":0,
-			"item":28350
+			"meta":0
 		},
 		"abstratorXP":6,
 		"blockLvl":3,
@@ -34,11 +30,7 @@
 		"type":"Catalyst",
 		"ids":
 		{
-			"ore":903,
-			"block":904,
-			"brick":905,
-			"meta":1,
-			"item":28400
+			"meta":1
 		},
 		"abstratorXP":6,
 		"blockLvl":3,
@@ -51,10 +43,7 @@
 		"type":"Alloy",
 		"ids":
 		{
-			"block":904,
-			"brick":905,
-			"meta":2,
-			"item":28450
+			"meta":2
 		},
 		"abstratorXP":6,
 		"blockLvl":4,

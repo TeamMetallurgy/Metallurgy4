@@ -16,13 +16,7 @@
 		"type":"Ore",
 		"ids":
 		{
-			"ore":900,
-			"block":901,
-			"brick":902,
-			"meta":0,
-			"item":26250,
-			"dust":26251,
-			"ingot":26252
+			"meta":0
 		},
 		"abstratorXP":1,
 		"blockLvl":1,
@@ -36,13 +30,7 @@
 		"type":"Catalyst",
 		"ids":
 		{
-			"ore":900,
-			"block":901,
-			"brick":902,
-			"meta":1,
-			"item":26250,
-			"dust":26251,
-			"ingot":26252
+			"meta":1
 		},
 		"abstratorXP":1,
 		"blockLvl":1,
@@ -55,13 +43,7 @@
 		"type":"Catalyst",
 		"ids":
 		{
-			"ore":900,
-			"block":901,
-			"brick":902,
-			"meta":2,
-			"item":26250,
-			"dust":26251,
-			"ingot":26252
+			"meta":2
 		},
 		"abstratorXP":3,
 		"blockLvl":2,
@@ -74,12 +56,7 @@
 		"type":"Alloy",
 		"ids":
 		{
-			"block":901,
-			"brick":902,
-			"meta":3,
-			"item":26250,
-			"dust":26251,
-			"ingot":26252
+			"meta":3
 		},
 		"abstratorXP":2,
 		"blockLvl":2,
@@ -92,12 +69,7 @@
 		"type":"Alloy",
 		"ids":
 		{
-			"block":901,
-			"brick":902,
-			"meta":4,
-			"item":26250,
-			"dust":26251,
-			"ingot":26252
+			"meta":4
 		},
 		"abstratorXP":8,
 		"blockLvl":2,
@@ -110,12 +82,7 @@
 		"type":"Alloy",
 		"ids":
 		{
-			"block":901,
-			"brick":902,
-			"meta":5,
-			"item":26250,
-			"dust":26251,
-			"ingot":26252
+			"meta":5
 		},
 		"abstratorXP":5,
 		"blockLvl":2,
@@ -128,12 +95,7 @@
 		"type":"Alloy",
 		"ids":
 		{
-			"block":901,
-			"brick":902,
-			"meta":6,
-			"item":26250,
-			"dust":26251,
-			"ingot":26252
+			"meta":6
 		},
 		"abstratorXP":9,
 		"blockLvl":2,
@@ -146,12 +108,7 @@
 		"type":"Alloy",
 		"ids":
 		{
-			"block":901,
-			"brick":902,
-			"meta":7,
-			"item":26250,
-			"dust":26251,
-			"ingot":26252
+			"meta":7
 		},
 		"abstratorXP":6,
 		"blockLvl":2,
