@@ -7,8 +7,10 @@ import java.io.Reader;
 import java.net.URL;
 
 import net.minecraft.block.Block;
+import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.EnumHelper;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.oredict.OreDictionary;
 
@@ -17,6 +19,11 @@ import com.google.gson.Gson;
 import com.teammetallurgy.metallurgy.Metallurgy;
 import com.teammetallurgy.metallurgy.Utils;
 import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
+import com.teammetallurgy.metallurgy.tools.Axe;
+import com.teammetallurgy.metallurgy.tools.Hoe;
+import com.teammetallurgy.metallurgy.tools.Pickaxe;
+import com.teammetallurgy.metallurgy.tools.Shovel;
+import com.teammetallurgy.metallurgy.tools.Sword;
 import com.teammetallurgy.metallurgy.world.WorldGenMetals;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -84,12 +91,12 @@ public class MetalSet
                 continue;
             }
 
-            MetalBlock ore;
-            MetalBlock block;
-            MetalBlock brick;
-            MetalItem dust;
-            MetalItem ingot;
-            MetalItem item;
+            MetalBlock ore = null;
+            MetalBlock block = null;
+            MetalBlock brick = null;
+            MetalItem dust = null;
+            MetalItem ingot = null;
+            MetalItem item = null;
 
             String texture = metal.getName().replace(" ", "_");
             texture = Metallurgy.MODID + ":" + name + "/" + texture.toLowerCase();
@@ -246,6 +253,88 @@ public class MetalSet
                 ore2 = "dust" + ore2;
 
                 Utils.alloys.put(tag, new String[] { ore1, ore2 });
+            }
+
+            // Tools and weapons
+
+            if (ingot != null && metal.haveTools())
+            {
+                String statsName = metal.getName().toUpperCase();
+                statsName = statsName.replace(" ", "_");
+
+                int harvestLevel = metal.getToolHarvestLevel();
+                int maxUses = metal.getToolDurability();
+                int efficiency = metal.getToolEncantabilty();
+                int damage = metal.getToolDamage();
+                int enchantability = metal.getToolEncantabilty();
+
+                EnumToolMaterial toolMaterial =
+                        EnumHelper.addToolMaterial(statsName, harvestLevel, maxUses, efficiency, damage, enchantability);
+
+                toolMaterial.customCraftingMaterial = ingot;
+
+                // Unlocalized Name
+                String toolUName = metal.getName().toLowerCase();
+                toolUName = toolUName.replace(" ", ".");
+
+                if (metal.ids.get("axe") != null)
+                {
+                    String axeTexture = texture + "_" + "axe";
+                    String axeUName = toolUName + ".axe";
+
+                    int axeId = ConfigHandler.getItem("Axes","axe" + configTag, metal.ids.get("axe"));
+
+                    Axe axe = new Axe(axeId, toolMaterial, axeUName, axeTexture);
+                    MinecraftForge.setToolClass(axe, "axe", harvestLevel);
+                    GameRegistry.registerItem(axe, axeUName);
+                }
+
+                if (metal.ids.get("hoe") != null)
+                {
+                    String hoeTexture = texture + "_" + "hoe";
+                    String hoeUName = toolUName + ".hoe";
+
+                    int hoeId = ConfigHandler.getItem("Hoes","hoe" + configTag, metal.ids.get("hoe"));
+
+                    Hoe hoe = new Hoe (hoeId, toolMaterial, hoeUName, hoeTexture);
+                    MinecraftForge.setToolClass(hoe, "hoe", harvestLevel);
+                    GameRegistry.registerItem(hoe, hoeUName);
+                }
+
+                if (metal.ids.get("pickaxe") != null)
+                {
+                    String pickaxeTexture = texture + "_" + "pick";
+                    String pickaxeUName = toolUName + ".pickaxe";
+
+                    int pickaxeId = ConfigHandler.getItem("Pickaxes","pickaxe" + configTag, metal.ids.get("pickaxe"));
+
+                    Pickaxe pickaxe = new Pickaxe(pickaxeId, toolMaterial, pickaxeUName, pickaxeTexture);
+                    MinecraftForge.setToolClass(pickaxe, "pickaxe", harvestLevel);
+                    GameRegistry.registerItem(pickaxe, pickaxeUName);
+                }
+
+                if (metal.ids.get("shovel") != null)
+                {
+                    String shovelTexture = texture + "_" + "shovel";
+                    String shovelUName = toolUName + ".shovel";
+
+                    int shovelId = ConfigHandler.getItem("Shovels","shovel" + configTag, metal.ids.get("shovel"));
+
+                    Shovel shovel = new Shovel(shovelId, toolMaterial, shovelUName, shovelTexture);
+                    MinecraftForge.setToolClass(shovel, "shovel", harvestLevel);
+                    GameRegistry.registerItem(shovel, shovelUName);
+                }
+
+                if (metal.ids.get("sword") != null)
+                {
+                    String swordTexture = texture + "_" + "sword";
+                    String swordUName = toolUName + ".sword";
+
+                    int swordId = ConfigHandler.getItem("Swords","sword" + configTag, metal.ids.get("sword"));
+
+                    Sword sword = new Sword(swordId, toolMaterial, swordUName, swordTexture);
+                    GameRegistry.registerItem(sword, swordUName);
+                }
             }
         }
 

@@ -54,6 +54,15 @@ public class ConfigHandler
         return id;
     }
 
+    public static int getItem(String category, String itemName, int defaultid)
+    {
+        int id = configuration.getItem(category, itemName, defaultid).getInt();
+
+        saveChanges();
+
+        return id;
+    }
+
     public static boolean generates(String name)
     {
         boolean b = configuration.get("Generators", name, true).getBoolean(true);

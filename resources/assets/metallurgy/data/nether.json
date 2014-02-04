@@ -16,7 +16,12 @@
 		"type":"Ore",
 		"ids":
 		{
-			"meta":0
+			"meta":0,
+			"axe":26920,
+			"hoe":26921,
+			"pickaxe":26922,
+			"shovel":26923,
+			"sword":26924
 		},
 		"abstratorXP":1,
 		"blockLvl":1,
@@ -30,7 +35,12 @@
 		"type":"Ore",
 		"ids":
 		{
-			"meta":1
+			"meta":1,
+			"axe":26925,
+			"hoe":26926,
+			"pickaxe":26927,
+			"shovel":26928,
+			"sword":26929
 		},
 		"abstratorXP":2,
 		"blockLvl":1,
@@ -57,7 +67,12 @@
 		"type":"Ore",
 		"ids":
 		{
-			"meta":3
+			"meta":3,
+			"axe":26930,
+			"hoe":26931,
+			"pickaxe":26932,
+			"shovel":26933,
+			"sword":26934
 		},
 		"abstratorXP":3,
 		"blockLvl":2,
@@ -71,7 +86,12 @@
 		"type":"Ore",
 		"ids":
 		{
-			"meta":4
+			"meta":4,
+			"axe":26935,
+			"hoe":26936,
+			"pickaxe":26937,
+			"shovel":26938,
+			"sword":26939
 		},
 		"abstratorXP":3,
 		"blockLvl":2,
@@ -85,7 +105,12 @@
 		"type":"Ore",
 		"ids":
 		{
-			"meta":5
+			"meta":5,
+			"axe":26940,
+			"hoe":26941,
+			"pickaxe":26942,
+			"shovel":26943,
+			"sword":26944
 		},
 		"abstratorXP":3,
 		"blockLvl":2,
@@ -112,7 +137,12 @@
 		"type":"Ore",
 		"ids":
 		{
-			"meta":7
+			"meta":7,
+			"axe":26945,
+			"hoe":26946,
+			"pickaxe":26947,
+			"shovel":26948,
+			"sword":26949
 		},
 		"abstratorXP":4,
 		"blockLvl":3,
@@ -126,7 +156,12 @@
 		"type":"Ore",
 		"ids":
 		{
-			"meta":8
+			"meta":8,
+			"axe":26950,
+			"hoe":26951,
+			"pickaxe":26952,
+			"shovel":26953,
+			"sword":26954
 		},
 		"abstratorXP":5,
 		"blockLvl":4,
@@ -140,7 +175,12 @@
 		"type":"Ore",
 		"ids":
 		{
-			"meta":9
+			"meta":9,
+			"axe":26955,
+			"hoe":26956,
+			"pickaxe":26957,
+			"shovel":26958,
+			"sword":26959
 		},
 		"abstratorXP":6,
 		"blockLvl":5,
@@ -154,7 +194,12 @@
 		"type":"Alloy",
 		"ids":
 		{
-			"meta":10
+			"meta":10,
+			"axe":26960,
+			"hoe":26961,
+			"pickaxe":26962,
+			"shovel":26963,
+			"sword":26964
 		},
 		"abstratorXP":4,
 		"blockLvl":1,
@@ -167,7 +212,12 @@
 		"type":"Alloy",
 		"ids":
 		{
-			"meta":11
+			"meta":11,
+			"axe":26965,
+			"hoe":26966,
+			"pickaxe":26967,
+			"shovel":26968,
+			"sword":26969
 		},
 		"abstratorXP":6,
 		"blockLvl":3,
@@ -180,7 +230,12 @@
 		"type":"Alloy",
 		"ids":
 		{
-			"meta":12
+			"meta":12,
+			"axe":26970,
+			"hoe":26971,
+			"pickaxe":26972,
+			"shovel":26973,
+			"sword":26974
 		},
 		"abstratorXP":24,
 		"blockLvl":3,
