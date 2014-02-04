@@ -1,10 +1,19 @@
 package com.teammetallurgy.metallurgy;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
 
+import sun.org.mozilla.javascript.internal.ast.NewExpression;
 import net.minecraft.block.Block;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraftforge.client.MinecraftForgeClient;
 
 import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
 import com.teammetallurgy.metallurgy.machines.alloyer.BlockAlloyer;
@@ -15,6 +24,7 @@ import com.teammetallurgy.metallurgy.machines.forge.BlockForge;
 import com.teammetallurgy.metallurgy.machines.forge.TileEntityForge;
 import com.teammetallurgy.metallurgy.metals.MetalSet;
 
+import cpw.mods.fml.common.ObfuscationReflectionHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class BlockList
@@ -45,17 +55,74 @@ public class BlockList
 
         registerBlockWithTileEntity(forge, TileEntityForge.class, blockName);
 
-        String[] sets = { "base", "ender", "fantasy", "nether", "precious", "utility" };
+        File directory = new File(Metallurgy.instance.modsPath());
 
-        for (int i = 0; i < sets.length; i++)
+        File[] listFiles = directory.listFiles();
+
+        ArrayList<String> zipDirs = new ArrayList<String>();
+
+        for (File file : listFiles)
         {
-            if (ConfigHandler.setEnabled(sets[i]))
+            if (file.getName().contains(".zip") && file.getName().startsWith("Metallurgy-Addon-"))
             {
-                MetalSet base = new MetalSet(sets[i]);
-                base.load();
-                setList.put(sets[i], base);
+                try
+                {
+                    zipDirs.add(file.getCanonicalPath());
+                }
+                catch (IOException e)
+                {
+                    // Don't add errored file
+                }
+                break;
             }
         }
+
+        for (String zipDir : zipDirs)
+        {
+            try
+            {
+                readPackZip(zipDir);
+            }
+            catch (IOException e)
+            {
+                e.printStackTrace();
+
+            }
+        }
+    }
+
+    private static void readPackZip(String zipDir) throws IOException
+    {
+        try (ZipFile zipFile = new ZipFile(zipDir))
+        {
+            Enumeration<? extends ZipEntry> entries = zipFile.entries();
+
+            while (entries.hasMoreElements())
+            {
+                ZipEntry nextElement = entries.nextElement();
+
+                String name = nextElement.getName();
+                if (!nextElement.isDirectory() && name.contains(".json"))
+                {
+                    Metallurgy.proxy.injectZipAsResource(zipDir);
+                    try (InputStream stream = zipFile.getInputStream(nextElement))
+                    {
+                        injectMetalSet(name.substring(name.lastIndexOf("/") + 1, name.lastIndexOf(".")), stream);
+                    }
+
+                }
+
+            }
+            zipFile.close();
+        }
+    }
+
+    private static void injectMetalSet(String name, InputStream stream) throws IOException
+    {
+        MetalSet metalSet = new MetalSet(name);
+
+        metalSet.load(stream);
+
     }
 
     private static int getId(String blockName)

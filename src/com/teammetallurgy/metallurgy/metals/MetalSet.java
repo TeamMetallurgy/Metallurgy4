@@ -42,17 +42,13 @@ public class MetalSet
         this.setTag = name.substring(0, 1).toUpperCase() + name.substring(1);
     }
 
-    public void load()
+    public void load(InputStream inputStream)
+    
     {
-        String path = "assets/metallurgy/data/";
-
-        URL resource = Resources.getResource(path + name + ".json");
-
         Reader reader = null;
         try
         {
-            InputStream dataStream = resource.openStream();
-            reader = new InputStreamReader(dataStream, "UTF-8");
+            reader = new InputStreamReader(inputStream, "UTF-8");
 
         }
         catch (IOException e)

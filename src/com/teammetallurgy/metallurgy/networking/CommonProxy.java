@@ -13,4 +13,10 @@ public class CommonProxy
         TickRegistry.registerTickHandler(new WorldTicker(), Side.SERVER);
     }
 
+    public void injectZipAsResource(String zipDir)
+    {
+        // TODO Auto-generated method stub
+        
+    }
+
 }
