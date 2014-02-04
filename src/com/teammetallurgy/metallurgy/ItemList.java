@@ -3,8 +3,6 @@ package com.teammetallurgy.metallurgy;
 import net.minecraft.item.Item;
 
 import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
-import com.teammetallurgy.metallurgy.machines.crusher.BlockCrusher;
-import com.teammetallurgy.metallurgy.machines.crusher.TileEntityCrusher;
 import com.teammetallurgy.metallurgy.utils.ItemOreFinder;
 
 import cpw.mods.fml.common.registry.GameRegistry;

@@ -3,13 +3,13 @@ package com.teammetallurgy.metallurgy.machines.forge;
 import java.util.Arrays;
 import java.util.List;
 
-import org.lwjgl.input.Mouse;
-import org.lwjgl.opengl.GL11;
-
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
+
+import org.lwjgl.input.Mouse;
+import org.lwjgl.opengl.GL11;
 
 import com.teammetallurgy.metallurgy.guiwidgets.FluidWidget;
 import com.teammetallurgy.metallurgy.machines.ContainerMetallurgy;

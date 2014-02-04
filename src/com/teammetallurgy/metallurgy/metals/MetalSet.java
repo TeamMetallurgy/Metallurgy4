@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
-import java.net.URL;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.EnumToolMaterial;
@@ -14,7 +13,6 @@ import net.minecraftforge.common.EnumHelper;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.oredict.OreDictionary;
 
-import com.google.common.io.Resources;
 import com.google.gson.Gson;
 import com.teammetallurgy.metallurgy.Metallurgy;
 import com.teammetallurgy.metallurgy.Utils;
@@ -49,17 +47,13 @@ public class MetalSet
         this.setTag = name.substring(0, 1).toUpperCase() + name.substring(1);
     }
 
-    public void load()
+    public void load(InputStream inputStream)
+    
     {
-        String path = "assets/metallurgy/data/";
-
-        URL resource = Resources.getResource(path + name + ".json");
-
         Reader reader = null;
         try
         {
-            InputStream dataStream = resource.openStream();
-            reader = new InputStreamReader(dataStream, "UTF-8");
+            reader = new InputStreamReader(inputStream, "UTF-8");
 
         }
         catch (IOException e)
