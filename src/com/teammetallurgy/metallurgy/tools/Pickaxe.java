@@ -13,7 +13,7 @@ public class Pickaxe extends ItemPickaxe
         super(id, toolMaterial);
         this.setTextureName(texture);
         this.setUnlocalizedName(Metallurgy.MODID.toLowerCase() + "." + unlocalizedName);
-        this.setCreativeTab(Metallurgy.instance.creativeTabItems);
+        this.setCreativeTab(Metallurgy.instance.creativeTabTools);
     }
 
 }

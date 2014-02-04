@@ -39,6 +39,7 @@ public class Metallurgy
     public CreativeTabs creativeTabMachines = new CreativeTabs(MODID + ".Machines");
     public CreativeTabs creativeTabBlocks = new CreativeTabs(MODID + ".Blocks");
     public CreativeTabs creativeTabItems = new CreativeTabs(MODID + ".Items");
+    public CreativeTabs creativeTabTools = new CreativeTabs(MODID + ".Tools");
 
     private File modsFolder;
 

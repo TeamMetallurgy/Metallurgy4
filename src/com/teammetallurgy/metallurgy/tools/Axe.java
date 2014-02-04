@@ -13,7 +13,7 @@ public class Axe extends ItemAxe
         super(id, toolMaterial);
         this.setTextureName(texture);
         this.setUnlocalizedName(Metallurgy.MODID.toLowerCase() + "." + unlocalizedName);
-        this.setCreativeTab(Metallurgy.instance.creativeTabItems);
+        this.setCreativeTab(Metallurgy.instance.creativeTabTools);
     }
 
 }
