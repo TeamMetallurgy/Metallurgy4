@@ -115,28 +115,26 @@ public class BlockList
 
     private static void readPackZip(String zipDir) throws IOException
     {
-        try (ZipFile zipFile = new ZipFile(zipDir))
+        ZipFile zipFile = new ZipFile(zipDir);
+
+        Enumeration<? extends ZipEntry> entries = zipFile.entries();
+
+        while (entries.hasMoreElements())
         {
-            Enumeration<? extends ZipEntry> entries = zipFile.entries();
+            ZipEntry nextElement = entries.nextElement();
 
-            while (entries.hasMoreElements())
+            String name = nextElement.getName();
+            if (!nextElement.isDirectory() && name.contains(".json"))
             {
-                ZipEntry nextElement = entries.nextElement();
+                Metallurgy.proxy.injectZipAsResource(zipDir);
+                InputStream stream = zipFile.getInputStream(nextElement);
 
-                String name = nextElement.getName();
-                if (!nextElement.isDirectory() && name.contains(".json"))
-                {
-                    Metallurgy.proxy.injectZipAsResource(zipDir);
-                    try (InputStream stream = zipFile.getInputStream(nextElement))
-                    {
-                        injectMetalSet(name.substring(name.lastIndexOf("/") + 1, name.lastIndexOf(".")), stream);
-                    }
-
-                }
+                injectMetalSet(name.substring(name.lastIndexOf("/") + 1, name.lastIndexOf(".")), stream);
 
             }
-            zipFile.close();
         }
+
+        zipFile.close();
     }
 
     private static void injectMetalSet(String name, InputStream stream) throws IOException
