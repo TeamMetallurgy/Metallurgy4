@@ -3,6 +3,7 @@ package com.teammetallurgy.metallurgy;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashMap;
@@ -15,6 +16,7 @@ import net.minecraft.block.Block;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.client.MinecraftForgeClient;
 
+import com.google.common.io.Resources;
 import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
 import com.teammetallurgy.metallurgy.machines.alloyer.BlockAlloyer;
 import com.teammetallurgy.metallurgy.machines.alloyer.TileEntityAlloyer;
@@ -89,6 +91,26 @@ public class BlockList
 
             }
         }
+
+        String[] sets = { "base", "ender", "fantasy", "nether", "precious", "utility" };
+
+        for (String set : sets)
+        {
+
+            String path = "assets/metallurgy/data/";
+
+            URL resource = Resources.getResource(path + set + ".json");
+
+            try
+            {
+                injectMetalSet(set, resource.openStream());
+            }
+            catch (IOException e)
+            {
+            }
+
+        }
+
     }
 
     private static void readPackZip(String zipDir) throws IOException
@@ -122,6 +144,8 @@ public class BlockList
         MetalSet metalSet = new MetalSet(name);
 
         metalSet.load(stream);
+
+        setList.put(name, metalSet);
 
     }
 
