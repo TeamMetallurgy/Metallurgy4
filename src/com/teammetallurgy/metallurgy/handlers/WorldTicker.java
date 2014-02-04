@@ -4,12 +4,11 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Random;
-import java.util.logging.Level;
+
+import net.minecraft.world.WorldServer;
 
 import com.teammetallurgy.metallurgy.world.WorldGenMetals;
 
-import net.minecraft.world.WorldServer;
-import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.ITickHandler;
 import cpw.mods.fml.common.TickType;
 

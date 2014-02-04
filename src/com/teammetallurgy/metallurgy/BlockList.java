@@ -11,10 +11,8 @@ import java.util.Map;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
-import sun.org.mozilla.javascript.internal.ast.NewExpression;
 import net.minecraft.block.Block;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraftforge.client.MinecraftForgeClient;
 
 import com.google.common.io.Resources;
 import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
@@ -26,7 +24,6 @@ import com.teammetallurgy.metallurgy.machines.forge.BlockForge;
 import com.teammetallurgy.metallurgy.machines.forge.TileEntityForge;
 import com.teammetallurgy.metallurgy.metals.MetalSet;
 
-import cpw.mods.fml.common.ObfuscationReflectionHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class BlockList

@@ -13,7 +13,6 @@ import com.teammetallurgy.metallurgy.handlers.LogHandler;
 import com.teammetallurgy.metallurgy.handlers.PacketHandler;
 import com.teammetallurgy.metallurgy.networking.CommonProxy;
 
-import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.ObfuscationReflectionHelper;
