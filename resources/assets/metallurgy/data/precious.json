@@ -7,8 +7,7 @@
 			"block":913,
 			"brick":914,
 			"item":26650,
-			"dust":26651,
-			"ingot":26652
+			"dust":26651
 		}
 	},
 	{
@@ -16,7 +15,8 @@
 		"type":"Catalyst",
 		"ids":
 		{
-			"meta":0
+			"meta":0,
+			"ingot":26700
 		},
 		"abstratorXP":3,
 		"blockLvl":0,
@@ -30,6 +30,7 @@
 		"ids":
 		{
 			"meta":1,
+			"ingot":26701,
 			"axe":26670,
 			"hoe":26671,
 			"pickaxe":26672,
@@ -49,6 +50,7 @@
 		"ids":
 		{
 			"meta":2,
+			"ingot":26702,
 			"axe":26675,
 			"hoe":26676,
 			"pickaxe":26677,
@@ -68,6 +70,7 @@
 		"ids":
 		{
 			"meta":3,
+			"ingot":26703,
 			"axe":26680,
 			"hoe":26681,
 			"pickaxe":26682,
@@ -86,6 +89,7 @@
 		"ids":
 		{
 			"meta":4,
+			"ingot":26704,
 			"axe":26685,
 			"hoe":26686,
 			"pickaxe":26687,

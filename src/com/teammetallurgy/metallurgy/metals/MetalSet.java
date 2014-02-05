@@ -200,9 +200,18 @@ public class MetalSet
                 }
 
                 ingot = getMetalItem(ingotId);
-                ingot.addSubItem(metaId, metal.getName(), 1, texture + "_" + identifier);
+                ingot.addSubItem(0, metal.getName(), 1, texture + "_" + identifier);
 
-                registerItem(ingot, tag, metaId, identifier);
+                OreDictionary.registerOre(identifier + tag, new ItemStack(ingot, 1, 0));
+
+                if (GameRegistry.findUniqueIdentifierFor(ingot) == null)
+                {
+                    String registryName = metal.getName().toLowerCase();
+                    registryName = registryName.replace(" ", ".");
+                    registryName = registryName + "." + identifier;
+
+                    GameRegistry.registerItem(ingot, registryName);
+                }
             }
 
             if ((metal.ids.get("item") != null || defaultItemId != 0) && metal.type == Metal.MetalType.Drop)

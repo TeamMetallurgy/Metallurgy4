@@ -7,8 +7,7 @@
 			"block":910,
 			"brick":911,
 			"item":26900,
-			"dust":26901,
-			"ingot":26902
+			"dust":26901
 		}
 	},
 	{
@@ -17,6 +16,7 @@
 		"ids":
 		{
 			"meta":0,
+			"ingot":27100,
 			"axe":26920,
 			"hoe":26921,
 			"pickaxe":26922,
@@ -36,6 +36,7 @@
 		"ids":
 		{
 			"meta":1,
+			"ingot":27101,
 			"axe":26925,
 			"hoe":26926,
 			"pickaxe":26927,
@@ -54,7 +55,8 @@
 		"type":"Catalyst",
 		"ids":
 		{
-			"meta":2
+			"meta":2,
+			"ingot":27102
 		},
 		"abstratorXP":2,
 		"blockLvl":1,
@@ -68,6 +70,7 @@
 		"ids":
 		{
 			"meta":3,
+			"ingot":27103,
 			"axe":26930,
 			"hoe":26931,
 			"pickaxe":26932,
@@ -87,6 +90,7 @@
 		"ids":
 		{
 			"meta":4,
+			"ingot":27104,
 			"axe":26935,
 			"hoe":26936,
 			"pickaxe":26937,
@@ -106,6 +110,7 @@
 		"ids":
 		{
 			"meta":5,
+			"ingot":27105,
 			"axe":26940,
 			"hoe":26941,
 			"pickaxe":26942,
@@ -124,7 +129,8 @@
 		"type":"Catalyst",
 		"ids":
 		{
-			"meta":6
+			"meta":6,
+			"ingot":27106
 		},
 		"abstratorXP":3,
 		"blockLvl":2,
@@ -138,6 +144,7 @@
 		"ids":
 		{
 			"meta":7,
+			"ingot":27107,
 			"axe":26945,
 			"hoe":26946,
 			"pickaxe":26947,
@@ -157,6 +164,7 @@
 		"ids":
 		{
 			"meta":8,
+			"ingot":27108,
 			"axe":26950,
 			"hoe":26951,
 			"pickaxe":26952,
@@ -176,6 +184,7 @@
 		"ids":
 		{
 			"meta":9,
+			"ingot":27109,
 			"axe":26955,
 			"hoe":26956,
 			"pickaxe":26957,
@@ -195,6 +204,7 @@
 		"ids":
 		{
 			"meta":10,
+			"ingot":27110,
 			"axe":26960,
 			"hoe":26961,
 			"pickaxe":26962,
@@ -213,6 +223,7 @@
 		"ids":
 		{
 			"meta":11,
+			"ingot":27111,
 			"axe":26965,
 			"hoe":26966,
 			"pickaxe":26967,
@@ -231,6 +242,7 @@
 		"ids":
 		{
 			"meta":12,
+			"ingot":27112,
 			"axe":26970,
 			"hoe":26971,
 			"pickaxe":26972,

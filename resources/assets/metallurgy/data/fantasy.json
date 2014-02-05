@@ -7,8 +7,7 @@
 			"block":907,
 			"brick":908,
 			"item":27550,
-			"dust":27551,
-			"ingot":27552
+			"dust":27551
 		}
 	},
 	{
@@ -17,6 +16,7 @@
 		"ids":
 		{
 			"meta":0,
+			"ingot":27700,
 			"axe":27560,
 			"hoe":27561,
 			"pickaxe":27562,
@@ -36,6 +36,7 @@
 		"ids":
 		{
 			"meta":1,
+			"ingot":27701,
 			"axe":27565,
 			"hoe":27566,
 			"pickaxe":27567,
@@ -54,7 +55,8 @@
 		"type":"Catalyst",
 		"ids":
 		{
-			"meta":2
+			"meta":2,
+			"ingot":27702
 		},
 		"abstratorXP":2,
 		"blockLvl":1,		
@@ -68,6 +70,7 @@
 		"ids":
 		{
 			"meta":3,
+			"ingot":27703,
 			"axe":27570,
 			"hoe":27571,
 			"pickaxe":27572,
@@ -86,6 +89,7 @@
 		"ids":
 		{
 			"meta":4,
+			"ingot":27704,
 			"axe":27575,
 			"hoe":27576,
 			"pickaxe":27577,
@@ -105,6 +109,7 @@
 		"ids":
 		{
 			"meta":5,
+			"ingot":27705,
 			"axe":27580,
 			"hoe":27581,
 			"pickaxe":27582,
@@ -124,6 +129,7 @@
 		"ids":
 		{
 			"meta":6,
+			"ingot":27706,
 			"axe":27585,
 			"hoe":27586,
 			"pickaxe":27587,
@@ -143,6 +149,7 @@
 		"ids":
 		{
 			"meta":7,
+			"ingot":27707,
 			"axe":27590,
 			"hoe":27591,
 			"pickaxe":27592,
@@ -161,7 +168,8 @@
 		"type":"Catalyst",
 		"ids":
 		{
-			"meta":8
+			"meta":8,
+			"ingot":27708
 		},
 		"abstratorXP":2,
 		"blockLvl":3,
@@ -175,6 +183,7 @@
 		"ids":
 		{
 			"meta":9,
+			"ingot":27709,
 			"axe":27595,
 			"hoe":27596,
 			"pickaxe":27597,
@@ -193,6 +202,7 @@
 		"ids":
 		{
 			"meta":10,
+			"ingot":27710,
 			"axe":27600,
 			"hoe":27601,
 			"pickaxe":27602,
@@ -211,6 +221,7 @@
 		"ids":
 		{
 			"meta":11,
+			"ingot":27711,
 			"axe":27605,
 			"hoe":27606,
 			"pickaxe":27607,
@@ -230,6 +241,7 @@
 		"ids":
 		{
 			"meta":12,
+			"ingot":27712,
 			"axe":27610,
 			"hoe":27611,
 			"pickaxe":27612,
@@ -248,6 +260,7 @@
 		"ids":
 		{
 			"meta":13,
+			"ingot":27713,
 			"axe":27615,
 			"hoe":27616,
 			"pickaxe":27617,
@@ -267,6 +280,7 @@
 		"ids":
 		{
 			"meta":14,
+			"ingot":27714,
 			"axe":27620,
 			"hoe":27621,
 			"pickaxe":27622,
@@ -286,6 +300,7 @@
 		"ids":
 		{
 			"meta":15,
+			"ingot":27715,
 			"axe":27625,
 			"hoe":27626,
 			"pickaxe":27627,
