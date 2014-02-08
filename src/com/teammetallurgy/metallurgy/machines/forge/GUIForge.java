@@ -11,9 +11,9 @@ import net.minecraftforge.fluids.FluidTank;
 import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.GL11;
 
-import com.teammetallurgy.metallurgy.guiwidgets.FluidWidget;
-import com.teammetallurgy.metallurgy.machines.ContainerMetallurgy;
-import com.teammetallurgy.metallurgy.machines.GUIMetallurgy;
+import com.teammetallurgy.metallurgycore.guiwidgets.FluidWidget;
+import com.teammetallurgy.metallurgycore.machines.ContainerMetallurgy;
+import com.teammetallurgy.metallurgycore.machines.GUIMetallurgy;
 
 public class GUIForge extends GUIMetallurgy
 {

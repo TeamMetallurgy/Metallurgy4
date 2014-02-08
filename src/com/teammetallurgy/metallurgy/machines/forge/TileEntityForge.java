@@ -15,7 +15,7 @@ import net.minecraftforge.fluids.FluidTank;
 import net.minecraftforge.fluids.FluidTankInfo;
 import net.minecraftforge.fluids.IFluidHandler;
 
-import com.teammetallurgy.metallurgy.machines.TileEntityMetallurgySided;
+import com.teammetallurgy.metallurgycore.machines.TileEntityMetallurgySided;
 
 public class TileEntityForge extends TileEntityMetallurgySided implements IFluidHandler
 {

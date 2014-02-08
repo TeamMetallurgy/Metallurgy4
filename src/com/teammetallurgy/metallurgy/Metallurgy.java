@@ -6,12 +6,13 @@ import java.io.IOException;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.common.MinecraftForge;
 
-import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
 import com.teammetallurgy.metallurgy.handlers.EventHandler;
-import com.teammetallurgy.metallurgy.handlers.GUIHandler;
-import com.teammetallurgy.metallurgy.handlers.LogHandler;
-import com.teammetallurgy.metallurgy.handlers.PacketHandler;
+import com.teammetallurgy.metallurgy.handlers.GUIHandlerMetallurgy;
 import com.teammetallurgy.metallurgy.networking.CommonProxy;
+import com.teammetallurgy.metallurgycore.handlers.ConfigHandler;
+import com.teammetallurgy.metallurgycore.handlers.GUIHandler;
+import com.teammetallurgy.metallurgycore.handlers.LogHandler;
+import com.teammetallurgy.metallurgycore.handlers.PacketHandler;
 
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
@@ -74,7 +75,7 @@ public class Metallurgy
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
-        NetworkRegistry.instance().registerGuiHandler(instance, new GUIHandler());
+        NetworkRegistry.instance().registerGuiHandler(instance, new GUIHandlerMetallurgy());
         proxy.registerTickHandlers();
         MinecraftForge.EVENT_BUS.register(new EventHandler());
 

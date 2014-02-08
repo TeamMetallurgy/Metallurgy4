@@ -14,8 +14,8 @@ import net.minecraftforge.oredict.OreDictionary;
 import com.google.gson.Gson;
 import com.teammetallurgy.metallurgy.Metallurgy;
 import com.teammetallurgy.metallurgy.Utils;
-import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
 import com.teammetallurgy.metallurgy.world.WorldGenMetals;
+import com.teammetallurgy.metallurgycore.handlers.ConfigHandler;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 

@@ -2,9 +2,9 @@ package com.teammetallurgy.metallurgy.machines.forge;
 
 import net.minecraft.entity.player.InventoryPlayer;
 
-import com.teammetallurgy.metallurgy.machines.ContainerMetallurgy;
-import com.teammetallurgy.metallurgy.machines.SlotMetallurgy;
-import com.teammetallurgy.metallurgy.machines.TileEntityMetallurgy;
+import com.teammetallurgy.metallurgycore.machines.ContainerMetallurgy;
+import com.teammetallurgy.metallurgycore.machines.SlotMetallurgy;
+import com.teammetallurgy.metallurgycore.machines.TileEntityMetallurgy;
 
 public class ContainerForge extends ContainerMetallurgy
 {

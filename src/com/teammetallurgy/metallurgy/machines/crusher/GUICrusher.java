@@ -1,7 +1,7 @@
 package com.teammetallurgy.metallurgy.machines.crusher;
 
-import com.teammetallurgy.metallurgy.machines.ContainerMetallurgy;
-import com.teammetallurgy.metallurgy.machines.GUIMetallurgy;
+import com.teammetallurgy.metallurgycore.machines.ContainerMetallurgy;
+import com.teammetallurgy.metallurgycore.machines.GUIMetallurgy;
 
 public class GUICrusher extends GUIMetallurgy
 {

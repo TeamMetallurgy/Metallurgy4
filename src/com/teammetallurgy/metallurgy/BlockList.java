@@ -15,7 +15,6 @@ import net.minecraft.block.Block;
 import net.minecraft.tileentity.TileEntity;
 
 import com.google.common.io.Resources;
-import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
 import com.teammetallurgy.metallurgy.machines.alloyer.BlockAlloyer;
 import com.teammetallurgy.metallurgy.machines.alloyer.TileEntityAlloyer;
 import com.teammetallurgy.metallurgy.machines.crusher.BlockCrusher;
@@ -23,6 +22,7 @@ import com.teammetallurgy.metallurgy.machines.crusher.TileEntityCrusher;
 import com.teammetallurgy.metallurgy.machines.forge.BlockForge;
 import com.teammetallurgy.metallurgy.machines.forge.TileEntityForge;
 import com.teammetallurgy.metallurgy.metals.MetalSet;
+import com.teammetallurgy.metallurgycore.handlers.ConfigHandler;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 

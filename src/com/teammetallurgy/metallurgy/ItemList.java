@@ -2,8 +2,8 @@ package com.teammetallurgy.metallurgy;
 
 import net.minecraft.item.Item;
 
-import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
-import com.teammetallurgy.metallurgy.utils.ItemOreFinder;
+import com.teammetallurgy.metallurgycore.handlers.ConfigHandler;
+import com.teammetallurgy.metallurgycore.utils.ItemOreFinder;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 

@@ -9,7 +9,7 @@ import net.minecraft.world.WorldServer;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 
-import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
+import com.teammetallurgy.metallurgycore.handlers.ConfigHandler;
 
 import cpw.mods.fml.common.IWorldGenerator;
 

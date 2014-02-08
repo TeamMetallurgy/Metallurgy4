@@ -2,8 +2,8 @@ package com.teammetallurgy.metallurgy.machines.alloyer;
 
 import org.lwjgl.opengl.GL11;
 
-import com.teammetallurgy.metallurgy.machines.ContainerMetallurgy;
-import com.teammetallurgy.metallurgy.machines.GUIMetallurgy;
+import com.teammetallurgy.metallurgycore.machines.ContainerMetallurgy;
+import com.teammetallurgy.metallurgycore.machines.GUIMetallurgy;
 
 public class GUIAlloyer extends GUIMetallurgy
 {

@@ -3,8 +3,8 @@ package com.teammetallurgy.metallurgy.machines.crusher;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntityFurnace;
 
-import com.teammetallurgy.metallurgy.machines.TileEntityMetallurgySided;
 import com.teammetallurgy.metallurgy.recipes.CrusherRecipes;
+import com.teammetallurgy.metallurgycore.machines.TileEntityMetallurgySided;
 
 public class TileEntityCrusher extends TileEntityMetallurgySided
 {
