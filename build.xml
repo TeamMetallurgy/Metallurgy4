@@ -102,6 +102,7 @@
 
 	<!-- Download necessary files -->
 	<target name="download-files">
+		<get src="https://github.com/TeamMetallurgy/MetallurgyCore/archive/master.zip" dest="${download.dir}"/>
 		<antcall target="download-forge"/> 
 	</target>
 
@@ -116,7 +117,8 @@
 		<delete failonerror="false">
 			<fileset dir="${libs.dir}" includes="*.zip"/>
 			<fileset dir="${libs.dir}" includes="*.jar"/>
-		</delete>	
+		</delete>
+		<unzip dest="${libs.dir}" src="${download.dir}/master.zip"/>
 	</target>
 	
 	<target name="setup-forge" if="out-of-date">
@@ -141,6 +143,7 @@
 	<target name="copy-src">
 		<!-- Copy sources -->
 		<copy todir="${mcpsrc.dir}/minecraft">
+			<fileset dir="${libs.dir}/MetallurgyCore-master/src"/>
 			<fileset dir="${src.dir}"/>
 		</copy>
 	</target>
@@ -191,6 +194,7 @@
 		
 		<!-- Reset src dir to post-forge-install state -->
 		<delete dir="${mcpsrc.dir}/minecraft/com/teammetallurgy"/>
+		<delete dir="${libs.dir}/MetallurgyCore-master"/>
 		
 	</target>
 
