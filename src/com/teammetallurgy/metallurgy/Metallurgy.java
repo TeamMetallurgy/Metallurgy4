@@ -10,7 +10,6 @@ import com.teammetallurgy.metallurgy.handlers.EventHandler;
 import com.teammetallurgy.metallurgy.handlers.GUIHandlerMetallurgy;
 import com.teammetallurgy.metallurgy.networking.CommonProxy;
 import com.teammetallurgy.metallurgycore.handlers.ConfigHandler;
-import com.teammetallurgy.metallurgycore.handlers.GUIHandler;
 import com.teammetallurgy.metallurgycore.handlers.LogHandler;
 import com.teammetallurgy.metallurgycore.handlers.PacketHandler;
 
@@ -31,17 +30,27 @@ public class Metallurgy
     public static final String MODNAME = "Metallurgy";
     public static final String MODID = "Metallurgy";
 
-    @Mod.Instance(MODID)
+    @Mod.Instance(Metallurgy.MODID)
     public static Metallurgy instance;
 
     @SidedProxy(clientSide = "com.teammetallurgy.metallurgy.networking.ClientProxy", serverSide = "com.teammetallurgy.metallurgy.networking.CommonProxy")
     public static CommonProxy proxy;
 
-    public CreativeTabs creativeTabMachines = new CreativeTabs(MODID + ".Machines");
-    public CreativeTabs creativeTabBlocks = new CreativeTabs(MODID + ".Blocks");
-    public CreativeTabs creativeTabItems = new CreativeTabs(MODID + ".Items");
+    public CreativeTabs creativeTabMachines = new CreativeTabs(Metallurgy.MODID + ".Machines");
+    public CreativeTabs creativeTabBlocks = new CreativeTabs(Metallurgy.MODID + ".Blocks");
+    public CreativeTabs creativeTabItems = new CreativeTabs(Metallurgy.MODID + ".Items");
+    public CreativeTabs creativeTabTools = new CreativeTabs(Metallurgy.MODID + ".Tools");
 
     private File modsFolder;
+
+    @Mod.EventHandler
+    public void init(FMLInitializationEvent event)
+    {
+        NetworkRegistry.instance().registerGuiHandler(Metallurgy.instance, new GUIHandlerMetallurgy());
+        Metallurgy.proxy.registerTickHandlers();
+        MinecraftForge.EVENT_BUS.register(new EventHandler());
+
+    }
 
     public String modsPath()
     {
@@ -53,6 +62,12 @@ public class Metallurgy
         {
             return "";
         }
+    }
+
+    @Mod.EventHandler
+    public void postInit(FMLPostInitializationEvent event)
+    {
+        Utils.injectOreDictionaryRecipes();
     }
 
     @Mod.EventHandler
@@ -70,20 +85,5 @@ public class Metallurgy
 
         BlockList.init();
         ItemList.init();
-    }
-
-    @Mod.EventHandler
-    public void init(FMLInitializationEvent event)
-    {
-        NetworkRegistry.instance().registerGuiHandler(instance, new GUIHandlerMetallurgy());
-        proxy.registerTickHandlers();
-        MinecraftForge.EVENT_BUS.register(new EventHandler());
-
-    }
-
-    @Mod.EventHandler
-    public void postInit(FMLPostInitializationEvent event)
-    {
-        Utils.injectOreDictionaryRecipes();
     }
 }

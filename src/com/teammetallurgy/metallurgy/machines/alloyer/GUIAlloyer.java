@@ -14,14 +14,6 @@ public class GUIAlloyer extends GUIMetallurgy
     }
 
     @Override
-    public void initGui()
-    {
-        super.initGui();
-        this.xSize = 176;
-        this.ySize = 165;
-    }
-    
-    @Override
     protected void drawGuiContainerBackgroundLayer(float f, int i, int j)
     {
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
@@ -37,6 +29,14 @@ public class GUIAlloyer extends GUIMetallurgy
 
         i1 = this.tileEntity.getCookProgressScaled(21);
         this.drawTexturedModalRect(this.guiLeft + 67, this.guiTop + 33, 176, 14, 50, i1);
+    }
+
+    @Override
+    public void initGui()
+    {
+        super.initGui();
+        this.xSize = 176;
+        this.ySize = 165;
     }
 
 }

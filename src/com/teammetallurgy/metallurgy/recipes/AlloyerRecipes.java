@@ -9,43 +9,6 @@ import com.teammetallurgy.metallurgycore.recipes.RecipeUtils;
 public class AlloyerRecipes
 {
 
-    private static AlloyerRecipes instance = new AlloyerRecipes();
-
-    public static AlloyerRecipes getInstance()
-    {
-        return instance;
-    }
-
-    private ArrayList<AlloyRecipe> recipes = new ArrayList<AlloyRecipe>();
-
-    public ItemStack getAlloyResult(ItemStack itemStack, ItemStack otherItemStack)
-    {
-        for (int j = 0; j < recipes.size(); ++j)
-        {
-            AlloyRecipe irecipe = recipes.get(j);
-
-            if (irecipe.matches(itemStack, otherItemStack)) { return irecipe.getCraftingResult(); }
-        }
-
-        return null;
-    }
-
-    public void addRecipe(ItemStack itemStack, ItemStack otherItemStack, ItemStack output)
-    {
-        recipes.add(new AlloyRecipe(itemStack, otherItemStack, output));
-    }
-
-    public boolean hasUsage(ItemStack itemStack)
-    {
-        for (int j = 0; j < recipes.size(); ++j)
-        {
-            AlloyRecipe irecipe = recipes.get(j);
-
-            if (irecipe.uses(itemStack)) { return true; }
-        }
-        return false;
-    }
-
     public class AlloyRecipe
     {
         private final ItemStack baseItem;
@@ -61,23 +24,23 @@ public class AlloyerRecipes
 
         public ItemStack getCraftingResult()
         {
-            return result.copy();
+            return this.result.copy();
         }
 
         public ItemStack[] getIngredients()
         {
-            return new ItemStack[] { first, baseItem };
+            return new ItemStack[] { this.first, this.baseItem };
         }
 
         public boolean matches(final ItemStack first, final ItemStack second)
         {
-            if (uses(first) && uses(second)) { return true; }
+            if (this.uses(first) && this.uses(second)) { return true; }
 
-            if (uses(first)) { return true; }
+            if (this.uses(first)) { return true; }
 
-            if (uses(second)) { return true; }
+            if (this.uses(second)) { return true; }
 
-            return matchesOreDict(first, second);
+            return this.matchesOreDict(first, second);
         }
 
         private boolean matchesOreDict(final ItemStack first, final ItemStack second)
@@ -95,13 +58,50 @@ public class AlloyerRecipes
         {
             if (ingredient == null) { return false; }
 
-            if (first != null && first.isItemEqual(ingredient))
+            if (this.first != null && this.first.isItemEqual(ingredient))
             {
                 return true;
             }
-            else if (baseItem != null && baseItem.isItemEqual(ingredient)) { return true; }
+            else if (this.baseItem != null && this.baseItem.isItemEqual(ingredient)) { return true; }
 
             return false;
         }
+    }
+
+    private static AlloyerRecipes instance = new AlloyerRecipes();
+
+    public static AlloyerRecipes getInstance()
+    {
+        return AlloyerRecipes.instance;
+    }
+
+    private ArrayList<AlloyRecipe> recipes = new ArrayList<AlloyRecipe>();
+
+    public void addRecipe(ItemStack itemStack, ItemStack otherItemStack, ItemStack output)
+    {
+        this.recipes.add(new AlloyRecipe(itemStack, otherItemStack, output));
+    }
+
+    public ItemStack getAlloyResult(ItemStack itemStack, ItemStack otherItemStack)
+    {
+        for (int j = 0; j < this.recipes.size(); ++j)
+        {
+            AlloyRecipe irecipe = this.recipes.get(j);
+
+            if (irecipe.matches(itemStack, otherItemStack)) { return irecipe.getCraftingResult(); }
+        }
+
+        return null;
+    }
+
+    public boolean hasUsage(ItemStack itemStack)
+    {
+        for (int j = 0; j < this.recipes.size(); ++j)
+        {
+            AlloyRecipe irecipe = this.recipes.get(j);
+
+            if (irecipe.uses(itemStack)) { return true; }
+        }
+        return false;
     }
 }

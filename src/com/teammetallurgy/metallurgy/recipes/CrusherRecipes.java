@@ -12,20 +12,20 @@ public class CrusherRecipes
 
     public static CrusherRecipes getInstance()
     {
-        return instance;
+        return CrusherRecipes.instance;
     }
 
     private HashMap<List<Integer>, ItemStack> metaList = new HashMap<List<Integer>, ItemStack>();
 
     public void addRecipe(int itemID, int itemDamage, ItemStack itemStack)
     {
-        metaList.put(Arrays.asList(itemID, itemDamage), itemStack);
+        this.metaList.put(Arrays.asList(itemID, itemDamage), itemStack);
     }
 
     public ItemStack getCrushingResult(ItemStack itemStack)
     {
         if (itemStack == null) { return null; }
-        return metaList.get(Arrays.asList(itemStack.itemID, itemStack.getItemDamage()));
+        return this.metaList.get(Arrays.asList(itemStack.itemID, itemStack.getItemDamage()));
 
     }
 

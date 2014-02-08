@@ -12,10 +12,10 @@ public class ContainerForge extends ContainerMetallurgy
     public ContainerForge(InventoryPlayer inventoryPlayer, TileEntityMetallurgy tileEntity)
     {
         super(-1, 2, tileEntity);
-        addSlotToContainer(new SlotMetallurgy(tileEntity, 0, 80, 8));
-        addSlotToContainer(new SlotMetallurgy(tileEntity, 1, 80, 62));
+        this.addSlotToContainer(new SlotMetallurgy(tileEntity, 0, 80, 8));
+        this.addSlotToContainer(new SlotMetallurgy(tileEntity, 1, 80, 62));
 
-        addPlayersInventoryToContainer(inventoryPlayer, 8, 84);
+        this.addPlayersInventoryToContainer(inventoryPlayer, 8, 84);
 
     }
 

@@ -7,8 +7,7 @@
 			"block":904,
 			"brick":905,
 			"item":28350,
-			"dust":26351,
-			"ingot":26352
+			"dust":26351
 		}
 	},
 	{
@@ -16,7 +15,13 @@
 		"type":"Ore",
 		"ids":
 		{
-			"meta":0
+			"meta":0,
+			"ingot":26380,
+			"axe":26360,
+			"hoe":26361,
+			"pickaxe":26362,
+			"shovel":26363,
+			"sword":26364
 		},
 		"abstratorXP":6,
 		"blockLvl":3,
@@ -30,7 +35,8 @@
 		"type":"Catalyst",
 		"ids":
 		{
-			"meta":1
+			"meta":1,
+			"ingot":26381
 		},
 		"abstratorXP":6,
 		"blockLvl":3,
@@ -43,7 +49,13 @@
 		"type":"Alloy",
 		"ids":
 		{
-			"meta":2
+			"meta":2,
+			"ingot":26382,
+			"axe":26365,
+			"hoe":26366,
+			"pickaxe":26367,
+			"shovel":26368,
+			"sword":26369
 		},
 		"abstratorXP":6,
 		"blockLvl":4,

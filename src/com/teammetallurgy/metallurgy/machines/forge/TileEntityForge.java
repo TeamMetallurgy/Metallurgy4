@@ -27,19 +27,101 @@ public class TileEntityForge extends TileEntityMetallurgySided implements IFluid
     }
 
     @Override
-    protected void writeCustomNBT(NBTTagCompound compound)
+    public boolean canDrain(ForgeDirection from, Fluid fluid)
     {
-        super.writeCustomNBT(compound);
-
-        this.tank.writeToNBT(compound);
+        return true;
     }
 
     @Override
-    protected void readCustomNBT(NBTTagCompound data)
+    public boolean canFill(ForgeDirection from, Fluid fluid)
     {
-        super.readCustomNBT(data);
+        return FluidRegistry.LAVA.equals(fluid);
+    }
 
-        this.tank = this.tank.readFromNBT(data);
+    @Override
+    protected boolean canProcessItem()
+    {
+        if (this.itemStacks[0] == null)
+        {
+            return false;
+        }
+        else
+        {
+            if (this.tank.getFluidAmount() <= 0) { return false; }
+            ItemStack itemstack = this.getSmeltingResult(this.itemStacks[0]);
+            if (itemstack == null) { return false; }
+            if (this.slotsAreEmtpty(1, 1)) { return true; }
+            return this.canAcceptStackRange(1, 1, itemstack);
+        }
+    }
+
+    @Override
+    public FluidStack drain(ForgeDirection from, FluidStack resource, boolean doDrain)
+    {
+        FluidDrainingEvent fluidDrainingEvent = new FluidEvent.FluidDrainingEvent(resource, this.worldObj, this.xCoord, this.yCoord, this.zCoord, this.tank);
+        FluidEvent.fireEvent(fluidDrainingEvent);
+
+        if (resource == null || !resource.isFluidEqual(this.tank.getFluid())) { return null; }
+        return this.drain(from, resource.amount, doDrain);
+    }
+
+    @Override
+    public FluidStack drain(ForgeDirection from, int maxDrain, boolean doDrain)
+    {
+
+        this.worldObj.markBlockForUpdate(this.xCoord, this.yCoord, this.zCoord);
+        return this.tank.drain(maxDrain, doDrain);
+    }
+
+    @Override
+    public int fill(ForgeDirection from, FluidStack resource, boolean doFill)
+    {
+        FluidFillingEvent fluidFillingEvent = new FluidEvent.FluidFillingEvent(resource, this.worldObj, this.xCoord, this.yCoord, this.zCoord, this.tank);
+        FluidEvent.fireEvent(fluidFillingEvent);
+
+        this.worldObj.markBlockForUpdate(this.xCoord, this.yCoord, this.zCoord);
+        return this.tank.fill(resource, doFill);
+    }
+
+    @Override
+    public int getInventoryStackLimit()
+    {
+        return 64;
+    }
+
+    @Override
+    public String getInvName()
+    {
+        return "container.forge";
+    }
+
+    @Override
+    protected ItemStack getSmeltingResult(ItemStack... itemStack)
+    {
+        return FurnaceRecipes.smelting().getSmeltingResult(itemStack[0]);
+    }
+
+    public FluidTank getTank()
+    {
+        return this.tank;
+    }
+
+    @Override
+    public FluidTankInfo[] getTankInfo(ForgeDirection from)
+    {
+        return new FluidTankInfo[] { this.tank.getInfo() };
+    }
+
+    @Override
+    public boolean isBurning()
+    {
+        return this.tank.getFluidAmount() > 0;
+    }
+
+    @Override
+    public boolean isItemValidForSlot(int i, ItemStack itemstack)
+    {
+        return i != 1;
     }
 
     @Override
@@ -47,7 +129,7 @@ public class TileEntityForge extends TileEntityMetallurgySided implements IFluid
     {
         if (this.canProcessItem())
         {
-            ItemStack itemstack = getSmeltingResult(this.itemStacks[0]);
+            ItemStack itemstack = this.getSmeltingResult(this.itemStacks[0]);
 
             if (this.itemStacks[1] == null)
             {
@@ -72,101 +154,19 @@ public class TileEntityForge extends TileEntityMetallurgySided implements IFluid
     }
 
     @Override
-    public boolean isBurning()
+    protected void readCustomNBT(NBTTagCompound data)
     {
-        return this.tank.getFluidAmount() > 0;
+        super.readCustomNBT(data);
+
+        this.tank = this.tank.readFromNBT(data);
     }
 
     @Override
-    protected boolean canProcessItem()
+    protected void writeCustomNBT(NBTTagCompound compound)
     {
-        if (this.itemStacks[0] == null)
-        {
-            return false;
-        }
-        else
-        {
-            if (this.tank.getFluidAmount() <= 0) return false;
-            ItemStack itemstack = getSmeltingResult(this.itemStacks[0]);
-            if (itemstack == null) return false;
-            if (slotsAreEmtpty(1, 1)) return true;
-            return canAcceptStackRange(1, 1, itemstack);
-        }
-    }
+        super.writeCustomNBT(compound);
 
-    @Override
-    public String getInvName()
-    {
-        return "container.forge";
-    }
-
-    @Override
-    public int getInventoryStackLimit()
-    {
-        return 64;
-    }
-
-    @Override
-    public boolean isItemValidForSlot(int i, ItemStack itemstack)
-    {
-        return (i != 1);
-    }
-
-    @Override
-    protected ItemStack getSmeltingResult(ItemStack... itemStack)
-    {
-        return FurnaceRecipes.smelting().getSmeltingResult(itemStack[0]);
-    }
-
-    @Override
-    public int fill(ForgeDirection from, FluidStack resource, boolean doFill)
-    {
-        FluidFillingEvent fluidFillingEvent = new FluidEvent.FluidFillingEvent(resource, this.worldObj, this.xCoord, this.yCoord, this.zCoord, this.tank);
-        FluidEvent.fireEvent(fluidFillingEvent);
-
-        this.worldObj.markBlockForUpdate(this.xCoord, this.yCoord, this.zCoord);
-        return this.tank.fill(resource, doFill);
-    }
-
-    @Override
-    public FluidStack drain(ForgeDirection from, FluidStack resource, boolean doDrain)
-    {
-        FluidDrainingEvent fluidDrainingEvent = new FluidEvent.FluidDrainingEvent(resource, this.worldObj, this.xCoord, this.yCoord, this.zCoord, this.tank);
-        FluidEvent.fireEvent(fluidDrainingEvent);
-
-        if (resource == null || !resource.isFluidEqual(this.tank.getFluid())) { return null; }
-        return this.drain(from, resource.amount, doDrain);
-    }
-
-    @Override
-    public FluidStack drain(ForgeDirection from, int maxDrain, boolean doDrain)
-    {
-
-        this.worldObj.markBlockForUpdate(this.xCoord, this.yCoord, this.zCoord);
-        return this.tank.drain(maxDrain, doDrain);
-    }
-
-    @Override
-    public boolean canFill(ForgeDirection from, Fluid fluid)
-    {
-        return FluidRegistry.LAVA.equals(fluid);
-    }
-
-    @Override
-    public boolean canDrain(ForgeDirection from, Fluid fluid)
-    {
-        return true;
-    }
-
-    @Override
-    public FluidTankInfo[] getTankInfo(ForgeDirection from)
-    {
-        return new FluidTankInfo[] { this.tank.getInfo() };
-    }
-
-    public FluidTank getTank()
-    {
-        return this.tank;
+        this.tank.writeToNBT(compound);
     }
 
 }

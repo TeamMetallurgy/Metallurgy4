@@ -20,7 +20,7 @@ public class ClientProxy extends CommonProxy
         if (value instanceof List)
         {
             FileResourcePack pack = new FileResourcePack(new File(zipDir));
-            
+
             ((List) value).add(pack);
         }
         FMLClientHandler.instance().getClient().refreshResources();

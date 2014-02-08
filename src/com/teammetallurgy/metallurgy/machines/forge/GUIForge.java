@@ -18,7 +18,15 @@ import com.teammetallurgy.metallurgycore.machines.GUIMetallurgy;
 public class GUIForge extends GUIMetallurgy
 {
 
+    public static FluidStack getFluidInfo(final FluidTank localTank)
+    {
+        if (localTank == null || localTank.getFluid() == null) { return null; }
+
+        return localTank.getFluid().copy();
+    }
+
     private FluidWidget fluidWidget;
+
     private FluidTank tank;
 
     public GUIForge(ContainerMetallurgy container)
@@ -26,14 +34,6 @@ public class GUIForge extends GUIMetallurgy
         super(container, "metallurgy:textures/gui/forge.png");
         this.tank = ((TileEntityForge) this.tileEntity).getTank();
         this.fluidWidget = new FluidWidget(this.tank, 8, 14, 179, 21, 16, 50);
-    }
-
-    @Override
-    public void initGui()
-    {
-        super.initGui();
-        this.xSize = 176;
-        this.ySize = 165;
     }
 
     @Override
@@ -54,7 +54,7 @@ public class GUIForge extends GUIMetallurgy
     @Override
     protected void drawGuiContainerForegroundLayer(int par1, int par2)
     {
-        drawTitle(30, 8);
+        this.drawTitle(30, 8);
     }
 
     @Override
@@ -64,17 +64,17 @@ public class GUIForge extends GUIMetallurgy
 
         if (GuiScreen.isShiftKeyDown())
         {
-            drawTankInfo(Mouse.getX() * this.width / this.mc.displayWidth - this.guiLeft, this.height - Mouse.getY() * this.height / this.mc.displayHeight - 1 - this.guiTop);
+            this.drawTankInfo(Mouse.getX() * this.width / this.mc.displayWidth - this.guiLeft, this.height - Mouse.getY() * this.height / this.mc.displayHeight - 1 - this.guiTop);
         }
     }
 
     public void drawTankInfo(int x, final int y)
     {
-        final FluidTank localTank = getTankAtCoord(x, y);
+        final FluidTank localTank = this.getTankAtCoord(x, y);
 
         if (localTank == null) { return; }
 
-        final FluidStack fluidInfo = getFluidInfo(localTank);
+        final FluidStack fluidInfo = GUIForge.getFluidInfo(localTank);
 
         if (fluidInfo == null) { return; }
 
@@ -83,21 +83,22 @@ public class GUIForge extends GUIMetallurgy
 
         final List<String> ret = Arrays.asList(new String[] { "Name: " + fluidName, "Amount: " + amount + "mB" });
 
-        drawHoveringText(ret, x - 5 + this.guiLeft / 4, y + this.guiTop, this.fontRenderer);
+        this.drawHoveringText(ret, x - 5 + this.guiLeft / 4, y + this.guiTop, this.fontRenderer);
 
-    }
-
-    public static FluidStack getFluidInfo(final FluidTank localTank)
-    {
-        if (localTank == null || localTank.getFluid() == null) { return null; }
-
-        return localTank.getFluid().copy();
     }
 
     public FluidTank getTankAtCoord(int x, int y)
     {
-        if (x >= 8 && x <= (16 + 8) && y >= 14 && y <= (14 + 65)) { return this.tank; }
+        if (x >= 8 && x <= 16 + 8 && y >= 14 && y <= 14 + 65) { return this.tank; }
 
         return null;
+    }
+
+    @Override
+    public void initGui()
+    {
+        super.initGui();
+        this.xSize = 176;
+        this.ySize = 165;
     }
 }

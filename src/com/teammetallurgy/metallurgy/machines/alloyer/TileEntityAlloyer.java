@@ -15,9 +15,19 @@ public class TileEntityAlloyer extends TileEntityMetallurgySided
     }
 
     @Override
-    public String getInvName()
+    protected boolean canProcessItem()
     {
-        return "container.alloyer";
+        if (this.itemStacks[0] == null || this.itemStacks[2] == null)
+        {
+            return false;
+        }
+        else
+        {
+            ItemStack itemstack = this.getSmeltingResult(this.itemStacks[0], this.itemStacks[2]);
+            if (itemstack == null) { return false; }
+            if (this.slotsAreEmtpty(3, 3)) { return true; }
+            return this.canAcceptStackRange(3, 3, itemstack);
+        }
     }
 
     @Override
@@ -27,9 +37,21 @@ public class TileEntityAlloyer extends TileEntityMetallurgySided
     }
 
     @Override
+    public String getInvName()
+    {
+        return "container.alloyer";
+    }
+
+    @Override
+    protected ItemStack getSmeltingResult(ItemStack... itemStack)
+    {
+        return AlloyerRecipes.getInstance().getAlloyResult(itemStack[0], itemStack[1]);
+    }
+
+    @Override
     public boolean isItemValidForSlot(int i, ItemStack itemstack)
     {
-        return i >= 3 ? false : (i == 1 ? TileEntityFurnace.isItemFuel(itemstack) : true);
+        return i >= 3 ? false : i == 1 ? TileEntityFurnace.isItemFuel(itemstack) : true;
     }
 
     @Override
@@ -37,7 +59,7 @@ public class TileEntityAlloyer extends TileEntityMetallurgySided
     {
         if (this.canProcessItem())
         {
-            ItemStack itemstack = getSmeltingResult(this.itemStacks[0], this.itemStacks[2]);
+            ItemStack itemstack = this.getSmeltingResult(this.itemStacks[0], this.itemStacks[2]);
 
             if (this.itemStacks[3] == null)
             {
@@ -45,7 +67,7 @@ public class TileEntityAlloyer extends TileEntityMetallurgySided
             }
             else if (this.itemStacks[3].isItemEqual(itemstack))
             {
-                itemStacks[3].stackSize += itemstack.stackSize;
+                this.itemStacks[3].stackSize += itemstack.stackSize;
             }
 
             --this.itemStacks[0].stackSize;
@@ -62,27 +84,5 @@ public class TileEntityAlloyer extends TileEntityMetallurgySided
                 this.itemStacks[2] = null;
             }
         }
-    }
-
-    @Override
-    protected boolean canProcessItem()
-    {
-        if (this.itemStacks[0] == null || this.itemStacks[2] == null)
-        {
-            return false;
-        }
-        else
-        {
-            ItemStack itemstack = getSmeltingResult(this.itemStacks[0], this.itemStacks[2]);
-            if (itemstack == null) return false;
-            if (slotsAreEmtpty(3, 3)) return true;
-            return canAcceptStackRange(3, 3, itemstack);
-        }
-    }
-
-    @Override
-    protected ItemStack getSmeltingResult(ItemStack... itemStack)
-    {
-        return AlloyerRecipes.getInstance().getAlloyResult(itemStack[0], itemStack[1]);
     }
 }

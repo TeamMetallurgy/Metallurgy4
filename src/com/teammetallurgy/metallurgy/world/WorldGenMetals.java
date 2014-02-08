@@ -27,42 +27,89 @@ public class WorldGenMetals implements IWorldGenerator
 
     private static ArrayList<WorldGenMetals> generators = new ArrayList<WorldGenMetals>();
 
+    public static void generateAll(Random fmlRandom, int chunkXPos, int chunkZPos, WorldServer world, boolean b)
+    {
+        synchronized (WorldGenMetals.generators)
+        {
+            for (WorldGenMetals gen : WorldGenMetals.generators)
+            {
+                gen.generate(fmlRandom, chunkXPos, chunkZPos, world, b);
+            }
+        }
+    }
+
     public WorldGenMetals(int blockId, int metaId, int[] generationInfo, String dimensionsInfo)
     {
 
-        genBlockId = blockId;
-        genMetaId = metaId;
-        
-        generation = generationInfo;
-        dimensions = dimensionsInfo;
+        this.genBlockId = blockId;
+        this.genMetaId = metaId;
+
+        this.generation = generationInfo;
+        this.dimensions = dimensionsInfo;
 
         int targetId = Block.stone.blockID;
 
-        if (vaildDimension(-1))
+        if (this.vaildDimension(-1))
         {
             targetId = Block.netherrack.blockID;
         }
 
-        if (vaildDimension(1))
+        if (this.vaildDimension(1))
         {
             targetId = Block.whiteStone.blockID;
         }
 
-        mineable = new WorldGenMinable(blockId, metaId, generation[1], targetId);
+        this.mineable = new WorldGenMinable(blockId, metaId, this.generation[1], targetId);
+    }
+
+    public void generate(Random random, int chunkX, int chunkZ, World world, boolean b)
+    {
+        if (b || ConfigHandler.regen())
+        {
+
+            Random chunkRand = this.getRandom(random, chunkX, chunkZ);
+
+            int dimId = world.provider.dimensionId;
+
+            if (!this.vaildDimension(dimId)) { return; }
+
+            if (chunkRand.nextInt(100) > this.generation[4]) { return; }
+
+            for (int i = 0; i <= this.generation[0]; i++)
+            {
+                int initX = chunkX * 16 + chunkRand.nextInt(16);
+                int initY = this.generation[2] + chunkRand.nextInt(this.generation[3] - this.generation[2]);
+                int initZ = chunkZ * 16 + chunkRand.nextInt(16);
+
+                this.mineable.generate(world, chunkRand, initX, initY, initZ);
+            }
+        }
     }
 
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider)
     {
-        generators.add(this);
-        generate(random, chunkX, chunkZ, world, true);
+        WorldGenMetals.generators.add(this);
+        this.generate(random, chunkX, chunkZ, world, true);
+    }
+
+    private Random getRandom(Random fmlRandom, int chunkX, int chunkZ)
+    {
+        // Create our own random chunk seed, to get different random numbers
+        // than other mods.
+        long seed = fmlRandom.nextLong();
+        // Get a different seed for each ore.
+        long seedBlock = this.genBlockId * this.genMetaId ^ fmlRandom.nextLong();
+        seed = chunkX * seed * chunkZ * seed * seedBlock ^ fmlRandom.nextInt(Integer.MAX_VALUE);
+
+        return new Random(seed);
     }
 
     private boolean vaildDimension(int dimensionId)
     {
 
         boolean vaild = false;
-        String[] dims = dimensions.split(" ");
+        String[] dims = this.dimensions.split(" ");
 
         if (dims.length < 1) { return false; }
 
@@ -80,7 +127,7 @@ public class WorldGenMetals implements IWorldGenerator
                         int low = Integer.parseInt(range[0]);
                         int high = Integer.parseInt(range[1]);
 
-                        if ((dimensionId >= low) && (dimensionId <= high))
+                        if (dimensionId >= low && dimensionId <= high)
                         {
                             vaild = true;
                             break;
@@ -112,52 +159,6 @@ public class WorldGenMetals implements IWorldGenerator
         }
 
         return vaild;
-    }
-
-    public void generate(Random random, int chunkX, int chunkZ, World world, boolean b)
-    {
-        if (b || ConfigHandler.regen())
-        {
-            
-            Random chunkRand = getRandom(random, chunkX, chunkZ);
-            
-            int dimId = world.provider.dimensionId;
-
-            if (!vaildDimension(dimId)) { return; }
-
-            if (chunkRand.nextInt(100) > generation[4]) { return; }
-
-            for (int i = 0; i <= this.generation[0]; i++)
-            {
-                int initX = (chunkX * 16) + chunkRand.nextInt(16);
-                int initY = generation[2] + chunkRand.nextInt(generation[3] - generation[2]);
-                int initZ = (chunkZ * 16) + chunkRand.nextInt(16);
-
-                mineable.generate(world, chunkRand, initX, initY, initZ);
-            }
-        }
-    }
-
-    public static void generateAll(Random fmlRandom, int chunkXPos, int chunkZPos, WorldServer world, boolean b)
-    {
-        synchronized (generators)
-        {
-            for (WorldGenMetals gen : generators)
-            {
-                gen.generate(fmlRandom, chunkXPos, chunkZPos, world, b);
-            }
-        }
-    }
-    
-    private Random getRandom (Random fmlRandom, int chunkX, int chunkZ)
-    {
-        // Create our own random chunk seed, to get different random numbers than other mods.
-        long seed = fmlRandom.nextLong();
-        // Get a different seed for each ore.
-        long seedBlock = (genBlockId * genMetaId) ^ fmlRandom.nextLong();
-        seed = (((chunkX * seed) * (chunkZ * seed)) * seedBlock)  ^ fmlRandom.nextInt(Integer.MAX_VALUE);
-        
-        return new Random(seed);
     }
 
 }

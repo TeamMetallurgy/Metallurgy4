@@ -34,25 +34,36 @@ public class BlockList
 
     private static Map<String, MetalSet> setList = new HashMap<String, MetalSet>();
 
+    private static int getId(String blockName)
+    {
+        int defaultId = 450;
+        return ConfigHandler.getBlock("Machines", blockName, defaultId++);
+    }
+
+    public static MetalSet getSet(String name)
+    {
+        return BlockList.setList.get(name);
+    }
+
     public static void init()
     {
         String blockName = "crusher";
 
-        crusher = new BlockCrusher(getId(blockName)).setUnlocalizedName(blockName);
+        BlockList.crusher = new BlockCrusher(BlockList.getId(blockName)).setUnlocalizedName(blockName);
 
-        registerBlockWithTileEntity(crusher, TileEntityCrusher.class, blockName);
+        BlockList.registerBlockWithTileEntity(BlockList.crusher, TileEntityCrusher.class, blockName);
 
         blockName = "alloyer";
 
-        alloyer = new BlockAlloyer(getId(blockName)).setUnlocalizedName(blockName);
+        BlockList.alloyer = new BlockAlloyer(BlockList.getId(blockName)).setUnlocalizedName(blockName);
 
-        registerBlockWithTileEntity(alloyer, TileEntityAlloyer.class, blockName);
+        BlockList.registerBlockWithTileEntity(BlockList.alloyer, TileEntityAlloyer.class, blockName);
 
         blockName = "forge";
 
-        forge = new BlockForge(getId(blockName)).setUnlocalizedName(blockName);
+        BlockList.forge = new BlockForge(BlockList.getId(blockName)).setUnlocalizedName(blockName);
 
-        registerBlockWithTileEntity(forge, TileEntityForge.class, blockName);
+        BlockList.registerBlockWithTileEntity(BlockList.forge, TileEntityForge.class, blockName);
 
         File directory = new File(Metallurgy.instance.modsPath());
 
@@ -80,7 +91,7 @@ public class BlockList
         {
             try
             {
-                readPackZip(zipDir);
+                BlockList.readPackZip(zipDir);
             }
             catch (IOException e)
             {
@@ -100,13 +111,23 @@ public class BlockList
 
             try
             {
-                injectMetalSet(set, resource.openStream());
+                BlockList.injectMetalSet(set, resource.openStream());
             }
             catch (IOException e)
             {
             }
 
         }
+
+    }
+
+    private static void injectMetalSet(String name, InputStream stream) throws IOException
+    {
+        MetalSet metalSet = new MetalSet(name);
+
+        metalSet.load(stream);
+
+        BlockList.setList.put(name, metalSet);
 
     }
 
@@ -126,7 +147,7 @@ public class BlockList
                 Metallurgy.proxy.injectZipAsResource(zipDir);
                 InputStream stream = zipFile.getInputStream(nextElement);
 
-                injectMetalSet(name.substring(name.lastIndexOf("/") + 1, name.lastIndexOf(".")), stream);
+                BlockList.injectMetalSet(name.substring(name.lastIndexOf("/") + 1, name.lastIndexOf(".")), stream);
 
             }
         }
@@ -134,41 +155,20 @@ public class BlockList
         zipFile.close();
     }
 
-    private static void injectMetalSet(String name, InputStream stream) throws IOException
+    private static void registerBlock(Block block, String name)
     {
-        MetalSet metalSet = new MetalSet(name);
-
-        metalSet.load(stream);
-
-        setList.put(name, metalSet);
-
-    }
-
-    private static int getId(String blockName)
-    {
-        int defaultId = 450;
-        return ConfigHandler.getBlock("Machines", blockName, defaultId++);
+        GameRegistry.registerBlock(block, Metallurgy.MODID + ":" + name);
     }
 
     private static void registerBlockWithTileEntity(Block block, Class<? extends TileEntity> teClass, String blockName)
     {
-        registerBlock(block, blockName);
-        registerTileEntity(teClass, blockName);
-    }
-
-    public static MetalSet getSet(String name)
-    {
-        return setList.get(name);
+        BlockList.registerBlock(block, blockName);
+        BlockList.registerTileEntity(teClass, blockName);
     }
 
     private static void registerTileEntity(Class<? extends TileEntity> clazz, String blockName)
     {
         GameRegistry.registerTileEntity(clazz, Metallurgy.MODID + ":" + blockName);
-    }
-
-    private static void registerBlock(Block block, String name)
-    {
-        GameRegistry.registerBlock(block, Metallurgy.MODID + ":" + name);
     }
 
 }

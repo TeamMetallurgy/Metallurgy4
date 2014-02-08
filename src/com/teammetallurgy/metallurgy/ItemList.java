@@ -20,9 +20,9 @@ public class ItemList
         {
             int id = ConfigHandler.getItem(itemName, defaultId++);
 
-            oreFinder = new ItemOreFinder(id).setUnlocalizedName(itemName);
+            ItemList.oreFinder = new ItemOreFinder(id).setUnlocalizedName(itemName);
 
-            registerItem(oreFinder, itemName);
+            ItemList.registerItem(ItemList.oreFinder, itemName);
         }
 
     }

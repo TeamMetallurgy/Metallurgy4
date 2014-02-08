@@ -25,53 +25,38 @@ public class MetalItem extends Item
     public MetalItem(int id)
     {
         super(id);
-        setTextureName(Metallurgy.MODID + ":metal_item_" + id);
-        setUnlocalizedName("metal.item." + id);
-        setCreativeTab(Metallurgy.instance.creativeTabItems);
-        setHasSubtypes(true);
-        setMaxDamage(0);
+        this.setTextureName(Metallurgy.MODID + ":metal_item_" + id);
+        this.setUnlocalizedName("metal.item." + id);
+        this.setCreativeTab(Metallurgy.instance.creativeTabItems);
+        this.setHasSubtypes(true);
+        this.setMaxDamage(0);
     }
 
     public void addSubItem(int meta, String name, int itemType, String texture)
     {
-        names.put(meta, name);
+        this.names.put(meta, name);
 
         if (itemType < 0 || itemType > 2)
         {
             itemType = 0;
         }
 
-        itemTypes.put(meta, itemType);
+        this.itemTypes.put(meta, itemType);
 
-        textures.put(meta, texture);
+        this.textures.put(meta, texture);
     }
 
     @SideOnly(Side.CLIENT)
     @Override
     public Icon getIconFromDamage(int meta)
     {
-        if (icons.containsKey(meta))
+        if (this.icons.containsKey(meta))
         {
-            return icons.get(meta);
+            return this.icons.get(meta);
         }
         else
         {
-            return itemIcon;
-        }
-    }
-
-    @SideOnly(Side.CLIENT)
-    @Override
-    public void registerIcons(IconRegister register)
-    {
-        for (Map.Entry<Integer, String> texture : textures.entrySet())
-        {
-            int meta = texture.getKey();
-            String textureName = texture.getValue();
-
-            Icon icon = register.registerIcon(textureName);
-
-            icons.put(meta, icon);
+            return this.itemIcon;
         }
     }
 
@@ -79,7 +64,7 @@ public class MetalItem extends Item
     @Override
     public void getSubItems(int id, CreativeTabs tab, List list)
     {
-        for (Map.Entry<Integer, String> name : names.entrySet())
+        for (Map.Entry<Integer, String> name : this.names.entrySet())
         {
             list.add(new ItemStack(id, 1, name.getKey()));
         }
@@ -90,13 +75,13 @@ public class MetalItem extends Item
     {
         int meta = itemStack.getItemDamage();
 
-        if (names.get(meta) != null)
+        if (this.names.get(meta) != null)
         {
-            String unlocalizedName = names.get(meta);
+            String unlocalizedName = this.names.get(meta);
             unlocalizedName = unlocalizedName.replace(" ", ".").toLowerCase();
 
             String itemType = "";
-            switch (itemTypes.get(meta))
+            switch (this.itemTypes.get(meta))
             {
                 case 0:
                     itemType = ".dust";
@@ -116,6 +101,21 @@ public class MetalItem extends Item
         else
         {
             return this.getUnlocalizedName();
+        }
+    }
+
+    @SideOnly(Side.CLIENT)
+    @Override
+    public void registerIcons(IconRegister register)
+    {
+        for (Map.Entry<Integer, String> texture : this.textures.entrySet())
+        {
+            int meta = texture.getKey();
+            String textureName = texture.getValue();
+
+            Icon icon = register.registerIcon(textureName);
+
+            this.icons.put(meta, icon);
         }
     }
 

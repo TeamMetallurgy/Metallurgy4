@@ -31,6 +31,102 @@ public class Metal
 
     public String getName()
     {
-        return name;
+        return this.name;
     }
+
+    /**
+     * Gets the tool's attack damage
+     * 
+     * @return
+     *         The tool's attack damage, and -1 if invalid
+     */
+    public int getToolDamage()
+    {
+        if (this.haveTools())
+        {
+            return this.equipment[2];
+        }
+        else
+        {
+            return -1;
+        }
+    }
+
+    /**
+     * Gets the tool's durability
+     * 
+     * @return
+     *         The tool's durability, and -1 if invalid
+     */
+    public int getToolDurability()
+    {
+        if (this.haveTools())
+        {
+            return this.equipment[1];
+        }
+        else
+        {
+            return -1;
+        }
+    }
+
+    /**
+     * Gets the tool's efficiency (speed)
+     * 
+     * @return
+     *         The tool's efficiency , and -1 if invalid
+     */
+    public int getToolEfficiency()
+    {
+        if (this.haveTools())
+        {
+            return this.equipment[3];
+        }
+        else
+        {
+            return -1;
+        }
+    }
+
+    /**
+     * Gets the tool's efficiency (speed)
+     * 
+     * @return
+     *         The tool's efficiency , and -1 if invalid
+     */
+    public int getToolEncantabilty()
+    {
+        if (this.haveTools())
+        {
+            return this.equipment[4];
+        }
+        else
+        {
+            return -1;
+        }
+    }
+
+    /**
+     * Gets the tool's harvest level
+     * 
+     * @return
+     *         the tool's harvest level, and -1 if invalid
+     */
+    public int getToolHarvestLevel()
+    {
+        if (this.haveTools())
+        {
+            return this.equipment[0];
+        }
+        else
+        {
+            return -1;
+        }
+    }
+
+    public boolean haveTools()
+    {
+        return this.equipment != null && this.equipment.length >= 5;
+    }
+
 }

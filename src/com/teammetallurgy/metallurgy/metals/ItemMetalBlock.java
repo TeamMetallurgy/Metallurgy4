@@ -10,8 +10,8 @@ public class ItemMetalBlock extends ItemBlock
     public ItemMetalBlock(int id)
     {
         super(id);
-        setHasSubtypes(true);
-        setUnlocalizedName("metallurgy.metal.block." + id);
+        this.setHasSubtypes(true);
+        this.setUnlocalizedName("metallurgy.metal.block." + id);
 
     }
 
@@ -32,7 +32,7 @@ public class ItemMetalBlock extends ItemBlock
         }
         else
         {
-            return getUnlocalizedName();
+            return this.getUnlocalizedName();
         }
 
     }
