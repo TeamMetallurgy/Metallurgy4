@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 
 import net.minecraft.block.Block;
+import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -16,6 +17,7 @@ import net.minecraftforge.oredict.OreDictionary;
 import com.google.gson.Gson;
 import com.teammetallurgy.metallurgy.Metallurgy;
 import com.teammetallurgy.metallurgy.Utils;
+import com.teammetallurgy.metallurgy.armor.ItemMetallurgyArmor;
 import com.teammetallurgy.metallurgy.tools.Axe;
 import com.teammetallurgy.metallurgy.tools.Hoe;
 import com.teammetallurgy.metallurgy.tools.Pickaxe;
@@ -448,8 +450,81 @@ public class MetalSet
                     GameRegistry.registerItem(sword, swordUName);
                 }
             }
-        }
 
+            // Armor
+            if (ingot != null && metal.haveArmor())
+            {
+                String modelTexture = metal.getName().replace(" ", "_").toLowerCase();
+                modelTexture = this.name.toLowerCase() + "/" + modelTexture;
+
+                String armorUName = metal.getName().toLowerCase();
+                armorUName = armorUName.replace(" ", ".");
+
+                int mutiplier = metal.getArmorMultiplier();
+                int[] damageReduction = metal.getArmorDamageReduction();
+                int enchantablilty = metal.getArmorEnchantability();
+
+                EnumArmorMaterial armorMaterial = EnumHelper.addArmorMaterial(armorUName, mutiplier, damageReduction, enchantablilty);
+
+                armorMaterial.customCraftingMaterial = ingot;
+
+                // Set default model texture to diamond, model texture will be
+                // overridden by the class.
+                int renderIndex = 3;
+
+                if (metal.ids.get("helmet") != null)
+                {
+                    String helmetIconTexture = texture + "_helmet";
+                    String helmetUName = armorUName + ".helmet";
+
+                    int helmetID = ConfigHandler.getItem("Helmets", "helmet" + configTag, metal.ids.get("helmet"));
+
+                    ItemMetallurgyArmor helmet = new ItemMetallurgyArmor(helmetID, armorMaterial, renderIndex, 0, modelTexture);
+                    helmet = (ItemMetallurgyArmor) helmet.setUnlocalizedName(helmetUName);
+                    helmet = (ItemMetallurgyArmor) helmet.setTextureName(helmetIconTexture);
+                    GameRegistry.registerItem(helmet, helmetUName);
+                }
+
+                if (metal.ids.get("chestplate") != null)
+                {
+                    String chestplateIconTexture = texture + "_chest";
+                    String chestplateUName = armorUName + ".chestplate";
+
+                    int chestplateID = ConfigHandler.getItem("Chestplates", "chestplate" + configTag, metal.ids.get("chestplate"));
+
+                    ItemMetallurgyArmor chestplate = new ItemMetallurgyArmor(chestplateID, armorMaterial, renderIndex, 1, modelTexture);
+                    chestplate = (ItemMetallurgyArmor) chestplate.setUnlocalizedName(chestplateUName);
+                    chestplate = (ItemMetallurgyArmor) chestplate.setTextureName(chestplateIconTexture);
+                    GameRegistry.registerItem(chestplate, chestplateUName);
+                }
+
+                if (metal.ids.get("leggings") != null)
+                {
+                    String leggingsIconTexture = texture + "_legs";
+                    String leggingsUName = armorUName + ".leggings";
+
+                    int leggingsID = ConfigHandler.getItem("Leggings", "leggings" + configTag, metal.ids.get("leggings"));
+
+                    ItemMetallurgyArmor leggings = new ItemMetallurgyArmor(leggingsID, armorMaterial, renderIndex, 2, modelTexture);
+                    leggings = (ItemMetallurgyArmor) leggings.setUnlocalizedName(leggingsUName);
+                    leggings = (ItemMetallurgyArmor) leggings.setTextureName(leggingsIconTexture);
+                    GameRegistry.registerItem(leggings, leggingsUName);
+                }
+
+                if (metal.ids.get("boots") != null)
+                {
+                    String bootsIconTexture = texture + "_boots";
+                    String bootsUName = armorUName + ".boots";
+
+                    int bootsID = ConfigHandler.getItem("Boots", "boots" + configTag, metal.ids.get("boots"));
+
+                    ItemMetallurgyArmor boots = new ItemMetallurgyArmor(bootsID, armorMaterial, renderIndex, 3, modelTexture);
+                    boots = (ItemMetallurgyArmor) boots.setUnlocalizedName(bootsUName);
+                    boots = (ItemMetallurgyArmor) boots.setTextureName(bootsIconTexture);
+                    GameRegistry.registerItem(boots, bootsUName);
+                }
+            }
+        }
     }
 
     private void registerItem(MetalItem item, String tag, int metaId, String intentifier)

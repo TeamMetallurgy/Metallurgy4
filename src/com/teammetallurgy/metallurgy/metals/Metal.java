@@ -128,5 +128,64 @@ public class Metal
     {
         return this.equipment != null && this.equipment.length >= 5;
     }
+    
+    public boolean haveArmor()
+    {
+        return this.equipment != null && this.equipment.length >=10;
+    }
+    
+    /**
+     * Gets the Armor Multiplier
+     * 
+     * @return
+     *         the armor's multiplier, and -1 if invalid.
+     */
+    public int getArmorMultiplier ()
+    {
+        if (this.haveArmor())
+        {
+            return this.equipment[9];
+        }
+        else 
+        {
+            return -1;
+        }
+    }
 
+    /**
+     * Gets the Armor Damage Reduction array
+     *
+     * @return
+     *         The armor's Damage Reduction array, and null if invalid.
+     */
+    public int[] getArmorDamageReduction ()
+    {
+        if (this.haveArmor())
+        {
+            int damageReduction [] = {this.equipment[5],this.equipment[6],this.equipment[7],this.equipment[8]};
+            return damageReduction;
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    /**
+     * Gets the Armor enchantability
+     *
+     * @return
+     *         the armor's enchantability, and -1 if invalid.
+     */
+    public int getArmorEnchantability ()
+    {
+        if (this.haveArmor())
+        {
+            return this.equipment[4];
+        }
+        else
+        {
+            return -1;
+        }
+    }
 }
