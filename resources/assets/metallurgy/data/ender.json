@@ -7,7 +7,7 @@
 			"block":904,
 			"brick":905,
 			"item":28350,
-			"dust":26351
+			"dust":28351
 		}
 	},
 	{
@@ -16,12 +16,16 @@
 		"ids":
 		{
 			"meta":0,
-			"ingot":26380,
-			"axe":26360,
-			"hoe":26361,
-			"pickaxe":26362,
-			"shovel":26363,
-			"sword":26364
+			"ingot":28380,
+			"axe":28360,
+			"hoe":28361,
+			"pickaxe":28362,
+			"shovel":28363,
+			"sword":28364,
+			"helmet":28370,
+			"chestplate":28372,
+			"leggings":28373,
+			"boots":28374
 		},
 		"abstratorXP":6,
 		"blockLvl":3,
@@ -36,7 +40,7 @@
 		"ids":
 		{
 			"meta":1,
-			"ingot":26381
+			"ingot":28381
 		},
 		"abstratorXP":6,
 		"blockLvl":3,
@@ -50,12 +54,16 @@
 		"ids":
 		{
 			"meta":2,
-			"ingot":26382,
-			"axe":26365,
-			"hoe":26366,
-			"pickaxe":26367,
-			"shovel":26368,
-			"sword":26369
+			"ingot":28382,
+			"axe":28365,
+			"hoe":28366,
+			"pickaxe":28367,
+			"shovel":28368,
+			"sword":28369,
+			"helmet":28375,
+			"chestplate":28376,
+			"leggings":28377,
+			"boots":28378
 		},
 		"abstratorXP":6,
 		"blockLvl":4,

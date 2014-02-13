@@ -16,12 +16,16 @@
 		"ids":
 		{
 			"meta":0,
-			"ingot":27700,
+			"ingot":27800,
 			"axe":27560,
 			"hoe":27561,
 			"pickaxe":27562,
 			"shovel":27563,
-			"sword":27564
+			"sword":27564,
+			"helmet":27630,
+			"chestplate":27631,
+			"leggings":27632,
+			"boots":27633
 		},
 		"abstratorXP":1,
 		"blockLvl":1,		
@@ -36,12 +40,16 @@
 		"ids":
 		{
 			"meta":1,
-			"ingot":27701,
+			"ingot":27801,
 			"axe":27565,
 			"hoe":27566,
 			"pickaxe":27567,
 			"shovel":27568,
-			"sword":27569
+			"sword":27569,
+			"helmet":27634,
+			"chestplate":27635,
+			"leggings":27636,
+			"boots":27637
 		},
 		"abstratorXP":2,
 		"blockLvl":1,
@@ -56,7 +64,7 @@
 		"ids":
 		{
 			"meta":2,
-			"ingot":27702
+			"ingot":27802
 		},
 		"abstratorXP":2,
 		"blockLvl":1,		
@@ -70,12 +78,16 @@
 		"ids":
 		{
 			"meta":3,
-			"ingot":27703,
+			"ingot":27803,
 			"axe":27570,
 			"hoe":27571,
 			"pickaxe":27572,
 			"shovel":27573,
-			"sword":27574
+			"sword":27574,
+			"helmet":27638,
+			"chestplate":27639,
+			"leggings":27640,
+			"boots":27641
 		},
 		"abstratorXP":4,
 		"blockLvl":1,
@@ -89,12 +101,16 @@
 		"ids":
 		{
 			"meta":4,
-			"ingot":27704,
+			"ingot":27804,
 			"axe":27575,
 			"hoe":27576,
 			"pickaxe":27577,
 			"shovel":27578,
-			"sword":27579
+			"sword":27579,
+			"helmet":27642,
+			"chestplate":27643,
+			"leggings":27644,
+			"boots":27645
 		},
 		"abstratorXP":3,
 		"blockLvl":2,
@@ -109,12 +125,16 @@
 		"ids":
 		{
 			"meta":5,
-			"ingot":27705,
+			"ingot":27805,
 			"axe":27580,
 			"hoe":27581,
 			"pickaxe":27582,
 			"shovel":27583,
-			"sword":27584
+			"sword":27584,
+			"helmet":27646,
+			"chestplate":27647,
+			"leggings":27648,
+			"boots":27649
 		},
 		"abstratorXP":11,
 		"blockLvl":3,
@@ -129,12 +149,16 @@
 		"ids":
 		{
 			"meta":6,
-			"ingot":27706,
+			"ingot":27806,
 			"axe":27585,
 			"hoe":27586,
 			"pickaxe":27587,
 			"shovel":27588,
-			"sword":27589
+			"sword":27589,
+			"helmet":27650,
+			"chestplate":27651,
+			"leggings":27652,
+			"boots":27653
 		},
 		"abstratorXP":15,
 		"blockLvl":3,
@@ -149,12 +173,16 @@
 		"ids":
 		{
 			"meta":7,
-			"ingot":27707,
+			"ingot":27807,
 			"axe":27590,
 			"hoe":27591,
 			"pickaxe":27592,
 			"shovel":27593,
-			"sword":27594
+			"sword":27594,
+			"helmet":27654,
+			"chestplate":27655,
+			"leggings":27656,
+			"boots":27657
 		},
 		"abstratorXP":4,
 		"blockLvl":3,
@@ -169,7 +197,7 @@
 		"ids":
 		{
 			"meta":8,
-			"ingot":27708
+			"ingot":27808
 		},
 		"abstratorXP":2,
 		"blockLvl":3,
@@ -183,12 +211,16 @@
 		"ids":
 		{
 			"meta":9,
-			"ingot":27709,
+			"ingot":27809,
 			"axe":27595,
 			"hoe":27596,
 			"pickaxe":27597,
 			"shovel":27598,
-			"sword":27599
+			"sword":27599,
+			"helmet":27658,
+			"chestplate":27659,
+			"leggings":27660,
+			"boots":27661
 		},
 		"abstratorXP":9,
 		"blockLvl":3,
@@ -202,12 +234,16 @@
 		"ids":
 		{
 			"meta":10,
-			"ingot":27710,
+			"ingot":27810,
 			"axe":27600,
 			"hoe":27601,
 			"pickaxe":27602,
 			"shovel":27603,
-			"sword":27604
+			"sword":27604,
+			"helmet":27662,
+			"chestplate":27663,
+			"leggings":27664,
+			"boots":27665
 		},
 		"abstratorXP":6,
 		"blockLvl":3,
@@ -221,12 +257,16 @@
 		"ids":
 		{
 			"meta":11,
-			"ingot":27711,
+			"ingot":27811,
 			"axe":27605,
 			"hoe":27606,
 			"pickaxe":27607,
 			"shovel":27608,
-			"sword":27609
+			"sword":27609,
+			"helmet":27666,
+			"chestplate":27667,
+			"leggings":27668,
+			"boots":27669
 		},
 		"abstratorXP":5,
 		"blockLvl":4,
@@ -241,12 +281,16 @@
 		"ids":
 		{
 			"meta":12,
-			"ingot":27712,
+			"ingot":27812,
 			"axe":27610,
 			"hoe":27611,
 			"pickaxe":27612,
 			"shovel":27613,
-			"sword":27614
+			"sword":27614,
+			"helmet":27670,
+			"chestplate":27671,
+			"leggings":27672,
+			"boots":27673
 		},
 		"abstratorXP":25,
 		"blockLvl":4,
@@ -260,12 +304,16 @@
 		"ids":
 		{
 			"meta":13,
-			"ingot":27713,
+			"ingot":27813,
 			"axe":27615,
 			"hoe":27616,
 			"pickaxe":27617,
 			"shovel":27618,
-			"sword":27619
+			"sword":27619,
+			"helmet":27674,
+			"chestplate":27675,
+			"leggings":27676,
+			"boots":27677
 		},
 		"abstratorXP":6,
 		"blockLvl":5,
@@ -280,12 +328,16 @@
 		"ids":
 		{
 			"meta":14,
-			"ingot":27714,
+			"ingot":27814,
 			"axe":27620,
 			"hoe":27621,
 			"pickaxe":27622,
 			"shovel":27623,
-			"sword":27624
+			"sword":27624,
+			"helmet":27678,
+			"chestplate":27679,
+			"leggings":27680,
+			"boots":27681
 		},
 		"abstratorXP":7,
 		"blockLvl":5,
@@ -300,12 +352,16 @@
 		"ids":
 		{
 			"meta":15,
-			"ingot":27715,
+			"ingot":27815,
 			"axe":27625,
 			"hoe":27626,
 			"pickaxe":27627,
 			"shovel":27628,
-			"sword":27629
+			"sword":27629,
+			"helmet":27682,
+			"chestplate":27683,
+			"leggings":27684,
+			"boots":27685
 		},
 		"abstratorXP":13,
 		"blockLvl":6,

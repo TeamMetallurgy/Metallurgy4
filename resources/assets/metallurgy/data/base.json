@@ -16,12 +16,16 @@
 		"ids":
 		{
 			"meta":0,
-			"ingot":26300,
+			"ingot":26400,
 			"axe":26260,
 			"hoe":26261,
 			"pickaxe":26262,
 			"shovel":26263,
-			"sword":26264
+			"sword":26264,
+			"helmet":26291,
+			"chestplate":26292,
+			"leggings":26293,
+			"boots":26294
 		},
 		"abstratorXP":1,
 		"blockLvl":1,
@@ -36,7 +40,7 @@
 		"ids":
 		{
 			"meta":1,
-			"ingot":26301
+			"ingot":26401
 		},
 		"abstratorXP":1,
 		"blockLvl":1,
@@ -50,7 +54,7 @@
 		"ids":
 		{
 			"meta":2,
-			"ingot":26302
+			"ingot":26402
 		},
 		"abstratorXP":3,
 		"blockLvl":2,
@@ -64,12 +68,16 @@
 		"ids":
 		{
 			"meta":3,
-			"ingot":26303,
+			"ingot":26403,
 			"axe":26265,
 			"hoe":26266,
 			"pickaxe":26267,
 			"shovel":26269,
-			"sword":26270
+			"sword":26270,
+			"helmet":26295,
+			"chestplate":26296,
+			"leggings":26297,
+			"boots":26298
 		},
 		"abstratorXP":2,
 		"blockLvl":2,
@@ -83,12 +91,16 @@
 		"ids":
 		{
 			"meta":4,
-			"ingot":26304,
+			"ingot":26404,
 			"axe":26271,
 			"hoe":26272,
 			"pickaxe":26273,
 			"shovel":26274,
-			"sword":26275
+			"sword":26275,
+			"helmet":26299,
+			"chestplate":26300,
+			"leggings":26301,
+			"boots":26302
 		},
 		"abstratorXP":8,
 		"blockLvl":2,
@@ -102,12 +114,16 @@
 		"ids":
 		{
 			"meta":5,
-			"ingot":26305,
+			"ingot":26405,
 			"axe":26276,
 			"hoe":26277,
 			"pickaxe":26278,
 			"shovel":26279,
-			"sword":26280
+			"sword":26280,
+			"helmet":26303,
+			"chestplate":26304,
+			"leggings":26305,
+			"boots":26306
 		},
 		"abstratorXP":5,
 		"blockLvl":2,
@@ -121,12 +137,16 @@
 		"ids":
 		{
 			"meta":6,
-			"ingot":26306,
+			"ingot":26406,
 			"axe":26281,
 			"hoe":26282,
 			"pickaxe":26283,
 			"shovel":26284,
-			"sword":26285
+			"sword":26285,
+			"helmet":26307,
+			"chestplate":26308,
+			"leggings":26309,
+			"boots":26310
 		},
 		"abstratorXP":9,
 		"blockLvl":2,
@@ -140,12 +160,16 @@
 		"ids":
 		{
 			"meta":7,
-			"ingot":26307,
+			"ingot":26407,
 			"axe":26286,
 			"hoe":26287,
 			"pickaxe":26288,
 			"shovel":26289,
-			"sword":26290
+			"sword":26290,
+			"helmet":26311,
+			"chestplate":26312,
+			"leggings":26313,
+			"boots":26314
 		},
 		"abstratorXP":6,
 		"blockLvl":2,
