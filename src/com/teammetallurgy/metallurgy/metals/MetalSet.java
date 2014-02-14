@@ -459,6 +459,7 @@ public class MetalSet
 
                 String armorUName = metal.getName().toLowerCase();
                 armorUName = armorUName.replace(" ", ".");
+                armorUName = Metallurgy.MODID.toLowerCase() + "." + armorUName;
 
                 int mutiplier = metal.getArmorMultiplier();
                 int[] damageReduction = metal.getArmorDamageReduction();
