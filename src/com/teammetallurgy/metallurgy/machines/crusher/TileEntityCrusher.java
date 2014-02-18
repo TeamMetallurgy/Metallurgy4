@@ -11,37 +11,48 @@ import com.teammetallurgy.metallurgycore.machines.TileEntityMetallurgySided;
 public class TileEntityCrusher extends TileEntityMetallurgySided
 {
 
+    protected static final int INPUT_SLOT = 0;
+    protected static final int FUEL_SLOT = 1;
+    protected static final int OUTPUT_START = 2;
+    protected static final int OUTPUT_END = 4;
+    protected static final int DRAWER_INPUT = 5;
+    protected static final int DRAWER_OUTPUT = 6;
+
     public TileEntityCrusher()
     {
-        super(6, new int[] { 0, 1 }, new int[] { 0, 1 }, new int[] { 1, 2, 3, 4 });
+        super(6, new int[] { TileEntityCrusher.INPUT_SLOT, TileEntityCrusher.FUEL_SLOT }, new int[] { TileEntityCrusher.INPUT_SLOT, TileEntityCrusher.FUEL_SLOT }, new int[] {
+                TileEntityCrusher.FUEL_SLOT, TileEntityCrusher.OUTPUT_START, 3, TileEntityCrusher.OUTPUT_END });
     }
 
     @Override
     protected boolean canProcessItem()
     {
-        if (this.itemStacks[0] == null)
-        {
-            if (this.itemStacks[5] != null)
-            {
-                ItemStack itemStack = this.itemStacks[5];
-                ItemStack firstStack = getDrawerItem(itemStack);
+        ItemStack inputStack = getStackInSlot(TileEntityCrusher.INPUT_SLOT);
 
-                if (firstStack != null) { return canProcessItem(firstStack); }
-            }
+        ItemStack drawerInput = getStackInSlot(TileEntityCrusher.DRAWER_INPUT);
+        if (drawerInput != null)
+        {
+            ItemStack firstStack = getDrawerItem(getStackInSlot(TileEntityCrusher.DRAWER_INPUT));
+
+            if (firstStack != null) { return canProcessItem(firstStack); }
+        }
+
+        if (inputStack == null)
+        {
             return false;
         }
         else
         {
-            return canProcessItem(this.itemStacks[0]);
+            return canProcessItem(inputStack);
         }
     }
 
-    protected boolean canProcessItem(ItemStack itemStack2)
+    protected boolean canProcessItem(ItemStack inputStack)
     {
-        ItemStack itemstack = this.getSmeltingResult(itemStack2);
-        if (itemstack == null) { return false; }
-        if (this.slotsAreEmtpty(2, 4)) { return true; }
-        return this.canAcceptStackRange(2, 4, itemstack);
+        ItemStack outputStack = this.getSmeltingResult(inputStack);
+        if (outputStack == null) { return false; }
+        if (this.slotsAreEmtpty(TileEntityCrusher.OUTPUT_START, TileEntityCrusher.OUTPUT_END)) { return true; }
+        return this.canAcceptStackRange(TileEntityCrusher.OUTPUT_START, TileEntityCrusher.OUTPUT_END, outputStack);
     }
 
     @Override
@@ -65,9 +76,9 @@ public class TileEntityCrusher extends TileEntityMetallurgySided
     @Override
     public boolean isItemValidForSlot(int i, ItemStack itemstack)
     {
-        if (i >= 5 && i <= 6) { return itemstack.getItem() == ItemList.drawer; }
+        if (i >= TileEntityCrusher.DRAWER_INPUT && i <= TileEntityCrusher.DRAWER_OUTPUT) { return itemstack.getItem() == ItemList.drawer; }
 
-        return i >= 2 ? false : i == 1 ? TileEntityFurnace.isItemFuel(itemstack) : true;
+        return i >= TileEntityCrusher.OUTPUT_START && i <= TileEntityCrusher.OUTPUT_END ? false : i == TileEntityCrusher.FUEL_SLOT ? TileEntityFurnace.isItemFuel(itemstack) : true;
     }
 
     @Override
@@ -75,67 +86,60 @@ public class TileEntityCrusher extends TileEntityMetallurgySided
     {
         if (this.canProcessItem())
         {
-            ItemStack itemstack = this.getSmeltingResult(this.itemStacks[0]);
-            
-            if(itemstack == null)
+            ItemStack inputStack = getStackInSlot(TileEntityCrusher.INPUT_SLOT);
+            ItemStack itemstack = this.getSmeltingResult(inputStack);
+
+            if (itemstack == null)
             {
-                itemstack = this.getSmeltingResult(getDrawerItem(this.itemStacks[5]));
+                itemstack = this.getSmeltingResult(getDrawerItem(getStackInSlot(TileEntityCrusher.DRAWER_INPUT)));
             }
 
-            if (this.itemStacks[2] == null)
+            for (int i = TileEntityCrusher.OUTPUT_START; i <= TileEntityCrusher.OUTPUT_END; i++)
             {
-                this.itemStacks[2] = itemstack.copy();
-            }
-            else if (this.itemStacks[2].isItemEqual(itemstack))
-            {
-                this.itemStacks[2].stackSize += itemstack.stackSize;
-            }
-
-            else if (this.itemStacks[3] == null)
-            {
-                this.itemStacks[3] = itemstack.copy();
-            }
-            else if (this.itemStacks[3].isItemEqual(itemstack))
-            {
-                this.itemStacks[3].stackSize += itemstack.stackSize;
-            }
-
-            else if (this.itemStacks[4] == null)
-            {
-                this.itemStacks[4] = itemstack.copy();
-            }
-            else if (this.itemStacks[4].isItemEqual(itemstack))
-            {
-                this.itemStacks[4].stackSize += itemstack.stackSize;
-            }
-
-            if (this.itemStacks[0] != null)
-            {
-                --this.itemStacks[0].stackSize;
-
-                if (this.itemStacks[0].stackSize <= 0)
+                boolean handled = false;
+                ItemStack stackInSlot = getStackInSlot(i);
+                if (stackInSlot == null)
                 {
-                    this.itemStacks[0] = null;
+                    setInventorySlotContents(i, itemstack.copy());
+                }
+                else if (stackInSlot.isItemEqual(itemstack))
+                {
+                    stackInSlot.stackSize += itemstack.stackSize;
+                }
+
+                if (handled)
+                {
+                    break;
+                }
+            }
+
+            if (inputStack != null)
+            {
+                --inputStack.stackSize;
+
+                if (inputStack.stackSize <= TileEntityCrusher.INPUT_SLOT)
+                {
+                    this.itemStacks[TileEntityCrusher.INPUT_SLOT] = null;
                 }
             }
             else
             {
-                ItemStack firstStack = getDrawerItem(this.itemStacks[5]);
+                ItemStack firstStack = getDrawerItem(getStackInSlot(TileEntityCrusher.DRAWER_INPUT));
 
                 --firstStack.stackSize;
 
-                if (firstStack.stackSize <= 0)
+                if (firstStack.stackSize <= TileEntityCrusher.INPUT_SLOT)
                 {
                     firstStack = null;
                 }
-                
-               setInventorySlotContents(5, ItemDrawer.writeFirstStack(this.itemStacks[5], firstStack));
+
+                setInventorySlotContents(TileEntityCrusher.DRAWER_INPUT, ItemDrawer.writeFirstStack(getStackInSlot(TileEntityCrusher.DRAWER_INPUT), firstStack));
             }
         }
     }
 
     private ItemStack getDrawerItem(ItemStack itemStack)
     {
-        return ItemDrawer.getFirstStack(this.itemStacks[5]);
+        return ItemDrawer.getFirstStack(getStackInSlot(TileEntityCrusher.DRAWER_INPUT));
     }
 }
