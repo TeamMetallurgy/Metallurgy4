@@ -5,6 +5,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 import com.teammetallurgy.metallurgy.Metallurgy;
+import com.teammetallurgy.metallurgy.lib.GUIIds;
 import com.teammetallurgy.metallurgy.machines.BlockMetallurgy;
 
 public class BlockCrusher extends BlockMetallurgy
@@ -24,6 +25,6 @@ public class BlockCrusher extends BlockMetallurgy
     @Override
     protected void doOnActivate(World world, int x, int y, int z, EntityPlayer player, int side, float xOffset, float yOffset, float zOffset)
     {
-        player.openGui(Metallurgy.instance, 0, world, x, y, z);
+        player.openGui(Metallurgy.instance, GUIIds.CRUSHER, world, x, y, z);
     }
 }

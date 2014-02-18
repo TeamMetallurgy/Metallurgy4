@@ -2,34 +2,26 @@ package com.teammetallurgy.metallurgy;
 
 import net.minecraft.item.Item;
 
+import com.teammetallurgy.metallurgy.items.ItemDrawer;
 import com.teammetallurgy.metallurgycore.handlers.ConfigHandler;
-import com.teammetallurgy.metallurgycore.utils.ItemOreFinder;
-
-import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ItemList
 {
-    private static Item oreFinder;
+    private static Item drawer;
 
     public static void init()
     {
-        String itemName = "oreFinder";
+        String itemName = "drawer";
         int defaultId = 2560;
 
         if (ConfigHandler.itemEnabled(itemName))
         {
             int id = ConfigHandler.getItem(itemName, defaultId++);
 
-            ItemList.oreFinder = new ItemOreFinder(id).setUnlocalizedName(itemName);
+            ItemList.drawer = new ItemDrawer(id).setUnlocalizedName(itemName);
 
-            ItemList.registerItem(ItemList.oreFinder, itemName);
+            com.teammetallurgy.metallurgycore.ItemList.registerItem(ItemList.drawer, itemName);
         }
 
     }
-
-    private static void registerItem(Item item, String itemName)
-    {
-        GameRegistry.registerItem(item, itemName);
-    }
-
 }

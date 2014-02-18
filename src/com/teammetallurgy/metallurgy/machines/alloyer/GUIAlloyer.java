@@ -1,14 +1,12 @@
 package com.teammetallurgy.metallurgy.machines.alloyer;
 
-import org.lwjgl.opengl.GL11;
+import com.teammetallurgy.metallurgycore.machines.ContainerMetallurgyMachine;
+import com.teammetallurgy.metallurgycore.machines.GUIMetallurgyMachine;
 
-import com.teammetallurgy.metallurgycore.machines.ContainerMetallurgy;
-import com.teammetallurgy.metallurgycore.machines.GUIMetallurgy;
-
-public class GUIAlloyer extends GUIMetallurgy
+public class GUIAlloyer extends GUIMetallurgyMachine
 {
 
-    public GUIAlloyer(ContainerMetallurgy container)
+    public GUIAlloyer(ContainerMetallurgyMachine container)
     {
         super(container, "metallurgy:textures/gui/alloyer.png");
     }
@@ -16,9 +14,7 @@ public class GUIAlloyer extends GUIMetallurgy
     @Override
     protected void drawGuiContainerBackgroundLayer(float f, int i, int j)
     {
-        GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-        this.mc.getTextureManager().bindTexture(this.texture);
-        this.drawTexturedModalRect(this.guiLeft, this.guiTop, 0, 0, this.xSize, this.ySize);
+        super.drawGuiContainerBackgroundLayer(f, i, j);
 
         int i1;
         if (this.tileEntity.isBurning())

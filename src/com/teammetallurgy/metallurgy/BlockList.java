@@ -48,21 +48,15 @@ public class BlockList
     public static void init()
     {
         String blockName = "crusher";
-
         BlockList.crusher = new BlockCrusher(BlockList.getId(blockName)).setUnlocalizedName(blockName);
-
         BlockList.registerBlockWithTileEntity(BlockList.crusher, TileEntityCrusher.class, blockName);
 
         blockName = "alloyer";
-
         BlockList.alloyer = new BlockAlloyer(BlockList.getId(blockName)).setUnlocalizedName(blockName);
-
         BlockList.registerBlockWithTileEntity(BlockList.alloyer, TileEntityAlloyer.class, blockName);
 
         blockName = "forge";
-
         BlockList.forge = new BlockForge(BlockList.getId(blockName)).setUnlocalizedName(blockName);
-
         BlockList.registerBlockWithTileEntity(BlockList.forge, TileEntityForge.class, blockName);
 
         File directory = new File(Metallurgy.instance.modsPath());

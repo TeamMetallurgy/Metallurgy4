@@ -11,6 +11,7 @@ import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 
 import com.teammetallurgy.metallurgy.Metallurgy;
+import com.teammetallurgy.metallurgy.lib.GUIIds;
 import com.teammetallurgy.metallurgy.machines.BlockMetallurgy;
 
 public class BlockForge extends BlockMetallurgy
@@ -30,7 +31,7 @@ public class BlockForge extends BlockMetallurgy
     @Override
     protected void doOnActivate(World world, int x, int y, int z, EntityPlayer player, int side, float xOffset, float yOffset, float zOffset)
     {
-        player.openGui(Metallurgy.instance, 2, world, x, y, z);
+        player.openGui(Metallurgy.instance, GUIIds.FORGE, world, x, y, z);
     }
 
     @Override

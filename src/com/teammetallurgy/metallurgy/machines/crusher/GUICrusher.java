@@ -1,11 +1,11 @@
 package com.teammetallurgy.metallurgy.machines.crusher;
 
-import com.teammetallurgy.metallurgycore.machines.ContainerMetallurgy;
-import com.teammetallurgy.metallurgycore.machines.GUIMetallurgy;
+import com.teammetallurgy.metallurgycore.machines.ContainerMetallurgyMachine;
+import com.teammetallurgy.metallurgycore.machines.GUIMetallurgyMachine;
 
-public class GUICrusher extends GUIMetallurgy
+public class GUICrusher extends GUIMetallurgyMachine
 {
-    public GUICrusher(ContainerMetallurgy container)
+    public GUICrusher(ContainerMetallurgyMachine container)
     {
         super(container, "metallurgy:textures/gui/crusher.png");
     }

@@ -9,13 +9,12 @@ import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
 
 import org.lwjgl.input.Mouse;
-import org.lwjgl.opengl.GL11;
 
 import com.teammetallurgy.metallurgycore.guiwidgets.FluidWidget;
-import com.teammetallurgy.metallurgycore.machines.ContainerMetallurgy;
-import com.teammetallurgy.metallurgycore.machines.GUIMetallurgy;
+import com.teammetallurgy.metallurgycore.machines.ContainerMetallurgyMachine;
+import com.teammetallurgy.metallurgycore.machines.GUIMetallurgyMachine;
 
-public class GUIForge extends GUIMetallurgy
+public class GUIForge extends GUIMetallurgyMachine
 {
 
     public static FluidStack getFluidInfo(final FluidTank localTank)
@@ -29,7 +28,7 @@ public class GUIForge extends GUIMetallurgy
 
     private FluidTank tank;
 
-    public GUIForge(ContainerMetallurgy container)
+    public GUIForge(ContainerMetallurgyMachine container)
     {
         super(container, "metallurgy:textures/gui/forge.png");
         this.tank = ((TileEntityForge) this.tileEntity).getTank();
@@ -39,13 +38,9 @@ public class GUIForge extends GUIMetallurgy
     @Override
     protected void drawGuiContainerBackgroundLayer(float f, int i, int j)
     {
-        GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-        this.mc.getTextureManager().bindTexture(this.texture);
-        this.drawTexturedModalRect(this.guiLeft, this.guiTop, 0, 0, this.xSize, this.ySize);
+        super.drawGuiContainerBackgroundLayer(f, i, j);
 
-        int i1;
-
-        i1 = this.tileEntity.getCookProgressScaled(21);
+        int i1 = this.tileEntity.getCookProgressScaled(21);
         this.drawTexturedModalRect(this.guiLeft + 82, this.guiTop + 35, 176, 0, 12, i1);
 
         this.fluidWidget.drawLiquid(this, this.guiLeft, this.guiTop, this.texture);
