@@ -7,7 +7,7 @@ import com.teammetallurgy.metallurgycore.handlers.ConfigHandler;
 
 public class ItemList
 {
-    private static Item drawer;
+    public static Item drawer;
 
     public static void init()
     {
