@@ -10,6 +10,7 @@ import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.CraftingManager;
 import net.minecraftforge.common.EnumHelper;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.oredict.OreDictionary;
@@ -266,6 +267,33 @@ public class MetalSet
                 block = this.createBlock(blockId, metaId, metal.blockLvl, tag, texture, identifier);
                 block.addSubBlock(metaId, metal.getName(), 1, texture + "_" + identifier);
             }
+            
+            if ((metal.ids.get("ingot") != null || this.defaultIngotId != 0) && metal.type != Metal.MetalType.Drop)
+            {
+                String identifier = "ingot";
+                
+                int ingotId = this.defaultIngotId;
+                
+                if (ingotId == 0)
+                {
+                    ingotId = ConfigHandler.getItem(identifier + configTag, metal.ids.get(identifier));
+                }
+                
+                ingot = this.getMetalItem(ingotId);
+                ingot.addSubItem(0, metal.getName(), 1, texture + "_" + identifier);
+                
+                OreDictionary.registerOre(identifier + tag, new ItemStack(ingot, 1, 0));
+                
+                if (GameRegistry.findUniqueIdentifierFor(ingot) == null)
+                {
+                    String registryName = metal.getName().toLowerCase();
+                    registryName = registryName.replace(" ", ".");
+                    registryName = registryName + "." + identifier;
+                    
+                    GameRegistry.registerItem(ingot, registryName);
+                }
+            }
+
 
             if ((metal.ids.get("brick") != null || this.defaultBrickId != 0) && (metal.type != Metal.MetalType.Drop || metal.type != Metal.MetalType.Respawn))
             {
@@ -280,6 +308,7 @@ public class MetalSet
 
                 brick = this.createBlock(brickId, metaId, metal.blockLvl, tag, texture, identifier);
                 brick.addSubBlock(metaId, metal.getName(), 2, texture + "_" + identifier);
+                CraftingManager.getInstance().addRecipe(new ItemStack(brick, 1, metaId), new Object[] {"iii", "iii", "iii", 'i', ingot});
             }
 
             if ((metal.ids.get("dust") != null || this.defaultDustId != 0) && metal.type != Metal.MetalType.Drop)
@@ -298,32 +327,6 @@ public class MetalSet
 
                 this.registerItem(dust, tag, metaId, identifier);
 
-            }
-
-            if ((metal.ids.get("ingot") != null || this.defaultIngotId != 0) && metal.type != Metal.MetalType.Drop)
-            {
-                String identifier = "ingot";
-
-                int ingotId = this.defaultIngotId;
-
-                if (ingotId == 0)
-                {
-                    ingotId = ConfigHandler.getItem(identifier + configTag, metal.ids.get(identifier));
-                }
-
-                ingot = this.getMetalItem(ingotId);
-                ingot.addSubItem(0, metal.getName(), 1, texture + "_" + identifier);
-
-                OreDictionary.registerOre(identifier + tag, new ItemStack(ingot, 1, 0));
-
-                if (GameRegistry.findUniqueIdentifierFor(ingot) == null)
-                {
-                    String registryName = metal.getName().toLowerCase();
-                    registryName = registryName.replace(" ", ".");
-                    registryName = registryName + "." + identifier;
-
-                    GameRegistry.registerItem(ingot, registryName);
-                }
             }
 
             if ((metal.ids.get("item") != null || this.defaultItemId != 0) && metal.type == Metal.MetalType.Drop)
@@ -401,6 +404,7 @@ public class MetalSet
                     Axe axe = new Axe(axeId, toolMaterial, axeUName, axeTexture);
                     MinecraftForge.setToolClass(axe, "axe", harvestLevel);
                     GameRegistry.registerItem(axe, axeUName);
+                    CraftingManager.getInstance().addRecipe(new ItemStack(axe), new Object[] {"iii", "is ", " s ", 'i', ingot, 's', Item.stick});
                 }
 
                 if (metal.ids.get("hoe") != null)
@@ -413,6 +417,7 @@ public class MetalSet
                     Hoe hoe = new Hoe(hoeId, toolMaterial, hoeUName, hoeTexture);
                     MinecraftForge.setToolClass(hoe, "hoe", harvestLevel);
                     GameRegistry.registerItem(hoe, hoeUName);
+                    CraftingManager.getInstance().addRecipe(new ItemStack(hoe), new Object[] {"ii ", " s ", " s ", 'i', ingot, 's', Item.stick});
                 }
 
                 if (metal.ids.get("pickaxe") != null)
@@ -425,6 +430,7 @@ public class MetalSet
                     Pickaxe pickaxe = new Pickaxe(pickaxeId, toolMaterial, pickaxeUName, pickaxeTexture);
                     MinecraftForge.setToolClass(pickaxe, "pickaxe", harvestLevel);
                     GameRegistry.registerItem(pickaxe, pickaxeUName);
+                    CraftingManager.getInstance().addRecipe(new ItemStack(pickaxe), new Object[] {"iii", " s ", " s ", 'i', ingot, 's', Item.stick});
                 }
 
                 if (metal.ids.get("shovel") != null)
@@ -437,6 +443,7 @@ public class MetalSet
                     Shovel shovel = new Shovel(shovelId, toolMaterial, shovelUName, shovelTexture);
                     MinecraftForge.setToolClass(shovel, "shovel", harvestLevel);
                     GameRegistry.registerItem(shovel, shovelUName);
+                    CraftingManager.getInstance().addRecipe(new ItemStack(shovel), new Object[] {"i", "s", "s", 'i', ingot, 's', Item.stick});
                 }
 
                 if (metal.ids.get("sword") != null)
@@ -448,6 +455,7 @@ public class MetalSet
 
                     Sword sword = new Sword(swordId, toolMaterial, swordUName, swordTexture);
                     GameRegistry.registerItem(sword, swordUName);
+                    CraftingManager.getInstance().addRecipe(new ItemStack(sword), new Object[] {"i", "i", "s", 'i', ingot, 's', Item.stick});
                 }
             }
 
@@ -484,6 +492,7 @@ public class MetalSet
                     helmet = (ItemMetallurgyArmor) helmet.setUnlocalizedName(helmetUName);
                     helmet = (ItemMetallurgyArmor) helmet.setTextureName(helmetIconTexture);
                     GameRegistry.registerItem(helmet, helmetUName);
+                    CraftingManager.getInstance().addRecipe(new ItemStack(helmet), new Object[] {"iii", "i i", 'i', ingot});
                 }
 
                 if (metal.ids.get("chestplate") != null)
@@ -497,6 +506,7 @@ public class MetalSet
                     chestplate = (ItemMetallurgyArmor) chestplate.setUnlocalizedName(chestplateUName);
                     chestplate = (ItemMetallurgyArmor) chestplate.setTextureName(chestplateIconTexture);
                     GameRegistry.registerItem(chestplate, chestplateUName);
+                    CraftingManager.getInstance().addRecipe(new ItemStack(chestplate), new Object[] {"i i", "iii", "iii", 'i', ingot});
                 }
 
                 if (metal.ids.get("leggings") != null)
@@ -510,6 +520,7 @@ public class MetalSet
                     leggings = (ItemMetallurgyArmor) leggings.setUnlocalizedName(leggingsUName);
                     leggings = (ItemMetallurgyArmor) leggings.setTextureName(leggingsIconTexture);
                     GameRegistry.registerItem(leggings, leggingsUName);
+                    CraftingManager.getInstance().addRecipe(new ItemStack(leggings), new Object[] {"iii", "i i", "i i", 'i', ingot});
                 }
 
                 if (metal.ids.get("boots") != null)
@@ -523,6 +534,7 @@ public class MetalSet
                     boots = (ItemMetallurgyArmor) boots.setUnlocalizedName(bootsUName);
                     boots = (ItemMetallurgyArmor) boots.setTextureName(bootsIconTexture);
                     GameRegistry.registerItem(boots, bootsUName);
+                    CraftingManager.getInstance().addRecipe(new ItemStack(boots), new Object[] {"i i", "i i", 'i', ingot});
                 }
             }
         }

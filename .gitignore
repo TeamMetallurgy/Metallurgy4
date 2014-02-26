@@ -3,3 +3,6 @@
 /bin
 /build
 /download
+*.iml
+/.settings
+Thumbs.db
