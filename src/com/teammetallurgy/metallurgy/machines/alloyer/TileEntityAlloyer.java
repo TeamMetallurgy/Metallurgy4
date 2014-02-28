@@ -9,25 +9,11 @@ import com.teammetallurgy.metallurgycore.machines.TileEntityMetallurgySided;
 public class TileEntityAlloyer extends TileEntityMetallurgySided
 {
 
+    private static final int FUEL_SLOT = 1;
+
     public TileEntityAlloyer()
     {
-        super(4, new int[] { 0, 1, 2 }, new int[] { 0, 1, 2 }, new int[] { 1, 3 });
-    }
-
-    @Override
-    protected boolean canProcessItem()
-    {
-        if (this.itemStacks[0] == null || this.itemStacks[2] == null)
-        {
-            return false;
-        }
-        else
-        {
-            ItemStack itemstack = this.getSmeltingResult(this.itemStacks[0], this.itemStacks[2]);
-            if (itemstack == null) { return false; }
-            if (this.slotsAreEmtpty(3, 3)) { return true; }
-            return this.canAcceptStackRange(3, 3, itemstack);
-        }
+        super(4, new int[] { 0, TileEntityAlloyer.FUEL_SLOT, 2 }, new int[] { 0, TileEntityAlloyer.FUEL_SLOT, 2 }, new int[] { TileEntityAlloyer.FUEL_SLOT, 3 });
     }
 
     @Override
@@ -43,46 +29,27 @@ public class TileEntityAlloyer extends TileEntityMetallurgySided
     }
 
     @Override
-    protected ItemStack getSmeltingResult(ItemStack... itemStack)
+    public ItemStack getSmeltingResult(ItemStack... itemStack)
     {
         return AlloyerRecipes.getInstance().getAlloyResult(itemStack[0], itemStack[1]);
     }
 
     @Override
-    public boolean isItemValidForSlot(int i, ItemStack itemstack)
+    public int[] getInputSlots()
     {
-        return i >= 3 ? false : i == 1 ? TileEntityFurnace.isItemFuel(itemstack) : true;
+        return new int[] { 0, 2 };
     }
 
     @Override
-    protected void processItem()
+    public int[] getOutputSlots()
     {
-        if (this.canProcessItem())
-        {
-            ItemStack itemstack = this.getSmeltingResult(this.itemStacks[0], this.itemStacks[2]);
-
-            if (this.itemStacks[3] == null)
-            {
-                this.itemStacks[3] = itemstack.copy();
-            }
-            else if (this.itemStacks[3].isItemEqual(itemstack))
-            {
-                this.itemStacks[3].stackSize += itemstack.stackSize;
-            }
-
-            --this.itemStacks[0].stackSize;
-
-            if (this.itemStacks[0].stackSize <= 0)
-            {
-                this.itemStacks[0] = null;
-            }
-
-            --this.itemStacks[2].stackSize;
-
-            if (this.itemStacks[2].stackSize <= 0)
-            {
-                this.itemStacks[2] = null;
-            }
-        }
+        return new int[] { 3 };
     }
+
+    @Override
+    protected int getFuelSlot()
+    {
+        return TileEntityAlloyer.FUEL_SLOT;
+    }
+
 }

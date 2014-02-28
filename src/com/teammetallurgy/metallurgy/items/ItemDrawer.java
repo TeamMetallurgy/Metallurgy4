@@ -41,7 +41,11 @@ public class ItemDrawer extends Item
         if (compound == null) { return null; }
         NBTTagList tagList = compound.getTagList("items");
 
-        return ItemStack.loadItemStackFromNBT((NBTTagCompound) tagList.tagAt(0));
+        if (tagList.tagCount() != 0)
+        {
+            return ItemStack.loadItemStackFromNBT((NBTTagCompound) tagList.tagAt(0));
+        }
+        return null;
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
@@ -75,6 +79,7 @@ public class ItemDrawer extends Item
 
     public static ItemStack writeFirstStack(ItemStack itemStack, ItemStack firstStack)
     {
+
         NBTTagCompound compound = itemStack.getTagCompound();
 
         if (compound == null)
@@ -87,12 +92,18 @@ public class ItemDrawer extends Item
         NBTTagCompound firstItemTag = (NBTTagCompound) tagList.tagAt(0);
 
         NBTTagCompound tagCompound = new NBTTagCompound();
-        tagCompound.setByte("Slot", firstItemTag.getByte("Slot"));
-        firstStack.writeToNBT(tagCompound);
+        if (firstStack != null)
+        {
+            tagCompound.setByte("Slot", firstItemTag.getByte("Slot"));
+            firstStack.writeToNBT(tagCompound);
+        }
 
         NBTTagList list = new NBTTagList();
 
-        list.appendTag(tagCompound);
+        if (!tagCompound.getTags().isEmpty())
+        {
+            list.appendTag(tagCompound);
+        }
 
         for (int i = 1; i < tagList.tagCount(); i++)
         {

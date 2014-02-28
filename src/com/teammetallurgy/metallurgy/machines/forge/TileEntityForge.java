@@ -39,19 +39,22 @@ public class TileEntityForge extends TileEntityMetallurgySided implements IFluid
     }
 
     @Override
-    protected boolean canProcessItem()
+    protected boolean hasMaterialAndRoom(ItemStack... itemStacks)
     {
-        if (this.itemStacks[0] == null)
+        if (this.tank.getFluidAmount() <= 0) { return false; }
+        return super.hasMaterialAndRoom(itemStacks);
+    }
+
+    @Override
+    protected void processItem()
+    {
+        super.processItem();
+
+        if (this.canProcessItem())
         {
-            return false;
-        }
-        else
-        {
-            if (this.tank.getFluidAmount() <= 0) { return false; }
-            ItemStack itemstack = this.getSmeltingResult(this.itemStacks[0]);
-            if (itemstack == null) { return false; }
-            if (this.slotsAreEmtpty(1, 1)) { return true; }
-            return this.canAcceptStackRange(1, 1, itemstack);
+            this.tank.drain(100, true);
+
+            this.worldObj.markBlockForUpdate(this.xCoord, this.yCoord, this.zCoord);
         }
     }
 
@@ -125,35 +128,6 @@ public class TileEntityForge extends TileEntityMetallurgySided implements IFluid
     }
 
     @Override
-    protected void processItem()
-    {
-        if (this.canProcessItem())
-        {
-            ItemStack itemstack = this.getSmeltingResult(this.itemStacks[0]);
-
-            if (this.itemStacks[1] == null)
-            {
-                this.itemStacks[1] = itemstack.copy();
-            }
-            else if (this.itemStacks[1].isItemEqual(itemstack))
-            {
-                this.itemStacks[1].stackSize += itemstack.stackSize;
-            }
-
-            --this.itemStacks[0].stackSize;
-
-            if (this.itemStacks[0].stackSize <= 0)
-            {
-                this.itemStacks[0] = null;
-            }
-
-            this.tank.drain(100, true);
-
-            this.worldObj.markBlockForUpdate(this.xCoord, this.yCoord, this.zCoord);
-        }
-    }
-
-    @Override
     protected void readCustomNBT(NBTTagCompound data)
     {
         super.readCustomNBT(data);
@@ -167,6 +141,23 @@ public class TileEntityForge extends TileEntityMetallurgySided implements IFluid
         super.writeCustomNBT(compound);
 
         this.tank.writeToNBT(compound);
+    }
+
+    protected int getFuelSlot()
+    {
+        return 1;
+    }
+
+    @Override
+    protected int[] getInputSlots()
+    {
+        return new int[] { 0 };
+    }
+
+    @Override
+    protected int[] getOutputSlots()
+    {
+        return new int[] { 1 };
     }
 
 }
