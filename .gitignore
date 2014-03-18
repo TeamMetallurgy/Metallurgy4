@@ -6,3 +6,5 @@
 *.iml
 /.settings
 Thumbs.db
+/eclipse
+/.gradle
