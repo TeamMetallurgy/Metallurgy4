@@ -19,7 +19,7 @@ buildscript {
 repositories {
     maven {
         name = "Team Metallurgy Maven"
-        url = "files:///var/www/maven"
+        url = "http://mc.aesireanempire.com/maven"
     }
 }
 
