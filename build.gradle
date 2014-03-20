@@ -1,6 +1,7 @@
 buildscript {
     repositories {
         mavenCentral()
+           mavenLocal()
         maven {
             name = "forge"
             url = "http://files.minecraftforge.net/maven"
@@ -15,16 +16,29 @@ buildscript {
     }
 }
 
+repositories {
+    maven {
+        name = "Team Metallurgy Maven"
+        url = "http://localhost/maven"
+    }
+}
+
 apply plugin: 'forge'
 
 version = "4.0"
-group= "com.teammetallurgy.metallurgy" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "metallurgy"
+group= "com.teammetallurgy" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "Metallurgy"
 
 minecraft {
     version = "1.7.2-10.12.0.1024"
     assetDir = "eclipse/assets"
 }
+
+
+dependencies {
+    compile group: 'com.teammetallurgy', name: 'MetallurgyCore', version: '1.0', classifier: "deobf"
+}
+
 processResources
 {
     // replace stuff in mcmod.info, nothing else
@@ -39,4 +53,13 @@ processResources
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
     }
+}
+
+task deobfJar(type: Jar) {
+    from sourceSets.main.output
+    classifier = 'deobf'
+}
+
+artifacts {
+    archives deobfJar
 }
