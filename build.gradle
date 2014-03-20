@@ -102,7 +102,7 @@ artifacts {
 uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url : "file:///var/www/maven")
+            repository(url : "file:///var/www/html/maven")
         }
     }
 }
