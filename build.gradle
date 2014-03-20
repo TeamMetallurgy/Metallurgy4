@@ -19,7 +19,7 @@ buildscript {
 repositories {
     maven {
         name = "Team Metallurgy Maven"
-        url = "http://localhost/maven"
+        url = "http://mc.aesireanempire.com/maven"
     }
 }
 
@@ -29,15 +29,50 @@ version = "4.0"
 group= "com.teammetallurgy" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "Metallurgy"
 
+ext.configFile = file "build.properties"
+
+configFile.withReader {
+    def prop = new Properties()
+    prop.load(it)
+    project.ext.config = new ConfigSlurper().parse prop
+}
+
 minecraft {
-    version = "1.7.2-10.12.0.1024"
+    version = config.minecraft_version + "-" + config.forge_version
     assetDir = "eclipse/assets"
 }
 
-
 dependencies {
-    compile group: 'com.teammetallurgy', name: 'MetallurgyCore', version: '1.0', classifier: "deobf"
+    compile "com.teammetallurgy:MetallurgyCore:${config.minecraft_version}-${config.core_version}:deobf"
 }
+
+task buildInfo() {
+    def cmd = "git rev-parse --short HEAD"
+    def proc = cmd.execute()
+    proc.waitFor()
+    if (proc.exitValue() == 0) {
+        ext.revision = proc.text.trim()
+    } else {
+        ext.revision = "GITBORK"
+    }
+
+    if (System.getenv().BUILD_NUMBER != null) {
+        ext.buildNum = "${System.getenv().BUILD_NUMBER}"
+    } else {
+        ext.buildNum = "${project.buildInfo.revision}"
+    }
+}
+
+ext.artifact_version = 'NFG'
+if (System.getenv().ARTIFACT_VERSION == null) {
+    artifact_version = "${config.mod_version}.${project.buildInfo.buildNum}"
+}
+
+if(System.getenv().ARTIFACT_VERSION != null) {
+    artifact_version = "${system.getenv().ARTIFACT_VERSION}"
+}
+
+version = "${config.minecraft_version}-${artifact_version}"
 
 processResources
 {
@@ -62,4 +97,12 @@ task deobfJar(type: Jar) {
 
 artifacts {
     archives deobfJar
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url : "file:///var/www/maven")
+        }
+    }
 }
