@@ -63,7 +63,10 @@ public class MetalSet
 
         OreDictionary.registerOre(identifier + tag, new ItemStack(metalBlock, 1, meta));
 
-        GameRegistry.registerBlock(metalBlock, ItemMetalBlock.class, this.name + "." + identifier);
+        if (meta == 0)
+        {
+            GameRegistry.registerBlock(metalBlock, ItemMetalBlock.class, this.name + "." + identifier);
+        }
 
         return metalBlock;
     }
@@ -251,9 +254,9 @@ public class MetalSet
 
                 if (ConfigHandler.generates(tag))
                 {
-                    WorldGenMetals worldGen = new WorldGenMetals(oreId, metaId, metal.generation, metal.dimensions);
+                   WorldGenMetals worldGen = new WorldGenMetals(ore, metaId, metal.generation, metal.dimensions);
 
-                    GameRegistry.registerWorldGenerator(worldGen, 5);
+                   GameRegistry.registerWorldGenerator(worldGen, 5);
                 }
             }
 

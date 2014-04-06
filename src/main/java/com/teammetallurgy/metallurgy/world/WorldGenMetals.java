@@ -1,5 +1,6 @@
 package com.teammetallurgy.metallurgy.world;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -16,7 +17,7 @@ import cpw.mods.fml.common.IWorldGenerator;
 
 public class WorldGenMetals implements IWorldGenerator
 {
-    Block genBlockId;
+    Block genBlock;
     int genMetaId;
     /**
      * 0: Veins Pre Chunk, 1: ores Pre Chunk, 2: minLvl, 3:maxLvl, <br />
@@ -25,6 +26,7 @@ public class WorldGenMetals implements IWorldGenerator
     private int[] generation;
     private String dimensions;
     private WorldGenMinable mineable;
+    private long blockSeed;
 
     private static ArrayList<WorldGenMetals> generators = new ArrayList<WorldGenMetals>();
 
@@ -39,15 +41,9 @@ public class WorldGenMetals implements IWorldGenerator
         }
     }
 
-    @Deprecated
-    public WorldGenMetals(int blockId, int metaId, int[] generationInfo, String dimensionsInfo)
-    {
-        this(Block.getBlockById(blockId), metaId, generationInfo, dimensionsInfo);
-    }
-
     public WorldGenMetals(Block block, int metaId, int[] generationInfo, String dimensionsInfo)
     {
-        this.genBlockId = block;
+        this.genBlock = block;
         this.genMetaId = metaId;
 
         this.generation = generationInfo;
@@ -65,12 +61,14 @@ public class WorldGenMetals implements IWorldGenerator
             targetId = Blocks.end_stone;
         }
 
+        this.blockSeed = genBlockSeed(block, metaId);
+
         this.mineable = new WorldGenMinable(block, metaId, this.generation[1], targetId);
     }
 
-    public void generate(Random random, int chunkX, int chunkZ, World world, boolean b)
+    public void generate(Random random, int chunkX, int chunkZ, World world, boolean firstGenerate)
     {
-        if (b || ConfigHandler.regen())
+        if (firstGenerate || ConfigHandler.regen())
         {
 
             Random chunkRand = this.getRandom(random, chunkX, chunkZ);
@@ -104,9 +102,10 @@ public class WorldGenMetals implements IWorldGenerator
         // Create our own random chunk seed, to get different random numbers
         // than other mods.
         long seed = fmlRandom.nextLong();
-        // Get a different seed for each ore.
-        long seedBlock = Block.getIdFromBlock(this.genBlockId) * this.genMetaId ^ fmlRandom.nextLong();
-        seed = chunkX * seed * chunkZ * seed * seedBlock ^ fmlRandom.nextInt(Integer.MAX_VALUE);
+
+        // Get a different seed for each chunk based on ore Seed.
+        seed = (this.blockSeed * this.genMetaId) ^ fmlRandom.nextLong();
+        seed = ((chunkX * seed) + (chunkZ * seed)) ^ fmlRandom.nextInt(Integer.MAX_VALUE);
 
         return new Random(seed);
     }
@@ -165,6 +164,23 @@ public class WorldGenMetals implements IWorldGenerator
         }
 
         return vaild;
+    }
+
+    private long genBlockSeed (Block block, int meta)
+    {
+        long seed = 0;
+        String blockUName = block.getUnlocalizedName();
+        byte[] bytes = blockUName.getBytes();
+
+        ByteBuffer buffer = ByteBuffer.allocate(bytes.length);
+        buffer.put(bytes);
+        buffer.flip();
+
+        seed = buffer.getLong() ;
+
+        seed = (seed + meta) ;
+
+        return seed;
     }
 
 }
