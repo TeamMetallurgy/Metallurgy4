@@ -105,7 +105,7 @@ public class WorldGenMetals implements IWorldGenerator
 
         // Get a different seed for each chunk based on ore Seed.
         seed = (this.blockSeed * this.genMetaId) ^ fmlRandom.nextLong();
-        seed = ((chunkX * seed) + (chunkZ * seed)) ^ fmlRandom.nextInt(Integer.MAX_VALUE);
+        seed = ((chunkX + chunkZ) * seed) ^ fmlRandom.nextInt(Integer.MAX_VALUE);
 
         return new Random(seed);
     }
@@ -166,9 +166,9 @@ public class WorldGenMetals implements IWorldGenerator
         return vaild;
     }
 
-    private long genBlockSeed (Block block, int meta)
+    private long genBlockSeed(Block block, int meta)
     {
-        long seed = 0;
+        long seed = 0L;
         String blockUName = block.getUnlocalizedName();
         byte[] bytes = blockUName.getBytes();
 
@@ -176,9 +176,9 @@ public class WorldGenMetals implements IWorldGenerator
         buffer.put(bytes);
         buffer.flip();
 
-        seed = buffer.getLong() ;
+        seed = buffer.getLong();
 
-        seed = (seed + meta) ;
+        seed = (seed + meta);
 
         return seed;
     }
