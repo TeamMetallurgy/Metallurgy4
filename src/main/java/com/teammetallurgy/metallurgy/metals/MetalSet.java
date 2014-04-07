@@ -62,6 +62,17 @@ public class MetalSet
     private HashMap<String, ItemStack> dustStacks = new HashMap<String, ItemStack>();
     private HashMap<String, ItemStack> dropStacks = new HashMap<String, ItemStack>();
 
+    private HashMap<String, ItemStack> axeStacks = new HashMap<String, ItemStack>();
+    private HashMap<String, ItemStack> hoeStacks = new HashMap<String, ItemStack>();
+    private HashMap<String, ItemStack> pickaxeStacks = new HashMap<String, ItemStack>();
+    private HashMap<String, ItemStack> shovelStacks = new HashMap<String, ItemStack>();
+    private HashMap<String, ItemStack> swordStacks = new HashMap<String, ItemStack>();
+
+    private HashMap<String, ItemStack> helmetStacks = new HashMap<String, ItemStack>();
+    private HashMap<String, ItemStack> chestplateStacks = new HashMap<String, ItemStack>();
+    private HashMap<String, ItemStack> leggingsStacks = new HashMap<String, ItemStack>();
+    private HashMap<String, ItemStack> bootsStacks = new HashMap<String, ItemStack>();
+
     public MetalSet(String setName)
     {
         this.name = setName;
@@ -360,7 +371,7 @@ public class MetalSet
                 brickStacks.put(metal.getName(), new ItemStack(brick, 1, metaId));
 
                 GameRegistry.addShapedRecipe(new ItemStack(brick, 1, metaId), new Object[] { "ii", "ii", 'i', ingot });
-                GameRegistry.addShapelessRecipe(new ItemStack(ingot,4), new ItemStack(brick, 1, metaId));
+                GameRegistry.addShapelessRecipe(new ItemStack(ingot, 4), new ItemStack(brick, 1, metaId));
 
             }
 
@@ -452,10 +463,11 @@ public class MetalSet
 
                     int axeId = ConfigHandler.getItem("Axes", "axe" + configTag, metal.ids.get("axe"));
 
-                    Axe axe = new Axe(axeId, toolMaterial, axeUName, axeTexture);
+                    Axe axe = new Axe(toolMaterial, axeUName, axeTexture);
                     axe.setHarvestLevel("axe", harvestLevel);
                     GameRegistry.registerItem(axe, axeUName);
                     GameRegistry.addRecipe(new ItemStack(axe), new Object[] { "iii", "is ", " s ", 'i', ingot, 's', Items.stick });
+                    axeStacks.put(tag, new ItemStack(axe));
                 }
 
                 if (metal.ids.get("hoe") != null)
@@ -465,10 +477,11 @@ public class MetalSet
 
                     int hoeId = ConfigHandler.getItem("Hoes", "hoe" + configTag, metal.ids.get("hoe"));
 
-                    Hoe hoe = new Hoe(hoeId, toolMaterial, hoeUName, hoeTexture);
+                    Hoe hoe = new Hoe(toolMaterial, hoeUName, hoeTexture);
                     hoe.setHarvestLevel("hoe", harvestLevel);
                     GameRegistry.registerItem(hoe, hoeUName);
                     GameRegistry.addRecipe(new ItemStack(hoe), new Object[] { "ii ", " s ", " s ", 'i', ingot, 's', Items.stick });
+                    hoeStacks.put(tag, new ItemStack(hoe));
                 }
 
                 if (metal.ids.get("pickaxe") != null)
@@ -478,10 +491,11 @@ public class MetalSet
 
                     int pickaxeId = ConfigHandler.getItem("Pickaxes", "pickaxe" + configTag, metal.ids.get("pickaxe"));
 
-                    Pickaxe pickaxe = new Pickaxe(pickaxeId, toolMaterial, pickaxeUName, pickaxeTexture);
+                    Pickaxe pickaxe = new Pickaxe(toolMaterial, pickaxeUName, pickaxeTexture);
                     pickaxe.setHarvestLevel("pickaxe", harvestLevel);
                     GameRegistry.registerItem(pickaxe, pickaxeUName);
                     GameRegistry.addRecipe(new ItemStack(pickaxe), new Object[] { "iii", " s ", " s ", 'i', ingot, 's', Items.stick });
+                    pickaxeStacks.put(tag, new ItemStack(pickaxe));
                 }
 
                 if (metal.ids.get("shovel") != null)
@@ -491,10 +505,11 @@ public class MetalSet
 
                     int shovelId = ConfigHandler.getItem("Shovels", "shovel" + configTag, metal.ids.get("shovel"));
 
-                    Shovel shovel = new Shovel(shovelId, toolMaterial, shovelUName, shovelTexture);
+                    Shovel shovel = new Shovel(toolMaterial, shovelUName, shovelTexture);
                     shovel.setHarvestLevel("shovel", harvestLevel);
                     GameRegistry.registerItem(shovel, shovelUName);
                     GameRegistry.addRecipe(new ItemStack(shovel), new Object[] { "i", "s", "s", 'i', ingot, 's', Items.stick });
+                    shovelStacks.put(tag, new ItemStack(shovel));
                 }
 
                 if (metal.ids.get("sword") != null)
@@ -504,9 +519,10 @@ public class MetalSet
 
                     int swordId = ConfigHandler.getItem("Swords", "sword" + configTag, metal.ids.get("sword"));
 
-                    Sword sword = new Sword(swordId, toolMaterial, swordUName, swordTexture);
+                    Sword sword = new Sword(toolMaterial, swordUName, swordTexture);
                     GameRegistry.registerItem(sword, swordUName);
                     GameRegistry.addRecipe(new ItemStack(sword), new Object[] { "i", "i", "s", 'i', ingot, 's', Items.stick });
+                    swordStacks.put(tag, new ItemStack(sword));
                 }
             }
 
@@ -539,11 +555,12 @@ public class MetalSet
 
                     int helmetID = ConfigHandler.getItem("Helmets", "helmet" + configTag, metal.ids.get("helmet"));
 
-                    ItemMetallurgyArmor helmet = new ItemMetallurgyArmor(helmetID, armorMaterial, renderIndex, 0, modelTexture);
+                    ItemMetallurgyArmor helmet = new ItemMetallurgyArmor(armorMaterial, renderIndex, 0, modelTexture);
                     helmet = (ItemMetallurgyArmor) helmet.setUnlocalizedName(helmetUName);
                     helmet = (ItemMetallurgyArmor) helmet.setTextureName(helmetIconTexture);
                     GameRegistry.registerItem(helmet, helmetUName);
                     GameRegistry.addRecipe(new ItemStack(helmet), new Object[] { "iii", "i i", 'i', ingot });
+                    helmetStacks.put(tag, new ItemStack(helmet));
                 }
 
                 if (metal.ids.get("chestplate") != null)
@@ -553,11 +570,12 @@ public class MetalSet
 
                     int chestplateID = ConfigHandler.getItem("Chestplates", "chestplate" + configTag, metal.ids.get("chestplate"));
 
-                    ItemMetallurgyArmor chestplate = new ItemMetallurgyArmor(chestplateID, armorMaterial, renderIndex, 1, modelTexture);
+                    ItemMetallurgyArmor chestplate = new ItemMetallurgyArmor(armorMaterial, renderIndex, 1, modelTexture);
                     chestplate = (ItemMetallurgyArmor) chestplate.setUnlocalizedName(chestplateUName);
                     chestplate = (ItemMetallurgyArmor) chestplate.setTextureName(chestplateIconTexture);
                     GameRegistry.registerItem(chestplate, chestplateUName);
                     GameRegistry.addRecipe(new ItemStack(chestplate), new Object[] { "i i", "iii", "iii", 'i', ingot });
+                    chestplateStacks.put(tag, new ItemStack(chestplate));
                 }
 
                 if (metal.ids.get("leggings") != null)
@@ -567,11 +585,12 @@ public class MetalSet
 
                     int leggingsID = ConfigHandler.getItem("Leggings", "leggings" + configTag, metal.ids.get("leggings"));
 
-                    ItemMetallurgyArmor leggings = new ItemMetallurgyArmor(leggingsID, armorMaterial, renderIndex, 2, modelTexture);
+                    ItemMetallurgyArmor leggings = new ItemMetallurgyArmor(armorMaterial, renderIndex, 2, modelTexture);
                     leggings = (ItemMetallurgyArmor) leggings.setUnlocalizedName(leggingsUName);
                     leggings = (ItemMetallurgyArmor) leggings.setTextureName(leggingsIconTexture);
                     GameRegistry.registerItem(leggings, leggingsUName);
                     GameRegistry.addRecipe(new ItemStack(leggings), new Object[] { "iii", "i i", "i i", 'i', ingot });
+                    leggingsStacks.put(tag, new ItemStack(leggings));
                 }
 
                 if (metal.ids.get("boots") != null)
@@ -581,11 +600,12 @@ public class MetalSet
 
                     int bootsID = ConfigHandler.getItem("Boots", "boots" + configTag, metal.ids.get("boots"));
 
-                    ItemMetallurgyArmor boots = new ItemMetallurgyArmor(bootsID, armorMaterial, renderIndex, 3, modelTexture);
+                    ItemMetallurgyArmor boots = new ItemMetallurgyArmor(armorMaterial, renderIndex, 3, modelTexture);
                     boots = (ItemMetallurgyArmor) boots.setUnlocalizedName(bootsUName);
                     boots = (ItemMetallurgyArmor) boots.setTextureName(bootsIconTexture);
                     GameRegistry.registerItem(boots, bootsUName);
                     GameRegistry.addRecipe(new ItemStack(boots), new Object[] { "i i", "i i", 'i', ingot });
+                    bootsStacks.put(tag, new ItemStack(boots));
                 }
             }
         }

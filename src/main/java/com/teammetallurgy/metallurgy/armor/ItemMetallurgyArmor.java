@@ -11,6 +11,7 @@ public class ItemMetallurgyArmor extends ItemArmor
 
     private String modelTexture;
 
+    @Deprecated
     public ItemMetallurgyArmor(int id, ItemArmor.ArmorMaterial armorMaterial, int renderIndex, int armorPart, String modelTexture)
     {
         this(armorMaterial, renderIndex, armorPart, modelTexture);
