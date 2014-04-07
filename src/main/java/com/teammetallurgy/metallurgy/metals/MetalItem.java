@@ -18,22 +18,35 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class MetalItem extends Item
 {
     private static int itemID;
-    
+
     private HashMap<Integer, String> names = new HashMap<Integer, String>();
     private HashMap<Integer, Integer> itemTypes = new HashMap<Integer, Integer>();
     private HashMap<Integer, String> textures = new HashMap<Integer, String>();
     private HashMap<Integer, IIcon> icons = new HashMap<Integer, IIcon>();
 
+    @Deprecated
     public MetalItem(int id)
     {
         this();
     }
 
+    @Deprecated
     public MetalItem()
     {
         itemID++;
-        this.setTextureName(Metallurgy.MODID + ":metal_item_" + itemID);
-        this.setUnlocalizedName("metal.item." + itemID);
+        String postfix = String.valueOf(itemID);
+        this.init(postfix);
+    }
+
+    public MetalItem(String postfix)
+    {
+        this.init(postfix);
+    }
+
+    private void init(String postfix)
+    {
+        this.setTextureName(Metallurgy.MODID + ":metal_item_default");
+        this.setUnlocalizedName("metal.item." + postfix);
         this.setCreativeTab(Metallurgy.instance.creativeTabItems);
         this.setHasSubtypes(true);
         this.setMaxDamage(0);
@@ -115,6 +128,10 @@ public class MetalItem extends Item
     @Override
     public void registerIcons(IIconRegister register)
     {
+        // Default texture
+        this.itemIcon = register.registerIcon(this.getIconString());
+
+        // Sub-Items textures
         for (Map.Entry<Integer, String> texture : this.textures.entrySet())
         {
             int meta = texture.getKey();

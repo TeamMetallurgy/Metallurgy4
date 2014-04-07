@@ -12,6 +12,7 @@ public class ClientProxy extends CommonProxy
 {
 
     @Override
+    @SuppressWarnings({ "unchecked", "rawtypes" })
     public void injectZipAsResource(String zipDir)
     {
 

@@ -11,6 +11,7 @@ public class Metal
 
     private String name;
     public MetalType type;
+    @Deprecated
     public HashMap<String, Integer> ids;
     public int abstractorXp;
     public int blockLvl;

@@ -1,6 +1,5 @@
 package com.teammetallurgy.metallurgy.metals;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +12,6 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
-import net.minecraft.world.World;
 
 import com.teammetallurgy.metallurgy.Metallurgy;
 
@@ -23,7 +21,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class MetalBlock extends Block
 {
     private static int blockID;
-    
+
     private HashMap<Integer, String> names = new HashMap<Integer, String>();
     private HashMap<Integer, Integer> blockTypes = new HashMap<Integer, Integer>();
     private HashMap<Integer, Item> drops = new HashMap<Integer, Item>();
@@ -37,13 +35,26 @@ public class MetalBlock extends Block
 
     }
 
+    @Deprecated
     public MetalBlock()
     {
         super(Material.rock);
         blockID++;
-        
-        this.setBlockTextureName(Metallurgy.MODID + ":metal_block_" + blockID);
-        this.setBlockName("metal.block." + blockID);
+        String postfix = String.valueOf(blockID);
+        this.init(postfix);
+
+    }
+
+    public MetalBlock(String postfix)
+    {
+        super(Material.rock);
+        this.init(postfix);
+    }
+
+    private void init(String posfix)
+    {
+        this.setBlockTextureName(Metallurgy.MODID + ":metal_block_default");
+        this.setBlockName("metal.block." + posfix);
         this.setCreativeTab(Metallurgy.instance.creativeTabBlocks);
         this.setHardness(3F);
     }
@@ -170,15 +181,15 @@ public class MetalBlock extends Block
 
         return item;
     }
-    
+
     @SideOnly(Side.CLIENT)
     @Override
     public void registerBlockIcons(IIconRegister register)
     {
         // Default Texture
-        // this.blockIcon = register.registerIcon(this.getTextureName());
+        this.blockIcon = register.registerIcon(this.getTextureName());
 
-        // Sub Block Textures
+        // Sub-Blocks Textures
         for (Map.Entry<Integer, String> texture : this.textures.entrySet())
         {
             int meta = texture.getKey();
