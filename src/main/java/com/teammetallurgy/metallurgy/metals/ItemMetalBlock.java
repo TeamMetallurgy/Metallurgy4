@@ -7,12 +7,6 @@ import net.minecraft.item.ItemStack;
 public class ItemMetalBlock extends ItemBlock
 {
 
-    @Deprecated
-    public ItemMetalBlock(int id)
-    {
-        this(Block.getBlockById(id));
-    }
-
     public ItemMetalBlock(Block block)
     {
         super(block);

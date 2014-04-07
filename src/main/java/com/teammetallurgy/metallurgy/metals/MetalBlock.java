@@ -20,43 +20,16 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class MetalBlock extends Block
 {
-    private static int blockID;
-
     private HashMap<Integer, String> names = new HashMap<Integer, String>();
     private HashMap<Integer, Integer> blockTypes = new HashMap<Integer, Integer>();
     private HashMap<Integer, Item> drops = new HashMap<Integer, Item>();
     private HashMap<Integer, String> textures = new HashMap<Integer, String>();
     private HashMap<Integer, IIcon> icons = new HashMap<Integer, IIcon>();
 
-    @Deprecated
-    public MetalBlock(int id)
-    {
-        this();
-
-    }
-
-    @Deprecated
-    public MetalBlock()
-    {
-        super(Material.rock);
-        blockID++;
-        String postfix = String.valueOf(blockID);
-        this.init(postfix);
-
-    }
-
     public MetalBlock(String postfix)
     {
         super(Material.rock);
         this.init(postfix);
-    }
-
-    private void init(String posfix)
-    {
-        this.setBlockTextureName(Metallurgy.MODID + ":metal_block_default");
-        this.setBlockName("metal.block." + posfix);
-        this.setCreativeTab(Metallurgy.instance.creativeTabBlocks);
-        this.setHardness(3F);
     }
 
     /**
@@ -128,6 +101,19 @@ public class MetalBlock extends Block
         }
     }
 
+    @Override
+    public Item getItemDropped(int meta, Random par2Random, int par3)
+    {
+        Item item = Item.getItemFromBlock(this);
+
+        if (this.drops.get(meta) != null)
+        {
+            item = this.drops.get(meta);
+        }
+
+        return item;
+    }
+
     @SuppressWarnings({ "rawtypes", "unchecked" })
     @Override
     public void getSubBlocks(Item item, CreativeTabs tab, List list)
@@ -169,17 +155,12 @@ public class MetalBlock extends Block
 
     }
 
-    @Override
-    public Item getItemDropped(int meta, Random par2Random, int par3)
+    private void init(String posfix)
     {
-        Item item = Item.getItemFromBlock(this);
-
-        if (this.drops.get(meta) != null)
-        {
-            item = this.drops.get(meta);
-        }
-
-        return item;
+        this.setBlockTextureName(Metallurgy.MODID + ":metal_block_default");
+        this.setBlockName("metal.block." + posfix);
+        this.setCreativeTab(Metallurgy.instance.creativeTabBlocks);
+        this.setHardness(3F);
     }
 
     @SideOnly(Side.CLIENT)

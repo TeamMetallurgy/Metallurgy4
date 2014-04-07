@@ -61,9 +61,26 @@ public class WorldGenMetals implements IWorldGenerator
             targetId = Blocks.end_stone;
         }
 
-        this.blockSeed = genBlockSeed(block, metaId);
+        this.blockSeed = this.genBlockSeed(block, metaId);
 
         this.mineable = new WorldGenMinable(block, metaId, this.generation[1], targetId);
+    }
+
+    private long genBlockSeed(Block block, int meta)
+    {
+        long seed = 0L;
+        String blockUName = block.getUnlocalizedName();
+        byte[] bytes = blockUName.getBytes();
+
+        ByteBuffer buffer = ByteBuffer.allocate(bytes.length);
+        buffer.put(bytes);
+        buffer.flip();
+
+        seed = buffer.getLong();
+
+        seed = seed + meta;
+
+        return seed;
     }
 
     public void generate(Random random, int chunkX, int chunkZ, World world, boolean firstGenerate)
@@ -104,8 +121,8 @@ public class WorldGenMetals implements IWorldGenerator
         long seed = fmlRandom.nextLong();
 
         // Get a different seed for each chunk based on ore Seed.
-        seed = (this.blockSeed * this.genMetaId) ^ fmlRandom.nextLong();
-        seed = ((chunkX + chunkZ) * seed) ^ fmlRandom.nextInt(Integer.MAX_VALUE);
+        seed = this.blockSeed * this.genMetaId ^ fmlRandom.nextLong();
+        seed = (chunkX + chunkZ) * seed ^ fmlRandom.nextInt(Integer.MAX_VALUE);
 
         return new Random(seed);
     }
@@ -164,23 +181,6 @@ public class WorldGenMetals implements IWorldGenerator
         }
 
         return vaild;
-    }
-
-    private long genBlockSeed(Block block, int meta)
-    {
-        long seed = 0L;
-        String blockUName = block.getUnlocalizedName();
-        byte[] bytes = blockUName.getBytes();
-
-        ByteBuffer buffer = ByteBuffer.allocate(bytes.length);
-        buffer.put(bytes);
-        buffer.flip();
-
-        seed = buffer.getLong();
-
-        seed = (seed + meta);
-
-        return seed;
     }
 
 }
