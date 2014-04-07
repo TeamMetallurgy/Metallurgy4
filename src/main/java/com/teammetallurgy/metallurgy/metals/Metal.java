@@ -1,6 +1,5 @@
 package com.teammetallurgy.metallurgy.metals;
 
-import java.util.HashMap;
 
 public class Metal
 {
@@ -11,8 +10,7 @@ public class Metal
 
     private String name;
     public MetalType type;
-    @Deprecated
-    public HashMap<String, Integer> ids;
+    public int meta;
     public int abstractorXp;
     public int blockLvl;
     // list of parent materials

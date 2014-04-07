@@ -165,7 +165,7 @@ public class MetalSet
             String tag = metal.getName().replace(" ", "");
             String configTag = tag.substring(0, 1).toUpperCase() + tag.substring(1);
 
-            int metaId = metal.ids.get("meta");
+            int metaId = metal.meta;
 
             if (metal.type != Metal.MetalType.Alloy)
             {

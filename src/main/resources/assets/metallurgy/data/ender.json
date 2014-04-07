@@ -1,32 +1,11 @@
 [
 	{
-		"type":"Default",
-		"ids":
-		{
-			"ore":903,
-			"block":904,
-			"brick":905,
-			"item":28350,
-			"dust":28351
-		}
+		"type":"Default"
 	},
 	{
 		"name":"Eximite",
 		"type":"Ore",
-		"ids":
-		{
-			"meta":0,
-			"ingot":28380,
-			"axe":28360,
-			"hoe":28361,
-			"pickaxe":28362,
-			"shovel":28363,
-			"sword":28364,
-			"helmet":28370,
-			"chestplate":28372,
-			"leggings":28373,
-			"boots":28374
-		},
+		"meta":0,
 		"abstratorXP":6,
 		"blockLvl":3,
 		"equipment":[3,1000,3,8,25,4,6,5,4,24],
@@ -37,11 +16,7 @@
 	{
 		"name":"Meutoite",
 		"type":"Catalyst",
-		"ids":
-		{
-			"meta":1,
-			"ingot":28381
-		},
+		"meta":1,
 		"abstratorXP":6,
 		"blockLvl":3,
 		"dugeonLoot":[0,0],
@@ -51,20 +26,7 @@
 	{
 		"name":"Desichalkos",
 		"type":"Alloy",
-		"ids":
-		{
-			"meta":2,
-			"ingot":28382,
-			"axe":28365,
-			"hoe":28366,
-			"pickaxe":28367,
-			"shovel":28368,
-			"sword":28369,
-			"helmet":28375,
-			"chestplate":28376,
-			"leggings":28377,
-			"boots":28378
-		},
+		"meta":2,
 		"abstratorXP":6,
 		"blockLvl":4,
 		"alloyRecipe":["Eximite","Meutoite"],

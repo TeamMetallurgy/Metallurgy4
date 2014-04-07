@@ -1,32 +1,11 @@
 [
 	{
-		"type":"Default",
-		"ids":
-		{
-			"ore":909,
-			"block":910,
-			"brick":911,
-			"item":26900,
-			"dust":26901
-		}
+		"type":"Default"
 	},
 	{
 		"name":"Ignatius",
 		"type":"Ore",
-		"ids":
-		{
-			"meta":0,
-			"ingot":27100,
-			"axe":26920,
-			"hoe":26921,
-			"pickaxe":26922,
-			"shovel":26923,
-			"sword":26924,
-			"helmet":26975,
-			"chestplate":26976,
-			"leggings":26977,
-			"boots":26978
-		},
+		"meta":0,
 		"abstratorXP":1,
 		"blockLvl":1,
 		"equipment":[1,200,2,4,15,2,6,5,2,15],
@@ -37,20 +16,7 @@
 	{
 		"name":"Shadow Iron",
 		"type":"Ore",
-		"ids":
-		{
-			"meta":1,
-			"ingot":27101,
-			"axe":26925,
-			"hoe":26926,
-			"pickaxe":26927,
-			"shovel":26928,
-			"sword":26929,
-			"helmet":26979,
-			"chestplate":26980,
-			"leggings":26981,
-			"boots":26982
-		},
+		"meta":1,
 		"abstratorXP":2,
 		"blockLvl":1,
 		"equipment":[1,300,2,4,3,3,6,5,2,16],
@@ -61,11 +27,7 @@
 	{
 		"name":"Lemurite",
 		"type":"Catalyst",
-		"ids":
-		{
-			"meta":2,
-			"ingot":27102
-		},
+		"meta":2,
 		"abstratorXP":2,
 		"blockLvl":1,
 		"dugeonLoot":[0,0],
@@ -75,20 +37,7 @@
 	{
 		"name":"Midasium",
 		"type":"Ore",
-		"ids":
-		{
-			"meta":3,
-			"ingot":27103,
-			"axe":26930,
-			"hoe":26931,
-			"pickaxe":26932,
-			"shovel":26933,
-			"sword":26934,
-			"helmet":26983,
-			"chestplate":26984,
-			"leggings":26985,
-			"boots":26986
-		},
+		"meta":3,
 		"abstratorXP":3,
 		"blockLvl":2,
 		"equipment":[3,100,3,10,35,2,5,3,3,8],
@@ -99,20 +48,7 @@
 	{
 		"name":"Vyroxeres",
 		"type":"Ore",
-		"ids":
-		{
-			"meta":4,
-			"ingot":27104,
-			"axe":26935,
-			"hoe":26936,
-			"pickaxe":26937,
-			"shovel":26938,
-			"sword":26939,
-			"helmet":26987,
-			"chestplate":26988,
-			"leggings":26989,
-			"boots":26990
-		},
+		"meta":4,
 		"abstratorXP":3,
 		"blockLvl":2,
 		"equipment":[3,300,3,7,16,3,6,5,4,23],
@@ -123,20 +59,7 @@
 	{
 		"name":"Ceruclase",
 		"type":"Ore",
-		"ids":
-		{
-			"meta":5,
-			"ingot":27105,
-			"axe":26940,
-			"hoe":26941,
-			"pickaxe":26942,
-			"shovel":26943,
-			"sword":26944,
-			"helmet":26991,
-			"chestplate":26992,
-			"leggings":26993,
-			"boots":26994
-		},
+		"meta":5,
 		"abstratorXP":3,
 		"blockLvl":2,
 		"equipment":[3,500,3,7,18,3,6,5,4,25],
@@ -147,11 +70,7 @@
 	{
 		"name":"Alduorite",
 		"type":"Catalyst",
-		"ids":
-		{
-			"meta":6,
-			"ingot":27106
-		},
+		"meta":6,
 		"abstratorXP":3,
 		"blockLvl":2,
 		"dugeonLoot":[0,0],
@@ -161,20 +80,7 @@
 	{
 		"name":"Kalendrite",
 		"type":"Ore",
-		"ids":
-		{
-			"meta":7,
-			"ingot":27107,
-			"axe":26945,
-			"hoe":26946,
-			"pickaxe":26947,
-			"shovel":26948,
-			"sword":26949,
-			"helmet":26995,
-			"chestplate":26996,
-			"leggings":26997,
-			"boots":26998
-		},
+		"meta":7,
 		"abstratorXP":4,
 		"blockLvl":3,
 		"equipment":[4,1000,3,8,20,4,6,5,4,28],
@@ -185,20 +91,7 @@
 	{
 		"name":"Vulcanite",
 		"type":"Ore",
-		"ids":
-		{
-			"meta":8,
-			"ingot":27108,
-			"axe":26950,
-			"hoe":26951,
-			"pickaxe":26952,
-			"shovel":26953,
-			"sword":26954,
-			"helmet":26999,
-			"chestplate":27000,
-			"leggings":27001,
-			"boots":27002
-		},
+		"meta":8,
 		"abstratorXP":5,
 		"blockLvl":4,
 		"equipment":[5,1500,3,10,20,4,7,6,4,34],
@@ -209,20 +102,7 @@
 	{
 		"name":"Sanguinite",
 		"type":"Ore",
-		"ids":
-		{
-			"meta":9,
-			"ingot":27109,
-			"axe":26955,
-			"hoe":26956,
-			"pickaxe":26957,
-			"shovel":26958,
-			"sword":26959,
-			"helmet":27003,
-			"chestplate":27004,
-			"leggings":27005,
-			"boots":27006
-		},
+		"meta":9,
 		"abstratorXP":6,
 		"blockLvl":5,
 		"equipment":[6,1750,4,12,25,5,7,6,4,36],
@@ -233,20 +113,6 @@
 	{
 		"name":"Shadow Steel",
 		"type":"Alloy",
-		"ids":
-		{
-			"meta":10,
-			"ingot":27110,
-			"axe":26960,
-			"hoe":26961,
-			"pickaxe":26962,
-			"shovel":26963,
-			"sword":26964,
-			"helmet":27007,
-			"chestplate":27008,
-			"leggings":27009,
-			"boots":27010
-		},
 		"abstratorXP":4,
 		"blockLvl":1,
 		"alloyRecipe":["Shadow Iron","Lemurite"],
@@ -256,20 +122,6 @@
 	{
 		"name":"Inolashite",
 		"type":"Alloy",
-		"ids":
-		{
-			"meta":11,
-			"ingot":27111,
-			"axe":26965,
-			"hoe":26966,
-			"pickaxe":26967,
-			"shovel":26968,
-			"sword":26969,
-			"helmet":27011,
-			"chestplate":27012,
-			"leggings":27013,
-			"boots":27014
-		},
 		"abstratorXP":6,
 		"blockLvl":3,
 		"alloyRecipe":["Alduorite","Ceruclase"],
@@ -279,20 +131,6 @@
 	{
 		"name":"Amordrine",
 		"type":"Alloy",
-		"ids":
-		{
-			"meta":12,
-			"ingot":27112,
-			"axe":26970,
-			"hoe":26971,
-			"pickaxe":26972,
-			"shovel":26973,
-			"sword":26974,
-			"helmet":27015,
-			"chestplate":27016,
-			"leggings":27017,
-			"boots":27018
-		},
 		"abstratorXP":24,
 		"blockLvl":3,
 		"alloyRecipe":["Kalendrite","Platinum"],
