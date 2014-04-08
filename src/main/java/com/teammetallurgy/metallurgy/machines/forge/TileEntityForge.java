@@ -46,16 +46,19 @@ public class TileEntityForge extends TileEntityMetallurgySided implements IFluid
     }
 
     @Override
-    protected void processItem()
+    protected boolean preProcessItem()
     {
-        super.processItem();
-
-        if (this.canProcessItem())
+        FluidStack drain = this.tank.drain(100, false);
+        
+        if(drain.amount == 100)
         {
-            this.tank.drain(100, true);
-
+            this.tank.drain(drain.amount, true);
+    
             this.worldObj.markBlockForUpdate(this.xCoord, this.yCoord, this.zCoord);
+            return true;
         }
+        
+        return false;
     }
 
     @Override
