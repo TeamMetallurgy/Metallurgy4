@@ -1,6 +1,5 @@
 package com.teammetallurgy.metallurgy.metals;
 
-
 public class Metal
 {
     public enum MetalType
@@ -21,6 +20,9 @@ public class Metal
     // 0: HarvestLvl, 1:ToolDura, 2:Damage, 3:Efficiency, 4:Enchant
     // 5: Helmet, 6:Chestplate, 7:Leggings, 8:Boots, 9:ArmorDuraMultiplier
     public int[] equipment;
+    // 0: Potion, 1: Duration, 2: Amplifier,
+    // 3: Receiver (0: Target, 1: Attacker. 2: Both)
+    public int[] entityEffect;
     // 0: Chance, 1: Amount
     public int[] dugeonLoot;
     // 0: Veins Pre Chunk, 1: ores Pre Chunk, 2: minLvl, 3:maxLvl,
@@ -127,25 +129,25 @@ public class Metal
     {
         return this.equipment != null && this.equipment.length >= 5;
     }
-    
+
     public boolean haveArmor()
     {
-        return this.equipment != null && this.equipment.length >=10;
+        return this.equipment != null && this.equipment.length >= 10;
     }
-    
+
     /**
      * Gets the Armor Multiplier
      * 
      * @return
      *         the armor's multiplier, and -1 if invalid.
      */
-    public int getArmorMultiplier ()
+    public int getArmorMultiplier()
     {
         if (this.haveArmor())
         {
             return this.equipment[9];
         }
-        else 
+        else
         {
             return -1;
         }
@@ -153,15 +155,15 @@ public class Metal
 
     /**
      * Gets the Armor Damage Reduction array
-     *
+     * 
      * @return
      *         The armor's Damage Reduction array, and null if invalid.
      */
-    public int[] getArmorDamageReduction ()
+    public int[] getArmorDamageReduction()
     {
         if (this.haveArmor())
         {
-            int damageReduction [] = {this.equipment[5],this.equipment[6],this.equipment[7],this.equipment[8]};
+            int damageReduction[] = { this.equipment[5], this.equipment[6], this.equipment[7], this.equipment[8] };
             return damageReduction;
         }
         else
@@ -172,15 +174,93 @@ public class Metal
 
     /**
      * Gets the Armor enchantability
-     *
+     * 
      * @return
      *         the armor's enchantability, and -1 if invalid.
      */
-    public int getArmorEnchantability ()
+    public int getArmorEnchantability()
     {
         if (this.haveArmor())
         {
             return this.equipment[4];
+        }
+        else
+        {
+            return -1;
+        }
+    }
+
+    public boolean haveEntityEffects()
+    {
+        return entityEffect != null && entityEffect.length == 4;
+    }
+
+    /**
+     * Gets the effect ID for the Metal
+     * 
+     * @return
+     *         The effect id, -1 if invalid, -2 if fire, -3 if heal.
+     */
+    public int getEffectId()
+    {
+        if (this.haveEntityEffects())
+        {
+            return this.entityEffect[0];
+        }
+        else
+        {
+            return -1;
+        }
+    }
+
+    /**
+     * Gets the effect duration in ticks
+     * 
+     * @return
+     *         The effect duration, -1 if invalid.
+     */
+    public int getEffectDuration()
+    {
+        if (this.haveEntityEffects())
+        {
+            return this.entityEffect[1];
+        }
+        else
+        {
+            return -1;
+        }
+    }
+
+    /**
+     * Gets the effect Amplifier
+     * 
+     * @return
+     *         The effect Amplifier, -1 if invalid.
+     */
+    public int getEffectAmplifier()
+    {
+        if (this.haveEntityEffects())
+        {
+            return this.entityEffect[2];
+        }
+        else
+        {
+            return -1;
+        }
+    }
+
+    /**
+     * Gets the effect receiver, it will be 0 for target
+     * 1 for Attacker, 2 for both
+     * 
+     * @return
+     *         The effect receiver, -1 if invalid.
+     */
+    public int getEffectReceiver()
+    {
+        if (this.haveEntityEffects())
+        {
+            return this.entityEffect[3];
         }
         else
         {

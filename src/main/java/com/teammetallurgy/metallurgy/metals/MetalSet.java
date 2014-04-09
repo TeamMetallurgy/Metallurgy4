@@ -351,6 +351,17 @@ public class MetalSet
                 String swordUName = toolUName + ".sword";
 
                 Sword sword = new Sword(toolMaterial, swordUName, swordTexture);
+
+                if (metal.haveEntityEffects())
+                {
+                    int effectId = metal.getEffectId();
+                    int effectDura = metal.getEffectDuration();
+                    int effectAmp = metal.getEffectAmplifier();
+                    int effectRec = metal.getEffectReceiver();
+
+                    sword.addEffect(effectId, effectDura, effectAmp, effectRec);
+                }
+
                 GameRegistry.registerItem(sword, swordUName);
                 GameRegistry.addRecipe(new ItemStack(sword), new Object[] { "i", "i", "s", 'i', ingot, 's', Items.stick });
                 this.swordStacks.put(tag, new ItemStack(sword));
