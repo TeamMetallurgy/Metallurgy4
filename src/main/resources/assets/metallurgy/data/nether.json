@@ -120,6 +120,7 @@
 	{
 		"name":"Shadow Steel",
 		"type":"Alloy",
+		"meta":10,
 		"abstratorXP":4,
 		"blockLvl":1,
 		"alloyRecipe":["Shadow Iron","Lemurite"],
@@ -130,6 +131,7 @@
 	{
 		"name":"Inolashite",
 		"type":"Alloy",
+		"meta":11,
 		"abstratorXP":6,
 		"blockLvl":3,
 		"alloyRecipe":["Alduorite","Ceruclase"],
@@ -140,6 +142,7 @@
 	{
 		"name":"Amordrine",
 		"type":"Alloy",
+		"meta":12,
 		"abstratorXP":24,
 		"blockLvl":3,
 		"alloyRecipe":["Kalendrite","Platinum"],
