@@ -73,24 +73,25 @@ public class MetalSet
 
         metalBlock.setHarvestLevel("pickaxe", harvestLvl, meta);
 
-        OreDictionary.registerOre(identifier + metalTag, new ItemStack(metalBlock, 1, meta));
-
         if (meta == 0)
         {
             GameRegistry.registerBlock(metalBlock, ItemMetalBlock.class, this.name + "." + identifier);
         }
+
+        OreDictionary.registerOre(identifier + metalTag, new ItemStack(metalBlock, 1, meta));
 
         return metalBlock;
     }
 
     private MetalItem createItem(MetalItem metalItem, int meta, String metalTag, String identifier)
     {
-        OreDictionary.registerOre(identifier + metalTag, new ItemStack(metalItem, 1, meta));
 
         if (meta == 0)
         {
             GameRegistry.registerItem(metalItem, this.name + "." + identifier);
         }
+
+        OreDictionary.registerOre(identifier + metalTag, new ItemStack(metalItem, 1, meta));
 
         return metalItem;
     }
