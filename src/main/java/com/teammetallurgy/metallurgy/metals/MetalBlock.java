@@ -7,7 +7,6 @@ import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.particle.EffectRenderer;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -16,9 +15,8 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
 import com.teammetallurgy.metallurgy.Metallurgy;
-import com.teammetallurgy.metallurgy.client.particle.EntityOreFX;
+import com.teammetallurgy.metallurgy.handlers.ParticleHandler;
 
-import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -177,55 +175,9 @@ public class MetalBlock extends Block
 
         if (!this.particles.containsKey(meta)) { return; }
 
-        double constant = 0.0625D;
+        int[] particle = this.particles.get(meta);
 
-        for (int l = 0; l < 6; ++l)
-        {
-            double particleX = blockX + rand.nextFloat();
-            double particleY = blockY + rand.nextFloat();
-            double particleZ = blockZ + rand.nextFloat();
-
-            if (l == 0 && !world.getBlock(blockX, blockY + 1, blockZ).isOpaqueCube())
-            {
-                particleY = blockY + 1 + constant;
-            }
-
-            if (l == 1 && !world.getBlock(blockX, blockY - 1, blockZ).isOpaqueCube())
-            {
-                particleY = blockY + 0 - constant;
-            }
-
-            if (l == 2 && !world.getBlock(blockX, blockY, blockZ + 1).isOpaqueCube())
-            {
-                particleZ = blockZ + 1 + constant;
-            }
-
-            if (l == 3 && !world.getBlock(blockX, blockY, blockZ - 1).isOpaqueCube())
-            {
-                particleZ = blockZ + 0 - constant;
-            }
-
-            if (l == 4 && !world.getBlock(blockX + 1, blockY, blockZ).isOpaqueCube())
-            {
-                particleX = blockX + 1 + constant;
-            }
-
-            if (l == 5 && !world.getBlock(blockX - 1, blockY, blockZ).isOpaqueCube())
-            {
-                particleX = blockX + 0 - constant;
-            }
-
-            if (particleX < blockX || particleX > blockX + 1 || particleY < 0.0D || particleY > blockY + 1 || particleZ < blockZ || particleZ > blockZ + 1)
-            {
-                int[] particle = this.particles.get(meta);
-                EffectRenderer effectRenderer = FMLClientHandler.instance().getClient().effectRenderer;
-
-                EntityOreFX particleFX = new EntityOreFX(world, particleX, particleY, particleZ, 0.0D, 0.0D, 0.0D);
-                particleFX.setTypeAndColor(particle[0], particle[1], particle[2], particle[3]);
-
-                effectRenderer.addEffect(particleFX);
-            }
-        }
+        ParticleHandler.renderOreParticle(world, blockX, blockY, blockZ, rand, particle);
     }
 
     @SideOnly(Side.CLIENT)
