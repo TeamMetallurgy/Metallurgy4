@@ -9,6 +9,7 @@
 		"abstratorXP":6,
 		"blockLvl":3,
 		"equipment":[3,1000,3,8,25,4,6,5,4,24],
+		"particleEffect":[2,75,54,90],
 		"dugeonLoot":[0,0],
 		"generation":[6,4,0,128,100,100],
 		"dimensions":"1"
@@ -19,6 +20,7 @@
 		"meta":1,
 		"abstratorXP":6,
 		"blockLvl":3,
+		"particleEffect":[2,51,44,56],
 		"dugeonLoot":[0,0],
 		"generation":[3,3,0,128,100,100],
 		"dimensions":"1"

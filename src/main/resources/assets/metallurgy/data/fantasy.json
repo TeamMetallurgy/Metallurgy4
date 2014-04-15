@@ -73,6 +73,7 @@
 		"abstratorXP":15,
 		"blockLvl":3,
 		"equipment":[4,50,1,12,40,3,6,5,3,12],
+		"particleEffect":[1,217,205,140],
 		"dugeonLoot":[0,0],
 		"generation":[3,3,0,128,100,100],
 		"dimensions":"0 2-100000"
@@ -84,6 +85,7 @@
 		"abstratorXP":4,
 		"blockLvl":3,
 		"equipment":[4,1000,3,9,18,4,6,5,4,28],
+		"particleEffect":[1,136,240,249],
 		"dugeonLoot":[0,0],
 		"generation":[3,3,0,128,100,100],
 		"dimensions":"0 2-100000"
@@ -125,6 +127,7 @@
 		"abstratorXP":5,
 		"blockLvl":4,
 		"equipment":[5,1350,3,9,20,4,7,6,4,35],
+		"particleEffect":[1,84,122,56],
 		"dugeonLoot":[0,0],
 		"generation":[2,4,0,128,100,100],
 		"dimensions":"0 2-100000"
@@ -146,6 +149,7 @@
 		"abstratorXP":6,
 		"blockLvl":5,
 		"equipment":[6,1550,4,10,22,5,7,6,4,38],
+		"particleEffect":[1,175,1,1],
 		"dugeonLoot":[0,0],
 		"generation":[2,3,0,128,50,100],
 		"dimensions":"0 2-100000"
@@ -157,6 +161,7 @@
 		"abstratorXP":7,
 		"blockLvl":5,
 		"equipment":[6,1750,4,10,22,5,7,6,4,40],
+		"particleEffect":[1,204,179,0],
 		"dugeonLoot":[0,0],
 		"generation":[2,3,0,128,50,100],
 		"dimensions":"0 2-100000"

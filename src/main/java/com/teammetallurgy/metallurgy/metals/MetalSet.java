@@ -187,6 +187,13 @@ public class MetalSet
                         ore.addSubBlock(metaId, metal.getName(), 0, texture + "_" + identifier);
                     }
 
+                    if (metal.haveParticles())
+                    {
+                        int type = metal.getParticleType();
+                        int[] colors = metal.getParticleColors();
+                        ore.setSubBlockParticles(metaId, type, colors[0], colors[1], colors[2]);
+                    }
+
                     this.oreStacks.put(tag, new ItemStack(ore, 1, metaId));
 
                 }

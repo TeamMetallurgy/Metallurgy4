@@ -23,6 +23,8 @@ public class Metal
     // 0: Potion, 1: Duration, 2: Amplifier,
     // 3: Receiver (0: Target, 1: Attacker. 2: Both)
     public int[] entityEffect;
+    // 0: Type, 1: Red, 2: Green, 3:Blue
+    public int[] particleEffect;
     // 0: Chance, 1: Amount
     public int[] dugeonLoot;
     // 0: Veins Pre Chunk, 1: ores Pre Chunk, 2: minLvl, 3:maxLvl,
@@ -265,6 +267,36 @@ public class Metal
         else
         {
             return -1;
+        }
+    }
+
+    public boolean haveParticles()
+    {
+        return (this.particleEffect != null && this.particleEffect.length >= 4);
+    }
+
+    public int getParticleType()
+    {
+        if (this.haveParticles())
+        {
+            return this.particleEffect[0];
+        }
+        else
+        {
+            return -1;
+        }
+    }
+
+    public int[] getParticleColors()
+    {
+        if (this.haveParticles())
+        {
+            int[] colors = { this.particleEffect[1], this.particleEffect[2], this.particleEffect[3] };
+            return colors;
+        }
+        else
+        {
+            return null;
         }
     }
 }
