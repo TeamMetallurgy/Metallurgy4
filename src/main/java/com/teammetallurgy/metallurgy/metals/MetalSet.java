@@ -24,6 +24,7 @@ import com.teammetallurgy.metallurgy.tools.Shovel;
 import com.teammetallurgy.metallurgy.tools.Sword;
 import com.teammetallurgy.metallurgy.world.WorldGenMetals;
 import com.teammetallurgy.metallurgycore.handlers.ConfigHandler;
+import com.teammetallurgy.metallurgycore.handlers.LogHandler;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -32,7 +33,6 @@ public class MetalSet
     private String name;
     private Metal[] metals = null;
 
-    private Metal defaultInfo;
     private String setTag;
 
     private MetalBlock defaultOre;
@@ -96,20 +96,79 @@ public class MetalSet
         return metalItem;
     }
 
-    /**
-     * Gets the default information from metal from JSON
-     * 
-     * @return Default info, if not found returns null
-     */
-    public Metal getDefaultInfo()
+    public ItemStack getAxe(String metal)
     {
+        return this.axeStacks.get(metal);
+    }
 
-        for (Metal metal : this.metals)
-        {
-            if (metal.type == Metal.MetalType.Default) { return metal; }
-        }
+    public ItemStack getBlock(String metal)
+    {
+        return this.blockStacks.get(metal);
+    }
 
-        return null;
+    public ItemStack getBoots(String metal)
+    {
+        return this.bootsStacks.get(metal);
+    }
+
+    public ItemStack getBrick(String metal)
+    {
+        return this.brickStacks.get(metal);
+    }
+
+    public ItemStack getChestplate(String metal)
+    {
+        return this.chestplateStacks.get(metal);
+    }
+
+    public ItemStack getDrop(String metal)
+    {
+        return this.dropStacks.get(metal);
+    }
+
+    public ItemStack getDust(String metal)
+    {
+        return this.dustStacks.get(metal);
+    }
+
+    public ItemStack getHelmet(String metal)
+    {
+        return this.helmetStacks.get(metal);
+    }
+
+    public ItemStack getHoe(String metal)
+    {
+        return this.hoeStacks.get(metal);
+    }
+
+    public ItemStack getIngot(String metal)
+    {
+        return this.ingotStacks.get(metal);
+    }
+
+    public ItemStack getLeggings(String metal)
+    {
+        return this.leggingsStacks.get(metal);
+    }
+
+    public ItemStack getOre(String metal)
+    {
+        return this.oreStacks.get(metal);
+    }
+
+    public ItemStack getPickaxe(String metal)
+    {
+        return this.pickaxeStacks.get(metal);
+    }
+
+    public ItemStack getShovel(String metal)
+    {
+        return this.shovelStacks.get(metal);
+    }
+
+    public ItemStack getSword(String metal)
+    {
+        return this.swordStacks.get(metal);
     }
 
     private void initDefaults()
@@ -136,14 +195,10 @@ public class MetalSet
         }
         catch (IOException e)
         {
-            e.getLocalizedMessage();
-            e.printStackTrace();
+            LogHandler.log(e.getLocalizedMessage());
         }
 
         this.metals = new Gson().fromJson(reader, Metal[].class);
-
-        // Getting Default IDs
-        this.defaultInfo = this.getDefaultInfo();
 
         for (Metal metal : this.metals)
         {
@@ -443,5 +498,4 @@ public class MetalSet
             }
         }
     }
-
 }
