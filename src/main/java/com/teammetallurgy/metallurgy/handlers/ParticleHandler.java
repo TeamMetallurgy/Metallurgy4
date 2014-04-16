@@ -7,6 +7,7 @@ import net.minecraft.client.particle.EffectRenderer;
 import net.minecraft.world.World;
 
 import com.teammetallurgy.metallurgy.client.particle.EntityOreFX;
+import com.teammetallurgy.metallurgycore.handlers.LogHandler;
 
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
@@ -21,7 +22,11 @@ public class ParticleHandler
 
         if (particle == null || particle.length != 4)
         {
-            // TODO: Add log message for particle error
+            String message = "Invaild ore particle configuration while trying to generate at";
+            message += " x: " + blockX;
+            message += " y: " + blockY;
+            message += " z: " + blockZ;
+            LogHandler.log(message);
             return;
         }
 
