@@ -34,11 +34,11 @@ public class Metallurgy
     @SidedProxy(clientSide = "com.teammetallurgy.metallurgy.networking.ClientProxy", serverSide = "com.teammetallurgy.metallurgy.networking.CommonProxy")
     public static CommonProxy proxy;
 
-    public CreativeTabs creativeTabMachines = new CreativeTab(Metallurgy.MODID + ".Machines");
-    public CreativeTabs creativeTabBlocks = new CreativeTab(Metallurgy.MODID + ".Blocks");
-    public CreativeTabs creativeTabItems = new CreativeTab(Metallurgy.MODID + ".Items");
-    public CreativeTabs creativeTabTools = new CreativeTab(Metallurgy.MODID + ".Tools");
-    public CreativeTabs creativeTabArmor = new CreativeTab(Metallurgy.MODID + ".Armor");
+    public CreativeTab creativeTabMachines = new CreativeTab(Metallurgy.MODID + ".Machines");
+    public CreativeTab creativeTabBlocks = new CreativeTab(Metallurgy.MODID + ".Blocks");
+    public CreativeTab creativeTabItems = new CreativeTab(Metallurgy.MODID + ".Items");
+    public CreativeTab creativeTabTools = new CreativeTab(Metallurgy.MODID + ".Tools");
+    public CreativeTab creativeTabArmor = new CreativeTab(Metallurgy.MODID + ".Armor");
 
     private File modsFolder;
 
@@ -49,6 +49,14 @@ public class Metallurgy
         Metallurgy.proxy.registerTickHandlers();
         MinecraftForge.EVENT_BUS.register(new EventHandler());
 
+    }
+
+    private void initTabs()
+    {
+        creativeTabBlocks.setItem(BlockList.getSet("ender").getBlock("Eximite").getItem());
+        creativeTabItems.setItem(BlockList.getSet("nether").getIngot("Ceruclase").getItem());
+        creativeTabTools.setItem(BlockList.getSet("base").getSword("DamascusSteel").getItem());
+        creativeTabArmor.setItem(BlockList.getSet("fantasy").getHelmet("Tartarite").getItem());
     }
 
     public String modsPath()
@@ -84,5 +92,7 @@ public class Metallurgy
 
         BlockList.init();
         ItemList.init();
+
+        initTabs();
     }
 }
