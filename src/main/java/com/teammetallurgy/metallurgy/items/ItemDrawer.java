@@ -20,6 +20,8 @@ public class ItemDrawer extends Item
     public ItemDrawer()
     {
         this.setCreativeTab(Metallurgy.instance.creativeTabItems);
+        //TODO Change to actual texture when ready
+        this.iconString = "metallurgy:metal_item_default";
     }
 
     @Override
