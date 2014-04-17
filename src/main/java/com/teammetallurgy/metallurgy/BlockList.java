@@ -165,4 +165,9 @@ public class BlockList
         GameRegistry.registerTileEntity(clazz, Metallurgy.MODID + ":" + blockName);
     }
 
+    public static Block getAlloyer()
+    {
+        return alloyer;
+    }
+
 }

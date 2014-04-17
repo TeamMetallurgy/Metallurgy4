@@ -53,6 +53,7 @@ public class Metallurgy
 
     private void initTabs()
     {
+        creativeTabMachines.setItem(BlockList.getAlloyer());
         creativeTabBlocks.setItem(BlockList.getSet("ender").getBlock("Eximite").getItem());
         creativeTabItems.setItem(BlockList.getSet("nether").getIngot("Ceruclase").getItem());
         creativeTabTools.setItem(BlockList.getSet("base").getSword("DamascusSteel").getItem());
