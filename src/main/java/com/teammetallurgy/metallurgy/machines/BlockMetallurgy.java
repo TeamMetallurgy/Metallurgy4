@@ -16,6 +16,7 @@ public abstract class BlockMetallurgy extends BlockMetallurgyCore
 
     public BlockMetallurgy()
     {
+        this.textureName = "metallurgy:metal_block_default";
     }
 
     @Override
