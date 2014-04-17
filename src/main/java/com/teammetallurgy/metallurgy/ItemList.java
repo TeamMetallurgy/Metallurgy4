@@ -5,23 +5,28 @@ import net.minecraft.item.Item;
 import com.teammetallurgy.metallurgy.items.ItemDrawer;
 import com.teammetallurgy.metallurgycore.handlers.ConfigHandler;
 
+import cpw.mods.fml.common.registry.GameRegistry;
+
 public class ItemList
 {
     public static Item drawer;
 
     public static void init()
     {
-        String itemName = "drawer";
-        int defaultId = 2560;
+        String itemName = "metallurgy.drawer";
 
         if (ConfigHandler.itemEnabled(itemName))
         {
-            int id = ConfigHandler.getItem(itemName, defaultId++);
 
-            ItemList.drawer = new ItemDrawer(id).setUnlocalizedName(itemName);
+            ItemList.drawer = new ItemDrawer().setUnlocalizedName(itemName);
 
-            com.teammetallurgy.metallurgycore.ItemList.registerItem(ItemList.drawer, itemName);
+            ItemList.registerItem(ItemList.drawer, itemName);
         }
 
+    }
+
+    public static void registerItem(Item item, String itemName)
+    {
+        GameRegistry.registerItem(item, itemName);
     }
 }

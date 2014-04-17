@@ -17,12 +17,6 @@ import com.teammetallurgy.metallurgy.lib.GUIIds;
 public class ItemDrawer extends Item
 {
 
-    @Deprecated
-    public ItemDrawer(int id)
-    {
-        this();
-    }
-
     public ItemDrawer()
     {
         this.setCreativeTab(Metallurgy.instance.creativeTabItems);
@@ -46,10 +40,7 @@ public class ItemDrawer extends Item
         if (compound == null) { return null; }
         NBTTagList tagList = compound.getTagList("items", 10);
 
-        if (tagList.tagCount() != 0)
-        {
-            return ItemStack.loadItemStackFromNBT((NBTTagCompound) tagList.getCompoundTagAt(0));
-        }
+        if (tagList.tagCount() != 0) { return ItemStack.loadItemStackFromNBT((NBTTagCompound) tagList.getCompoundTagAt(0)); }
         return null;
     }
 
