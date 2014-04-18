@@ -21,13 +21,14 @@ import com.teammetallurgy.metallurgy.machines.crusher.BlockCrusher;
 import com.teammetallurgy.metallurgy.machines.crusher.TileEntityCrusher;
 import com.teammetallurgy.metallurgy.machines.forge.BlockForge;
 import com.teammetallurgy.metallurgy.machines.forge.TileEntityForge;
+import com.teammetallurgy.metallurgy.machines.frame.BlockFrame;
 import com.teammetallurgy.metallurgy.metals.MetalSet;
-import com.teammetallurgy.metallurgycore.handlers.ConfigHandler;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class BlockList
 {
+    private static Block machineFrame;
     private static Block crusher;
     private static Block alloyer;
     private static Block forge;
@@ -41,7 +42,11 @@ public class BlockList
 
     public static void init()
     {
-        String blockName = "crusher";
+        String blockName = "machine.frame";
+        BlockList.machineFrame = new BlockFrame().setBlockName(blockName);
+        BlockList.registerBlock(BlockList.machineFrame, blockName);
+
+        blockName = "crusher";
         BlockList.crusher = new BlockCrusher().setBlockName(blockName);
         BlockList.registerBlockWithTileEntity(BlockList.crusher, TileEntityCrusher.class, blockName);
 

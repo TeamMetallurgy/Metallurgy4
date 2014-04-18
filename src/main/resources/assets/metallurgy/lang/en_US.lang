@@ -4,6 +4,8 @@ itemGroup.Metallurgy.Items=Metallurgy Items
 itemGroup.Metallurgy.Tools=Metallurgy Tools
 itemGroup.Metallurgy.Armor=Metallurgy Armor
 
+tile.machine.frame.name=Machine Frame
+
 tile.crusher.name=Crusher
 container.crusher=Crusher
 
