@@ -34,12 +34,6 @@ public class BlockList
 
     private static Map<String, MetalSet> setList = new HashMap<String, MetalSet>();
 
-    private static int getId(String blockName)
-    {
-        int defaultId = 450;
-        return ConfigHandler.getBlock("Machines", blockName, defaultId++);
-    }
-
     public static MetalSet getSet(String name)
     {
         return BlockList.setList.get(name);
@@ -48,15 +42,15 @@ public class BlockList
     public static void init()
     {
         String blockName = "crusher";
-        BlockList.crusher = new BlockCrusher(BlockList.getId(blockName)).setBlockName(blockName);
+        BlockList.crusher = new BlockCrusher().setBlockName(blockName);
         BlockList.registerBlockWithTileEntity(BlockList.crusher, TileEntityCrusher.class, blockName);
 
         blockName = "alloyer";
-        BlockList.alloyer = new BlockAlloyer(BlockList.getId(blockName)).setBlockName(blockName);
+        BlockList.alloyer = new BlockAlloyer().setBlockName(blockName);
         BlockList.registerBlockWithTileEntity(BlockList.alloyer, TileEntityAlloyer.class, blockName);
 
         blockName = "forge";
-        BlockList.forge = new BlockForge(BlockList.getId(blockName)).setBlockName(blockName);
+        BlockList.forge = new BlockForge().setBlockName(blockName);
         BlockList.registerBlockWithTileEntity(BlockList.forge, TileEntityForge.class, blockName);
 
         File directory = new File(Metallurgy.instance.modsPath());

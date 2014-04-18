@@ -17,12 +17,6 @@ import com.teammetallurgy.metallurgy.machines.BlockMetallurgy;
 public class BlockForge extends BlockMetallurgy
 {
 
-    @Deprecated
-    public BlockForge(int id)
-    {
-        this();
-    }
-
     public BlockForge()
     {
     }

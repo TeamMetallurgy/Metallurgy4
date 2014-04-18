@@ -11,12 +11,6 @@ import com.teammetallurgy.metallurgy.machines.BlockMetallurgy;
 public class BlockAlloyer extends BlockMetallurgy
 {
 
-    @Deprecated
-    public BlockAlloyer(int id)
-    {
-        this();
-    }
-
     public BlockAlloyer()
     {
     }

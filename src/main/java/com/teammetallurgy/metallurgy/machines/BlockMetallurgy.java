@@ -8,12 +8,6 @@ import com.teammetallurgy.metallurgycore.machines.BlockMetallurgyCore;
 public abstract class BlockMetallurgy extends BlockMetallurgyCore
 {
 
-    @Deprecated
-    public BlockMetallurgy(int id)
-    {
-        this();
-    }
-
     public BlockMetallurgy()
     {
         this.textureName = "metallurgy:metal_block_default";

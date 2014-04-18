@@ -11,12 +11,6 @@ import com.teammetallurgy.metallurgy.machines.BlockMetallurgy;
 public class BlockCrusher extends BlockMetallurgy
 {
 
-    @Deprecated
-    public BlockCrusher(int id)
-    {
-        this();
-    }
-
     public BlockCrusher()
     {
     }
