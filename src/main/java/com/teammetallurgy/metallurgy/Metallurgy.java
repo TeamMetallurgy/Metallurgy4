@@ -45,6 +45,8 @@ public class Metallurgy
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
+        BlockList.initRecipies();
+
         NetworkRegistry.INSTANCE.registerGuiHandler(Metallurgy.instance, new GUIHandlerMetallurgy());
         Metallurgy.proxy.registerTickHandlers();
         MinecraftForge.EVENT_BUS.register(new EventHandler());

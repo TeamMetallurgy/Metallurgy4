@@ -12,7 +12,11 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraftforge.oredict.ShapedOreRecipe;
 
 import com.google.common.io.Resources;
 import com.teammetallurgy.metallurgy.machines.alloyer.BlockAlloyer;
@@ -112,6 +116,24 @@ public class BlockList
 
         }
 
+    }
+
+    public static void initRecipies()
+    {
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(BlockList.machineFrame),
+                "ici", "cic", "ici", 'c', "ingotCopper", 'i', Items.iron_ingot));
+
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(BlockList.crusher),
+                "ccc", "imi", "ifi", 'c', "ingotCopper", 'i', Items.iron_ingot,
+                'm', new ItemStack(BlockList.machineFrame), 'f', Blocks.furnace));
+
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(BlockList.alloyer),
+                "aaa", "dmd", "dfd", 'a', "ingotAngmallen", 'd', "ingotDamascusSteel",
+                'm', new ItemStack(BlockList.machineFrame), 'f', Blocks.furnace));
+
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(BlockList.forge),
+                "iii", "sms", "sfs", 'i', "ingotIgnatius", 's', "ingotShadowSteel",
+                'm', new ItemStack(BlockList.machineFrame), 'f', Blocks.furnace));
     }
 
     private static void injectMetalSet(String name, InputStream stream) throws IOException
