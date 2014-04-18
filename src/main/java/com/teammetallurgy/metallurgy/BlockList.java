@@ -62,6 +62,12 @@ public class BlockList
         BlockList.forge = new BlockForge().setBlockName(blockName);
         BlockList.registerBlockWithTileEntity(BlockList.forge, TileEntityForge.class, blockName);
 
+        initMetalSets();
+
+    }
+
+    private static void initMetalSets ()
+    {
         File directory = new File(Metallurgy.instance.modsPath());
 
         File[] listFiles = directory.listFiles();
@@ -113,9 +119,7 @@ public class BlockList
             catch (IOException e)
             {
             }
-
         }
-
     }
 
     public static void initRecipies()

@@ -223,6 +223,56 @@ public class MetalSet
 
             int metaId = metal.meta;
 
+            if (metal.type != Metal.MetalType.Drop)
+            {
+                String identifier = "dust";
+
+                dust = this.createItem(this.defaultDust, metaId, tag, identifier);
+                dust.addSubItem(metaId, metal.getName(), 0, texture + "_" + identifier);
+                this.dustStacks.put(tag, new ItemStack(dust, 1, metaId));
+
+            }
+
+            if (metal.type != Metal.MetalType.Drop)
+            {
+                String identifier = "ingot";
+
+                ingot = new MetalItem(configTag + "." + identifier);
+                ingot.addSubItem(0, metal.getName(), 1, texture + "_" + identifier);
+
+                OreDictionary.registerOre(identifier + tag, new ItemStack(ingot, 1, 0));
+
+                String registryName = metal.getName().toLowerCase();
+                registryName = registryName.replace(" ", ".");
+                registryName = registryName + "." + identifier;
+
+                GameRegistry.registerItem(ingot, registryName);
+                this.ingotStacks.put(tag, new ItemStack(ingot));
+
+            }
+
+            if (metal.type == Metal.MetalType.Drop)
+            {
+                String identifier = "item";
+
+                item = this.createItem(this.defaultDrops, metaId, tag, identifier);
+
+                // Some items have different names than the ores
+                String itemName = metal.dropName;
+                String itemTexture = metal.dropName.replace(" ", "_");
+                itemTexture = Metallurgy.MODID + ":" + this.name + "/" + itemTexture.toLowerCase();
+
+                if (itemName.compareTo("") == 0)
+                {
+                    itemName = metal.getName();
+                    itemTexture = texture;
+                }
+
+                item.addSubItem(metaId, itemName, 2, itemTexture);
+                this.dropStacks.put(tag, new ItemStack(item, 1, metaId));
+
+            }
+
             if (metal.type != Metal.MetalType.Alloy)
             {
                 String identifier = "ore";
@@ -269,23 +319,9 @@ public class MetalSet
                 block.addSubBlock(metaId, metal.getName(), 1, texture + "_" + identifier);
 
                 this.blockStacks.put(tag, new ItemStack(block, 1, metaId));
-            }
 
-            if (metal.type != Metal.MetalType.Drop)
-            {
-                String identifier = "ingot";
-
-                ingot = new MetalItem(configTag + "." + identifier);
-                ingot.addSubItem(0, metal.getName(), 1, texture + "_" + identifier);
-
-                OreDictionary.registerOre(identifier + tag, new ItemStack(ingot, 1, 0));
-
-                String registryName = metal.getName().toLowerCase();
-                registryName = registryName.replace(" ", ".");
-                registryName = registryName + "." + identifier;
-
-                GameRegistry.registerItem(ingot, registryName);
-                this.ingotStacks.put(tag, new ItemStack(ingot));
+                GameRegistry.addShapedRecipe(new ItemStack(block, 1, metaId), new Object[] { "iii", "iii", "iii", 'i', ingot });
+                GameRegistry.addShapelessRecipe(new ItemStack(ingot, 9), new ItemStack(block, 1, metaId));
 
             }
 
@@ -299,38 +335,6 @@ public class MetalSet
 
                 GameRegistry.addShapedRecipe(new ItemStack(brick, 1, metaId), new Object[] { "ii", "ii", 'i', ingot });
                 GameRegistry.addShapelessRecipe(new ItemStack(ingot, 4), new ItemStack(brick, 1, metaId));
-
-            }
-
-            if (metal.type != Metal.MetalType.Drop)
-            {
-                String identifier = "dust";
-
-                dust = this.createItem(this.defaultDust, metaId, tag, identifier);
-                dust.addSubItem(metaId, metal.getName(), 0, texture + "_" + identifier);
-                this.dustStacks.put(tag, new ItemStack(dust, 1, metaId));
-
-            }
-
-            if (metal.type == Metal.MetalType.Drop)
-            {
-                String identifier = "item";
-
-                item = this.createItem(this.defaultDrops, metaId, tag, identifier);
-
-                // Some items have different names than the ores
-                String itemName = metal.dropName;
-                String itemTexture = metal.dropName.replace(" ", "_");
-                itemTexture = Metallurgy.MODID + ":" + this.name + "/" + itemTexture.toLowerCase();
-
-                if (itemName.compareTo("") == 0)
-                {
-                    itemName = metal.getName();
-                    itemTexture = texture;
-                }
-
-                item.addSubItem(metaId, itemName, 2, itemTexture);
-                this.dropStacks.put(tag, new ItemStack(item, 1, metaId));
 
             }
 
