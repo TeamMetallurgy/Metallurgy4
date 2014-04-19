@@ -152,6 +152,7 @@
 		"abstratorXP":24,
 		"blockLvl":3,
 		"alloyRecipe":["Kalendrite","Platinum"],
+		"requireAlloyer":true,
 		"equipment":[4,1300,3,14,50,4,7,5,4,32],
 		"entityEffect":[-3,0,3,1],
 		"dugeonLoot":[0,0]

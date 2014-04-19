@@ -350,6 +350,7 @@ public class MetalSet
                 ore2 = "dust" + ore2;
 
                 Utils.alloys.put(tag, new String[] { ore1, ore2 });
+                Utils.requireAlloyer.put(tag, metal.isAlloyerRequired());
             }
 
             // Tools and weapons

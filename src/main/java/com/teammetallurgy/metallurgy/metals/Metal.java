@@ -14,6 +14,7 @@ public class Metal
     public int blockLvl;
     // list of parent materials
     public String[] alloyRecipe;
+    public boolean requireAlloyer;
     public String dropName;
     // 0: min, 1:max
     public int[] dropRate;
@@ -298,5 +299,10 @@ public class Metal
         {
             return null;
         }
+    }
+
+    public boolean isAlloyerRequired()
+    {
+        return this.requireAlloyer;
     }
 }

@@ -107,6 +107,7 @@
 		"abstratorXP":9,
 		"blockLvl":3,
 		"alloyRecipe":["Mithril","Silver"],
+		"requireAlloyer":true,
 		"equipment":[4,1100,3,14,20,4,7,5,4,30],
 		"dugeonLoot":[0,0]
 	},
@@ -139,6 +140,7 @@
 		"abstratorXP":25,
 		"blockLvl":4,
 		"alloyRecipe":["Orichalcum","Platinum"],
+		"requireAlloyer":true,
 		"equipment":[5,1600,3,14,50,5,7,6,4,36],
 		"dugeonLoot":[0,0]
 	},
@@ -173,6 +175,7 @@
 		"abstratorXP":13,
 		"blockLvl":6,
 		"alloyRecipe":["Adamantine","Atlarus"],
+		"requireAlloyer":true,
 		"equipment":[7,3000,5,14,25,5,7,6,5,42],
 		"dugeonLoot":[0,0]
 	}

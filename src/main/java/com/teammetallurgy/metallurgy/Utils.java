@@ -15,6 +15,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class Utils
 {
     public static HashMap<String, String[]> alloys = new HashMap<String, String[]>();
+    public static HashMap<String, Boolean> requireAlloyer = new HashMap<String, Boolean>();
 
     private static void injectAlloyRecipe(String tag, String[] materials)
     {
@@ -32,10 +33,14 @@ public class Utils
                 List<ItemStack> output = OreDictionary.getOres("dust" + tag);
                 if (output.size() > 0)
                 {
+                    boolean isAlloyerRequired = Utils.requireAlloyer.get(tag);
                     ItemStack outputStack = output.get(0).copy();
 
                     outputStack.stackSize = 2;
-                    GameRegistry.addShapelessRecipe(outputStack, itemStack, otherItemStack);
+                    if (!isAlloyerRequired)
+                    {
+                        GameRegistry.addShapelessRecipe(outputStack, itemStack, otherItemStack);
+                    }
 
                     ItemStack copy = outputStack.copy();
                     copy.stackSize = 4;
