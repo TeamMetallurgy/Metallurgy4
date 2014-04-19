@@ -10,6 +10,8 @@ import net.minecraftforge.oredict.OreDictionary;
 import com.teammetallurgy.metallurgy.recipes.AlloyerRecipes;
 import com.teammetallurgy.metallurgy.recipes.CrusherRecipes;
 
+import cpw.mods.fml.common.registry.GameRegistry;
+
 public class Utils
 {
     public static HashMap<String, String[]> alloys = new HashMap<String, String[]>();
@@ -33,7 +35,11 @@ public class Utils
                     ItemStack outputStack = output.get(0).copy();
 
                     outputStack.stackSize = 2;
-                    AlloyerRecipes.getInstance().addRecipe(itemStack, otherItemStack, outputStack);
+                    GameRegistry.addShapelessRecipe(outputStack, itemStack, otherItemStack);
+
+                    ItemStack copy = outputStack.copy();
+                    copy.stackSize = 4;
+                    AlloyerRecipes.getInstance().addRecipe(itemStack, otherItemStack, copy);
                 }
             }
         }

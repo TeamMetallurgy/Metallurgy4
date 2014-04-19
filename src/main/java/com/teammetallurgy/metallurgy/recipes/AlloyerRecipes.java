@@ -36,9 +36,9 @@ public class AlloyerRecipes
         {
             if (this.uses(first) && this.uses(second)) { return true; }
 
-            if (this.uses(first)) { return true; }
+            if (this.uses(first) && (second == null)) { return true; }
 
-            if (this.uses(second)) { return true; }
+            if (this.uses(second) && (first == null)) { return true; }
 
             return this.matchesOreDict(first, second);
         }
@@ -47,9 +47,9 @@ public class AlloyerRecipes
         {
             if (RecipeUtils.matchesOreDict(first) && RecipeUtils.matchesOreDict(second)) { return true; }
 
-            if (RecipeUtils.matchesOreDict(first)) { return true; }
+            if (RecipeUtils.matchesOreDict(first) && (second == null)) { return true; }
 
-            if (RecipeUtils.matchesOreDict(second)) { return true; }
+            if (RecipeUtils.matchesOreDict(second) && (first == null)) { return true; }
 
             return false;
         }
@@ -58,11 +58,11 @@ public class AlloyerRecipes
         {
             if (ingredient == null) { return false; }
 
-            if (this.first != null && this.first.isItemEqual(ingredient))
+            if ((this.first != null) && this.first.isItemEqual(ingredient))
             {
                 return true;
             }
-            else if (this.baseItem != null && this.baseItem.isItemEqual(ingredient)) { return true; }
+            else if ((this.baseItem != null) && this.baseItem.isItemEqual(ingredient)) { return true; }
 
             return false;
         }
@@ -75,7 +75,7 @@ public class AlloyerRecipes
         return AlloyerRecipes.instance;
     }
 
-    private ArrayList<AlloyRecipe> recipes = new ArrayList<AlloyRecipe>();
+    private final ArrayList<AlloyRecipe> recipes = new ArrayList<AlloyRecipe>();
 
     public void addRecipe(ItemStack itemStack, ItemStack otherItemStack, ItemStack output)
     {
