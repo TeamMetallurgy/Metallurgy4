@@ -305,7 +305,10 @@ public class MetalSet
 
                 if (ConfigHandler.generates(tag))
                 {
-                    WorldGenMetals worldGen = new WorldGenMetals(ore, metaId, metal.generation, metal.dimensions);
+                    String dims = ConfigHandler.getOreGenerationDimInfo(configTag, metal.dimensions);
+                    int[] genInfo = ConfigHandler.getOreGenerationInformation(configTag, metal.generation);
+
+                    WorldGenMetals worldGen = new WorldGenMetals(ore, metaId, genInfo, dims);
 
                     GameRegistry.registerWorldGenerator(worldGen, 5);
                 }
