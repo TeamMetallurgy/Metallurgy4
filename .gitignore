@@ -4,7 +4,11 @@
 /build
 /download
 *.iml
+*.ipr
+*.iws
 /.settings
 Thumbs.db
 /eclipse
 /.gradle
+*~
+/.idea
