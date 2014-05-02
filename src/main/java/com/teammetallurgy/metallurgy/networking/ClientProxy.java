@@ -5,7 +5,13 @@ import java.util.List;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.FileResourcePack;
+
+import com.teammetallurgy.metallurgy.BlockList;
+import com.teammetallurgy.metallurgy.machines.RenderBlockMachine;
+
 import cpw.mods.fml.client.FMLClientHandler;
+import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
+import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.ObfuscationReflectionHelper;
 
 public class ClientProxy extends CommonProxy
@@ -25,5 +31,11 @@ public class ClientProxy extends CommonProxy
             ((List) value).add(pack);
         }
         FMLClientHandler.instance().getClient().refreshResources();
+    }
+    
+    @Override
+    public void registerBlockRenderers()
+    {
+        RenderingRegistry.registerBlockHandler(new RenderBlockMachine());
     }
 }

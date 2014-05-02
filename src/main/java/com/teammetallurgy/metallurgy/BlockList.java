@@ -194,5 +194,20 @@ public class BlockList
     {
         return alloyer;
     }
+    
+    public static Block getMachineFrame()
+    {
+        return machineFrame;
+    }
+    
+    public static Block getCrusher()
+    {
+        return crusher;
+    }
+    
+    public static Block getForge()
+    {
+        return forge;
+    }
 
 }

@@ -17,5 +17,10 @@ public class CommonProxy
     {
         MinecraftForge.EVENT_BUS.register(new WorldTickerMetallurgy());
     }
+    
+    public void registerBlockRenderers()
+    {
+        
+    }
 
 }
