@@ -626,3 +626,9 @@ item.metallurgy.bitumen.name=Bitume
 
 tile.metallurgy.potash.ore.name=Potasso Grezzo
 item.metallurgy.potash.name=Potasso
+
+tile.metallurgy.gold.brick.name=Mattoni d'Oro
+item.metallurgy.gold.dust.name=Polvere d'Oro
+
+tile.metallurgy.iron.brick.name=Mattoni di Ferro
+item.metallurgy.iron.dust.name=Polvere di Ferro

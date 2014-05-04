@@ -624,3 +624,9 @@ item.metallurgy.bitumen.name=Bitumen
 
 tile.metallurgy.potash.ore.name=Kalisalz Erz
 item.metallurgy.potash.name=Kalisalz
+
+tile.metallurgy.gold.brick.name=Gold Ziegel
+item.metallurgy.gold.dust.name=Gold Staub
+
+tile.metallurgy.iron.brick.name=Eisen Ziegel
+item.metallurgy.iron.dust.name=Eisen Staub

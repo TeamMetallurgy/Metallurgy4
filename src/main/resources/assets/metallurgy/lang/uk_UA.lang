@@ -624,3 +624,9 @@ item.metallurgy.bitumen.name=Бітум
 
 tile.metallurgy.potash.ore.name=Поташева руда
 item.metallurgy.potash.name=Поташ
+
+tile.metallurgy.gold.brick.name=Золотий цегла
+item.metallurgy.gold.dust.name=Золотий пил
+
+tile.metallurgy.iron.brick.name=Залізний цегла
+item.metallurgy.iron.dust.name=Залізний пил
