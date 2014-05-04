@@ -27,6 +27,7 @@ import com.teammetallurgy.metallurgy.machines.forge.BlockForge;
 import com.teammetallurgy.metallurgy.machines.forge.TileEntityForge;
 import com.teammetallurgy.metallurgy.machines.frame.BlockFrame;
 import com.teammetallurgy.metallurgy.metals.MetalSet;
+import com.teammetallurgy.metallurgy.metals.VanillaMetals;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -63,6 +64,8 @@ public class BlockList
         BlockList.registerBlockWithTileEntity(BlockList.forge, TileEntityForge.class, blockName);
 
         initMetalSets();
+        
+        VanillaMetals.initBlocks();
 
     }
 

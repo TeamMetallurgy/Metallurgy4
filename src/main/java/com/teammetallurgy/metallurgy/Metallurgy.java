@@ -3,11 +3,11 @@ package com.teammetallurgy.metallurgy;
 import java.io.File;
 import java.io.IOException;
 
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.common.MinecraftForge;
 
 import com.teammetallurgy.metallurgy.handlers.EventHandler;
 import com.teammetallurgy.metallurgy.handlers.GUIHandlerMetallurgy;
+import com.teammetallurgy.metallurgy.metals.VanillaMetals;
 import com.teammetallurgy.metallurgy.networking.CommonProxy;
 import com.teammetallurgy.metallurgycore.CreativeTab;
 import com.teammetallurgy.metallurgycore.handlers.ConfigHandler;
@@ -45,6 +45,7 @@ public class Metallurgy
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
+        VanillaMetals.initRecipes();
         BlockList.initRecipies();
 
         NetworkRegistry.INSTANCE.registerGuiHandler(Metallurgy.instance, new GUIHandlerMetallurgy());

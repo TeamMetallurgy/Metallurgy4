@@ -3,6 +3,7 @@ package com.teammetallurgy.metallurgy;
 import net.minecraft.item.Item;
 
 import com.teammetallurgy.metallurgy.items.ItemDrawer;
+import com.teammetallurgy.metallurgy.metals.VanillaMetals;
 import com.teammetallurgy.metallurgycore.handlers.ConfigHandler;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -13,15 +14,17 @@ public class ItemList
 
     public static void init()
     {
-        String itemName = "metallurgy.drawer";
+        String itemDrawerName = "metallurgy.drawer";
 
-        if (ConfigHandler.itemEnabled(itemName))
+        if (ConfigHandler.itemEnabled(itemDrawerName))
         {
 
-            ItemList.drawer = new ItemDrawer().setUnlocalizedName(itemName);
+            ItemList.drawer = new ItemDrawer().setUnlocalizedName(itemDrawerName);
 
-            ItemList.registerItem(ItemList.drawer, itemName);
+            ItemList.registerItem(ItemList.drawer, itemDrawerName);
         }
+
+        VanillaMetals.initItems();
 
     }
 

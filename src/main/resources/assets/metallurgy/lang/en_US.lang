@@ -624,3 +624,9 @@ item.metallurgy.bitumen.name=Bitumen
 
 tile.metallurgy.potash.ore.name=Potash Ore
 item.metallurgy.potash.name=Potash
+
+tile.metallurgy.gold.brick.name=Gold Brick
+item.metallurgy.gold.dust.name=Gold Dust
+
+tile.metallurgy.iron.brick.name=Iron Brick
+item.metallurgy.iron.dust.name=Iron Dust
