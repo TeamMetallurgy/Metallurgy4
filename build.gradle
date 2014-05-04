@@ -21,6 +21,10 @@ repositories {
         name = "Team Metallurgy Maven"
         url = "http://mc.aesireanempire.com/maven"
     }
+    maven {
+        name = "ChickenBones"
+        url = "http://chickenbones.net/maven"
+    }
 }
 
 apply plugin: 'forge'
@@ -44,6 +48,8 @@ minecraft {
 
 dependencies {
     compile "com.teammetallurgy:MetallurgyCore:${config.minecraft_version}-${config.metallurgycore_version}:deobf"
+    compile "codechicken:NotEnoughItems:${config.minecraft_version}-${config.nei_version}:dev"
+    compile "codechicken:CodeChickenCore:${config.minecraft_version}-${config.nei_version}:dev"
 }
 
 task buildInfo() {

@@ -104,4 +104,33 @@ public class AlloyerRecipes
         }
         return false;
     }
+
+
+    public ArrayList<AlloyRecipe> getRecipesFor(ItemStack ingredient)
+    {
+        ArrayList<AlloyRecipe> list = new ArrayList<AlloyRecipe>();
+
+        for (AlloyRecipe alloyRecipe : this.recipes)
+        {
+            if (ItemStack.areItemStacksEqual(alloyRecipe.result, ingredient))
+            {
+                list.add(alloyRecipe);
+            }
+        }
+        return list;
+    }
+
+    public ArrayList<AlloyRecipe> getRecipesUsing(ItemStack ingredient)
+    {
+        ArrayList<AlloyRecipe> list = new ArrayList<AlloyRecipe>();
+
+        for (AlloyRecipe alloyRecipe : this.recipes)
+        {
+            if (alloyRecipe.uses(ingredient))
+            {
+                list.add(alloyRecipe);
+            }
+        }
+        return list;
+    }
 }
