@@ -10,7 +10,7 @@ public class ForgeHandler extends TemplateRecipeHandler
 {
     @Override public String getGuiTexture()
     {
-        return "metallurgy:textures/gui/Forge.png";
+        return "metallurgy:textures/gui/nei_forge.png";
     }
 
     @Override public String getRecipeName()
