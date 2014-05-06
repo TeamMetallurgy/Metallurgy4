@@ -48,16 +48,21 @@ public class TileEntityForge extends TileEntityMetallurgySided implements IFluid
     @Override
     protected boolean preProcessItem()
     {
-        FluidStack drain = this.tank.drain(100, false);
-        
-        if(drain.amount == 100)
+        FluidStack drain = this.tank.drain(10, false);
+
+        if (drain == null) { return false; }
+
+        if (drain.amount == 10)
         {
             this.tank.drain(drain.amount, true);
-    
+
+            this.currentItemBurnTime = this.burnTime = 200;
+
             this.worldObj.markBlockForUpdate(this.xCoord, this.yCoord, this.zCoord);
+
             return true;
         }
-        
+
         return false;
     }
 
