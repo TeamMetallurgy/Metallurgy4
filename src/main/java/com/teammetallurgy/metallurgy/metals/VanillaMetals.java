@@ -62,6 +62,9 @@ public class VanillaMetals
         
         CrusherRecipes.getInstance().addRecipe(new ItemStack(Items.gold_ingot), new ItemStack(vanillaDust,1,0));
         CrusherRecipes.getInstance().addRecipe(new ItemStack(Items.iron_ingot), new ItemStack(vanillaDust,1,1));
+        
+        GameRegistry.addSmelting(new ItemStack(vanillaDust,1,0), new ItemStack(Items.gold_ingot), 0.7F);
+        GameRegistry.addSmelting(new ItemStack(vanillaDust,1,1), new ItemStack(Items.iron_ingot), 0.7F);
     }
     
 }
