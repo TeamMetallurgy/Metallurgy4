@@ -105,14 +105,13 @@ public class AlloyerRecipes
         return false;
     }
 
-
     public ArrayList<AlloyRecipe> getRecipesFor(ItemStack ingredient)
     {
         ArrayList<AlloyRecipe> list = new ArrayList<AlloyRecipe>();
 
         for (AlloyRecipe alloyRecipe : this.recipes)
         {
-            if (ItemStack.areItemStacksEqual(alloyRecipe.result, ingredient))
+            if (alloyRecipe.result.isItemEqual(ingredient) && alloyRecipe.result.stackTagCompound == ingredient.stackTagCompound)
             {
                 list.add(alloyRecipe);
             }
