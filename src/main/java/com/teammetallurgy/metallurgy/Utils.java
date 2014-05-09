@@ -69,6 +69,9 @@ public class Utils
 
     private static void injectFurnaceDustRecipe(ItemStack oreItem, String replacement, String name)
     {
+
+        if (replacement.equals("ingot")) { return; }
+
         List<ItemStack> retList = OreDictionary.getOres(name);
         if (retList.size() > 0)
         {
