@@ -346,8 +346,8 @@ public class MetalSet
                 String ore1 = metal.alloyRecipe[0];
                 String ore2 = metal.alloyRecipe[1];
 
-                ore1.replace(" ", "");
-                ore2.replace(" ", "");
+                ore1 = ore1.replace(" ", "");
+                ore2 = ore2.replace(" ", "");
 
                 ore1 = "dust" + ore1;
                 ore2 = "dust" + ore2;
