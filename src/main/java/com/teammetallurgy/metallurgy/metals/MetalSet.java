@@ -12,6 +12,7 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.oredict.OreDictionary;
+import net.minecraftforge.oredict.ShapedOreRecipe;
 
 import com.google.gson.Gson;
 import com.teammetallurgy.metallurgy.Metallurgy;
@@ -373,6 +374,8 @@ public class MetalSet
 
                 toolMaterial.customCraftingMaterial = ingot;
 
+                String ingotOreDicName = "ingot" + tag;
+
                 // Unlocalized Name
                 String toolUName = metal.getName().toLowerCase();
                 toolUName = toolUName.replace(" ", ".");
@@ -384,7 +387,7 @@ public class MetalSet
                 Axe axe = new Axe(toolMaterial, axeUName, axeTexture);
                 axe.setHarvestLevel("axe", harvestLevel);
                 GameRegistry.registerItem(axe, axeUName);
-                GameRegistry.addRecipe(new ItemStack(axe), new Object[] { "iii", "is ", " s ", 'i', ingot, 's', Items.stick });
+                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(axe), new Object[] { "iii", "is ", " s ", 'i', ingotOreDicName, 's', Items.stick }));
                 this.axeStacks.put(tag, new ItemStack(axe));
 
                 // Hoe
@@ -394,7 +397,7 @@ public class MetalSet
                 Hoe hoe = new Hoe(toolMaterial, hoeUName, hoeTexture);
                 hoe.setHarvestLevel("hoe", harvestLevel);
                 GameRegistry.registerItem(hoe, hoeUName);
-                GameRegistry.addRecipe(new ItemStack(hoe), new Object[] { "ii ", " s ", " s ", 'i', ingot, 's', Items.stick });
+                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(hoe), new Object[] { "ii ", " s ", " s ", 'i', ingotOreDicName, 's', Items.stick }));
                 this.hoeStacks.put(tag, new ItemStack(hoe));
 
                 // Pickaxe
@@ -404,7 +407,7 @@ public class MetalSet
                 Pickaxe pickaxe = new Pickaxe(toolMaterial, pickaxeUName, pickaxeTexture);
                 pickaxe.setHarvestLevel("pickaxe", harvestLevel);
                 GameRegistry.registerItem(pickaxe, pickaxeUName);
-                GameRegistry.addRecipe(new ItemStack(pickaxe), new Object[] { "iii", " s ", " s ", 'i', ingot, 's', Items.stick });
+                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(pickaxe), new Object[] { "iii", " s ", " s ", 'i', ingotOreDicName, 's', Items.stick }));
                 this.pickaxeStacks.put(tag, new ItemStack(pickaxe));
 
                 // Shovel
@@ -414,7 +417,7 @@ public class MetalSet
                 Shovel shovel = new Shovel(toolMaterial, shovelUName, shovelTexture);
                 shovel.setHarvestLevel("shovel", harvestLevel);
                 GameRegistry.registerItem(shovel, shovelUName);
-                GameRegistry.addRecipe(new ItemStack(shovel), new Object[] { "i", "s", "s", 'i', ingot, 's', Items.stick });
+                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(shovel), new Object[] { "i", "s", "s", 'i', ingotOreDicName, 's', Items.stick }));
                 this.shovelStacks.put(tag, new ItemStack(shovel));
 
                 // Sword
@@ -434,7 +437,7 @@ public class MetalSet
                 }
 
                 GameRegistry.registerItem(sword, swordUName);
-                GameRegistry.addRecipe(new ItemStack(sword), new Object[] { "i", "i", "s", 'i', ingot, 's', Items.stick });
+                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(sword), new Object[] { "i", "i", "s", 'i', ingotOreDicName, 's', Items.stick }));
                 this.swordStacks.put(tag, new ItemStack(sword));
             }
 
@@ -456,6 +459,8 @@ public class MetalSet
 
                 armorMaterial.customCraftingMaterial = ingot;
 
+                String ingotOreDicName = "ingot" + tag;
+
                 // Set default model texture to diamond, model texture will be
                 // overridden by the class.
                 int renderIndex = 3;
@@ -468,7 +473,7 @@ public class MetalSet
                 helmet = (ItemMetallurgyArmor) helmet.setUnlocalizedName(helmetUName);
                 helmet = (ItemMetallurgyArmor) helmet.setTextureName(helmetIconTexture);
                 GameRegistry.registerItem(helmet, helmetUName);
-                GameRegistry.addRecipe(new ItemStack(helmet), new Object[] { "iii", "i i", 'i', ingot });
+                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(helmet), new Object[] { "iii", "i i", 'i', ingotOreDicName }));
                 this.helmetStacks.put(tag, new ItemStack(helmet));
 
                 // Chestplate
@@ -479,7 +484,7 @@ public class MetalSet
                 chestplate = (ItemMetallurgyArmor) chestplate.setUnlocalizedName(chestplateUName);
                 chestplate = (ItemMetallurgyArmor) chestplate.setTextureName(chestplateIconTexture);
                 GameRegistry.registerItem(chestplate, chestplateUName);
-                GameRegistry.addRecipe(new ItemStack(chestplate), new Object[] { "i i", "iii", "iii", 'i', ingot });
+                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chestplate), new Object[] { "i i", "iii", "iii", 'i', ingotOreDicName }));
                 this.chestplateStacks.put(tag, new ItemStack(chestplate));
 
                 // Leggings
@@ -490,7 +495,7 @@ public class MetalSet
                 leggings = (ItemMetallurgyArmor) leggings.setUnlocalizedName(leggingsUName);
                 leggings = (ItemMetallurgyArmor) leggings.setTextureName(leggingsIconTexture);
                 GameRegistry.registerItem(leggings, leggingsUName);
-                GameRegistry.addRecipe(new ItemStack(leggings), new Object[] { "iii", "i i", "i i", 'i', ingot });
+                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(leggings), new Object[] { "iii", "i i", "i i", 'i', ingotOreDicName }));
                 this.leggingsStacks.put(tag, new ItemStack(leggings));
 
                 // Boots
@@ -501,7 +506,7 @@ public class MetalSet
                 boots = (ItemMetallurgyArmor) boots.setUnlocalizedName(bootsUName);
                 boots = (ItemMetallurgyArmor) boots.setTextureName(bootsIconTexture);
                 GameRegistry.registerItem(boots, bootsUName);
-                GameRegistry.addRecipe(new ItemStack(boots), new Object[] { "i i", "i i", 'i', ingot });
+                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(boots), new Object[] { "i i", "i i", 'i', ingotOreDicName }));
                 this.bootsStacks.put(tag, new ItemStack(boots));
             }
         }
