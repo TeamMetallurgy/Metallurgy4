@@ -387,7 +387,7 @@ public class MetalSet
                 Axe axe = new Axe(toolMaterial, axeUName, axeTexture);
                 axe.setHarvestLevel("axe", harvestLevel);
                 GameRegistry.registerItem(axe, axeUName);
-                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(axe), new Object[] { "iii", "is ", " s ", 'i', ingotOreDicName, 's', Items.stick }));
+                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(axe), new Object[] { "ii ", "is ", " s ", 'i', ingotOreDicName, 's', Items.stick }));
                 this.axeStacks.put(tag, new ItemStack(axe));
 
                 // Hoe
