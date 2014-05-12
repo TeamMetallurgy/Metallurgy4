@@ -622,8 +622,8 @@ item.metallurgy.magnesium.name=Магний
 tile.metallurgy.bitumen.ore.name=Битумная руда
 item.metallurgy.bitumen.name=Битум
 
-tile.metallurgy.potash.ore.name=Поташиевая руда
-item.metallurgy.potash.name=Поташ
+tile.metallurgy.potash.ore.name=Калийная руда
+item.metallurgy.potash.name=Калий
 
 tile.metallurgy.gold.brick.name=Золотые кирпичи
 item.metallurgy.gold.dust.name=Золотая пыль
