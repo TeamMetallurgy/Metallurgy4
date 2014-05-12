@@ -34,6 +34,8 @@ public class AlloyerRecipes
 
         public boolean matches(final ItemStack first, final ItemStack second)
         {
+            if (first.isItemEqual(second)) { return false; }
+
             if (this.uses(first) && this.uses(second)) { return true; }
 
             if (this.uses(first) && (second == null)) { return true; }
