@@ -11,14 +11,17 @@ import java.util.Map;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
+import com.google.common.io.Resources;
+import com.teammetallurgy.metallurgycore.handlers.LogHandler;
+import cpw.mods.fml.common.Loader;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
-import com.google.common.io.Resources;
 import com.teammetallurgy.metallurgy.machines.alloyer.BlockAlloyer;
 import com.teammetallurgy.metallurgy.machines.alloyer.TileEntityAlloyer;
 import com.teammetallurgy.metallurgy.machines.crusher.BlockCrusher;
@@ -77,19 +80,22 @@ public class BlockList
 
         ArrayList<String> zipDirs = new ArrayList<String>();
 
-        for (File file : listFiles)
+        if (listFiles != null)
         {
-            if (file.getName().contains(".zip") && file.getName().startsWith("Metallurgy-Addon-"))
+            for (File file : listFiles)
             {
-                try
+                if (file.getName().contains(".zip") && file.getName().startsWith("Metallurgy-Addon-"))
                 {
-                    zipDirs.add(file.getCanonicalPath());
+                    try
+                    {
+                        zipDirs.add(file.getCanonicalPath());
+                    }
+                    catch (IOException e)
+                    {
+                        // Don't add errored file
+                    }
+                    break;
                 }
-                catch (IOException e)
-                {
-                    // Don't add errored file
-                }
-                break;
             }
         }
 
@@ -113,11 +119,17 @@ public class BlockList
 
             String path = "assets/metallurgy/data/";
 
-            URL resource = Resources.getResource(path + set + ".json");
+            URL resource = Block.class.getClassLoader().getResource(path + set + ".json");
 
             try
             {
-                BlockList.injectMetalSet(set, resource.openStream());
+                if (resource != null)
+                {
+                    BlockList.injectMetalSet(set, resource.openStream());
+                } else
+                {
+                    LogHandler.log("Could not load '" + path + "'");
+                }
             }
             catch (IOException e)
             {
@@ -179,7 +191,7 @@ public class BlockList
 
     private static void registerBlock(Block block, String name)
     {
-        GameRegistry.registerBlock(block, Metallurgy.MODID + ":" + name);
+        GameRegistry.registerBlock(block, name);
     }
 
     private static void registerBlockWithTileEntity(Block block, Class<? extends TileEntity> teClass, String blockName)
