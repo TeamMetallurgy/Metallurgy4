@@ -70,13 +70,20 @@ public class WorldGenMetals implements IWorldGenerator
     {
         long seed = 0L;
         String blockUName = block.getUnlocalizedName();
-        byte[] bytes = blockUName.getBytes();
 
-        ByteBuffer buffer = ByteBuffer.allocate(bytes.length);
-        buffer.put(bytes);
-        buffer.flip();
+        char[] name = blockUName.toCharArray();
 
-        seed = buffer.getLong();
+        long hash = 0L;
+
+        if (name.length > 0)
+        {
+            for (int i = 0; i < name.length; i++)
+            {
+                hash = 31 * hash + name[i];
+            }
+        }
+
+        seed = hash * 31;
 
         seed = seed + meta;
 
