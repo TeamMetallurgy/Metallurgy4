@@ -509,6 +509,17 @@ public class MetalSet
                 GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(boots), new Object[] { "i i", "i i", 'i', ingotOreDicName }));
                 this.bootsStacks.put(tag, new ItemStack(boots));
             }
+
+            // Shears and Buckets
+            if (ingot != null)
+            {
+                String ingotOreDicName = "ingot" + tag;
+
+                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.shears), new Object[] { " i", "i ", 'i', ingotOreDicName }));
+
+                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.bucket), new Object[] { "i i", " i ", 'i', ingotOreDicName }));
+            }
+
         }
     }
 }
