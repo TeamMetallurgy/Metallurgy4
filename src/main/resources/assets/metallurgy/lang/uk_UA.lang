@@ -214,23 +214,23 @@ item.metallurgy.oureclase.shovel.name=Аурова лопата
 item.metallurgy.oureclase.sword.name=Ауровий меч
 item.metallurgy.oureclase.helmet.name=Ауровий шолом
 item.metallurgy.oureclase.chestplate.name=Ауровий нагрудник
-item.metallurgy.oureclase.leggings.name=Аурові наголінники
+item.metallurgy.oureclase.leggings.name=Аурові поножі
 item.metallurgy.oureclase.boots.name=Аурові чоботи
 
-tile.metallurgy.astral.silver.ore.name=Руда зоряного срібла
-tile.metallurgy.astral.silver.block.name=Блок зоряного срібла
-tile.metallurgy.astral.silver.brick.name=Цегля з зоряного срібла
-item.metallurgy.astral.silver.dust.name=Пил зоряного срібла
-item.metallurgy.astral.silver.ingot.name=Злиток зоряного срібла
-item.metallurgy.astral.silver.axe.name=Сокира з зоряного срібла
-item.metallurgy.astral.silver.hoe.name=Мотика з зоряного срібла
-item.metallurgy.astral.silver.pickaxe.name=Кайло з зоряного срібла
-item.metallurgy.astral.silver.shovel.name=Лопата з зоряного срібла
-item.metallurgy.astral.silver.sword.name=Меч з зоряного срібла
-item.metallurgy.astral.silver.helmet.name=Шолом з зорного срібла
-item.metallurgy.astral.silver.chestplate.name=Нагрудник з зоряного срібла
-item.metallurgy.astral.silver.leggings.name=Поножі з зоряного срібла
-item.metallurgy.astral.silver.boots.name=Чоботи з зоряного срібла
+tile.metallurgy.astral.silver.ore.name=Руда астрального срібла
+tile.metallurgy.astral.silver.block.name=Блок астрального срібла
+tile.metallurgy.astral.silver.brick.name=Цегля з астрального срібла
+item.metallurgy.astral.silver.dust.name=Пил астрального срібла
+item.metallurgy.astral.silver.ingot.name=Злиток астрального срібла
+item.metallurgy.astral.silver.axe.name=Сокира з астрального срібла
+item.metallurgy.astral.silver.hoe.name=Мотика з астрального срібла
+item.metallurgy.astral.silver.pickaxe.name=Кайло з астрального срібла
+item.metallurgy.astral.silver.shovel.name=Лопата з астрального срібла
+item.metallurgy.astral.silver.sword.name=Меч з астрального срібла
+item.metallurgy.astral.silver.helmet.name=Шолом з астрального срібла
+item.metallurgy.astral.silver.chestplate.name=Нагрудник з астрального срібла
+item.metallurgy.astral.silver.leggings.name=Поножі з астрального срібла
+item.metallurgy.astral.silver.boots.name=Чоботи з астрального срібла
 
 tile.metallurgy.carmot.ore.name=Кармотова руда
 tile.metallurgy.carmot.block.name=Кармотовий блок
@@ -262,11 +262,11 @@ item.metallurgy.mithril.chestplate.name=Мітріловий нагрудник
 item.metallurgy.mithril.leggings.name=Мітрілові поножі
 item.metallurgy.mithril.boots.name=Мітрілові чоботи
 
-tile.metallurgy.rubracium.ore.name=Рубрісіємова руда
-tile.metallurgy.rubracium.block.name=Рубрісіємовий блок
-tile.metallurgy.rubracium.brick.name=Рубрісіємова цегла
-item.metallurgy.rubracium.dust.name=Рубрісіємовий пил
-item.metallurgy.rubracium.ingot.name=Рубрісіємовий злиток
+tile.metallurgy.rubracium.ore.name=Рубрісієва руда
+tile.metallurgy.rubracium.block.name=Рубрісієвий блок
+tile.metallurgy.rubracium.brick.name=Рубрісієва цегла
+item.metallurgy.rubracium.dust.name=Рубрісієвий пил
+item.metallurgy.rubracium.ingot.name=Рубрісієвий злиток
 
 tile.metallurgy.quicksilver.block.name=Ртутний блок
 tile.metallurgy.quicksilver.brick.name=Ртутна цегла
@@ -279,7 +279,7 @@ item.metallurgy.quicksilver.shovel.name=Ртутна лопата
 item.metallurgy.quicksilver.sword.name=Ртутний меч
 item.metallurgy.quicksilver.helmet.name=Ртутний шолом
 item.metallurgy.quicksilver.chestplate.name=Ртутний нагрудник
-item.metallurgy.quicksilver.leggings.name=Ртутні наголінники
+item.metallurgy.quicksilver.leggings.name=Ртутні поножі
 item.metallurgy.quicksilver.boots.name=Ртутні чоботи
 
 tile.metallurgy.haderoth.block.name=Хадеротова руда
@@ -291,12 +291,12 @@ item.metallurgy.haderoth.hoe.name=Хадеротова мотика
 item.metallurgy.haderoth.pickaxe.name=Хадеротове кайло
 item.metallurgy.haderoth.shovel.name=Хадеротова лопата
 item.metallurgy.haderoth.sword.name=Хадеротовий меч
-item.metallurgy.haderoth.helmet.name=Ходеротовий шолом
+item.metallurgy.haderoth.helmet.name=Хадеротовий шолом
 item.metallurgy.haderoth.chestplate.name=Хадеротовий нагрудник
-item.metallurgy.haderoth.leggings.name=Хадеротові наголінники
+item.metallurgy.haderoth.leggings.name=Хадеротові поножі
 item.metallurgy.haderoth.boots.name=Хадеротові чоботи
 
-tile.metallurgy.orichalcum.ore.name=Оріхолкова руда
+tile.metallurgy.orichalcum.ore.name=Оріхалкова руда
 tile.metallurgy.orichalcum.block.name=Оріхалковий блок
 tile.metallurgy.orichalcum.brick.name=Оріхалкова цегла
 item.metallurgy.orichalcum.dust.name=Оріхалкоий пил
@@ -308,7 +308,7 @@ item.metallurgy.orichalcum.shovel.name=Оріхалкова лопата
 item.metallurgy.orichalcum.sword.name=Оріхалковий меч
 item.metallurgy.orichalcum.helmet.name=Оріхалковий шолом
 item.metallurgy.orichalcum.chestplate.name=Оріхалковий нагрудник
-item.metallurgy.orichalcum.leggings.name=Оріхалкові наголінники
+item.metallurgy.orichalcum.leggings.name=Оріхалкові поножі
 item.metallurgy.orichalcum.boots.name=Оріхалкові чоботи
 
 tile.metallurgy.celenegil.block.name=Селеновий блок
@@ -322,7 +322,7 @@ item.metallurgy.celenegil.shovel.name=Селенова лопата
 item.metallurgy.celenegil.sword.name=Селеновий меч
 item.metallurgy.celenegil.helmet.name=Селеновий шолом
 item.metallurgy.celenegil.chestplate.name=Селеновий нагрудник
-item.metallurgy.celenegil.leggings.name=Селенові наголінники
+item.metallurgy.celenegil.leggings.name=Селенові поножі
 item.metallurgy.celenegil.boots.name=Селенові чоботи
 
 tile.metallurgy.adamantine.ore.name=Адамантієва руда
@@ -337,7 +337,7 @@ item.metallurgy.adamantine.shovel.name=Адамантієва лопата
 item.metallurgy.adamantine.sword.name=Адамантієвий меч
 item.metallurgy.adamantine.helmet.name=Адамантієвий шолом
 item.metallurgy.adamantine.chestplate.name=Адамантієвий нагрудник
-item.metallurgy.adamantine.leggings.name=Адамантієві наголінники
+item.metallurgy.adamantine.leggings.name=Адамантієві поножі
 item.metallurgy.adamantine.boots.name=Адамантієві чоботи
 
 tile.metallurgy.atlarus.ore.name=Атларусова руда
@@ -352,7 +352,7 @@ item.metallurgy.atlarus.shovel.name=Атларусова лопата
 item.metallurgy.atlarus.sword.name=Атларусовий меч
 item.metallurgy.atlarus.helmet.name=Атларусовий шолом
 item.metallurgy.atlarus.chestplate.name=Атларусовий нагрудник
-item.metallurgy.atlarus.leggings.name=Атларусові наголінники
+item.metallurgy.atlarus.leggings.name=Атларусові поножі
 item.metallurgy.atlarus.boots.name=Атларусові чоботи
 
 tile.metallurgy.tartarite.block.name=Тартарітовий блок
@@ -381,7 +381,7 @@ item.metallurgy.ignatius.shovel.name=Іґнатієва лопата
 item.metallurgy.ignatius.sword.name=Іґнатієвий меч
 item.metallurgy.ignatius.helmet.name=Іґнатієвий шолом
 item.metallurgy.ignatius.chestplate.name=Іґнатієвий нагрудник
-item.metallurgy.ignatius.leggings.name=Іґнатієві наголінники
+item.metallurgy.ignatius.leggings.name=Іґнатієві поножі
 item.metallurgy.ignatius.boots.name=Іґнатієві чоботи
 
 tile.metallurgy.shadow.iron.ore.name=Антизалізна руда
@@ -396,7 +396,7 @@ item.metallurgy.shadow.iron.shovel.name=Антизалізна лопата
 item.metallurgy.shadow.iron.sword.name=Антизалізний меч
 item.metallurgy.shadow.iron.helmet.name=Антизалізний шолом
 item.metallurgy.shadow.iron.chestplate.name=Антизалізний нагрудник
-item.metallurgy.shadow.iron.leggings.name=Антизалізні наголінники
+item.metallurgy.shadow.iron.leggings.name=Антизалізні поножі
 item.metallurgy.shadow.iron.boots.name=Антизалізні чоботи
 
 tile.metallurgy.lemurite.ore.name=Лемурітова руда
@@ -416,8 +416,8 @@ item.metallurgy.midasium.pickaxe.name=Мідасіюмове кайло
 item.metallurgy.midasium.shovel.name=Мідасіюмова лопата
 item.metallurgy.midasium.sword.name=Мідасіюмовий меч
 item.metallurgy.midasium.helmet.name=Мідасіюмовий шолом
-item.metallurgy.midasium.chestplate.name=Мідасіюмовий нпгрудник
-item.metallurgy.midasium.leggings.name=Мідасіюмові наголінники
+item.metallurgy.midasium.chestplate.name=Мідасіюмовий нагрудник
+item.metallurgy.midasium.leggings.name=Мідасіюмові поножі
 item.metallurgy.midasium.boots.name=Мідасіюмові чоботи
 
 tile.metallurgy.vyroxeres.ore.name=Ксеросова руда
@@ -432,7 +432,7 @@ item.metallurgy.vyroxeres.shovel.name=Ксеросова лопата
 item.metallurgy.vyroxeres.sword.name=Ксеросовий меч
 item.metallurgy.vyroxeres.helmet.name=Ксеросовий шолом
 item.metallurgy.vyroxeres.chestplate.name=Ксеросовий нагрудник
-item.metallurgy.vyroxeres.leggings.name=Ксеросові наголінники
+item.metallurgy.vyroxeres.leggings.name=Ксеросові поножі
 item.metallurgy.vyroxeres.boots.name=Ксеросові чоботи
 
 tile.metallurgy.ceruclase.ore.name=Курасова руда
@@ -447,7 +447,7 @@ item.metallurgy.ceruclase.shovel.name=Курасова лопата
 item.metallurgy.ceruclase.sword.name=Курасовий меч
 item.metallurgy.ceruclase.helmet.name=Курасовий шолом
 item.metallurgy.ceruclase.chestplate.name=Курасовий нагрудник
-item.metallurgy.ceruclase.leggings.name=Курасові наголінники
+item.metallurgy.ceruclase.leggings.name=Курасові поножі
 item.metallurgy.ceruclase.boots.name=Курасові чоботи
 
 tile.metallurgy.alduorite.ore.name=Алдурітова руда
@@ -468,7 +468,7 @@ item.metallurgy.kalendrite.shovel.name=Календрітова лопата
 item.metallurgy.kalendrite.sword.name=Календрітовий меч
 item.metallurgy.kalendrite.helmet.name=Календрітовий шолом
 item.metallurgy.kalendrite.chestplate.name=Календрітовий нагрудник
-item.metallurgy.kalendrite.leggings.name=Календрітові наголінники
+item.metallurgy.kalendrite.leggings.name=Календрітові поножі
 item.metallurgy.kalendrite.boots.name=Календрітові чоботи
 
 tile.metallurgy.vulcanite.ore.name=Вулканітова руда
@@ -483,7 +483,7 @@ item.metallurgy.vulcanite.shovel.name=Вулканітова лопата
 item.metallurgy.vulcanite.sword.name=Вулканітовий меч
 item.metallurgy.vulcanite.helmet.name=Вулканітовий шолом
 item.metallurgy.vulcanite.chestplate.name=Вулканітовий нагрудник
-item.metallurgy.vulcanite.leggings.name=Вулканітові наголінники
+item.metallurgy.vulcanite.leggings.name=Вулканітові поножі
 item.metallurgy.vulcanite.boots.name=Вулканітові чоботи
 
 tile.metallurgy.sanguinite.ore.name=Санґунітова руда
@@ -512,7 +512,7 @@ item.metallurgy.shadow.steel.shovel.name=Антисталева лопата
 item.metallurgy.shadow.steel.sword.name=Антисталевий меч
 item.metallurgy.shadow.steel.helmet.name=Антисталевий шолом
 item.metallurgy.shadow.steel.chestplate.name=Антисталевий нагрудник
-item.metallurgy.shadow.steel.leggings.name=Антисталеві наголінники
+item.metallurgy.shadow.steel.leggings.name=Антисталеві поножі
 item.metallurgy.shadow.steel.boots.name=Антисталеві чоботи
 
 tile.metallurgy.inolashite.block.name=Лашітовий блок
@@ -526,7 +526,7 @@ item.metallurgy.inolashite.shovel.name=Лашітова лопата
 item.metallurgy.inolashite.sword.name=Лашітовий меч
 item.metallurgy.inolashite.helmet.name=Лашітовий шолом
 item.metallurgy.inolashite.chestplate.name=Лашітовий нагрудник
-item.metallurgy.inolashite.leggings.name=Лашітовий наголінники
+item.metallurgy.inolashite.leggings.name=Лашітовий поножі
 item.metallurgy.inolashite.boots.name=Лашітові чоботи
 
 tile.metallurgy.amordrine.block.name=Амодріновий блок
@@ -540,11 +540,11 @@ item.metallurgy.amordrine.shovel.name=Амодрінова лопата
 item.metallurgy.amordrine.sword.name=Амодріновий меч
 item.metallurgy.amordrine.helmet.name=Амодріновий шолом
 item.metallurgy.amordrine.chestplate.name=Амодріновий нагрудник
-item.metallurgy.amordrine.leggings.name=Амодрінові наголінники
+item.metallurgy.amordrine.leggings.name=Амодрінові поножі
 item.metallurgy.amordrine.boots.name=Амодрінові чоботи
 
 tile.metallurgy.zinc.ore.name=Цинкова руда
-tile.metallurgy.zinc.block.name=Блок цинку
+tile.metallurgy.zinc.block.name=Цинковий блок
 tile.metallurgy.zinc.brick.name=Цинкова цегла
 item.metallurgy.zinc.dust.name=Цинковий пил
 item.metallurgy.zinc.ingot.name=Цинковий злиток
@@ -561,7 +561,7 @@ item.metallurgy.silver.shovel.name=Срібна лопата
 item.metallurgy.silver.sword.name=Срібний меч
 item.metallurgy.silver.helmet.name=Срібний шолом
 item.metallurgy.silver.chestplate.name=Срібний нагрудник
-item.metallurgy.silver.leggings.name=Срібні наголінники
+item.metallurgy.silver.leggings.name=Срібні поножі
 item.metallurgy.silver.boots.name=Срібні чоботи
 
 tile.metallurgy.platinum.ore.name=Платинова руда
@@ -576,13 +576,13 @@ item.metallurgy.platinum.shovel.name=Платинова лопата
 item.metallurgy.platinum.sword.name=Платиновий меч
 item.metallurgy.platinum.helmet.name=Платиновий шолом
 item.metallurgy.platinum.chestplate.name=Платиновий нагрудник
-item.metallurgy.platinum.leggings.name=Платинові наголінники
+item.metallurgy.platinum.leggings.name=Платинові поножі
 item.metallurgy.platinum.boots.name=Платинові чоботи
 
 tile.metallurgy.brass.block.name=Латунний блок
 tile.metallurgy.brass.brick.name=Латунна цегла
 item.metallurgy.brass.dust.name=Латунний пил
-item.metallurgy.brass.ingot.name=Латунний злмток
+item.metallurgy.brass.ingot.name=Латунний злиток
 item.metallurgy.brass.axe.name=Латунна сокира
 item.metallurgy.brass.hoe.name=Латунна мотика
 item.metallurgy.brass.pickaxe.name=Латунне кайло
@@ -590,43 +590,43 @@ item.metallurgy.brass.shovel.name=Латунна лопата
 item.metallurgy.brass.sword.name=Латунний меч
 item.metallurgy.brass.helmet.name=Латунний шолом
 item.metallurgy.brass.chestplate.name=Латунний нагрудник
-item.metallurgy.brass.leggings.name=Латунні наголінники
+item.metallurgy.brass.leggings.name=Латунні поножі
 item.metallurgy.brass.boots.name=Латунні чоботи
 
-tile.metallurgy.electrum.block.name=Блок електруму
-tile.metallurgy.electrum.brick.name=Електрумна цегла
-item.metallurgy.electrum.dust.name=Електрумний пил
-item.metallurgy.electrum.ingot.name=Електрумний злиток
-item.metallurgy.electrum.axe.name=Електрумна сокира
-item.metallurgy.electrum.hoe.name=Електрумна мотика
-item.metallurgy.electrum.pickaxe.name=Електрумне кайло
-item.metallurgy.electrum.shovel.name=Електрумна лопата
-item.metallurgy.electrum.sword.name=Електрумний меч
-item.metallurgy.electrum.helmet.name=Електрумний шолом
-item.metallurgy.electrum.chestplate.name=Електрумний нагрудник
-item.metallurgy.electrum.leggings.name=Електрумні наголінники
-item.metallurgy.electrum.boots.name=Електрумні чоботи
+tile.metallurgy.electrum.block.name=Електрумовий блок
+tile.metallurgy.electrum.brick.name=Електрумова цегла
+item.metallurgy.electrum.dust.name=Електрумовий пил
+item.metallurgy.electrum.ingot.name=Електрумовий злиток
+item.metallurgy.electrum.axe.name=Електрумова сокира
+item.metallurgy.electrum.hoe.name=Електрумова мотика
+item.metallurgy.electrum.pickaxe.name=Електрумове кайло
+item.metallurgy.electrum.shovel.name=Електрумова лопата
+item.metallurgy.electrum.sword.name=Електрумовий меч
+item.metallurgy.electrum.helmet.name=Електрумовий шолом
+item.metallurgy.electrum.chestplate.name=Електрумовий нагрудник
+item.metallurgy.electrum.leggings.name=Електрумові поножі
+item.metallurgy.electrum.boots.name=Електрумові чоботи
 
-tile.metallurgy.sulfur.ore.name=Сульфурова руда
+tile.metallurgy.sulfur.ore.name=Поклади сульфуру
 item.metallurgy.sulfur.name=Сульфур
 
-tile.metallurgy.phosphorite.ore.name=Фосфорова руда
+tile.metallurgy.phosphorite.ore.name=Поклади фосору
 item.metallurgy.phosphorus.name=Фосфор
 
-tile.metallurgy.saltpeter.ore.name=Селітрева руда
+tile.metallurgy.saltpeter.ore.name=Поклади селітри
 item.metallurgy.saltpeter.name=Селітра
 
-tile.metallurgy.magnesium.ore.name=Маґнезієва руда
+tile.metallurgy.magnesium.ore.name=Поклади маґнезію
 item.metallurgy.magnesium.name=Маґнезій
 
-tile.metallurgy.bitumen.ore.name=Бітумова руда
+tile.metallurgy.bitumen.ore.name=Поклади бітуму
 item.metallurgy.bitumen.name=Бітум
 
-tile.metallurgy.potash.ore.name=Поташева руда
-item.metallurgy.potash.name=Поташ
+tile.metallurgy.potash.ore.name=Поклади калію
+item.metallurgy.potash.name=Калій
 
-tile.metallurgy.gold.brick.name=Золотий цегла
+tile.metallurgy.gold.brick.name=Золота цегла
 item.metallurgy.gold.dust.name=Золотий пил
 
-tile.metallurgy.iron.brick.name=Залізний цегла
+tile.metallurgy.iron.brick.name=Залізна цегла
 item.metallurgy.iron.dust.name=Залізний пил
