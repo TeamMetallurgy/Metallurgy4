@@ -8,6 +8,7 @@ public class Metal
     };
 
     private String name;
+    private String[] nameAliases;
     public MetalType type;
     public int meta;
     public int abstractorXp;
@@ -16,6 +17,7 @@ public class Metal
     public String[] alloyRecipe;
     public boolean requireAlloyer;
     public String dropName;
+    public String[] dropOreDicNames;
     // 0: min, 1:max
     public int[] dropRate;
     // 0: HarvestLvl, 1:ToolDura, 2:Damage, 3:Efficiency, 4:Enchant
@@ -304,5 +306,15 @@ public class Metal
     public boolean isAlloyerRequired()
     {
         return this.requireAlloyer;
+    }
+
+    public String[] getAliases()
+    {
+        return this.nameAliases;
+    }
+
+    public String[] getDropOreDicNames()
+    {
+        return this.dropOreDicNames;
     }
 }

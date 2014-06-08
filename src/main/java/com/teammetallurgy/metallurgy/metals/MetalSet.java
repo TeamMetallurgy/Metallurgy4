@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 
 import net.minecraft.init.Items;
@@ -69,7 +71,7 @@ public class MetalSet
         this.initDefaults();
     }
 
-    private MetalBlock createBlock(MetalBlock metalBlock, int meta, int harvestLvl, String metalTag, String identifier)
+    private MetalBlock createBlock(MetalBlock metalBlock, int meta, int harvestLvl, String metalTag, String identifier, boolean defaultOreDic, String[] oreDicAliases)
     {
 
         metalBlock.setHarvestLevel("pickaxe", harvestLvl, meta);
@@ -79,12 +81,26 @@ public class MetalSet
             GameRegistry.registerBlock(metalBlock, ItemMetalBlock.class, this.name + "." + identifier);
         }
 
-        OreDictionary.registerOre(identifier + metalTag, new ItemStack(metalBlock, 1, meta));
+        ItemStack blockStack = new ItemStack(metalBlock, 1, meta);
+
+        if (defaultOreDic)
+        {
+            OreDictionary.registerOre(identifier + metalTag, blockStack.copy());
+        }
+
+        if (oreDicAliases != null && oreDicAliases.length > 0)
+        {
+            for (int i = 0; i < oreDicAliases.length; i++)
+            {
+                OreDictionary.registerOre(oreDicAliases[i], blockStack.copy());
+
+            }
+        }
 
         return metalBlock;
     }
 
-    private MetalItem createItem(MetalItem metalItem, int meta, String metalTag, String identifier)
+    private MetalItem createItem(MetalItem metalItem, int meta, String metalTag, String identifier, boolean defaultOreDic, String[] oreDicAliases)
     {
 
         if (meta == 0)
@@ -92,9 +108,44 @@ public class MetalSet
             GameRegistry.registerItem(metalItem, this.name + "." + identifier);
         }
 
-        OreDictionary.registerOre(identifier + metalTag, new ItemStack(metalItem, 1, meta));
+        ItemStack itemStack = new ItemStack(metalItem, 1, meta);
+
+        if (defaultOreDic)
+        {
+            OreDictionary.registerOre(identifier + metalTag, itemStack.copy());
+        }
+
+        if (oreDicAliases != null && oreDicAliases.length > 0)
+        {
+            for (int i = 0; i < oreDicAliases.length; i++)
+            {
+                OreDictionary.registerOre(oreDicAliases[i], itemStack.copy());
+            }
+        }
 
         return metalItem;
+    }
+
+    public String[] createOreDicAliases(String identifier, String[] aliases)
+    {
+
+        String[] oreDicAliases = null;
+
+        if (aliases != null && aliases.length > 0)
+        {
+            oreDicAliases = new String[aliases.length];
+
+            for (int i = 0; i < aliases.length; i++)
+            {
+                String alias = aliases[i];
+
+                alias = alias.replace(" ", "");
+
+                oreDicAliases[i] = identifier + alias;
+            }
+        }
+
+        return oreDicAliases;
     }
 
     public ItemStack getAxe(String metal)
@@ -228,7 +279,9 @@ public class MetalSet
             {
                 String identifier = "dust";
 
-                dust = this.createItem(this.defaultDust, metaId, tag, identifier);
+                String[] oreDicAliases = createOreDicAliases(identifier, metal.getAliases());
+
+                dust = this.createItem(this.defaultDust, metaId, tag, identifier, true, oreDicAliases);
                 dust.addSubItem(metaId, metal.getName(), 0, texture + "_" + identifier);
                 this.dustStacks.put(tag, new ItemStack(dust, 1, metaId));
 
@@ -256,7 +309,32 @@ public class MetalSet
             {
                 String identifier = "item";
 
-                item = this.createItem(this.defaultDrops, metaId, tag, identifier);
+                boolean defaultOreDic = true;
+                String[] customOreDic = metal.getDropOreDicNames();
+                String[] oreDicAliases = createOreDicAliases(identifier, metal.getAliases());
+
+                ArrayList<String> oreDicList = new ArrayList<String>();
+
+                if (customOreDic != null && customOreDic.length > 0)
+                {
+                    oreDicList.addAll(Arrays.asList(customOreDic));
+                    defaultOreDic = false;
+                }
+
+                if (oreDicAliases != null && oreDicAliases.length > 0)
+                {
+                    oreDicList.addAll(Arrays.asList(oreDicAliases));
+                }
+
+                String[] oreDic = null;
+
+                if (oreDicList.size() > 0)
+                {
+                    oreDic = new String[oreDicList.size()];
+                    oreDic = oreDicList.toArray(oreDic);
+                }
+
+                item = this.createItem(this.defaultDrops, metaId, tag, identifier, defaultOreDic, oreDic);
 
                 // Some items have different names than the ores
                 String itemName = metal.dropName;
@@ -280,7 +358,9 @@ public class MetalSet
 
                 if (metal.type != Metal.MetalType.Respawn)
                 {
-                    ore = this.createBlock(this.defaultOre, metaId, metal.blockLvl, tag, identifier);
+                    String[] oreDicAliases = createOreDicAliases(identifier, metal.getAliases());
+
+                    ore = this.createBlock(this.defaultOre, metaId, metal.blockLvl, tag, identifier, true, oreDicAliases);
 
                     item = this.defaultDrops;
 
@@ -319,7 +399,9 @@ public class MetalSet
             {
                 String identifier = "block";
 
-                block = this.createBlock(this.defaultBlock, metaId, metal.blockLvl, tag, identifier);
+                String[] oreDicAliases = createOreDicAliases(identifier, metal.getAliases());
+
+                block = this.createBlock(this.defaultBlock, metaId, metal.blockLvl, tag, identifier, true, oreDicAliases);
                 block.addSubBlock(metaId, metal.getName(), 1, texture + "_" + identifier);
 
                 this.blockStacks.put(tag, new ItemStack(block, 1, metaId));
@@ -333,7 +415,9 @@ public class MetalSet
             {
                 String identifier = "brick";
 
-                brick = this.createBlock(this.defaultBricks, metaId, metal.blockLvl, tag, identifier);
+                String[] oreDicAliases = createOreDicAliases(identifier, metal.getAliases());
+
+                brick = this.createBlock(this.defaultBricks, metaId, metal.blockLvl, tag, identifier, true, oreDicAliases);
                 brick.addSubBlock(metaId, metal.getName(), 2, texture + "_" + identifier);
                 this.brickStacks.put(metal.getName(), new ItemStack(brick, 1, metaId));
 
