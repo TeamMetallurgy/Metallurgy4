@@ -17,6 +17,7 @@
 		"meta":0,
 		"blockLvl":1,
 		"dropName":"Sulfur",
+		"dropOreDicNames":["dustSulfur"],
 		"dropRate":[2,5],
 		"generation":[4,4,0,128,100,100],
 		"dimensions":"0 2-100000"
@@ -31,6 +32,7 @@
 		"meta":1,
 		"blockLvl":1,
 		"dropName":"Phosphorus",
+		"dropOreDicNames":["dustPhosphorus"],
 		"dropRate":[2,5],
 		"generation":[4,4,0,128,100,100],
 		"dimensions":"0 2-100000"
@@ -45,6 +47,7 @@
 		"meta":2,
 		"blockLvl":1,
 		"dropName":"Saltpeter",
+		"dropOreDicNames":["dustSaltpeter"],
 		"dropRate":[2,5],
 		"generation":[4,4,0,128,100,100],
 		"dimensions":"0 2-100000"
@@ -59,6 +62,7 @@
 		"meta":3,
 		"blockLvl":1,
 		"dropName":"Magnesium",
+		"dropOreDicNames":["dustMagnesium"],
 		"dropRate":[2,5],
 		"generation":[4,4,0,128,100,100],
 		"dimensions":"0 2-100000"
@@ -73,6 +77,7 @@
 		"meta":4,
 		"blockLvl":1,
 		"dropName":"Bitumen",
+		"dropOreDicNames":["dustBitumen"],
 		"dropRate":[2,5],
 		"generation":[4,4,0,128,100,100],
 		"dimensions":"0 2-100000"
@@ -87,6 +92,7 @@
 		"meta":5,
 		"blockLvl":1,
 		"dropName":"Potash",
+		"dropOreDicNames":["dustPotash"],
 		"dropRate":[2,5],
 		"generation":[4,4,0,128,100,100],
 		"dimensions":"0 2-100000"

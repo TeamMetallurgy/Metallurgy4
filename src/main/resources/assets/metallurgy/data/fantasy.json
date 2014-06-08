@@ -80,6 +80,7 @@
 	},
 	{
 		"name":"Mithril",
+		"nameAliases":["Mythril"],
 		"type":"Ore",
 		"meta":7,
 		"abstratorXP":4,
@@ -146,6 +147,7 @@
 	},
 	{
 		"name":"Adamantine",
+		"nameAliases":["Adamantium"],
 		"type":"Ore",
 		"meta":13,
 		"abstratorXP":6,
