@@ -1,4 +1,4 @@
-#Nota del Traduttore: Alcuni metalli (come quelli del Nether, End o Fantasy) non sono tradotti perchè hanno nomi in latino o inventati, se avete traduzioni migliori migliori siate liberi di cambiarli e riportarli sul github di Metallurgy 4.
+#Nota del Traduttore: Alcuni metalli (come quelli del Nether, End o Fantasy) non sono tradotti perchè hanno nomi inventati dall'autore della mod o derivano da nim di altri giochi, se avete traduzioni migliori siate liberi di cambiarli e riportarli sul github di Metallurgy 4.
 itemGroup.Metallurgy.Machines=Metallurgy Macchinari
 itemGroup.Metallurgy.Blocks=Metallurgy Blocchi
 itemGroup.Metallurgy.Items=Metallurgy Oggetti
@@ -14,7 +14,7 @@ tile.alloyer.name=Legheria
 container.alloyer=Legheria
 
 tile.forge.name=Forgia
-container.forge=Forgia
+container.forge= Forgia
 
 item.metallurgy.drawer.name=Cassetto
 container.drawer=Cassetto
