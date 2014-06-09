@@ -19,6 +19,13 @@ container.forge= Forgia
 item.metallurgy.drawer.name=Cassetto
 container.drawer=Cassetto
 
+tooltip.metallurgy.drawer.stacks=Stacks: %d / %d
+tooltip.metallurgy.hold.shift=Premi [Shift] per vedere il contenuto
+tooltip.metallurgy.tankinfo=Nome: %s || Quantità: %d mB
+
+enchantment.metallurgy.heal=Cura
+enchantment.metallurgy.unknown=Incantesimo sconosciuto
+
 tile.metallurgy.copper.ore.name=Rame Grezzo
 tile.metallurgy.copper.block.name=Blocco di Rame
 tile.metallurgy.copper.brick.name=Mattoni di Rame
