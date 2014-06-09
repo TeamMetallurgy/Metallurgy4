@@ -18,6 +18,13 @@ container.forge=Forge
 item.metallurgy.drawer.name=Drawer
 container.drawer=Drawer
 
+tooltip.metallurgy.drawer.stacks=Stacks: %d / %d
+tooltip.metallurgy.hold.shift=Hold [Shift] to display contents
+tooltip.metallurgy.tankinfo=Name: %s || Amount: %d mB
+
+enchantment.metallurgy.heal=Heal
+enchantment.metallurgy.unknown=Unknown enchantment
+
 tile.metallurgy.copper.ore.name=Copper Ore
 tile.metallurgy.copper.block.name=Copper Block
 tile.metallurgy.copper.brick.name=Copper Brick

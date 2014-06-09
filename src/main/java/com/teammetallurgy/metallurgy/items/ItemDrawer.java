@@ -7,6 +7,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
+import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
 import org.lwjgl.input.Keyboard;
@@ -20,7 +21,7 @@ public class ItemDrawer extends Item
     public ItemDrawer()
     {
         this.setCreativeTab(Metallurgy.instance.creativeTabItems);
-        //TODO Change to actual texture when ready
+        // TODO Change to actual texture when ready
         this.iconString = "metallurgy:metal_item_default";
     }
 
@@ -52,15 +53,18 @@ public class ItemDrawer extends Item
     {
         NBTTagCompound compound = itemStack.getTagCompound();
 
+        String stacksLocalized = StatCollector.translateToLocal("tooltip.metallurgy.drawer.stacks");
+        String holdShiftLocalized = StatCollector.translateToLocal("tooltip.metallurgy.hold.shift");
+
         if (compound == null)
         {
-            list.add("Items: 0 / 9");
+            list.add(String.format(stacksLocalized, 0, 9));
             return;
         }
 
         NBTTagList tagList = compound.getTagList("items", 10);
 
-        list.add(String.format("Stacks: %d / 9", tagList.tagCount()));
+        list.add(String.format(stacksLocalized, tagList.tagCount(), 9));
 
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RIGHT))
         {
@@ -72,6 +76,10 @@ public class ItemDrawer extends Item
                     list.add(String.format("- %d %s", stack.stackSize, stack.getDisplayName()));
                 }
             }
+        }
+        else
+        {
+            list.add(holdShiftLocalized);
         }
     }
 

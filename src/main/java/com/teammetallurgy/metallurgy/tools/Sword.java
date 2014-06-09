@@ -52,7 +52,7 @@ public class Sword extends ItemSword
 
             if (this.effectId == -3)
             {
-                effectName = "Heal";
+                effectName = "enchantment.metallurgy.heal";
             }
             else if (this.effectId == -2)
             {
@@ -60,7 +60,7 @@ public class Sword extends ItemSword
             }
             else if (this.effectId < 1 && this.effectId >= 32)
             {
-                effectName = "effect.unknown";
+                effectName = "enchantment.metallurgy.unknown";
             }
             else
             {

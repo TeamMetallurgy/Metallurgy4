@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.util.StatCollector;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
@@ -73,10 +74,15 @@ public class GUIForge extends GUIMetallurgyMachine
 
         if (fluidInfo == null) { return; }
 
-        final String fluidName = FluidRegistry.getFluidName(fluidInfo);
+        final String fluidName = fluidInfo.getFluid().getLocalizedName();
         final int amount = fluidInfo.amount;
 
-        final List<String> ret = Arrays.asList(new String[] { "Name: " + fluidName, "Amount: " + amount + "mB" });
+        String localizedTankInfo = StatCollector.translateToLocal("tooltip.metallurgy.tankinfo");
+        localizedTankInfo = String.format(localizedTankInfo, fluidName, amount);
+
+        int lineSeprator = localizedTankInfo.indexOf("||");
+
+        final List<String> ret = Arrays.asList(new String[] { localizedTankInfo.substring(0, lineSeprator), localizedTankInfo.substring(lineSeprator + 3) });
 
         this.drawHoveringText(ret, x - 5 + this.guiLeft / 4, y + this.guiTop, this.fontRendererObj);
 
