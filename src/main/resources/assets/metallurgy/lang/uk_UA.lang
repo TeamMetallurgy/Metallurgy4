@@ -18,6 +18,13 @@ container.forge=Кузня
 item.metallurgy.drawer.name=Шухляда
 container.drawer=Шухляда
 
+tooltip.metallurgy.drawer.stacks=Стопка: %d з %d
+tooltip.metallurgy.hold.shift=Утримуйте Shift для відображення вмісту
+tooltip.metallurgy.tankinfo=Назва: %s || Кількість: %d mB
+
+enchantment.metallurgy.heal=Зцілення
+enchantment.metallurgy.unknown=Невідоме зачарування
+
 tile.metallurgy.copper.ore.name=Мідна руда
 tile.metallurgy.copper.block.name=Мідний блок
 tile.metallurgy.copper.brick.name=Мідна цегла
