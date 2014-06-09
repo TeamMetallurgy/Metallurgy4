@@ -15,8 +15,15 @@ container.alloyer=Сплавитель
 tile.forge.name=Кузница
 container.forge=Кузница
 
-item.metallurgy.drawer.name=Выдвижной ящик
-container.drawer=Выдвижной ящик
+item.metallurgy.drawer.name=Ящик
+container.drawer=Ящик
+
+tooltip.metallurgy.drawer.stacks=Укладывается: %d / %d
+tooltip.metallurgy.hold.shift=Удерживайте [Shift], чтобы увидеть содержимое
+tooltip.metallurgy.tankinfo=Имя: %s || Количество: %d мВ
+
+enchantment.metallurgy.heal=Исцеление
+enchantment.metallurgy.unknown=Неизвестный чар
 
 tile.metallurgy.copper.ore.name=Медная руда
 tile.metallurgy.copper.block.name=Медный блок
