@@ -11,15 +11,11 @@ import java.util.Map;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
-import com.google.common.io.Resources;
-import com.teammetallurgy.metallurgycore.handlers.LogHandler;
-import cpw.mods.fml.common.Loader;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
 import com.teammetallurgy.metallurgy.machines.alloyer.BlockAlloyer;
@@ -31,6 +27,7 @@ import com.teammetallurgy.metallurgy.machines.forge.TileEntityForge;
 import com.teammetallurgy.metallurgy.machines.frame.BlockFrame;
 import com.teammetallurgy.metallurgy.metals.MetalSet;
 import com.teammetallurgy.metallurgy.metals.VanillaMetals;
+import com.teammetallurgy.metallurgycore.handlers.LogHandler;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -42,6 +39,19 @@ public class BlockList
     private static Block forge;
 
     private static Map<String, MetalSet> setList = new HashMap<String, MetalSet>();
+    private static final String[] setNames = { "base", "ender", "fantasy", "nether", "precious", "utility" };
+
+    public static String[] getDefaultSetNames()
+    {
+        return setNames;
+    }
+
+    public static String[] getLoadedSetNames()
+    {
+        String[] setNames = new String[setList.size()];
+        setNames = setList.keySet().toArray(setNames);
+        return setNames;
+    }
 
     public static MetalSet getSet(String name)
     {
@@ -112,9 +122,7 @@ public class BlockList
             }
         }
 
-        String[] sets = { "base", "ender", "fantasy", "nether", "precious", "utility" };
-
-        for (String set : sets)
+        for (String set : setNames)
         {
 
             String path = "assets/metallurgy/data/";

@@ -203,6 +203,18 @@ public class MetalSet
         return this.leggingsStacks.get(metal);
     }
 
+    public String[] getMetalNames ()
+    {
+        String[] names = new String [this.metals.length];
+
+        for (int i = 0; i < metals.length; i++)
+        {
+            names[i] = metals[i].getName();
+        }
+
+        return names;
+    }
+
     public ItemStack getOre(String metal)
     {
         return this.oreStacks.get(metal);
