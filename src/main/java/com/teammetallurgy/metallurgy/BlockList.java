@@ -18,6 +18,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
+import com.teammetallurgy.metallurgy.api.IMetalSet;
 import com.teammetallurgy.metallurgy.machines.alloyer.BlockAlloyer;
 import com.teammetallurgy.metallurgy.machines.alloyer.TileEntityAlloyer;
 import com.teammetallurgy.metallurgy.machines.crusher.BlockCrusher;
@@ -39,7 +40,7 @@ public class BlockList
     private static Block forge;
 
     private static Map<String, MetalSet> setList = new HashMap<String, MetalSet>();
-    private static final String[] setNames = { "base", "ender", "fantasy", "nether", "precious", "utility" };
+    private static String[] setNames = { "base", "ender", "fantasy", "nether", "precious", "utility" };
 
     public static String[] getDefaultSetNames()
     {
@@ -53,9 +54,9 @@ public class BlockList
         return setNames;
     }
 
-    public static MetalSet getSet(String name)
+    public static IMetalSet getSet(String name)
     {
-        return BlockList.setList.get(name);
+        return (IMetalSet)BlockList.setList.get(name);
     }
 
     public static void init()

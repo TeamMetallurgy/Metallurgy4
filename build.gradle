@@ -105,8 +105,16 @@ task deobfJar(type: Jar) {
     classifier = 'deobf'
 }
 
+task apiJar(type: Jar) {
+    from (sourceSets.main.java){
+	    include "com/teammetallurgy/metallurgy/api/*"
+	}
+	classifier = 'api'
+}
+
 artifacts {
     archives deobfJar
+    archives apiJar
 }
 
 uploadArchives {

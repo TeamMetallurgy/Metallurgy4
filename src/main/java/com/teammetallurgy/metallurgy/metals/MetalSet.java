@@ -19,6 +19,9 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 import com.google.gson.Gson;
 import com.teammetallurgy.metallurgy.Metallurgy;
 import com.teammetallurgy.metallurgy.Utils;
+import com.teammetallurgy.metallurgy.api.IMetalInfo;
+import com.teammetallurgy.metallurgy.api.IMetalSet;
+import com.teammetallurgy.metallurgy.api.MetalType;
 import com.teammetallurgy.metallurgy.armor.ItemMetallurgyArmor;
 import com.teammetallurgy.metallurgy.tools.Axe;
 import com.teammetallurgy.metallurgy.tools.Hoe;
@@ -31,7 +34,7 @@ import com.teammetallurgy.metallurgycore.handlers.LogHandler;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
-public class MetalSet
+public class MetalSet implements IMetalSet
 {
     private String name;
     private Metal[] metals = null;
@@ -148,88 +151,132 @@ public class MetalSet
         return oreDicAliases;
     }
 
+    @Override
     public ItemStack getAxe(String metal)
     {
         return this.axeStacks.get(metal);
     }
 
+    @Override
     public ItemStack getBlock(String metal)
     {
         return this.blockStacks.get(metal);
     }
 
+    @Override
     public ItemStack getBoots(String metal)
     {
         return this.bootsStacks.get(metal);
     }
 
+    @Override
     public ItemStack getBrick(String metal)
     {
         return this.brickStacks.get(metal);
     }
 
+    @Override
     public ItemStack getChestplate(String metal)
     {
         return this.chestplateStacks.get(metal);
     }
 
+    @Override
     public ItemStack getDrop(String metal)
     {
         return this.dropStacks.get(metal);
     }
 
+    @Override
     public ItemStack getDust(String metal)
     {
         return this.dustStacks.get(metal);
     }
 
+    @Override
     public ItemStack getHelmet(String metal)
     {
         return this.helmetStacks.get(metal);
     }
 
+    @Override
     public ItemStack getHoe(String metal)
     {
         return this.hoeStacks.get(metal);
     }
 
+    @Override
     public ItemStack getIngot(String metal)
     {
         return this.ingotStacks.get(metal);
     }
 
+    @Override
     public ItemStack getLeggings(String metal)
     {
         return this.leggingsStacks.get(metal);
     }
 
-    public String[] getMetalNames ()
+    @Override
+    public IMetalInfo getMetal(String metal)
     {
-        String[] names = new String [this.metals.length];
+        IMetalInfo metalInfo = null;
 
         for (int i = 0; i < metals.length; i++)
         {
-            names[i] = metals[i].getName();
+            if (metals[i].getType() == MetalType.Default)
+            {
+                continue;
+            }
+
+            if (metal.equals(metals[i].getName()))
+            {
+                metalInfo = (IMetalInfo)metals[i];
+                break;
+            }
         }
 
-        return names;
+        return metalInfo;
     }
 
+    @Override
+    public String[] getMetalNames()
+    {
+        ArrayList<String> names = new ArrayList<String>();
+
+        for (int i = 0; i < metals.length; i++)
+        {
+            if (metals[i].getType() != MetalType.Default)
+            {
+                names.add(metals[i].getName());
+            }
+        }
+
+        String[] outputNames = new String[names.size()];
+        outputNames = names.toArray(outputNames);
+
+        return outputNames;
+    }
+
+    @Override
     public ItemStack getOre(String metal)
     {
         return this.oreStacks.get(metal);
     }
 
+    @Override
     public ItemStack getPickaxe(String metal)
     {
         return this.pickaxeStacks.get(metal);
     }
 
+    @Override
     public ItemStack getShovel(String metal)
     {
         return this.shovelStacks.get(metal);
     }
 
+    @Override
     public ItemStack getSword(String metal)
     {
         return this.swordStacks.get(metal);
@@ -267,7 +314,7 @@ public class MetalSet
         for (Metal metal : this.metals)
         {
 
-            if (metal.type == Metal.MetalType.Default)
+            if (metal.type == MetalType.Default)
             {
                 continue;
             }
@@ -287,7 +334,7 @@ public class MetalSet
 
             int metaId = metal.meta;
 
-            if (metal.type != Metal.MetalType.Drop)
+            if (metal.type != MetalType.Drop)
             {
                 String identifier = "dust";
 
@@ -299,7 +346,7 @@ public class MetalSet
 
             }
 
-            if (metal.type != Metal.MetalType.Drop)
+            if (metal.type != MetalType.Drop)
             {
                 String identifier = "ingot";
 
@@ -317,7 +364,7 @@ public class MetalSet
 
             }
 
-            if (metal.type == Metal.MetalType.Drop)
+            if (metal.type == MetalType.Drop)
             {
                 String identifier = "item";
 
@@ -364,11 +411,11 @@ public class MetalSet
 
             }
 
-            if (metal.type != Metal.MetalType.Alloy)
+            if (metal.type != MetalType.Alloy)
             {
                 String identifier = "ore";
 
-                if (metal.type != Metal.MetalType.Respawn)
+                if (metal.type != MetalType.Respawn)
                 {
                     String[] oreDicAliases = createOreDicAliases(identifier, metal.getAliases());
 
@@ -376,7 +423,7 @@ public class MetalSet
 
                     item = this.defaultDrops;
 
-                    if (metal.type == Metal.MetalType.Drop)
+                    if (metal.type == MetalType.Drop)
                     {
                         ore.addSubBlock(metaId, metal.getName(), 0, texture + "_" + identifier, item);
                     }
@@ -407,7 +454,7 @@ public class MetalSet
                 }
             }
 
-            if (metal.type != Metal.MetalType.Drop && metal.type != Metal.MetalType.Respawn)
+            if (metal.type != MetalType.Drop && metal.type != MetalType.Respawn)
             {
                 String identifier = "block";
 
@@ -423,7 +470,7 @@ public class MetalSet
 
             }
 
-            if (metal.type != Metal.MetalType.Drop && metal.type != Metal.MetalType.Respawn)
+            if (metal.type != MetalType.Drop && metal.type != MetalType.Respawn)
             {
                 String identifier = "brick";
 

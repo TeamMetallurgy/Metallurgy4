@@ -1,11 +1,10 @@
 package com.teammetallurgy.metallurgy.metals;
 
-public class Metal
+import com.teammetallurgy.metallurgy.api.IMetalInfo;
+import com.teammetallurgy.metallurgy.api.MetalType;
+
+public class Metal implements IMetalInfo
 {
-    public enum MetalType
-    {
-        Respawn, Ore, Catalyst, Alloy, Drop, Default
-    };
 
     private String name;
     private String[] nameAliases;
@@ -35,9 +34,22 @@ public class Metal
     public int[] generation;
     public String dimensions;
 
+    @Override
     public String getName()
     {
         return this.name;
+    }
+
+    @Override
+    public MetalType getType()
+    {
+        return this.type;
+    }
+
+    @Override
+    public int getBlockLevel()
+    {
+        return this.blockLvl;
     }
 
     /**
@@ -46,6 +58,7 @@ public class Metal
      * @return
      *         The tool's attack damage, and -1 if invalid
      */
+    @Override
     public int getToolDamage()
     {
         if (this.haveTools())
@@ -64,6 +77,7 @@ public class Metal
      * @return
      *         The tool's durability, and -1 if invalid
      */
+    @Override
     public int getToolDurability()
     {
         if (this.haveTools())
@@ -82,6 +96,7 @@ public class Metal
      * @return
      *         The tool's efficiency , and -1 if invalid
      */
+    @Override
     public int getToolEfficiency()
     {
         if (this.haveTools())
@@ -100,6 +115,7 @@ public class Metal
      * @return
      *         The tool's efficiency , and -1 if invalid
      */
+    @Override
     public int getToolEncantabilty()
     {
         if (this.haveTools())
@@ -118,6 +134,7 @@ public class Metal
      * @return
      *         the tool's harvest level, and -1 if invalid
      */
+    @Override
     public int getToolHarvestLevel()
     {
         if (this.haveTools())
@@ -130,11 +147,13 @@ public class Metal
         }
     }
 
+    @Override
     public boolean haveTools()
     {
         return this.equipment != null && this.equipment.length >= 5;
     }
 
+    @Override
     public boolean haveArmor()
     {
         return this.equipment != null && this.equipment.length >= 10;
@@ -164,6 +183,7 @@ public class Metal
      * @return
      *         The armor's Damage Reduction array, and null if invalid.
      */
+    @Override
     public int[] getArmorDamageReduction()
     {
         if (this.haveArmor())
@@ -183,6 +203,7 @@ public class Metal
      * @return
      *         the armor's enchantability, and -1 if invalid.
      */
+    @Override
     public int getArmorEnchantability()
     {
         if (this.haveArmor())
@@ -303,18 +324,34 @@ public class Metal
         }
     }
 
+    @Override
     public boolean isAlloyerRequired()
     {
         return this.requireAlloyer;
     }
 
+    @Override
     public String[] getAliases()
     {
         return this.nameAliases;
     }
 
+    @Override
     public String[] getDropOreDicNames()
     {
         return this.dropOreDicNames;
     }
+
+    @Override
+    public int[] getGeneration()
+    {
+        return this.generation;
+    }
+
+    @Override
+    public String getDimentions()
+    {
+        return this.dimensions;
+    }
+
 }
