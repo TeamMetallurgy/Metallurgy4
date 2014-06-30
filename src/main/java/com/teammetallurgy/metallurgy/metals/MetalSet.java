@@ -229,7 +229,7 @@ public class MetalSet implements IMetalSet
                 continue;
             }
 
-            if (metal.equals(metals[i].getName()))
+            if (metal.equalsIgnoreCase((metals[i].getName())))
             {
                 metalInfo = (IMetalInfo)metals[i];
                 break;
