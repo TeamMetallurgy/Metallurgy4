@@ -5,7 +5,7 @@
   "description": "Metallurgy",
   "credits": "",
   "logoFile": "",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
@@ -16,10 +16,10 @@
   ],
   "parent":"",
   "requiredMods" : [
-     "MetallurgyCore@[4.0.0,]"
+     "MetallurgyCore@[4.0.3,]"
   ],
   "dependencies": [
-    "MetallurgyCore@[4.0.0,]"
+    "MetallurgyCore@[4.0.3,]"
    ],
   "dependants": [
    ],

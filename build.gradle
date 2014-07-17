@@ -43,13 +43,14 @@ configFile.withReader {
 
 minecraft {
     version = config.minecraft_version + "-" + config.forge_version
-    assetDir = "eclipse/assets"
+    runDir = "eclipse"
 }
 
 dependencies {
     compile "com.teammetallurgy:MetallurgyCore:${config.minecraft_version}-${config.metallurgycore_version}:deobf"
+    compile "codechicken:CodeChickenLib:${config.minecraft_version}-${config.cclib_version}:dev"
+    compile "codechicken:CodeChickenCore:${config.minecraft_version}-${config.ccc_version}:dev"
     compile "codechicken:NotEnoughItems:${config.minecraft_version}-${config.nei_version}:dev"
-    compile "codechicken:CodeChickenCore:${config.minecraft_version}-${config.nei_version}:dev"
 }
 
 task buildInfo() {
