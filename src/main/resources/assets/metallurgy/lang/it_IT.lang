@@ -38,7 +38,7 @@ item.metallurgy.copper.shovel.name=Pala di rame
 item.metallurgy.copper.sword.name=Spada di rame
 item.metallurgy.copper.helmet.name=Elmo di rame
 item.metallurgy.copper.chestplate.name=Corazza di rame
-item.metallurgy.copper.leggings.name=Gambali di rame
+item.metallurgy.copper.leggings.name=Gambiera di rame
 item.metallurgy.copper.boots.name=Stivali di rame
 
 tile.metallurgy.tin.ore.name=Stagno grezzo
@@ -64,7 +64,7 @@ item.metallurgy.bronze.shovel.name=Pala di bronzo
 item.metallurgy.bronze.sword.name=Spada di bronzo
 item.metallurgy.bronze.helmet.name=Elmo di bronzo
 item.metallurgy.bronze.chestplate.name=Corazza di bronzo
-item.metallurgy.bronze.leggings.name=Gambali di bronzo
+item.metallurgy.bronze.leggings.name=Gambiera di bronzo
 item.metallurgy.bronze.boots.name=Stivali di bronzo
 
 tile.metallurgy.hepatizon.block.name=Blocco di hepatizon
@@ -78,7 +78,7 @@ item.metallurgy.hepatizon.shovel.name=Pala di hepatizon
 item.metallurgy.hepatizon.sword.name=Spada di hepatizon
 item.metallurgy.hepatizon.helmet.name=Elmo di hepatizon
 item.metallurgy.hepatizon.chestplate.name=Corazza di hepatizon
-item.metallurgy.hepatizon.leggings.name=Gambali di hepatizon
+item.metallurgy.hepatizon.leggings.name=Gambiera di hepatizon
 item.metallurgy.hepatizon.boots.name=Stivali di hepatizon
 
 tile.metallurgy.damascus.steel.block.name=Blocco di acciaio damasco
@@ -92,7 +92,7 @@ item.metallurgy.damascus.steel.shovel.name=Pala di acciaio damasco
 item.metallurgy.damascus.steel.sword.name=Spada di acciaio damasco
 item.metallurgy.damascus.steel.helmet.name=Elmo di acciaio damasco
 item.metallurgy.damascus.steel.chestplate.name=Corazza di acciaio damasco
-item.metallurgy.damascus.steel.leggings.name=Gambali di acciaio damasco
+item.metallurgy.damascus.steel.leggings.name=Gambiera di acciaio damasco
 item.metallurgy.damascus.steel.boots.name=Stivali di acciaio damasco
 
 tile.metallurgy.angmallen.ore.name=Angmallen grezzo
@@ -107,7 +107,7 @@ item.metallurgy.angmallen.shovel.name=Pala di angmallen
 item.metallurgy.angmallen.sword.name=Spada di angmallen
 item.metallurgy.angmallen.helmet.name=Elmo di angmallen
 item.metallurgy.angmallen.chestplate.name=Corazza di angmallen
-item.metallurgy.angmallen.leggings.name=Gambali di angmallen
+item.metallurgy.angmallen.leggings.name=Gambiera di angmallen
 item.metallurgy.angmallen.boots.name=Stivali di angmallen
 
 tile.metallurgy.steel.ore.name=Acciaio grezzo
@@ -122,7 +122,7 @@ item.metallurgy.steel.shovel.name=Pala di acciaio
 item.metallurgy.steel.sword.name=Spada di acciaio
 item.metallurgy.steel.helmet.name=Elmo di acciaio
 item.metallurgy.steel.chestplate.name=Corazza di acciaio
-item.metallurgy.steel.leggings.name=Gambali di acciaio
+item.metallurgy.steel.leggings.name=Gambiera di acciaio
 item.metallurgy.steel.boots.name=Stivali di acciaio
 
 tile.metallurgy.eximite.ore.name=Eximite grezzo
@@ -137,7 +137,7 @@ item.metallurgy.eximite.shovel.name=Pala di eximite
 item.metallurgy.eximite.sword.name=Spada di eximite
 item.metallurgy.eximite.helmet.name=Elmo di eximite
 item.metallurgy.eximite.chestplate.name=Corazza di eximite
-item.metallurgy.eximite.leggings.name=Gambali di eximite
+item.metallurgy.eximite.leggings.name=Gambiera di eximite
 item.metallurgy.eximite.boots.name=Stivali di eximite
 
 tile.metallurgy.meutoite.ore.name=Meutoite frezzo
@@ -157,7 +157,7 @@ item.metallurgy.desichalkos.shovel.name=Pala di desichalkos
 item.metallurgy.desichalkos.sword.name=Spada di desichalkos
 item.metallurgy.desichalkos.helmet.name=Elmo di desichalkos
 item.metallurgy.desichalkos.chestplate.name=Corazza di desichalkos
-item.metallurgy.desichalkos.leggings.name=Gambali di desichalkos
+item.metallurgy.desichalkos.leggings.name=Gambiera di desichalkos
 item.metallurgy.desichalkos.boots.name=Stivali di desichalkos
 
 tile.metallurgy.prometheum.ore.name=Prometheum grezzo
@@ -172,7 +172,7 @@ item.metallurgy.prometheum.shovel.name=Pala di prometheum
 item.metallurgy.prometheum.sword.name=Spada di prometheum
 item.metallurgy.prometheum.helmet.name=Elmo di prometheum
 item.metallurgy.prometheum.chestplate.name=Corazza di prometheum
-item.metallurgy.prometheum.leggings.name=Gambali di prometheum
+item.metallurgy.prometheum.leggings.name=Gambiera di prometheum
 item.metallurgy.prometheum.boots.name=Stivali di prometheum
 
 tile.metallurgy.deep.iron.ore.name=Ferro profondo grezzo
@@ -187,7 +187,7 @@ item.metallurgy.deep.iron.shovel.name=Pala di ferro profondo
 item.metallurgy.deep.iron.sword.name=Spada di ferro profondo
 item.metallurgy.deep.iron.helmet.name=Elmo di ferro profondo
 item.metallurgy.deep.iron.chestplate.name=Corazza di ferro profondo
-item.metallurgy.deep.iron.leggings.name=Gambali di ferro profondo
+item.metallurgy.deep.iron.leggings.name=Gambiera di ferro profondo
 item.metallurgy.deep.iron.boots.name=Stivali di ferro profondo
 
 tile.metallurgy.infuscolium.ore.name=Infuscolium grezzo
@@ -208,7 +208,7 @@ item.metallurgy.black.steel.shovel.name=Pala di acciaio nero
 item.metallurgy.black.steel.sword.name=Spada di acciaio nero
 item.metallurgy.black.steel.helmet.name=Elmo di acciaio nero
 item.metallurgy.black.steel.chestplate.name=Corazza di acciaio nero
-item.metallurgy.black.steel.leggings.name=Gambali di acciaio nero
+item.metallurgy.black.steel.leggings.name=Gambiera di acciaio nero
 item.metallurgy.black.steel.boots.name=Stivali di acciaio nero
 
 tile.metallurgy.oureclase.ore.name=Oureclase grezzo
@@ -223,7 +223,7 @@ item.metallurgy.oureclase.shovel.name=Pala di oureclase
 item.metallurgy.oureclase.sword.name=Spada di oureclase
 item.metallurgy.oureclase.helmet.name=Elmo di oureclase
 item.metallurgy.oureclase.chestplate.name=Corazza di oureclase
-item.metallurgy.oureclase.leggings.name=Gambali di oureclase
+item.metallurgy.oureclase.leggings.name=Gambiera di oureclase
 item.metallurgy.oureclase.boots.name=Stivali di oureclase
 
 tile.metallurgy.astral.silver.ore.name=Argento astrale grezzo
@@ -238,7 +238,7 @@ item.metallurgy.astral.silver.shovel.name=Pala di argento astrale
 item.metallurgy.astral.silver.sword.name=Spada di argento astrale
 item.metallurgy.astral.silver.helmet.name=Elmo di argento astrale
 item.metallurgy.astral.silver.chestplate.name=Corazza di argento astrale
-item.metallurgy.astral.silver.leggings.name=Gambali di argento astrale
+item.metallurgy.astral.silver.leggings.name=Gambiera di argento astrale
 item.metallurgy.astral.silver.boots.name=Stivali di argento astrale
 
 tile.metallurgy.carmot.ore.name=Carmot grezzo
@@ -253,7 +253,7 @@ item.metallurgy.carmot.shovel.name=Pala di carmot
 item.metallurgy.carmot.sword.name=Spada di carmot
 item.metallurgy.carmot.helmet.name=Elmo di carmot
 item.metallurgy.carmot.chestplate.name=Corazza di carmot
-item.metallurgy.carmot.leggings.name=Gambali di carmot
+item.metallurgy.carmot.leggings.name=Gambiera di carmot
 item.metallurgy.carmot.boots.name=Stivali di carmot
 
 tile.metallurgy.mithril.ore.name=Mithril grezzo
@@ -268,7 +268,7 @@ item.metallurgy.mithril.shovel.name=Pala di mithril
 item.metallurgy.mithril.sword.name=Spada di mithril
 item.metallurgy.mithril.helmet.name=Elmo di mithril
 item.metallurgy.mithril.chestplate.name=Corazza di mithril
-item.metallurgy.mithril.leggings.name=Gambali di mithril
+item.metallurgy.mithril.leggings.name=Gambiera di mithril
 item.metallurgy.mithril.boots.name=Stivali di mithril
 
 tile.metallurgy.rubracium.ore.name=Rubracium grezzo
@@ -288,7 +288,7 @@ item.metallurgy.quicksilver.shovel.name=Pala di mercurio
 item.metallurgy.quicksilver.sword.name=Spada di mercurio
 item.metallurgy.quicksilver.helmet.name=Elmo di mercurio
 item.metallurgy.quicksilver.chestplate.name=Corazza di mercurio
-item.metallurgy.quicksilver.leggings.name=Gambali di mercurio
+item.metallurgy.quicksilver.leggings.name=Gambiera di mercurio
 item.metallurgy.quicksilver.boots.name=Stivali di mercurio
 
 tile.metallurgy.haderoth.block.name=Blocco di haderoth
@@ -302,7 +302,7 @@ item.metallurgy.haderoth.shovel.name=Pala di haderoth
 item.metallurgy.haderoth.sword.name=Spada di haderoth
 item.metallurgy.haderoth.helmet.name=Elmo di haderoth
 item.metallurgy.haderoth.chestplate.name=Corazza di haderoth
-item.metallurgy.haderoth.leggings.name=Gambali di haderoth
+item.metallurgy.haderoth.leggings.name=Gambiera di haderoth
 item.metallurgy.haderoth.boots.name=Stivali di haderoth
 
 tile.metallurgy.orichalcum.ore.name=Orichalcum grezzo
@@ -317,7 +317,7 @@ item.metallurgy.orichalcum.shovel.name=Pala di orichalcum
 item.metallurgy.orichalcum.sword.name=Spada di orichalcum
 item.metallurgy.orichalcum.helmet.name=Elmo di orichalcum
 item.metallurgy.orichalcum.chestplate.name=Corazza di orichalcum
-item.metallurgy.orichalcum.leggings.name=Gambali di orichalcum
+item.metallurgy.orichalcum.leggings.name=Gambiera di orichalcum
 item.metallurgy.orichalcum.boots.name=Stivali di orichalcum
 
 tile.metallurgy.celenegil.block.name=Blocco di celenegil
@@ -331,7 +331,7 @@ item.metallurgy.celenegil.shovel.name=Pala di celenegil
 item.metallurgy.celenegil.sword.name=Spada di celenegil
 item.metallurgy.celenegil.helmet.name=Elmo di celenegil
 item.metallurgy.celenegil.chestplate.name=Corazza di celenegil
-item.metallurgy.celenegil.leggings.name=Gambali di celenegil
+item.metallurgy.celenegil.leggings.name=Gambiera di celenegil
 item.metallurgy.celenegil.boots.name=Stivali di celenegil
 
 tile.metallurgy.adamantine.ore.name=Adamantite grezzo
@@ -346,7 +346,7 @@ item.metallurgy.adamantine.shovel.name=Pala di adamantite
 item.metallurgy.adamantine.sword.name=Spada di adamantite
 item.metallurgy.adamantine.helmet.name=Elmo di adamantite
 item.metallurgy.adamantine.chestplate.name=Corazza di adamantite
-item.metallurgy.adamantine.leggings.name=Gambali di adamantite
+item.metallurgy.adamantine.leggings.name=Gambiera di adamantite
 item.metallurgy.adamantine.boots.name=Stivali di adamantite
 
 tile.metallurgy.atlarus.ore.name=Altarus grezzo
@@ -361,7 +361,7 @@ item.metallurgy.atlarus.shovel.name=Pala di altarus
 item.metallurgy.atlarus.sword.name=Spada di altarus
 item.metallurgy.atlarus.helmet.name=Elmo di altarus
 item.metallurgy.atlarus.chestplate.name=Corazza di altarus
-item.metallurgy.atlarus.leggings.name=Gambali di altarus
+item.metallurgy.atlarus.leggings.name=Gambiera di altarus
 item.metallurgy.atlarus.boots.name=Stivali di altarus
 
 tile.metallurgy.tartarite.block.name=Blocco di tartarite
@@ -375,7 +375,7 @@ item.metallurgy.tartarite.shovel.name=Pala di tartarite
 item.metallurgy.tartarite.sword.name=Spada di tartarite
 item.metallurgy.tartarite.helmet.name=Elmo di tartarite
 item.metallurgy.tartarite.chestplate.name=Corazza di tartarite
-item.metallurgy.tartarite.leggings.name=Gambali di tartarite
+item.metallurgy.tartarite.leggings.name=Gambiera di tartarite
 item.metallurgy.tartarite.boots.name=Stivali di tartarite
 
 tile.metallurgy.ignatius.ore.name=Ignatius grezzo
@@ -390,7 +390,7 @@ item.metallurgy.ignatius.shovel.name=Pala di ignatius
 item.metallurgy.ignatius.sword.name=Spada di ignatius
 item.metallurgy.ignatius.helmet.name=Elmo di ignatius
 item.metallurgy.ignatius.chestplate.name=Corazza di ignatius
-item.metallurgy.ignatius.leggings.name=Gambali di ignatius
+item.metallurgy.ignatius.leggings.name=Gambiera di ignatius
 item.metallurgy.ignatius.boots.name=Stivali di ignatius
 
 tile.metallurgy.shadow.iron.ore.name=Ferro spettrale grezzo
@@ -405,7 +405,7 @@ item.metallurgy.shadow.iron.shovel.name=Pala di ferro spettrale
 item.metallurgy.shadow.iron.sword.name=Spada di ferro spettrale
 item.metallurgy.shadow.iron.helmet.name=Elmo di ferro spettrale
 item.metallurgy.shadow.iron.chestplate.name=Corazza di ferro spettrale
-item.metallurgy.shadow.iron.leggings.name=Gambali di ferro spettrale
+item.metallurgy.shadow.iron.leggings.name=Gambiera di ferro spettrale
 item.metallurgy.shadow.iron.boots.name=Stivali di ferro spettrale
 
 tile.metallurgy.lemurite.ore.name=Grezzo lemurite
@@ -426,7 +426,7 @@ item.metallurgy.midasium.shovel.name=Pala di midasium
 item.metallurgy.midasium.sword.name=Spada di midasium
 item.metallurgy.midasium.helmet.name=Elmo di midasium
 item.metallurgy.midasium.chestplate.name=Corazza di midasium
-item.metallurgy.midasium.leggings.name=Gambali di midasium
+item.metallurgy.midasium.leggings.name=Gambiera di midasium
 item.metallurgy.midasium.boots.name=Stivali di midasium
 
 tile.metallurgy.vyroxeres.ore.name=Vyroxeres grezzo
@@ -441,7 +441,7 @@ item.metallurgy.vyroxeres.shovel.name=Pala di vyroxeres
 item.metallurgy.vyroxeres.sword.name=Spada di vyroxeres
 item.metallurgy.vyroxeres.helmet.name=Elmo di vyroxeres
 item.metallurgy.vyroxeres.chestplate.name=Corazza di vyroxeres
-item.metallurgy.vyroxeres.leggings.name=Gambali di vyroxeres
+item.metallurgy.vyroxeres.leggings.name=Gambiera di vyroxeres
 item.metallurgy.vyroxeres.boots.name=Stivali di vyroxeres
 
 tile.metallurgy.ceruclase.ore.name=Ceruclase grezzo
@@ -456,7 +456,7 @@ item.metallurgy.ceruclase.shovel.name=Pala di ceruclase
 item.metallurgy.ceruclase.sword.name=Spada di ceruclase
 item.metallurgy.ceruclase.helmet.name=Elmo di ceruclase
 item.metallurgy.ceruclase.chestplate.name=Corazza di ceruclase
-item.metallurgy.ceruclase.leggings.name=Gambali di ceruclase
+item.metallurgy.ceruclase.leggings.name=Gambiera di ceruclase
 item.metallurgy.ceruclase.boots.name=Stivali di ceruclase
 
 tile.metallurgy.alduorite.ore.name=Grezzo di alduorite
@@ -477,7 +477,7 @@ item.metallurgy.kalendrite.shovel.name=Pala di kalendrite
 item.metallurgy.kalendrite.sword.name=Spada di kalendrite
 item.metallurgy.kalendrite.helmet.name=Elmo di kalendrite
 item.metallurgy.kalendrite.chestplate.name=Corazza di kalendrite
-item.metallurgy.kalendrite.leggings.name=Gambali di kalendrite
+item.metallurgy.kalendrite.leggings.name=Gambiera di kalendrite
 item.metallurgy.kalendrite.boots.name=Stivali di kalendrite
 
 tile.metallurgy.vulcanite.ore.name=Vulcanite grezzo
@@ -492,7 +492,7 @@ item.metallurgy.vulcanite.shovel.name=Pala di vulcanite
 item.metallurgy.vulcanite.sword.name=Spada di vulcanite
 item.metallurgy.vulcanite.helmet.name=Elmo di vulcanite
 item.metallurgy.vulcanite.chestplate.name=Corazza di vulcanite
-item.metallurgy.vulcanite.leggings.name=Gambali di vulcanite
+item.metallurgy.vulcanite.leggings.name=Gambiera di vulcanite
 item.metallurgy.vulcanite.boots.name=Stivali di vulcanite
 
 tile.metallurgy.sanguinite.ore.name=Sanguinite grezzo
@@ -507,7 +507,7 @@ item.metallurgy.sanguinite.shovel.name=Pala di sanguinite
 item.metallurgy.sanguinite.sword.name=Spada di sanguinite
 item.metallurgy.sanguinite.helmet.name=Elmo di sanguinite
 item.metallurgy.sanguinite.chestplate.name=Corazza di sanguinite
-item.metallurgy.sanguinite.leggings.name=Gambali di sanguinite
+item.metallurgy.sanguinite.leggings.name=Gambiera di sanguinite
 item.metallurgy.sanguinite.boots.name=Stivali di sanguinite
 
 tile.metallurgy.shadow.steel.block.name=Blocco di acciaio spettrale
@@ -521,7 +521,7 @@ item.metallurgy.shadow.steel.shovel.name=Pala di acciaio spettrale
 item.metallurgy.shadow.steel.sword.name=Spada di acciaio spettrale
 item.metallurgy.shadow.steel.helmet.name=Elmo di acciaio spettrale
 item.metallurgy.shadow.steel.chestplate.name=Corazza di acciaio spettrale
-item.metallurgy.shadow.steel.leggings.name=Gambali di acciaio spettrale
+item.metallurgy.shadow.steel.leggings.name=Gambiera di acciaio spettrale
 item.metallurgy.shadow.steel.boots.name=Stivali di acciaio spettrale
 
 tile.metallurgy.inolashite.block.name=Blocco di inolashite
@@ -535,7 +535,7 @@ item.metallurgy.inolashite.shovel.name=Pala di inolashite
 item.metallurgy.inolashite.sword.name=Spada di inolashite
 item.metallurgy.inolashite.helmet.name=Elmo di inolashite
 item.metallurgy.inolashite.chestplate.name=Corazza di inolashite
-item.metallurgy.inolashite.leggings.name=Gambali di inolashite
+item.metallurgy.inolashite.leggings.name=Gambiera di inolashite
 item.metallurgy.inolashite.boots.name=Stivali di inolashite
 
 tile.metallurgy.amordrine.block.name=Blocco di amordrine
@@ -549,7 +549,7 @@ item.metallurgy.amordrine.shovel.name=Pala di amordrine
 item.metallurgy.amordrine.sword.name=Spada di amordrine
 item.metallurgy.amordrine.helmet.name=Elmo di amordrine
 item.metallurgy.amordrine.chestplate.name=Corazza di amordrine
-item.metallurgy.amordrine.leggings.name=Gambali di amordrine
+item.metallurgy.amordrine.leggings.name=Gambiera di amordrine
 item.metallurgy.amordrine.boots.name=Stivali di amordrine
 
 tile.metallurgy.zinc.ore.name=Grezzo zinco
@@ -570,7 +570,7 @@ item.metallurgy.silver.shovel.name=Pala di argento
 item.metallurgy.silver.sword.name=Spada di argento
 item.metallurgy.silver.helmet.name=Elmo di argento
 item.metallurgy.silver.chestplate.name=Corazza di argento
-item.metallurgy.silver.leggings.name=Gambali di argento
+item.metallurgy.silver.leggings.name=Gambiera di argento
 item.metallurgy.silver.boots.name=Stivali di argento
 
 tile.metallurgy.platinum.ore.name=Platino grezzo
@@ -585,7 +585,7 @@ item.metallurgy.platinum.shovel.name=Pala di platino
 item.metallurgy.platinum.sword.name=Spada di platino
 item.metallurgy.platinum.helmet.name=Elmo di platino
 item.metallurgy.platinum.chestplate.name=Corazza di platino
-item.metallurgy.platinum.leggings.name=Gambali di platino
+item.metallurgy.platinum.leggings.name=Gambiera di platino
 item.metallurgy.platinum.boots.name=Stivali di platino
 
 tile.metallurgy.brass.block.name=Blocco di ottone
@@ -599,7 +599,7 @@ item.metallurgy.brass.shovel.name=Pala di ottone
 item.metallurgy.brass.sword.name=Spada di ottone
 item.metallurgy.brass.helmet.name=Elmo di ottone
 item.metallurgy.brass.chestplate.name=Corazza di ottone
-item.metallurgy.brass.leggings.name=Gambali di ottone
+item.metallurgy.brass.leggings.name=Gambiera di ottone
 item.metallurgy.brass.boots.name=Stivali di ottone
 
 tile.metallurgy.electrum.block.name=Blocco di electro
@@ -613,7 +613,7 @@ item.metallurgy.electrum.shovel.name=Pala di electro
 item.metallurgy.electrum.sword.name=Spada di electro
 item.metallurgy.electrum.helmet.name=Elmo di electro
 item.metallurgy.electrum.chestplate.name=Corazza di electro
-item.metallurgy.electrum.leggings.name=Gambali di electro
+item.metallurgy.electrum.leggings.name=Gambiera di electro
 item.metallurgy.electrum.boots.name=Stivali di electro
 
 tile.metallurgy.sulfur.ore.name=Zolfo grezzo
