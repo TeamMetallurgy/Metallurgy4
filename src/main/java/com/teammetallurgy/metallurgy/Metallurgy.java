@@ -7,6 +7,7 @@ import net.minecraftforge.common.MinecraftForge;
 
 import com.teammetallurgy.metallurgy.handlers.EventHandler;
 import com.teammetallurgy.metallurgy.handlers.GUIHandlerMetallurgy;
+import com.teammetallurgy.metallurgy.integrations.Integration;
 import com.teammetallurgy.metallurgy.metals.VanillaMetals;
 import com.teammetallurgy.metallurgy.networking.CommonProxy;
 import com.teammetallurgy.metallurgycore.CreativeTab;
@@ -54,6 +55,7 @@ public class Metallurgy
         Metallurgy.proxy.registerBlockRenderers();
         MinecraftForge.EVENT_BUS.register(new EventHandler());
 
+        Integration.init(event);
     }
 
     private void initTabs()
@@ -61,7 +63,7 @@ public class Metallurgy
         creativeTabMachines.setItem(BlockList.getAlloyer());
         creativeTabBlocks.setItem(BlockList.getSet("ender").getBlock("Eximite").getItem());
         creativeTabItems.setItem(BlockList.getSet("nether").getIngot("Ceruclase").getItem());
-        creativeTabTools.setItem(BlockList.getSet("base").getSword("DamascusSteel").getItem());
+        creativeTabTools.setItem(BlockList.getSet("base").getSword("Damascus Steel").getItem());
         creativeTabArmor.setItem(BlockList.getSet("fantasy").getHelmet("Tartarite").getItem());
     }
 
@@ -81,6 +83,7 @@ public class Metallurgy
     public void postInit(FMLPostInitializationEvent event)
     {
         Utils.injectOreDictionaryRecipes();
+        Integration.postinit(event);
     }
 
     @Mod.EventHandler
@@ -100,5 +103,7 @@ public class Metallurgy
         ItemList.init();
 
         initTabs();
+
+        Integration.preinit(event);
     }
 }
