@@ -528,7 +528,7 @@ public class MetalSet implements IMetalSet
 
                 int harvestLevel = metal.getToolHarvestLevel();
                 int maxUses = metal.getToolDurability();
-                int efficiency = metal.getToolEncantabilty();
+                int efficiency = metal.getToolEfficiency();
                 int damage = metal.getToolDamage();
                 int enchantability = metal.getToolEncantabilty();
 
