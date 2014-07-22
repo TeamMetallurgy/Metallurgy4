@@ -39,7 +39,7 @@ public class IntegrationUBC
                 int metadata = itemStack.getItemDamage();
 
                 String overlayName = "metallurgy:";
-                overlayName += setTextureName;
+                overlayName += "/" + setTextureName;
                 overlayName += "/" + metalName.toLowerCase().trim().replace(" ", "_");
                 overlayName += "_ore_overlay";
 
