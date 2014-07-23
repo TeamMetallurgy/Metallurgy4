@@ -1,6 +1,7 @@
 package com.teammetallurgy.metallurgy.tools;
 
 import java.util.List;
+import java.util.Random;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -124,8 +125,9 @@ public class Sword extends ItemSword
     public boolean hitEntity(ItemStack currentItemStack, EntityLivingBase target, EntityLivingBase player)
     {
         Item item = currentItemStack.getItem();
+        Random rand = new Random();
 
-        if (item instanceof Sword && this.effectId != 0 && this.effectId != -1)
+        if (item instanceof Sword && this.effectId != 0 && this.effectId != -1 && rand.nextInt(100) <= 30)
         {
             this.applyEffects(target, player);
         }
