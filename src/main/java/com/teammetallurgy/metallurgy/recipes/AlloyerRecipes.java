@@ -47,11 +47,13 @@ public class AlloyerRecipes
 
         private boolean matchesOreDict(final ItemStack first, final ItemStack second)
         {
-            if (RecipeUtils.matchesOreDict(first) && RecipeUtils.matchesOreDict(second)) { return true; }
+            if (RecipeUtils.matchesOreDict(first,this.first) && RecipeUtils.matchesOreDict(second, this.baseItem)) { return true; }
 
-            if (RecipeUtils.matchesOreDict(first) && (second == null)) { return true; }
+            if (RecipeUtils.matchesOreDict(first,this.baseItem) && RecipeUtils.matchesOreDict(second, this.first)) { return true; }
 
-            if (RecipeUtils.matchesOreDict(second) && (first == null)) { return true; }
+            if (RecipeUtils.matchesOreDict(first, this.first) && (second == null)) { return true; }
+
+            if (RecipeUtils.matchesOreDict(second, this.first) && (first == null)) { return true; }
 
             return false;
         }
