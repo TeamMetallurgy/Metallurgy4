@@ -30,6 +30,7 @@ public class Utils
             {
                 ItemStack otherItemStack = retList2.get(0).copy();
                 List<ItemStack> output = OreDictionary.getOres("dust" + tag);
+                List<ItemStack> OutputIngot = OreDictionary.getOres("ingot" + tag);
                 if (output.size() > 0)
                 {
                     boolean isAlloyerRequired = Utils.requireAlloyer.get(tag);
@@ -40,10 +41,14 @@ public class Utils
                     {
                         GameRegistry.addShapelessRecipe(outputStack, itemStack, otherItemStack);
                     }
+                }
 
-                    ItemStack copy = outputStack.copy();
-                    copy.stackSize = 4;
-                    AlloyerRecipes.getInstance().addRecipe(itemStack, otherItemStack, copy);
+                if (OutputIngot.size() > 0)
+                {
+                    ItemStack outputStack = OutputIngot.get(0).copy();
+                    outputStack.stackSize = 2;
+
+                    AlloyerRecipes.getInstance().addRecipe(itemStack, otherItemStack, outputStack);
                 }
             }
         }
