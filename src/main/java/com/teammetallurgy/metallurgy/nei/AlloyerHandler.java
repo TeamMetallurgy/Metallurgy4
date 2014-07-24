@@ -34,13 +34,13 @@ public class AlloyerHandler extends TemplateRecipeHandler
         return GUIAlloyer.class;
     }
 
-    @Override public void loadCraftingRecipes(ItemStack ingredient)
+    @Override public void loadCraftingRecipes(ItemStack output)
     {
-        ArrayList<AlloyerRecipes.AlloyRecipe> recipesFor = AlloyerRecipes.getInstance().getRecipesFor(ingredient);
+        ArrayList<AlloyerRecipes.AlloyRecipe> recipesFor = AlloyerRecipes.getInstance().getRecipesFor(output);
 
         for (AlloyerRecipes.AlloyRecipe recipe: recipesFor)
         {
-            NEIRecipe neiRecipe = new NEIRecipe(recipe.getIngredients(), recipe.getCraftingResult(), ingredient);
+            NEIRecipe neiRecipe = new NEIRecipe(recipe.getIngredients(), recipe.getCraftingResult(), output);
             arecipes.add(neiRecipe);
         }
     }

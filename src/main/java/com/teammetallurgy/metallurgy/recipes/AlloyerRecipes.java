@@ -109,13 +109,13 @@ public class AlloyerRecipes
         return false;
     }
 
-    public ArrayList<AlloyRecipe> getRecipesFor(ItemStack ingredient)
+    public ArrayList<AlloyRecipe> getRecipesFor(ItemStack output)
     {
         ArrayList<AlloyRecipe> list = new ArrayList<AlloyRecipe>();
 
         for (AlloyRecipe alloyRecipe : this.recipes)
         {
-            if (alloyRecipe.result.isItemEqual(ingredient) && alloyRecipe.result.stackTagCompound == ingredient.stackTagCompound)
+            if (alloyRecipe.result.isItemEqual(output) && alloyRecipe.result.stackTagCompound == output.stackTagCompound)
             {
                 list.add(alloyRecipe);
             }
@@ -132,6 +132,18 @@ public class AlloyerRecipes
             if (alloyRecipe.uses(ingredient))
             {
                 list.add(alloyRecipe);
+                continue;
+            }
+
+            if (RecipeUtils.matchesOreDict(ingredient, alloyRecipe.first))
+            {
+                list.add(new AlloyRecipe(ingredient, alloyRecipe.baseItem.copy(), alloyRecipe.result.copy()));
+                continue;
+            }
+
+            if (RecipeUtils.matchesOreDict(ingredient, alloyRecipe.baseItem))
+            {
+                list.add(new AlloyRecipe(alloyRecipe.first.copy(), ingredient, alloyRecipe.result.copy()));
             }
         }
         return list;
