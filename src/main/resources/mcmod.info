@@ -19,9 +19,11 @@
      "MetallurgyCore@[4.0.3,]"
   ],
   "dependencies": [
-    "MetallurgyCore@[4.0.3,]"
+    "MetallurgyCore@[4.0.3,]",
+    "Botania"
    ],
   "dependants": [
+    "UndergroundBiomes"
    ],
   "useDependencyInformation": "true"
 }

@@ -23,12 +23,13 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 
-@Mod(name = Metallurgy.MODNAME, modid = Metallurgy.MODID, version = Metallurgy.VERSION)
+@Mod(name = Metallurgy.MODNAME, modid = Metallurgy.MODID, version = Metallurgy.VERSION, dependencies = Metallurgy.DEPS)
 public class Metallurgy
 {
     public static final String MODNAME = "Metallurgy";
     public static final String MODID = "Metallurgy";
     public static final String VERSION = "4.0.3";
+    public static final String DEPS = "reqired-after:MetallurgyCore@[4.0.3,];before:UndergroundBiomes;after:Botania";
 
     @Mod.Instance(Metallurgy.MODID)
     public static Metallurgy instance;

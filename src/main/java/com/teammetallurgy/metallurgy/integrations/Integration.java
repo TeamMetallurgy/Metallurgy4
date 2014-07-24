@@ -17,7 +17,10 @@ public class Integration
 
     public static void init(FMLInitializationEvent event)
     {
-
+        if (Loader.isModLoaded("Botania"))
+        {
+            IntegrationBotania.init();
+        }
     }
 
     public static void postinit(FMLPostInitializationEvent event)
