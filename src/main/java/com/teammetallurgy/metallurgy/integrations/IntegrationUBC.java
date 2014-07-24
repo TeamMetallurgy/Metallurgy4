@@ -31,7 +31,7 @@ public class IntegrationUBC
 
                 if (itemStack == null)
                 {
-                    LogHandler.log("Skipping " + setName + ": " + metalName);
+                    // Metal without ore, skipping...
                     continue;
                 }
 
@@ -44,9 +44,6 @@ public class IntegrationUBC
                 overlayName += "_ore_overlay";
 
                 String blockName = metalName + " Ore";
-
-                LogHandler.log("Adding " + setName + ":" + metalName + " to UBC overlay");
-                LogHandler.log("Texutre path: " + overlayName);
 
                 UBAPIHook.ubAPIHook.ubOreTexturizer.requestUBOreSetup(oreBlock, metadata, overlayName, blockName);
             }
