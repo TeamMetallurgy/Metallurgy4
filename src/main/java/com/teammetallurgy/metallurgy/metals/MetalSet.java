@@ -549,7 +549,7 @@ public class MetalSet implements IMetalSet
                 Axe axe = new Axe(toolMaterial, axeUName, axeTexture);
                 axe.setHarvestLevel("axe", harvestLevel);
                 GameRegistry.registerItem(axe, axeUName);
-                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(axe), new Object[] { "ii ", "is ", " s ", 'i', ingotOreDicName, 's', Items.stick }));
+                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(axe), new Object[] { "ii ", "is ", " s ", 'i', ingotOreDicName, 's', "stickWood" }));
                 this.axeStacks.put(metal.getName(), new ItemStack(axe));
 
                 // Hoe
@@ -559,7 +559,7 @@ public class MetalSet implements IMetalSet
                 Hoe hoe = new Hoe(toolMaterial, hoeUName, hoeTexture);
                 hoe.setHarvestLevel("hoe", harvestLevel);
                 GameRegistry.registerItem(hoe, hoeUName);
-                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(hoe), new Object[] { "ii ", " s ", " s ", 'i', ingotOreDicName, 's', Items.stick }));
+                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(hoe), new Object[] { "ii ", " s ", " s ", 'i', ingotOreDicName, 's', "stickWood" }));
                 this.hoeStacks.put(metal.getName(), new ItemStack(hoe));
 
                 // Pickaxe
@@ -569,7 +569,7 @@ public class MetalSet implements IMetalSet
                 Pickaxe pickaxe = new Pickaxe(toolMaterial, pickaxeUName, pickaxeTexture);
                 pickaxe.setHarvestLevel("pickaxe", harvestLevel);
                 GameRegistry.registerItem(pickaxe, pickaxeUName);
-                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(pickaxe), new Object[] { "iii", " s ", " s ", 'i', ingotOreDicName, 's', Items.stick }));
+                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(pickaxe), new Object[] { "iii", " s ", " s ", 'i', ingotOreDicName, 's', "stickWood" }));
                 this.pickaxeStacks.put(metal.getName(), new ItemStack(pickaxe));
 
                 // Shovel
@@ -579,7 +579,7 @@ public class MetalSet implements IMetalSet
                 Shovel shovel = new Shovel(toolMaterial, shovelUName, shovelTexture);
                 shovel.setHarvestLevel("shovel", harvestLevel);
                 GameRegistry.registerItem(shovel, shovelUName);
-                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(shovel), new Object[] { "i", "s", "s", 'i', ingotOreDicName, 's', Items.stick }));
+                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(shovel), new Object[] { "i", "s", "s", 'i', ingotOreDicName, 's', "stickWood" }));
                 this.shovelStacks.put(metal.getName(), new ItemStack(shovel));
 
                 // Sword
@@ -599,7 +599,7 @@ public class MetalSet implements IMetalSet
                 }
 
                 GameRegistry.registerItem(sword, swordUName);
-                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(sword), new Object[] { "i", "i", "s", 'i', ingotOreDicName, 's', Items.stick }));
+                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(sword), new Object[] { "i", "i", "s", 'i', ingotOreDicName, 's', "stickWood" }));
                 this.swordStacks.put(metal.getName(), new ItemStack(sword));
             }
 
