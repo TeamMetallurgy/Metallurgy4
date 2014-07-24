@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.List;
 
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.oredict.OreDictionary;
 
 import com.teammetallurgy.metallurgy.recipes.AlloyerRecipes;
