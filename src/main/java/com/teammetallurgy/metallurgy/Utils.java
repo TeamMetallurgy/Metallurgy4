@@ -67,19 +67,6 @@ public class Utils
         }
     }
 
-    private static void injectFurnaceDustRecipe(ItemStack oreItem, String replacement, String name)
-    {
-
-        if (replacement.equals("ingot")) { return; }
-
-        List<ItemStack> retList = OreDictionary.getOres(name);
-        if (retList.size() > 0)
-        {
-            ItemStack ret = retList.get(0).copy();
-            FurnaceRecipes.smelting().func_151394_a(oreItem, ret, 0.7F);
-        }
-    }
-
     public static void injectOreDictionaryRecipes()
     {
         for (String name : OreDictionary.getOreNames())
@@ -98,7 +85,6 @@ public class Utils
                 }
 
                 Utils.injectCrusherDustRecipe(oreItem, replacement, name.replace(replacement, "dust"));
-                Utils.injectFurnaceDustRecipe(oreItem, replacement, name.replace(replacement, "ingot"));
             }
         }
 

@@ -682,6 +682,16 @@ public class MetalSet implements IMetalSet
                 GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.bucket), new Object[] { "i i", " i ", 'i', ingotOreDicName }));
             }
 
+            // Furnace Recipes
+            if (ingot != null)
+            {
+                GameRegistry.addSmelting(new ItemStack (dust,1,metaId), new ItemStack(ingot), 0.7F);
+                
+                if (ore != null)
+                {
+                    GameRegistry.addSmelting(new ItemStack (ore,1,metaId), new ItemStack(ingot), 0.7F);
+                }
+            }
         }
     }
 }
