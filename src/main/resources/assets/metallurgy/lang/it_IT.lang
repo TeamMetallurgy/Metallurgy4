@@ -408,7 +408,7 @@ item.metallurgy.shadow.iron.chestplate.name=Corazza di ferro spettrale
 item.metallurgy.shadow.iron.leggings.name=Gambiera di ferro spettrale
 item.metallurgy.shadow.iron.boots.name=Stivali di ferro spettrale
 
-tile.metallurgy.lemurite.ore.name=Grezzo lemurite
+tile.metallurgy.lemurite.ore.name=Lemurite grezzo
 tile.metallurgy.lemurite.block.name=Blocco di lemurite
 tile.metallurgy.lemurite.brick.name=Mattoni di lemurite
 item.metallurgy.lemurite.dust.name=Polvere di lemurite
@@ -459,7 +459,7 @@ item.metallurgy.ceruclase.chestplate.name=Corazza di ceruclase
 item.metallurgy.ceruclase.leggings.name=Gambiera di ceruclase
 item.metallurgy.ceruclase.boots.name=Stivali di ceruclase
 
-tile.metallurgy.alduorite.ore.name=Grezzo di alduorite
+tile.metallurgy.alduorite.ore.name=Alduorite grezzo
 tile.metallurgy.alduorite.block.name=Blocco di alduorite
 tile.metallurgy.alduorite.brick.name=Mattoni di alduorite
 item.metallurgy.alduorite.dust.name=Polvere di alduorite
@@ -552,7 +552,7 @@ item.metallurgy.amordrine.chestplate.name=Corazza di amordrine
 item.metallurgy.amordrine.leggings.name=Gambiera di amordrine
 item.metallurgy.amordrine.boots.name=Stivali di amordrine
 
-tile.metallurgy.zinc.ore.name=Grezzo zinco
+tile.metallurgy.zinc.ore.name=Zinco grezzo
 tile.metallurgy.zinc.block.name=Blocco di zinco
 tile.metallurgy.zinc.brick.name=Mattoni di zinco
 item.metallurgy.zinc.dust.name=Polvere di zinco
