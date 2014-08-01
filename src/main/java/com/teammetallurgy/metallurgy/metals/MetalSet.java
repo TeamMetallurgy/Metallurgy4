@@ -7,6 +7,7 @@ import java.io.Reader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Locale;
 
 import net.minecraft.block.Block;
 import net.minecraft.init.Items;
@@ -14,6 +15,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
@@ -491,6 +494,7 @@ public class MetalSet implements IMetalSet
 
             if (metal.type != MetalType.Drop && metal.type != MetalType.Respawn)
             {
+                // Bricks
                 String identifier = "brick";
 
                 String[] oreDicAliases = createOreDicAliases(identifier, metal.getAliases());
@@ -502,6 +506,24 @@ public class MetalSet implements IMetalSet
                 GameRegistry.addShapedRecipe(new ItemStack(brick, 1, metaId), new Object[] { "ii", "ii", 'i', ingot });
                 GameRegistry.addShapelessRecipe(new ItemStack(ingot, 4), new ItemStack(brick, 1, metaId));
 
+                // Molten Metals
+                String fluidName = ((metal.getName()).trim().replace(" ", ".").toLowerCase()) + ".molten";
+                Fluid fluid = new Fluid(fluidName).setLuminosity(15).setDensity(3000).setViscosity(6000).setTemperature(1300);
+
+                FluidRegistry.registerFluid(fluid);
+
+                String registryName = metal.getName().toLowerCase();
+                registryName = registryName.trim().replace(" ", ".") + ".molten";
+
+                String unlocalizedName = Metallurgy.MODID.toLowerCase() + "." + registryName;
+
+                String moltenTexture = Metallurgy.MODID.toLowerCase() + ":";
+                moltenTexture += this.name.replace(" ", "_").toLowerCase() + "/";
+                moltenTexture += metal.getName().trim().replace(" ", "_").toLowerCase();
+
+                MoltenMetalBlock moltenMetal = new MoltenMetalBlock(fluid, unlocalizedName, moltenTexture);
+
+                GameRegistry.registerBlock(moltenMetal, registryName);
             }
 
             if (metal.alloyRecipe != null && metal.alloyRecipe.length == 2)

@@ -5,6 +5,7 @@ import java.io.IOException;
 
 import net.minecraftforge.common.MinecraftForge;
 
+import com.teammetallurgy.metallurgy.handlers.BucketsHandler;
 import com.teammetallurgy.metallurgy.handlers.EventHandler;
 import com.teammetallurgy.metallurgy.handlers.GUIHandlerMetallurgy;
 import com.teammetallurgy.metallurgy.integrations.Integration;
@@ -102,6 +103,7 @@ public class Metallurgy
 
         BlockList.init();
         ItemList.init();
+        BucketsHandler.instance.init();
 
         initTabs();
 

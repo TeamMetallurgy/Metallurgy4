@@ -639,3 +639,137 @@ item.metallurgy.gold.dust.name=Polvere d'oro
 
 tile.metallurgy.iron.brick.name=Mattoni di ferro
 item.metallurgy.iron.dust.name=Polvere di ferro
+
+# Fluids
+fluid.angmallen.molten=Angmallen Fuso
+fluid.damascus.steel.molten=Acciaio Damasco Fuso
+fluid.hepatizon.molten=Hepatizon Fuso
+fluid.manganese.molten=Manganese Fuso
+
+fluid.brass.molten=Ottone Fuso
+fluid.platinum.molten=Platino Fuso
+fluid.zinc.molten=Zinco Fuso
+
+fluid.amordrine.molten=Amordrine Fuso
+fluid.alduorite.molten=Alduorite Fuso
+fluid.ceruclase.molten=Ceruclase Fuso
+fluid.ignatius.molten=Ignatius Fuso
+fluid.inolashite.molten=Inolashite Fuso
+fluid.kalendrite.molten=Kalendrite Fuso
+fluid.lemurite.molten=Lemurite Fuso
+fluid.midasium.molten=Midasium Fuso
+fluid.sanguinite.molten=Sanguinite Fuso
+fluid.shadow.iron.molten=Ferro Spettrale Fuso
+fluid.shadow.steel.molten=Acciaio Spettrale Fuso
+fluid.vulcanite.molten=Vulcanite Fuso
+fluid.vyroxeres.molten=Vyroxeres Fuso
+
+fluid.adamantine.molten=Adamantine Fuso
+fluid.astral.silver.molten=Argento Astrale Fuso
+fluid.atlarus.molten=Atlarus Fuso
+fluid.black.steel.molten=Acciaio Nero Fuso
+fluid.carmot.molten=Carmot Fuso
+fluid.celenegil.molten=Celenegil Fuso
+fluid.deep.iron.molten=Ferro Profondo Fuso
+fluid.haderoth.molten=Haderoth Fuso
+fluid.infuscolium.molten=Infuscolium Fuso
+fluid.mithril.molten=Mithril Fuso
+fluid.orichalcum.molten=Orichalcum Fuso
+fluid.oureclase.molten=Oureclase Fuso
+fluid.prometheum.molten=Prometheum Fuso
+fluid.quicksilver.molten=Mercurio Fuso
+fluid.rubracium.molten=Rubracium Fuso
+fluid.tartarite.molten=Tartarite Fuso
+
+fluid.desichalkos.molten=Desichalkos Fuso
+fluid.eximite.molten=Eximite Fuso
+fluid.meutoite.molten=Meutoite Fuso
+
+tile.metallurgy.angmallen.molten=Angmallen Fuso
+tile.metallurgy.damascus.steel.molten=Acciaio Damasco Fuso
+tile.metallurgy.hepatizon.molten=Hepatizon Fuso
+tile.metallurgy.manganese.molten=Manganese Fuso
+
+tile.metallurgy.brass.molten=Ottone Fuso
+tile.metallurgy.platinum.molten=Platino Fuso
+tile.metallurgy.zinc.molten=Zinco Fuso
+
+tile.metallurgy.amordrine.molten=Amordrine Fuso
+tile.metallurgy.alduorite.molten=Alduorite Fuso
+tile.metallurgy.ceruclase.molten=Ceruclase Fuso
+tile.metallurgy.ignatius.molten=Ignatius Fuso
+tile.metallurgy.inolashite.molten=Inolashite Fuso
+tile.metallurgy.kalendrite.molten=Kalendrite Fuso
+tile.metallurgy.lemurite.molten=Lemurite Fuso
+tile.metallurgy.midasium.molten=Midasium Fuso
+tile.metallurgy.sanguinite.molten=Sanguinite Fuso
+tile.metallurgy.shadow.iron.molten=Ferro Spettrale Fuso
+tile.metallurgy.shadow.steel.molten=Acciaio Spettrale Fuso
+tile.metallurgy.vulcanite.molten=Vulcanite Fuso
+tile.metallurgy.vyroxeres.molten=Vyroxeres Fuso
+
+tile.metallurgy.adamantine.molten=Adamantine Fuso
+tile.metallurgy.astral.silver.molten=Argento Astrale Fuso
+tile.metallurgy.atlarus.molten=Atlarus Fuso
+tile.metallurgy.black.steel.molten=Acciaio Nero Fuso
+tile.metallurgy.carmot.molten=Carmot Fuso
+tile.metallurgy.celenegil.molten=Celenegil Fuso
+tile.metallurgy.deep.iron.molten=Ferro Profondo Fuso
+tile.metallurgy.haderoth.molten=Haderoth Fuso
+tile.metallurgy.infuscolium.molten=Infuscolium Fuso
+tile.metallurgy.mithril.molten=Mithril Fuso
+tile.metallurgy.orichalcum.molten=Orichalcum Fuso
+tile.metallurgy.oureclase.molten=Oureclase Fuso
+tile.metallurgy.prometheum.molten=Prometheum Fuso
+tile.metallurgy.quicksilver.molten=Mercurio Fuso
+tile.metallurgy.rubracium.molten=Rubracium Fuso
+tile.metallurgy.tartarite.molten=Tartarite Fuso
+
+tile.metallurgy.desichalkos.molten=Desichalkos Fuso
+tile.metallurgy.eximite.molten=Eximite Fuso
+tile.metallurgy.meutoite.molten=Meutoite Fuso
+
+# Buckets
+item.metallurgy.bucket.filled.angmallen.molten.name=Secchio di angmallen fuso
+item.metallurgy.bucket.filled.damascus.steel.molten.name=Secchio di acciaio damasco fuso
+item.metallurgy.bucket.filled.hepatizon.molten.name=Secchio di hepatizon fuso
+item.metallurgy.bucket.filled.manganese.molten.name=Secchio di manganese fuso
+
+item.metallurgy.bucket.filled.brass.molten.name=Secchio di ottone fuso
+item.metallurgy.bucket.filled.platinum.molten.name=Secchio di platino fuso
+item.metallurgy.bucket.filled.zinc.molten.name=Secchio di zinco fuso
+
+item.metallurgy.bucket.filled.amordrine.molten.name=Secchio di amordrine fuso
+item.metallurgy.bucket.filled.alduorite.molten.name=Secchio di alduorite fuso
+item.metallurgy.bucket.filled.ceruclase.molten.name=Secchio di ceruclase fuso
+item.metallurgy.bucket.filled.ignatius.molten.name=Secchio di ignatius fuso
+item.metallurgy.bucket.filled.inolashite.molten.name=Secchio di inolashite fuso
+item.metallurgy.bucket.filled.kalendrite.molten.name=Secchio di kalendrite fuso
+item.metallurgy.bucket.filled.lemurite.molten.name=Secchio di lemurite fuso
+item.metallurgy.bucket.filled.midasium.molten.name=Secchio di midasium fuso
+item.metallurgy.bucket.filled.sanguinite.molten.name=Secchio di sanguinite fuso
+item.metallurgy.bucket.filled.shadow.iron.molten.name=Secchio di ferro spettrale fuso
+item.metallurgy.bucket.filled.shadow.steel.molten.name=Secchio di acciaio spettrale fuso
+item.metallurgy.bucket.filled.vulcanite.molten.name=Secchio di vulcanite fuso
+item.metallurgy.bucket.filled.vyroxeres.molten.name=Secchio di vyroxeres fuso
+
+item.metallurgy.bucket.filled.adamantine.molten.name=Secchio di adamantine fuso
+item.metallurgy.bucket.filled.astral.silver.molten.name=Secchio di argento astrale fuso
+item.metallurgy.bucket.filled.atlarus.molten.name=Secchio di atlarus fuso
+item.metallurgy.bucket.filled.black.steel.molten.name=Secchio di acciaio nero fuso
+item.metallurgy.bucket.filled.carmot.molten.name=Secchio di carmot fuso
+item.metallurgy.bucket.filled.celenegil.molten.name=Secchio di celenegil fuso
+item.metallurgy.bucket.filled.deep.iron.molten.name=Secchio di ferro profondo fuso
+item.metallurgy.bucket.filled.haderoth.molten.name=Secchio di haderoth fuso
+item.metallurgy.bucket.filled.infuscolium.molten.name=Secchio di infuscolium fuso
+item.metallurgy.bucket.filled.mithril.molten.name=Secchio di mithril fuso
+item.metallurgy.bucket.filled.orichalcum.molten.name=Secchio di orichalcum fuso
+item.metallurgy.bucket.filled.oureclase.molten.name=Secchio di oureclase fuso
+item.metallurgy.bucket.filled.prometheum.molten.name=Secchio di prometheum fuso
+item.metallurgy.bucket.filled.quicksilver.molten.name=Secchio di mercurio fuso
+item.metallurgy.bucket.filled.rubracium.molten.name=Secchio di rubracium fuso
+item.metallurgy.bucket.filled.tartarite.molten.name=Secchio di tartarite fuso
+
+item.metallurgy.bucket.filled.desichalkos.molten.name=Secchio di desichalkos fuso
+item.metallurgy.bucket.filled.eximite.molten.name=Secchio di eximite fuso
+item.metallurgy.bucket.filled.meutoite.molten.name=Secchio di meutoite fuso

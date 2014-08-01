@@ -637,3 +637,91 @@ item.metallurgy.gold.dust.name=Золотая пыль
 
 tile.metallurgy.iron.brick.name=Железные кирпичи
 item.metallurgy.iron.dust.name=Железная пыль
+
+fluid.angmallen.molten=Расплавленный ангмаллен
+fluid.damascus.steel.molten=Расплавленная дамасская сталь
+fluid.hepatizon.molten=Расплавленный гепатизон
+fluid.manganese.molten=Расплавленный марганец
+
+fluid.brass.molten=Расплавленная латунь
+fluid.platinum.molten=Расплавленная платина
+fluid.zinc.molten=Расплавленный цинк
+
+fluid.amordrine.molten=Расплавленный амордрин
+fluid.alduorite.molten=Расплавленный алдурит
+fluid.ceruclase.molten=Расплавленный церукласс
+fluid.ignatius.molten=Расплавленная игнатиевая руда
+fluid.inolashite.molten=Расплавленный инолашит
+fluid.kalendrite.molten=Расплавленный календрит
+fluid.lemurite.molten=Расплавленный лемурит
+fluid.midasium.molten=Расплавленный мидасий
+fluid.sanguinite.molten=Расплавленный сангвинит
+fluid.shadow.iron.molten=Расплавленное тёмное железо
+fluid.shadow.steel.molten=Расплавленная тёмная сталь
+fluid.vulcanite.molten=Расплавленный вулканит
+fluid.vyroxeres.molten=Расплавленный вироксер
+
+fluid.adamantine.molten=Расплавленный адамантин
+fluid.astral.silver.molten=Расплавленное астральное серебро
+fluid.atlarus.molten=Расплавленный атларис
+fluid.black.steel.molten=Расплавленная чёрная сталь
+fluid.carmot.molten=Расплавленный кармот
+fluid.celenegil.molten=Расплавленный целенегил
+fluid.deep.iron.molten=Расплавленное глубинное железо
+fluid.haderoth.molten=Расплавленный хадерот
+fluid.infuscolium.molten=Расплавленный инфузкол
+fluid.mithril.molten=Расплавленный мифрил
+fluid.orichalcum.molten=Расплавленный орихалк
+fluid.oureclase.molten=Расплавленный ауркласс
+fluid.prometheum.molten=Расплавленная прометеевая руда
+fluid.quicksilver.molten=Расплавленная ртуть
+fluid.rubracium.molten=Расплавленный рубракий
+fluid.tartarite.molten=Расплавленный тартарит
+
+fluid.desichalkos.molten=Расплавленный дезихалький
+fluid.eximite.molten=Расплавленный эксимит
+fluid.meutoite.molten=Расплавленный мьютват
+
+tile.metallurgy.angmallen.molten.name.name=Расплавленный ангмаллен
+tile.metallurgy.damascus.steel.molten.name=Расплавленная дамасская сталь
+tile.metallurgy.hepatizon.molten.name=Расплавленный гепатизон
+tile.metallurgy.manganese.molten.name=Расплавленный марганец
+
+tile.metallurgy.brass.molten.name=Расплавленная латунь
+tile.metallurgy.platinum.molten.name=Расплавленная платина
+tile.metallurgy.zinc.molten.name=Расплавленный цинк
+
+tile.metallurgy.amordrine.molten.name=Расплавленный амордрин
+tile.metallurgy.alduorite.molten.name=Расплавленный алдурит
+tile.metallurgy.ceruclase.molten.name=Расплавленный церукласс
+tile.metallurgy.ignatius.molten.name=Расплавленная игнатиевая руда
+tile.metallurgy.inolashite.molten.name=Расплавленный инолашит
+tile.metallurgy.kalendrite.molten.name=Расплавленный календрит
+tile.metallurgy.lemurite.molten.name=Расплавленный лемурит
+tile.metallurgy.midasium.molten.name=Расплавленный мидасий
+tile.metallurgy.sanguinite.molten.name=Расплавленный сангвинит
+tile.metallurgy.shadow.iron.molten.name=Расплавленное тёмное железо
+tile.metallurgy.shadow.steel.molten.name=Расплавленная тёмная сталь
+tile.metallurgy.vulcanite.molten.name=Расплавленный вулканит
+tile.metallurgy.vyroxeres.molten.name=Расплавленный вироксер
+
+tile.metallurgy.adamantine.molten.name=Расплавленный адамантин
+tile.metallurgy.astral.silver.molten.name=Расплавленное астральное серебро
+tile.metallurgy.atlarus.molten.name=Расплавленный атларис
+tile.metallurgy.black.steel.molten.name=Расплавленная чёрная сталь
+tile.metallurgy.carmot.molten.name=Расплавленный кармот
+tile.metallurgy.celenegil.molten.name=Расплавленный целенегил
+tile.metallurgy.deep.iron.molten.name=Расплавленное глубинное железо
+tile.metallurgy.haderoth.molten.name=Расплавленный хадерот
+tile.metallurgy.infuscolium.molten.name=Расплавленный инфузкол
+tile.metallurgy.mithril.molten.name=Расплавленный мифрил
+tile.metallurgy.orichalcum.molten.name=Расплавленный орихалк
+tile.metallurgy.oureclase.molten.name=Расплавленный ауркласс
+tile.metallurgy.prometheum.molten.name=Расплавленная прометеевая руда
+tile.metallurgy.quicksilver.molten.name=Расплавленная ртуть
+tile.metallurgy.rubracium.molten.name=Расплавленный рубракий
+tile.metallurgy.tartarite.molten.name=Расплавленный тартарит
+
+tile.metallurgy.desichalkos.molten.name=Расплавленный дезихалький
+tile.metallurgy.eximite.molten.name=Расплавленный эксимит
+tile.metallurgy.meutoite.molten.name=Расплавленный мьютват

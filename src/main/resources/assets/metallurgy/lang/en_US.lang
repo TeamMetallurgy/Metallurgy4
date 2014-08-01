@@ -637,3 +637,155 @@ item.metallurgy.gold.dust.name=Gold Dust
 
 tile.metallurgy.iron.brick.name=Iron Brick
 item.metallurgy.iron.dust.name=Iron Dust
+
+# Fluids
+fluid.angmallen.molten=Molten Angmallen
+fluid.bronze.molten=Molten Bronze
+fluid.copper.molten=Molten Copper
+fluid.damascus.steel.molten=Molten Damascus Steel
+fluid.hepatizon.molten=Molten Hepatizon
+fluid.manganese.molten=Molten Manganese
+fluid.silver.molten=Molten Steel
+fluid.tin.molten=Molten Tin
+
+fluid.brass.molten=Molten Brass
+fluid.electrum.molten=Molten Electrum
+fluid.platinum.molten=Molten Platinum
+fluid.silver.molten=Molten Silver
+fluid.zinc.molten=Molten Zinc
+
+fluid.amordrine.molten=Molten Amordrine
+fluid.alduorite.molten=Molten Alduorite
+fluid.ceruclase.molten=Molten Ceruclase
+fluid.ignatius.molten=Molten Ignatius
+fluid.inolashite.molten=Molten Inolashite
+fluid.kalendrite.molten=Molten Kalendrite
+fluid.lemurite.molten=Molten Lemurite
+fluid.midasium.molten=Molten Midasium
+fluid.sanguinite.molten=Molten Sanguinite
+fluid.shadow.iron.molten=Molten Shadow Iron
+fluid.shadow.steel.molten=Molten Shadow Steel
+fluid.vulcanite.molten=Molten Vulcanite
+fluid.vyroxeres.molten=Molten Vyroxeres
+
+fluid.adamantine.molten=Molten Adamantine
+fluid.astral.silver.molten=Molten Astral Silver
+fluid.atlarus.molten=Molten Atlarus
+fluid.black.steel.molten=Molten Black Steel
+fluid.carmot.molten=Molten Carmot
+fluid.celenegil.molten=Molten Celenegil
+fluid.deep.iron.molten=Molten Deep Iron
+fluid.haderoth.molten=Molten Haderoth
+fluid.infuscolium.molten=Molten Infuscolium
+fluid.mithril.molten=Molten Mithril
+fluid.orichalcum.molten=Molten Orichalcum
+fluid.oureclase.molten=Molten Oureclase
+fluid.prometheum.molten=Molten Prometheum
+fluid.quicksilver.molten=Molten Quicksilver
+fluid.rubracium.molten=Molten Rubracium
+fluid.tartarite.molten=Molten Tartarite
+
+fluid.desichalkos.molten=Molten Desichalkos
+fluid.eximite.molten=Molten Eximite
+fluid.meutoite.molten=Molten Meutoite
+
+tile.metallurgy.angmallen.molten.name=Molten Angmallen
+tile.metallurgy.bronze.molten.name=Molten Bronze
+tile.metallurgy.copper.molten.name=Molten Copper
+tile.metallurgy.damascus.steel.molten.name=Molten Damascus Steel
+tile.metallurgy.hepatizon.molten.name=Molten Hepatizon
+tile.metallurgy.manganese.molten.name=Molten Manganese
+tile.metallurgy.steel.molten.name=Molten Steel
+tile.metallurgy.tin.molten.name=Molten Tin
+
+tile.metallurgy.brass.molten.name=Molten Brass
+tile.metallurgy.electrum.molten.name=Molten Electrum
+tile.metallurgy.platinum.molten.name=Molten Platinum
+tile.metallurgy.silver.molten.name=Molten Silver
+tile.metallurgy.zinc.molten.name=Molten Zinc
+
+tile.metallurgy.amordrine.molten.name=Molten Amordrine
+tile.metallurgy.alduorite.molten.name=Molten Alduorite
+tile.metallurgy.ceruclase.molten.name=Molten Ceruclase
+tile.metallurgy.ignatius.molten.name=Molten Ignatius
+tile.metallurgy.inolashite.molten.name=Molten Inolashite
+tile.metallurgy.kalendrite.molten.name=Molten Kalendrite
+tile.metallurgy.lemurite.molten.name=Molten Lemurite
+tile.metallurgy.midasium.molten.name=Molten Midasium
+tile.metallurgy.sanguinite.molten.name=Molten Sanguinite
+tile.metallurgy.shadow.iron.molten.name=Molten Shadow Iron
+tile.metallurgy.shadow.steel.molten.name=Molten Shadow Steel
+tile.metallurgy.vulcanite.molten.name=Molten Vulcanite
+tile.metallurgy.vyroxeres.molten.name=Molten Vyroxeres
+
+tile.metallurgy.adamantine.molten.name=Molten Adamantine
+tile.metallurgy.astral.silver.molten.name=Molten Astral Silver
+tile.metallurgy.atlarus.molten.name=Molten Atlarus
+tile.metallurgy.black.steel.molten.name=Molten Black Steel
+tile.metallurgy.carmot.molten.name=Molten Carmot
+tile.metallurgy.celenegil.molten.name=Molten Celenegil
+tile.metallurgy.deep.iron.molten.name=Molten Deep Iron
+tile.metallurgy.haderoth.molten.name=Molten Haderoth
+tile.metallurgy.infuscolium.molten.name=Molten Infuscolium
+tile.metallurgy.mithril.molten.name=Molten Mithril
+tile.metallurgy.orichalcum.molten.name=Molten Orichalcum
+tile.metallurgy.oureclase.molten.name=Molten Oureclase
+tile.metallurgy.prometheum.molten.name=Molten Prometheum
+tile.metallurgy.quicksilver.molten.name=Molten Quicksilver
+tile.metallurgy.rubracium.molten.name=Molten Rubracium
+tile.metallurgy.tartarite.molten.name=Molten Tartarite
+
+tile.metallurgy.desichalkos.molten.name=Molten Desichalkos
+tile.metallurgy.eximite.molten.name=Molten Eximite
+tile.metallurgy.meutoite.molten.name=Molten Meutoite
+
+# Buckets
+item.metallurgy.bucket.filled.angmallen.molten.name=Molten Angmallen Bucket
+item.metallurgy.bucket.filled.bronze.molten.name=Molten Bronze Bucket
+item.metallurgy.bucket.filled.copper.molten.name=Molten Copper Bucket
+item.metallurgy.bucket.filled.damascus.steel.molten.name=Molten Damascus Steel Bucket
+item.metallurgy.bucket.filled.hepatizon.molten.name=Molten Hepatizon Bucket
+item.metallurgy.bucket.filled.manganese.molten.name=Molten Manganese Bucket
+item.metallurgy.bucket.filled.steel.molten.name=Molten Steel Bucket
+item.metallurgy.bucket.filled.tin.molten.name=Molten Tin Bucket
+
+item.metallurgy.bucket.filled.brass.molten.name=Molten Brass Bucket
+item.metallurgy.bucket.filled.electrum.molten.name=Molten Electrum Bucket
+item.metallurgy.bucket.filled.platinum.molten.name=Molten Platinum Bucket
+item.metallurgy.bucket.filled.silver.molten.name=Molten Silver Bucket
+item.metallurgy.bucket.filled.zinc.molten.name=Molten Zinc Bucket
+
+item.metallurgy.bucket.filled.amordrine.molten.name=Molten Amordrine Bucket
+item.metallurgy.bucket.filled.alduorite.molten.name=Molten Alduorite Bucket
+item.metallurgy.bucket.filled.ceruclase.molten.name=Molten Ceruclase Bucket
+item.metallurgy.bucket.filled.ignatius.molten.name=Molten Ignatius Bucket
+item.metallurgy.bucket.filled.inolashite.molten.name=Molten Inolashite Bucket
+item.metallurgy.bucket.filled.kalendrite.molten.name=Molten Kalendrite Bucket
+item.metallurgy.bucket.filled.lemurite.molten.name=Molten Lemurite Bucket
+item.metallurgy.bucket.filled.midasium.molten.name=Molten Midasium Bucket
+item.metallurgy.bucket.filled.sanguinite.molten.name=Molten Sanguinite Bucket
+item.metallurgy.bucket.filled.shadow.iron.molten.name=Molten Shadow Iron Bucket
+item.metallurgy.bucket.filled.shadow.steel.molten.name=Molten Shadow Steel Bucket
+item.metallurgy.bucket.filled.vulcanite.molten.name=Molten Vulcanite Bucket
+item.metallurgy.bucket.filled.vyroxeres.molten.name=Molten Vyroxeres Bucket
+
+item.metallurgy.bucket.filled.adamantine.molten.name=Molten Adamantine Bucket
+item.metallurgy.bucket.filled.astral.silver.molten.name=Molten Astral Silver Bucket
+item.metallurgy.bucket.filled.atlarus.molten.name=Molten Atlarus Bucket
+item.metallurgy.bucket.filled.black.steel.molten.name=Molten Black Steel Bucket
+item.metallurgy.bucket.filled.carmot.molten.name=Molten Carmot Bucket
+item.metallurgy.bucket.filled.celenegil.molten.name=Molten Celenegil Bucket
+item.metallurgy.bucket.filled.deep.iron.molten.name=Molten Deep Iron Bucket
+item.metallurgy.bucket.filled.haderoth.molten.name=Molten Haderoth Bucket
+item.metallurgy.bucket.filled.infuscolium.molten.name=Molten Infuscolium Bucket
+item.metallurgy.bucket.filled.mithril.molten.name=Molten Mithril Bucket
+item.metallurgy.bucket.filled.orichalcum.molten.name=Molten Orichalcum Bucket
+item.metallurgy.bucket.filled.oureclase.molten.name=Molten Oureclase Bucket
+item.metallurgy.bucket.filled.prometheum.molten.name=Molten Prometheum Bucket
+item.metallurgy.bucket.filled.quicksilver.molten.name=Molten Quicksilver Bucket
+item.metallurgy.bucket.filled.rubracium.molten.name=Molten Rubracium Bucket
+item.metallurgy.bucket.filled.tartarite.molten.name=Molten Tartarite Bucket
+
+item.metallurgy.bucket.filled.desichalkos.molten.name=Molten Desichalkos Bucket
+item.metallurgy.bucket.filled.eximite.molten.name=Molten Eximite Bucket
+item.metallurgy.bucket.filled.meutoite.molten.name=Molten Meutoite Bucket
