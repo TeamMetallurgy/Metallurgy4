@@ -9,8 +9,8 @@ tile.machine.frame.name=Корпус механизма
 tile.crusher.name=Дробилка
 container.crusher=Дробилка
 
-tile.alloyer.name=Сплавитель
-container.alloyer=Сплавитель
+tile.alloyer.name=Плавильня
+container.alloyer=Плавильня
 
 tile.forge.name=Кузница
 container.forge=Кузница
@@ -638,13 +638,20 @@ item.metallurgy.gold.dust.name=Золотая пыль
 tile.metallurgy.iron.brick.name=Железные кирпичи
 item.metallurgy.iron.dust.name=Железная пыль
 
+# Fluids
 fluid.angmallen.molten=Расплавленный ангмаллен
+fluid.bronze.molten=Расплавленная бронза
+fluid.copper.molten=Расплавленная медь
 fluid.damascus.steel.molten=Расплавленная дамасская сталь
 fluid.hepatizon.molten=Расплавленный гепатизон
 fluid.manganese.molten=Расплавленный марганец
+fluid.silver.molten=Расплавленная сталь
+fluid.tin.molten=Расплавленное олово
 
 fluid.brass.molten=Расплавленная латунь
+fluid.electrum.molten=Расплавленный электрум
 fluid.platinum.molten=Расплавленная платина
+fluid.silver.molten=Расплавленное серебро
 fluid.zinc.molten=Расплавленный цинк
 
 fluid.amordrine.molten=Расплавленный амордрин
@@ -683,12 +690,18 @@ fluid.eximite.molten=Расплавленный эксимит
 fluid.meutoite.molten=Расплавленный мьютват
 
 tile.metallurgy.angmallen.molten.name.name=Расплавленный ангмаллен
+tile.metallurgy.bronze.molten.name=Расплавленная бронза
+tile.metallurgy.copper.molten.name=Расплавленная медь
 tile.metallurgy.damascus.steel.molten.name=Расплавленная дамасская сталь
 tile.metallurgy.hepatizon.molten.name=Расплавленный гепатизон
 tile.metallurgy.manganese.molten.name=Расплавленный марганец
+tile.metallurgy.steel.molten.name=Расплавленная сталь
+tile.metallurgy.tin.molten.name=Расплавленное олово
 
 tile.metallurgy.brass.molten.name=Расплавленная латунь
+tile.metallurgy.electrum.molten.name=Расплавленный электрум
 tile.metallurgy.platinum.molten.name=Расплавленная платина
+tile.metallurgy.silver.molten.name=Расплавленное серебро
 tile.metallurgy.zinc.molten.name=Расплавленный цинк
 
 tile.metallurgy.amordrine.molten.name=Расплавленный амордрин
@@ -725,3 +738,54 @@ tile.metallurgy.tartarite.molten.name=Расплавленный тартари�
 tile.metallurgy.desichalkos.molten.name=Расплавленный дезихалький
 tile.metallurgy.eximite.molten.name=Расплавленный эксимит
 tile.metallurgy.meutoite.molten.name=Расплавленный мьютват
+
+# Buckets
+item.metallurgy.bucket.filled.angmallen.molten.name=Ведро расплавленного ангмаллена
+item.metallurgy.bucket.filled.bronze.molten.name=Ведро расплавленной бронзы
+item.metallurgy.bucket.filled.copper.molten.name=Ведро расплавленной меди
+item.metallurgy.bucket.filled.damascus.steel.molten.name=Ведро расплавленной дамасской стали
+item.metallurgy.bucket.filled.hepatizon.molten.name=Ведро расплавленного гепатизона
+item.metallurgy.bucket.filled.manganese.molten.name=Ведро расплавленного марганца
+item.metallurgy.bucket.filled.steel.molten.name=Ведро расплавленной стали
+item.metallurgy.bucket.filled.tin.molten.name=Ведро расплавленного олова
+
+item.metallurgy.bucket.filled.brass.molten.name=Ведро расплавленной латуни
+item.metallurgy.bucket.filled.electrum.molten.name=Ведро расплавленного электрума
+item.metallurgy.bucket.filled.platinum.molten.name=Ведро расплавленной платины
+item.metallurgy.bucket.filled.silver.molten.name=Ведро расплавленного серебра
+item.metallurgy.bucket.filled.zinc.molten.name=Ведро расплавленного цинка
+
+item.metallurgy.bucket.filled.amordrine.molten.name=Ведро расплавленного амордрина
+item.metallurgy.bucket.filled.alduorite.molten.name=Ведро расплавленного алдурита
+item.metallurgy.bucket.filled.ceruclase.molten.name=Ведро расплавленного церукласса
+item.metallurgy.bucket.filled.ignatius.molten.name=Ведро расплавленной игнатиевой руды
+item.metallurgy.bucket.filled.inolashite.molten.name=Ведро расплавленного инолашита
+item.metallurgy.bucket.filled.kalendrite.molten.name=Ведро расплавленного календрита
+item.metallurgy.bucket.filled.lemurite.molten.name=Ведро расплавленного лемурита
+item.metallurgy.bucket.filled.midasium.molten.name=Ведро расплавленного мидасия
+item.metallurgy.bucket.filled.sanguinite.molten.name=Ведро расплавленного сангвинита
+item.metallurgy.bucket.filled.shadow.iron.molten.name=Ведро расплавленного тёмного железа
+item.metallurgy.bucket.filled.shadow.steel.molten.name=Ведро расплавленной тёмной стали
+item.metallurgy.bucket.filled.vulcanite.molten.name=Ведро расплавленного вулканита
+item.metallurgy.bucket.filled.vyroxeres.molten.name=Ведро расплавленного вироксера
+
+item.metallurgy.bucket.filled.adamantine.molten.name=Ведро расплавленного адамантина
+item.metallurgy.bucket.filled.astral.silver.molten.name=Ведро расплавленного астрального серебра
+item.metallurgy.bucket.filled.atlarus.molten.name=Ведро расплавленного атлариса
+item.metallurgy.bucket.filled.black.steel.molten.name=Ведро расплавленной чёрной стали
+item.metallurgy.bucket.filled.carmot.molten.name=Ведро расплавленного кармота
+item.metallurgy.bucket.filled.celenegil.molten.name=Ведро расплавленного целенегила
+item.metallurgy.bucket.filled.deep.iron.molten.name=Ведро расплавленного глубинного железа
+item.metallurgy.bucket.filled.haderoth.molten.name=Ведро расплавленного хадерота
+item.metallurgy.bucket.filled.infuscolium.molten.name=Ведро расплавленного инфузкола
+item.metallurgy.bucket.filled.mithril.molten.name=Ведро расплавленного мифрила
+item.metallurgy.bucket.filled.orichalcum.molten.name=Ведро расплавленного орихалка
+item.metallurgy.bucket.filled.oureclase.molten.name=Ведро расплавленного ауркласса
+item.metallurgy.bucket.filled.prometheum.molten.name=Ведро расплавленной прометеевой руды
+item.metallurgy.bucket.filled.quicksilver.molten.name=Ведро расплавленной ртути
+item.metallurgy.bucket.filled.rubracium.molten.name=Ведро расплавленного рубракия
+item.metallurgy.bucket.filled.tartarite.molten.name=Ведро расплавленного тартарита
+
+item.metallurgy.bucket.filled.desichalkos.molten.name=Ведро расплавленного дезихалькия
+item.metallurgy.bucket.filled.eximite.molten.name=Ведро расплавленного эксимита
+item.metallurgy.bucket.filled.meutoite.molten.name=Ведро расплавленного мьютвата
