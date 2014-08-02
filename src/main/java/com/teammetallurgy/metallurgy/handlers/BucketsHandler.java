@@ -116,16 +116,20 @@ public class BucketsHandler
 
                     bucketId += 1;
 
-                    addBucketMapping(bucketId, unlocalizedName, texture);
+                    ItemStack testBucket = FluidContainerRegistry.fillFluidContainer(fluidStack, emptyBucketStack);
+                    if (testBucket == null)
+                    {
+                        addBucketMapping(bucketId, unlocalizedName, texture);
 
-                    ItemStack bucketStack = new ItemStack(bucket, 1, bucketId);
+                        ItemStack bucketStack = new ItemStack(bucket, 1, bucketId);
 
-                    addMoltenMapping(bucketStack, fluidStack.getFluid().getBlock());
+                        addMoltenMapping(bucketStack, fluidStack.getFluid().getBlock());
 
-                    FluidContainerRegistry.registerFluidContainer(fluidStack, bucketStack, emptyBucketStack);
+                        FluidContainerRegistry.registerFluidContainer(fluidStack, bucketStack, emptyBucketStack);
+                    }
+
                 }
             }
         }
-
     }
 }
