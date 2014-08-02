@@ -20,7 +20,8 @@
   ],
   "dependencies": [
     "MetallurgyCore@[4.0.3,]",
-    "Botania"
+    "Botania",
+    "TConstruct"
    ],
   "dependants": [
     "UndergroundBiomes"
