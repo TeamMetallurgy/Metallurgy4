@@ -163,7 +163,8 @@ public class MetalBlock extends Block
         this.setBlockTextureName(Metallurgy.MODID + ":metal_block_default");
         this.setBlockName("metal.block." + posfix);
         this.setCreativeTab(Metallurgy.instance.creativeTabBlocks);
-        this.setHardness(3F);
+        this.setHardness(3.0F);
+        this.setResistance(5.0F);
     }
 
     @SideOnly(Side.CLIENT)
