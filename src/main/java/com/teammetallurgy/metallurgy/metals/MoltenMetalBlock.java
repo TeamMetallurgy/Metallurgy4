@@ -5,9 +5,6 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
 import net.minecraftforge.fluids.BlockFluidClassic;
 import net.minecraftforge.fluids.Fluid;
-
-import com.teammetallurgy.metallurgy.Metallurgy;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -18,6 +15,8 @@ public class MoltenMetalBlock extends BlockFluidClassic
     
     private String stillIconTexture;
     private String flowIconTexture;
+
+    private boolean writeFluidIcons = true;
 
     public MoltenMetalBlock(Fluid fluid, String unloclizedName, String texture)
     {
@@ -37,7 +36,10 @@ public class MoltenMetalBlock extends BlockFluidClassic
         this.stillIcon = icon.registerIcon(stillIconTexture);
         this.flowingIcon = icon.registerIcon(flowIconTexture);
 
-        this.getFluid().setIcons(this.stillIcon, this.flowingIcon);
+        if(writeFluidIcons)
+        {
+            this.getFluid().setIcons(this.stillIcon, this.flowingIcon);
+        }
     }
 
     public IIcon getStillIcon()
@@ -62,5 +64,10 @@ public class MoltenMetalBlock extends BlockFluidClassic
         {
             return this.flowingIcon;
         }
+    }
+
+    public void disableWritingFluidIcons()
+    {
+        this.writeFluidIcons = false;
     }
 }

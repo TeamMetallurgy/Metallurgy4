@@ -510,7 +510,7 @@ public class MetalSet implements IMetalSet
                 String fluidName = ((metal.getName()).trim().replace(" ", ".").toLowerCase()) + ".molten";
                 Fluid fluid = new Fluid(fluidName).setLuminosity(15).setDensity(3000).setViscosity(6000).setTemperature(1300);
 
-                FluidRegistry.registerFluid(fluid);
+                boolean registered = FluidRegistry.registerFluid(fluid);
 
                 String registryName = metal.getName().toLowerCase();
                 registryName = registryName.trim().replace(" ", ".") + ".molten";
@@ -524,6 +524,19 @@ public class MetalSet implements IMetalSet
                 MoltenMetalBlock moltenMetal = new MoltenMetalBlock(fluid, unlocalizedName, moltenTexture);
 
                 GameRegistry.registerBlock(moltenMetal, registryName);
+                if (!registered)
+                {
+                    Fluid registeredFluid = FluidRegistry.getFluid(fluidName);
+                    Block registeredFluidBlock = registeredFluid.getBlock();
+                    if (registeredFluidBlock == null)
+                    {
+                        fluid.setBlock(moltenMetal);
+                    }
+                    else
+                    {
+                        moltenMetal.disableWritingFluidIcons();
+                    }
+                }
             }
 
             if (metal.alloyRecipe != null && metal.alloyRecipe.length == 2)
