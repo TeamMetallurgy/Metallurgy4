@@ -9,6 +9,7 @@ import com.teammetallurgy.metallurgy.handlers.BucketsHandler;
 import com.teammetallurgy.metallurgy.handlers.EventHandler;
 import com.teammetallurgy.metallurgy.handlers.GUIHandlerMetallurgy;
 import com.teammetallurgy.metallurgy.integrations.Integration;
+import com.teammetallurgy.metallurgy.metals.MetalMaterials;
 import com.teammetallurgy.metallurgy.metals.VanillaMetals;
 import com.teammetallurgy.metallurgy.networking.CommonProxy;
 import com.teammetallurgy.metallurgycore.CreativeTab;
@@ -51,6 +52,7 @@ public class Metallurgy
     {
         VanillaMetals.initRecipes();
         BlockList.initRecipies();
+        MetalMaterials.Instance.addRecipes();
 
         NetworkRegistry.INSTANCE.registerGuiHandler(Metallurgy.instance, new GUIHandlerMetallurgy());
         Metallurgy.proxy.registerTickHandlers();
