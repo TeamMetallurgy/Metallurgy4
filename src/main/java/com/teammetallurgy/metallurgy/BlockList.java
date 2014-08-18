@@ -19,6 +19,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
 import com.teammetallurgy.metallurgy.api.IMetalSet;
+import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
 import com.teammetallurgy.metallurgy.machines.alloyer.BlockAlloyer;
 import com.teammetallurgy.metallurgy.machines.alloyer.TileEntityAlloyer;
 import com.teammetallurgy.metallurgy.machines.crusher.BlockCrusher;
@@ -56,7 +57,7 @@ public class BlockList
 
     public static IMetalSet getSet(String name)
     {
-        return (IMetalSet)BlockList.setList.get(name);
+        return (IMetalSet) BlockList.setList.get(name);
     }
 
     public static void init()
@@ -78,12 +79,12 @@ public class BlockList
         BlockList.registerBlockWithTileEntity(BlockList.forge, TileEntityForge.class, blockName);
 
         initMetalSets();
-        
+
         VanillaMetals.initBlocks();
 
     }
 
-    private static void initMetalSets ()
+    private static void initMetalSets()
     {
         File directory = new File(Metallurgy.instance.modsPath());
 
@@ -129,13 +130,15 @@ public class BlockList
             String path = "assets/metallurgy/data/";
 
             URL resource = Block.class.getClassLoader().getResource(path + set + ".json");
+            boolean enabledSet = ConfigHandler.setEnabled(set);
 
             try
             {
-                if (resource != null)
+                if (resource != null && enabledSet)
                 {
                     BlockList.injectMetalSet(set, resource.openStream());
-                } else
+                }
+                else
                 {
                     LogHandler.log("Could not load '" + path + "'");
                 }
@@ -148,20 +151,16 @@ public class BlockList
 
     public static void initRecipies()
     {
-        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(BlockList.machineFrame),
-                "ici", "cic", "ici", 'c', "ingotCopper", 'i', Items.iron_ingot));
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(BlockList.machineFrame), "ici", "cic", "ici", 'c', "ingotCopper", 'i', Items.iron_ingot));
 
-        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(BlockList.crusher),
-                "ccc", "imi", "ifi", 'c', "ingotCopper", 'i', Items.iron_ingot,
-                'm', new ItemStack(BlockList.machineFrame), 'f', Blocks.furnace));
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(BlockList.crusher), "ccc", "imi", "ifi", 'c', "ingotCopper", 'i', Items.iron_ingot, 'm', new ItemStack(BlockList.machineFrame), 'f',
+                Blocks.furnace));
 
-        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(BlockList.alloyer),
-                "aaa", "dmd", "dfd", 'a', "ingotAngmallen", 'd', "ingotDamascusSteel",
-                'm', new ItemStack(BlockList.machineFrame), 'f', Blocks.furnace));
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(BlockList.alloyer), "aaa", "dmd", "dfd", 'a', "ingotAngmallen", 'd', "ingotDamascusSteel", 'm', new ItemStack(BlockList.machineFrame),
+                'f', Blocks.furnace));
 
-        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(BlockList.forge),
-                "iii", "sms", "sfs", 'i', "ingotIgnatius", 's', "ingotShadowSteel",
-                'm', new ItemStack(BlockList.machineFrame), 'f', Blocks.furnace));
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(BlockList.forge), "iii", "sms", "sfs", 'i', "ingotIgnatius", 's', "ingotShadowSteel", 'm', new ItemStack(BlockList.machineFrame), 'f',
+                Blocks.furnace));
     }
 
     private static void injectMetalSet(String name, InputStream stream) throws IOException
@@ -218,17 +217,17 @@ public class BlockList
     {
         return alloyer;
     }
-    
+
     public static Block getMachineFrame()
     {
         return machineFrame;
     }
-    
+
     public static Block getCrusher()
     {
         return crusher;
     }
-    
+
     public static Block getForge()
     {
         return forge;

@@ -6,6 +6,7 @@ import java.io.IOException;
 import net.minecraftforge.common.MinecraftForge;
 
 import com.teammetallurgy.metallurgy.handlers.BucketsHandler;
+import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
 import com.teammetallurgy.metallurgy.handlers.EventHandlerMetallurgy;
 import com.teammetallurgy.metallurgy.handlers.GUIHandlerMetallurgy;
 import com.teammetallurgy.metallurgy.integrations.Integration;
@@ -13,7 +14,6 @@ import com.teammetallurgy.metallurgy.metals.MetalMaterials;
 import com.teammetallurgy.metallurgy.metals.VanillaMetals;
 import com.teammetallurgy.metallurgy.networking.CommonProxy;
 import com.teammetallurgy.metallurgycore.CreativeTab;
-import com.teammetallurgy.metallurgycore.handlers.ConfigHandler;
 import com.teammetallurgy.metallurgycore.handlers.LogHandler;
 
 import cpw.mods.fml.common.Loader;
@@ -51,6 +51,7 @@ public class Metallurgy
     public void init(FMLInitializationEvent event)
     {
         VanillaMetals.initRecipes();
+        ItemList.addRecipes();
         BlockList.initRecipies();
         MetalMaterials.Instance.addRecipes();
 

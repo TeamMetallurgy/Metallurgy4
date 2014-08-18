@@ -7,7 +7,6 @@ import java.io.Reader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Locale;
 
 import net.minecraft.block.Block;
 import net.minecraft.init.Items;
@@ -27,13 +26,13 @@ import com.teammetallurgy.metallurgy.api.IMetalInfo;
 import com.teammetallurgy.metallurgy.api.IMetalSet;
 import com.teammetallurgy.metallurgy.api.MetalType;
 import com.teammetallurgy.metallurgy.armor.ItemMetallurgyArmor;
+import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
 import com.teammetallurgy.metallurgy.tools.Axe;
 import com.teammetallurgy.metallurgy.tools.Hoe;
 import com.teammetallurgy.metallurgy.tools.Pickaxe;
 import com.teammetallurgy.metallurgy.tools.Shovel;
 import com.teammetallurgy.metallurgy.tools.Sword;
 import com.teammetallurgy.metallurgy.world.WorldGenMetals;
-import com.teammetallurgy.metallurgycore.handlers.ConfigHandler;
 import com.teammetallurgy.metallurgycore.handlers.LogHandler;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -720,11 +719,11 @@ public class MetalSet implements IMetalSet
             // Furnace Recipes
             if (ingot != null)
             {
-                GameRegistry.addSmelting(new ItemStack (dust,1,metaId), new ItemStack(ingot), 0.7F);
-                
+                GameRegistry.addSmelting(new ItemStack(dust, 1, metaId), new ItemStack(ingot), 0.7F);
+
                 if (ore != null)
                 {
-                    GameRegistry.addSmelting(new ItemStack (ore,1,metaId), new ItemStack(ingot), 0.7F);
+                    GameRegistry.addSmelting(new ItemStack(ore, 1, metaId), new ItemStack(ingot), 0.7F);
                 }
             }
         }

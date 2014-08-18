@@ -2,16 +2,16 @@ package com.teammetallurgy.metallurgy.handlers;
 
 import java.util.ArrayList;
 
-import com.teammetallurgy.metallurgycore.handlers.ChunkLoc;
-import com.teammetallurgy.metallurgycore.handlers.ConfigHandler;
-import com.teammetallurgy.metallurgycore.handlers.EventHandler;
-import com.teammetallurgy.metallurgycore.handlers.LogHandler;
-import com.teammetallurgy.metallurgycore.handlers.WorldTicker;
-
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.ChunkCoordIntPair;
 import net.minecraftforge.event.entity.player.FillBucketEvent;
 import net.minecraftforge.event.world.ChunkDataEvent;
+
+import com.teammetallurgy.metallurgycore.handlers.ChunkLoc;
+import com.teammetallurgy.metallurgycore.handlers.EventHandler;
+import com.teammetallurgy.metallurgycore.handlers.LogHandler;
+import com.teammetallurgy.metallurgycore.handlers.WorldTicker;
+
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class EventHandlerMetallurgy extends EventHandler
