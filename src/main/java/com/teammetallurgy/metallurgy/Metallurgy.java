@@ -66,10 +66,10 @@ public class Metallurgy
     private void initTabs()
     {
         creativeTabMachines.setItem(BlockList.getAlloyer());
-        creativeTabBlocks.setItem(BlockList.getSet("ender").getBlock("Eximite").getItem());
-        creativeTabItems.setItem(BlockList.getSet("nether").getIngot("Ceruclase").getItem());
-        creativeTabTools.setItem(BlockList.getSet("base").getSword("Damascus Steel").getItem());
-        creativeTabArmor.setItem(BlockList.getSet("fantasy").getHelmet("Tartarite").getItem());
+        creativeTabBlocks.setItemStack(BlockList.getSet("ender").getBlock("Eximite"));
+        creativeTabItems.setItemStack(BlockList.getSet("nether").getIngot("Ceruclase"));
+        creativeTabTools.setItemStack(BlockList.getSet("base").getSword("Damascus Steel"));
+        creativeTabArmor.setItemStack(BlockList.getSet("fantasy").getHelmet("Tartarite"));
     }
 
     public String modsPath()
