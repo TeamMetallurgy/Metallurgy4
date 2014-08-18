@@ -6,7 +6,7 @@ import java.io.IOException;
 import net.minecraftforge.common.MinecraftForge;
 
 import com.teammetallurgy.metallurgy.handlers.BucketsHandler;
-import com.teammetallurgy.metallurgy.handlers.EventHandler;
+import com.teammetallurgy.metallurgy.handlers.EventHandlerMetallurgy;
 import com.teammetallurgy.metallurgy.handlers.GUIHandlerMetallurgy;
 import com.teammetallurgy.metallurgy.integrations.Integration;
 import com.teammetallurgy.metallurgy.metals.MetalMaterials;
@@ -57,7 +57,7 @@ public class Metallurgy
         NetworkRegistry.INSTANCE.registerGuiHandler(Metallurgy.instance, new GUIHandlerMetallurgy());
         Metallurgy.proxy.registerTickHandlers();
         Metallurgy.proxy.registerBlockRenderers();
-        MinecraftForge.EVENT_BUS.register(new EventHandler());
+        MinecraftForge.EVENT_BUS.register(new EventHandlerMetallurgy());
 
         Integration.init(event);
     }
