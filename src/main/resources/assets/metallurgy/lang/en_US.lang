@@ -789,3 +789,5 @@ item.metallurgy.bucket.filled.tartarite.molten.name=Molten Tartarite Bucket
 item.metallurgy.bucket.filled.desichalkos.molten.name=Molten Desichalkos Bucket
 item.metallurgy.bucket.filled.eximite.molten.name=Molten Eximite Bucket
 item.metallurgy.bucket.filled.meutoite.molten.name=Molten Meutoite Bucket
+
+item.metallurgy.fertilizer.name=Fertilizer
