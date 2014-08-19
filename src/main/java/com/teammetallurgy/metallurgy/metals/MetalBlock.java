@@ -63,8 +63,8 @@ public class MetalBlock extends Block
      *            0:Ore, 1:Block, 2:Brick
      * @param texture
      *            Texture
-     * @param dropId
-     *            Dropped Item ID, 0: drop block
+     * @param drop
+     *            Dropped Item, null: drop block
      */
     public void addSubBlock(int meta, String name, int blockType, String texture, Item drop)
     {
@@ -115,6 +115,29 @@ public class MetalBlock extends Block
         }
 
         return item;
+    }
+
+    @Override
+    public int quantityDropped(int meta, int fortune, Random random)
+    {
+        boolean haveDrops = (this.drops.get(meta) != null);
+
+        if (haveDrops)
+        {
+            int range = random.nextInt(3 - 2 + 1) + 2;
+            int droppedAmount = random.nextInt(fortune + range + 1) - 1;
+
+            if (droppedAmount < 0)
+            {
+                droppedAmount = 0;
+            }
+
+            return (droppedAmount + 1);
+
+        }
+
+        // default
+        return 1;
     }
 
     @SuppressWarnings({ "rawtypes", "unchecked" })
