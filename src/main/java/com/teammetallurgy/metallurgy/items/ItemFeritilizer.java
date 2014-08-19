@@ -30,11 +30,6 @@ public class ItemFeritilizer extends Item
         BonemealEvent event = new BonemealEvent(player, world, block, xPos, yPos, zPos);
         if (MinecraftForge.EVENT_BUS.post(event)) { return false; }
 
-        if (!world.isRemote)
-        {
-            world.playAuxSFX(2005, xPos, yPos, zPos, 0);
-        }
-
         if (event.getResult() == Result.ALLOW)
         {
             if (!world.isRemote)
@@ -58,6 +53,7 @@ public class ItemFeritilizer extends Item
                     }
 
                     --stack.stackSize;
+                    world.playAuxSFX(2005, xPos, yPos, zPos, 0);
                 }
 
                 return true;
