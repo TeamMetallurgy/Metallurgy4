@@ -12,6 +12,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 import com.teammetallurgy.metallurgy.Metallurgy;
@@ -138,6 +139,20 @@ public class MetalBlock extends Block
 
         // default
         return 1;
+    }
+
+    @Override
+    public int getExpDrop(IBlockAccess world, int metadata, int fortune)
+    {
+        boolean haveDrops = (this.drops.get(metadata) != null);
+        if (haveDrops)
+        {
+            Random random = new Random();
+            int exp = random.nextInt(4 - 5 + 1) + 5;
+            return exp;
+        }
+        // default
+        return 0;
     }
 
     @SuppressWarnings({ "rawtypes", "unchecked" })
