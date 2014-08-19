@@ -355,6 +355,9 @@ public class MetalSet implements IMetalSet
 
             int metaId = metal.meta;
 
+            String metalTag = metal.getName().trim().toLowerCase().replace(" ", "_");
+            int blockLvl = ConfigHandler.blockHarvestLevel(metalTag, metal.blockLvl);
+
             if (metal.type != MetalType.Drop)
             {
                 String identifier = "dust";
@@ -440,7 +443,7 @@ public class MetalSet implements IMetalSet
                 {
                     String[] oreDicAliases = createOreDicAliases(identifier, metal.getAliases());
 
-                    ore = this.createBlock(this.defaultOre, metaId, metal.blockLvl, tag, identifier, true, oreDicAliases);
+                    ore = this.createBlock(this.defaultOre, metaId, blockLvl, tag, identifier, true, oreDicAliases);
 
                     item = this.defaultDrops;
 
@@ -481,7 +484,7 @@ public class MetalSet implements IMetalSet
 
                 String[] oreDicAliases = createOreDicAliases(identifier, metal.getAliases());
 
-                block = this.createBlock(this.defaultBlock, metaId, metal.blockLvl, tag, identifier, true, oreDicAliases);
+                block = this.createBlock(this.defaultBlock, metaId, blockLvl, tag, identifier, true, oreDicAliases);
                 block.addSubBlock(metaId, metal.getName(), 1, texture + "_" + identifier);
 
                 this.blockStacks.put(metal.getName(), new ItemStack(block, 1, metaId));
@@ -498,7 +501,7 @@ public class MetalSet implements IMetalSet
 
                 String[] oreDicAliases = createOreDicAliases(identifier, metal.getAliases());
 
-                brick = this.createBlock(this.defaultBricks, metaId, metal.blockLvl, tag, identifier, true, oreDicAliases);
+                brick = this.createBlock(this.defaultBricks, metaId, blockLvl, tag, identifier, true, oreDicAliases);
                 brick.addSubBlock(metaId, metal.getName(), 2, texture + "_" + identifier);
                 this.brickStacks.put(metal.getName(), new ItemStack(brick, 1, metaId));
 
@@ -560,11 +563,23 @@ public class MetalSet implements IMetalSet
                 String statsName = metal.getName().toUpperCase();
                 statsName = statsName.replace(" ", "_");
 
+                boolean weaponEnabled = ConfigHandler.weaponsEnabled(statsName.toLowerCase());
+
                 int harvestLevel = metal.getToolHarvestLevel();
                 int maxUses = metal.getToolDurability();
                 int efficiency = metal.getToolEfficiency();
                 int damage = metal.getToolDamage();
                 int enchantability = metal.getToolEncantabilty();
+
+                int[] stats = { harvestLevel, maxUses, efficiency, damage, enchantability };
+
+                stats = ConfigHandler.toolsStats(statsName.toLowerCase(), stats);
+
+                harvestLevel = stats[0];
+                maxUses = stats[1];
+                efficiency = stats[2];
+                damage = stats[3];
+                enchantability = stats[4];
 
                 Item.ToolMaterial toolMaterial = EnumHelper.addToolMaterial(statsName, harvestLevel, maxUses, efficiency, damage, enchantability);
 
@@ -583,7 +598,10 @@ public class MetalSet implements IMetalSet
                 Axe axe = new Axe(toolMaterial, axeUName, axeTexture);
                 axe.setHarvestLevel("axe", harvestLevel);
                 GameRegistry.registerItem(axe, axeUName);
-                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(axe), new Object[] { "ii ", "is ", " s ", 'i', ingotOreDicName, 's', "stickWood" }));
+                if (weaponEnabled)
+                {
+                    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(axe), new Object[] { "ii ", "is ", " s ", 'i', ingotOreDicName, 's', "stickWood" }));
+                }
                 this.axeStacks.put(metal.getName(), new ItemStack(axe));
 
                 // Hoe
@@ -593,7 +611,10 @@ public class MetalSet implements IMetalSet
                 Hoe hoe = new Hoe(toolMaterial, hoeUName, hoeTexture);
                 hoe.setHarvestLevel("hoe", harvestLevel);
                 GameRegistry.registerItem(hoe, hoeUName);
-                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(hoe), new Object[] { "ii ", " s ", " s ", 'i', ingotOreDicName, 's', "stickWood" }));
+                if (weaponEnabled)
+                {
+                    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(hoe), new Object[] { "ii ", " s ", " s ", 'i', ingotOreDicName, 's', "stickWood" }));
+                }
                 this.hoeStacks.put(metal.getName(), new ItemStack(hoe));
 
                 // Pickaxe
@@ -603,7 +624,10 @@ public class MetalSet implements IMetalSet
                 Pickaxe pickaxe = new Pickaxe(toolMaterial, pickaxeUName, pickaxeTexture);
                 pickaxe.setHarvestLevel("pickaxe", harvestLevel);
                 GameRegistry.registerItem(pickaxe, pickaxeUName);
-                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(pickaxe), new Object[] { "iii", " s ", " s ", 'i', ingotOreDicName, 's', "stickWood" }));
+                if (weaponEnabled)
+                {
+                    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(pickaxe), new Object[] { "iii", " s ", " s ", 'i', ingotOreDicName, 's', "stickWood" }));
+                }
                 this.pickaxeStacks.put(metal.getName(), new ItemStack(pickaxe));
 
                 // Shovel
@@ -613,7 +637,10 @@ public class MetalSet implements IMetalSet
                 Shovel shovel = new Shovel(toolMaterial, shovelUName, shovelTexture);
                 shovel.setHarvestLevel("shovel", harvestLevel);
                 GameRegistry.registerItem(shovel, shovelUName);
-                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(shovel), new Object[] { "i", "s", "s", 'i', ingotOreDicName, 's', "stickWood" }));
+                if (weaponEnabled)
+                {
+                    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(shovel), new Object[] { "i", "s", "s", 'i', ingotOreDicName, 's', "stickWood" }));
+                }
                 this.shovelStacks.put(metal.getName(), new ItemStack(shovel));
 
                 // Sword
@@ -624,16 +651,24 @@ public class MetalSet implements IMetalSet
 
                 if (metal.haveEntityEffects())
                 {
-                    int effectId = metal.getEffectId();
-                    int effectDura = metal.getEffectDuration();
-                    int effectAmp = metal.getEffectAmplifier();
-                    int effectRec = metal.getEffectReceiver();
+                    boolean enableEffect = ConfigHandler.swordEffectEnabled(statsName.toLowerCase());
 
-                    sword.addEffect(effectId, effectDura, effectAmp, effectRec);
+                    if (enableEffect)
+                    {
+                        int effectId = metal.getEffectId();
+                        int effectDura = metal.getEffectDuration();
+                        int effectAmp = metal.getEffectAmplifier();
+                        int effectRec = metal.getEffectReceiver();
+
+                        sword.addEffect(effectId, effectDura, effectAmp, effectRec);
+                    }
                 }
 
                 GameRegistry.registerItem(sword, swordUName);
-                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(sword), new Object[] { "i", "i", "s", 'i', ingotOreDicName, 's', "stickWood" }));
+                if (weaponEnabled)
+                {
+                    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(sword), new Object[] { "i", "i", "s", 'i', ingotOreDicName, 's', "stickWood" }));
+                }
                 this.swordStacks.put(metal.getName(), new ItemStack(sword));
             }
 
@@ -647,9 +682,20 @@ public class MetalSet implements IMetalSet
                 armorUName = armorUName.replace(" ", ".");
                 armorUName = Metallurgy.MODID.toLowerCase() + "." + armorUName;
 
+                String armorConfName = metal.getName().toLowerCase().replace(" ", "_");
+                boolean armorEnabled = ConfigHandler.armorEnabled(armorConfName);
+
                 int mutiplier = metal.getArmorMultiplier();
                 int[] damageReduction = metal.getArmorDamageReduction();
                 int enchantablilty = metal.getArmorEnchantability();
+
+                int[] stats = { mutiplier, damageReduction[0], damageReduction[1], damageReduction[2], damageReduction[3], enchantablilty };
+
+                stats = ConfigHandler.armourStats(armorConfName, stats);
+
+                mutiplier = stats[0];
+                damageReduction = new int[] { stats[1], stats[2], stats[3], stats[4] };
+                enchantablilty = stats[5];
 
                 ItemArmor.ArmorMaterial armorMaterial = EnumHelper.addArmorMaterial(armorUName, mutiplier, damageReduction, enchantablilty);
 
@@ -669,7 +715,10 @@ public class MetalSet implements IMetalSet
                 helmet = (ItemMetallurgyArmor) helmet.setUnlocalizedName(helmetUName);
                 helmet = (ItemMetallurgyArmor) helmet.setTextureName(helmetIconTexture);
                 GameRegistry.registerItem(helmet, helmetUName);
-                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(helmet), new Object[] { "iii", "i i", 'i', ingotOreDicName }));
+                if (armorEnabled)
+                {
+                    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(helmet), new Object[] { "iii", "i i", 'i', ingotOreDicName }));
+                }
                 this.helmetStacks.put(metal.getName(), new ItemStack(helmet));
 
                 // Chestplate
@@ -680,7 +729,10 @@ public class MetalSet implements IMetalSet
                 chestplate = (ItemMetallurgyArmor) chestplate.setUnlocalizedName(chestplateUName);
                 chestplate = (ItemMetallurgyArmor) chestplate.setTextureName(chestplateIconTexture);
                 GameRegistry.registerItem(chestplate, chestplateUName);
-                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chestplate), new Object[] { "i i", "iii", "iii", 'i', ingotOreDicName }));
+                if (armorEnabled)
+                {
+                    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chestplate), new Object[] { "i i", "iii", "iii", 'i', ingotOreDicName }));
+                }
                 this.chestplateStacks.put(metal.getName(), new ItemStack(chestplate));
 
                 // Leggings
@@ -691,7 +743,10 @@ public class MetalSet implements IMetalSet
                 leggings = (ItemMetallurgyArmor) leggings.setUnlocalizedName(leggingsUName);
                 leggings = (ItemMetallurgyArmor) leggings.setTextureName(leggingsIconTexture);
                 GameRegistry.registerItem(leggings, leggingsUName);
-                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(leggings), new Object[] { "iii", "i i", "i i", 'i', ingotOreDicName }));
+                if (armorEnabled)
+                {
+                    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(leggings), new Object[] { "iii", "i i", "i i", 'i', ingotOreDicName }));
+                }
                 this.leggingsStacks.put(metal.getName(), new ItemStack(leggings));
 
                 // Boots
@@ -702,18 +757,29 @@ public class MetalSet implements IMetalSet
                 boots = (ItemMetallurgyArmor) boots.setUnlocalizedName(bootsUName);
                 boots = (ItemMetallurgyArmor) boots.setTextureName(bootsIconTexture);
                 GameRegistry.registerItem(boots, bootsUName);
-                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(boots), new Object[] { "i i", "i i", 'i', ingotOreDicName }));
+                if (armorEnabled)
+                {
+                    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(boots), new Object[] { "i i", "i i", 'i', ingotOreDicName }));
+                }
                 this.bootsStacks.put(metal.getName(), new ItemStack(boots));
             }
 
             // Shears and Buckets
+            boolean shearsEnabled = ConfigHandler.recipeEnabled("shears");
+            boolean bucketsEnabled = ConfigHandler.recipeEnabled("buckets");
             if (ingot != null)
             {
                 String ingotOreDicName = "ingot" + tag;
 
-                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.shears), new Object[] { " i", "i ", 'i', ingotOreDicName }));
+                if (shearsEnabled)
+                {
+                    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.shears), new Object[] { " i", "i ", 'i', ingotOreDicName }));
+                }
 
-                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.bucket), new Object[] { "i i", " i ", 'i', ingotOreDicName }));
+                if (bucketsEnabled)
+                {
+                    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.bucket), new Object[] { "i i", " i ", 'i', ingotOreDicName }));
+                }
             }
 
             // Furnace Recipes
