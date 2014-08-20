@@ -615,21 +615,27 @@ item.metallurgy.electrum.leggings.name=Electrum Leggings
 item.metallurgy.electrum.boots.name=Electrum Boots
 
 tile.metallurgy.sulfur.ore.name=Sulfur Ore
+tile.metallurgy.sulfur.block.name=Sulfur block
 item.metallurgy.sulfur.name=Sulfur
 
 tile.metallurgy.phosphorite.ore.name=Phosphorite Ore
+tile.metallurgy.phosphorite.block.name=Phosphorite Block
 item.metallurgy.phosphorus.name=Phosphorus
 
 tile.metallurgy.saltpeter.ore.name=Saltpeter Ore
+tile.metallurgy.saltpeter.block.name=Saltpeter Block
 item.metallurgy.saltpeter.name=Saltpeter
 
 tile.metallurgy.magnesium.ore.name=Magnesium Ore
+tile.metallurgy.magnesium.block.name=Magnesium Block
 item.metallurgy.magnesium.name=Magnesium
 
 tile.metallurgy.bitumen.ore.name=Bitumen Ore
+tile.metallurgy.bitumen.block.name=Bitumen Block
 item.metallurgy.bitumen.name=Bitumen
 
 tile.metallurgy.potash.ore.name=Potash Ore
+tile.metallurgy.potash.block.name=Potash Block
 item.metallurgy.potash.name=Potash
 
 tile.metallurgy.gold.brick.name=Gold Brick

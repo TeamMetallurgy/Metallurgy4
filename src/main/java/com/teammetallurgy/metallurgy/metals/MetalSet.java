@@ -478,7 +478,7 @@ public class MetalSet implements IMetalSet
                 }
             }
 
-            if (metal.type != MetalType.Drop && metal.type != MetalType.Respawn)
+            if (metal.type != MetalType.Respawn)
             {
                 String identifier = "block";
 
@@ -489,8 +489,22 @@ public class MetalSet implements IMetalSet
 
                 this.blockStacks.put(metal.getName(), new ItemStack(block, 1, metaId));
 
-                GameRegistry.addShapedRecipe(new ItemStack(block, 1, metaId), new Object[] { "iii", "iii", "iii", 'i', ingot });
-                GameRegistry.addShapelessRecipe(new ItemStack(ingot, 9), new ItemStack(block, 1, metaId));
+                ItemStack recipeElement;
+
+                if (metal.type == MetalType.Drop)
+                {
+                    recipeElement = new ItemStack(item, 1, metaId);
+                }
+                else
+                {
+                    recipeElement = new ItemStack(ingot);
+                }
+
+                ItemStack returnedItems = recipeElement.copy();
+                returnedItems.stackSize = 9;
+
+                GameRegistry.addShapedRecipe(new ItemStack(block, 1, metaId), new Object[] { "iii", "iii", "iii", 'i', recipeElement });
+                GameRegistry.addShapelessRecipe(returnedItems, new ItemStack(block, 1, metaId));
 
             }
 
