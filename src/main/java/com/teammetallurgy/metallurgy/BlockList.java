@@ -16,6 +16,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
 import com.teammetallurgy.metallurgy.api.IMetalSet;
@@ -27,6 +28,8 @@ import com.teammetallurgy.metallurgy.machines.crusher.TileEntityCrusher;
 import com.teammetallurgy.metallurgy.machines.forge.BlockForge;
 import com.teammetallurgy.metallurgy.machines.forge.TileEntityForge;
 import com.teammetallurgy.metallurgy.machines.frame.BlockFrame;
+import com.teammetallurgy.metallurgy.metals.ItemMetalBlock;
+import com.teammetallurgy.metallurgy.metals.MetalBlock;
 import com.teammetallurgy.metallurgy.metals.MetalSet;
 import com.teammetallurgy.metallurgy.metals.VanillaMetals;
 import com.teammetallurgy.metallurgycore.handlers.LogHandler;
@@ -39,6 +42,7 @@ public class BlockList
     private static Block crusher;
     private static Block alloyer;
     private static Block forge;
+    private static MetalBlock extraSorageBlock;
 
     private static Map<String, MetalSet> setList = new HashMap<String, MetalSet>();
     private static String[] setNames = { "base", "ender", "fantasy", "nether", "precious", "utility" };
@@ -81,6 +85,11 @@ public class BlockList
         initMetalSets();
 
         VanillaMetals.initBlocks();
+
+        BlockList.extraSorageBlock = new MetalBlock("extra.storage.block");
+        BlockList.extraSorageBlock.addSubBlock(0, "charcoal", 1, "metallurgy:misc/charcoal_block");
+        BlockList.extraSorageBlock.setHarvestLevel("pickaxe", 0, 0);
+        GameRegistry.registerBlock(BlockList.extraSorageBlock, ItemMetalBlock.class, "extra.storage.block");
 
     }
 
@@ -161,6 +170,13 @@ public class BlockList
 
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(BlockList.forge), "iii", "sms", "sfs", 'i', "ingotIgnatius", 's', "ingotShadowSteel", 'm', new ItemStack(BlockList.machineFrame), 'f',
                 Blocks.furnace));
+
+        ItemStack charcoalBlock = new ItemStack(BlockList.extraSorageBlock, 1, 0);
+        ItemStack charcoalStack = new ItemStack(Items.coal, 1, 1);
+        ItemStack charcoalResult = new ItemStack(Items.coal, 9, 1);
+        GameRegistry.addRecipe(charcoalBlock.copy(), "ccc", "ccc", "ccc", 'c', charcoalStack);
+        GameRegistry.addShapelessRecipe(charcoalResult, charcoalBlock.copy());
+        OreDictionary.registerOre("blockCharcoal", charcoalBlock.copy());
     }
 
     private static void injectMetalSet(String name, InputStream stream) throws IOException
@@ -231,6 +247,11 @@ public class BlockList
     public static Block getForge()
     {
         return forge;
+    }
+
+    public static Block getExtraStorageBlock()
+    {
+        return extraSorageBlock;
     }
 
 }

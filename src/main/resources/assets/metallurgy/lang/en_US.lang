@@ -796,5 +796,8 @@ item.metallurgy.bucket.filled.desichalkos.molten.name=Molten Desichalkos Bucket
 item.metallurgy.bucket.filled.eximite.molten.name=Molten Eximite Bucket
 item.metallurgy.bucket.filled.meutoite.molten.name=Molten Meutoite Bucket
 
+#Misc Items and blocks
 item.metallurgy.fertilizer.name=Fertilizer
 item.metallurgy.tar.name=Tar
+
+tile.metallurgy.charcoal.block.name=Block of Charcoal
