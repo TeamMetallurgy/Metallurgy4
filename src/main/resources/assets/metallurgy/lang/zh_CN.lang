@@ -615,21 +615,27 @@ item.metallurgy.electrum.leggings.name=琥珀金护腿
 item.metallurgy.electrum.boots.name=琥珀金靴
 
 tile.metallurgy.sulfur.ore.name=硫磺矿
+tile.metallurgy.sulfur.block.name=硫磺块
 item.metallurgy.sulfur.name=硫磺
 
 tile.metallurgy.phosphorite.ore.name=磷灰石矿
+tile.metallurgy.phosphorite.block.name=磷块
 item.metallurgy.phosphorus.name=磷
 
 tile.metallurgy.saltpeter.ore.name=硝石矿
+tile.metallurgy.saltpeter.block.name=硝石块
 item.metallurgy.saltpeter.name=硝石
 
 tile.metallurgy.magnesium.ore.name=镁矿
+tile.metallurgy.magnesium.block.name=镁块
 item.metallurgy.magnesium.name=镁
 
 tile.metallurgy.bitumen.ore.name=沥青矿
+tile.metallurgy.bitumen.block.name=沥青块
 item.metallurgy.bitumen.name=沥青
 
 tile.metallurgy.potash.ore.name=碳酸钾矿
+tile.metallurgy.potash.block.name=碳酸钾块
 item.metallurgy.potash.name=碳酸钾
 
 tile.metallurgy.gold.brick.name=金砖
@@ -790,4 +796,8 @@ item.metallurgy.bucket.filled.desichalkos.molten.name=融化的虚空魂石桶
 item.metallurgy.bucket.filled.eximite.molten.name=融化的虚空石桶
 item.metallurgy.bucket.filled.meutoite.molten.name=融化的龙魂石桶
 
+#Misc Items and blocks
 item.metallurgy.fertilizer.name=施肥机
+item.metallurgy.tar.name=焦油
+
+tile.metallurgy.charcoal.block.name=木炭块
