@@ -148,7 +148,7 @@ public class MetalBlock extends Block
         if (haveDrops)
         {
             Random random = new Random();
-            int exp = random.nextInt(4 - 5 + 1) + 5;
+            int exp = random.nextInt(7 - 2 + 1) + 2;
             return exp;
         }
         // default
