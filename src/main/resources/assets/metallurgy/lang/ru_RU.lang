@@ -615,21 +615,27 @@ item.metallurgy.electrum.leggings.name=Электрумовые поножи
 item.metallurgy.electrum.boots.name=Электрумовые ботинки
 
 tile.metallurgy.sulfur.ore.name=Серная руда
+tile.metallurgy.sulfur.block.name=Серный блок
 item.metallurgy.sulfur.name=Сера
 
 tile.metallurgy.phosphorite.ore.name=Фосфоритовая руда
+tile.metallurgy.phosphorite.block.name=Фосфоритовый блок
 item.metallurgy.phosphorus.name=Фосфор
 
 tile.metallurgy.saltpeter.ore.name=Селитровая руда
+tile.metallurgy.saltpeter.block.name=Селитровый блок
 item.metallurgy.saltpeter.name=Селитра
 
 tile.metallurgy.magnesium.ore.name=Магниевая руда
+tile.metallurgy.magnesium.block.name=Магниевый блок
 item.metallurgy.magnesium.name=Магний
 
 tile.metallurgy.bitumen.ore.name=Битумная руда
+tile.metallurgy.bitumen.block.name=Битумный блок
 item.metallurgy.bitumen.name=Битум
 
 tile.metallurgy.potash.ore.name=Калийная руда
+tile.metallurgy.potash.block.name=Калийный блок
 item.metallurgy.potash.name=Калий
 
 tile.metallurgy.gold.brick.name=Золотые кирпичи
@@ -789,3 +795,9 @@ item.metallurgy.bucket.filled.tartarite.molten.name=Ведро расплавл�
 item.metallurgy.bucket.filled.desichalkos.molten.name=Ведро расплавленного дезихалькия
 item.metallurgy.bucket.filled.eximite.molten.name=Ведро расплавленного эксимита
 item.metallurgy.bucket.filled.meutoite.molten.name=Ведро расплавленного мьютвата
+
+#Misc Items and blocks
+item.metallurgy.fertilizer.name=Удобрение
+item.metallurgy.tar.name=Дёготь
+
+tile.metallurgy.charcoal.block.name=Блок древесного угля
