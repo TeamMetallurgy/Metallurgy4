@@ -32,8 +32,12 @@ import com.teammetallurgy.metallurgy.metals.ItemMetalBlock;
 import com.teammetallurgy.metallurgy.metals.MetalBlock;
 import com.teammetallurgy.metallurgy.metals.MetalSet;
 import com.teammetallurgy.metallurgy.metals.VanillaMetals;
+import com.teammetallurgy.metallurgy.tnt.BlockExplosive;
+import com.teammetallurgy.metallurgy.tnt.BlockExplosiveItem;
+import com.teammetallurgy.metallurgy.tnt.EntityExplosive;
 import com.teammetallurgy.metallurgycore.handlers.LogHandler;
 
+import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class BlockList
@@ -43,6 +47,7 @@ public class BlockList
     private static Block alloyer;
     private static Block forge;
     private static MetalBlock extraSorageBlock;
+    private static BlockExplosive explosive;
 
     private static Map<String, MetalSet> setList = new HashMap<String, MetalSet>();
     private static String[] setNames = { "base", "ender", "fantasy", "nether", "precious", "utility" };
@@ -91,6 +96,10 @@ public class BlockList
         BlockList.extraSorageBlock.setHarvestLevel("pickaxe", 0, 0);
         GameRegistry.registerBlock(BlockList.extraSorageBlock, ItemMetalBlock.class, "extra.storage.block");
 
+        BlockList.explosive = new BlockExplosive();
+        GameRegistry.registerBlock(BlockList.explosive, BlockExplosiveItem.class, "explosive");
+        // Explosive entity
+        EntityRegistry.registerModEntity(EntityExplosive.class, "explosiveEntity", 0, Metallurgy.instance, 64, 10, true);
     }
 
     private static void initMetalSets()
@@ -252,6 +261,11 @@ public class BlockList
     public static Block getExtraStorageBlock()
     {
         return extraSorageBlock;
+    }
+
+    public static Block getExplosive()
+    {
+        return explosive;
     }
 
 }

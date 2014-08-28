@@ -26,6 +26,11 @@ public class CommonProxy
 
     }
 
+    public void registerEntityRenderers()
+    {
+
+    }
+
     public void registerFuelHandlers()
     {
         GameRegistry.registerFuelHandler(new FuelHandler());

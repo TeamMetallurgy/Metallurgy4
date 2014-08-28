@@ -58,6 +58,7 @@ public class Metallurgy
         NetworkRegistry.INSTANCE.registerGuiHandler(Metallurgy.instance, new GUIHandlerMetallurgy());
         Metallurgy.proxy.registerTickHandlers();
         Metallurgy.proxy.registerBlockRenderers();
+        Metallurgy.proxy.registerEntityRenderers();
         Metallurgy.proxy.registerFuelHandlers();
         MinecraftForge.EVENT_BUS.register(new EventHandlerMetallurgy());
 
