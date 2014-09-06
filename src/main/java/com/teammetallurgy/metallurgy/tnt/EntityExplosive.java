@@ -11,6 +11,7 @@ public class EntityExplosive extends Entity
 {
     private byte fuse = 80;
     private byte type;
+    private byte updateTick = 0;
     private EntityLivingBase placedBy;
 
     public EntityExplosive(World world)
@@ -59,16 +60,20 @@ public class EntityExplosive extends Entity
     public void onUpdate()
     {
 
-        if (this.worldObj.isRemote)
+        if (this.worldObj.isRemote && this.dataWatcher.hasChanges())
         {
             this.fuse = this.dataWatcher.getWatchableObjectByte(2);
             this.type = this.dataWatcher.getWatchableObjectByte(3);
+            this.dataWatcher.func_111144_e();
         }
-        else
+
+        if (this.updateTick % 7 == 0 && !this.worldObj.isRemote)
         {
             this.dataWatcher.updateObject(2, this.fuse);
             this.dataWatcher.updateObject(3, this.type);
         }
+
+        this.updateTick++;
 
         this.prevPosX = this.posX;
         this.prevPosY = this.posY;
