@@ -796,6 +796,16 @@ item.metallurgy.bucket.filled.desichalkos.molten.name=Ведро расплав�
 item.metallurgy.bucket.filled.eximite.molten.name=Ведро расплавленного эксимита
 item.metallurgy.bucket.filled.meutoite.molten.name=Ведро расплавленного мьютвата
 
+#Explosive
+
+entity.Metallurgy.explosiveEntity.name=Воспламенённая взрывчатка
+
+tile.metallurgy.explosives.he.name=Мощная взрывчатка
+tile.metallurgy.explosives.le.name=Слабая взрывчатка
+tile.metallurgy.explosives.m.name=Взрывчатка шахтёров
+tile.metallurgy.explosives.de.name=Смертельная взрывчатка
+tile.metallurgy.explosives.pe.name=Точная взрывчатка
+
 #Misc Items and blocks
 item.metallurgy.fertilizer.name=Удобрение
 item.metallurgy.tar.name=Дёготь
