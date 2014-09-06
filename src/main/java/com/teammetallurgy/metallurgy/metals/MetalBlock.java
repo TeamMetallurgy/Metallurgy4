@@ -15,6 +15,7 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
+import com.teammetallurgy.metallurgy.BlockList;
 import com.teammetallurgy.metallurgy.Metallurgy;
 import com.teammetallurgy.metallurgy.handlers.ParticleHandler;
 
@@ -243,6 +244,21 @@ public class MetalBlock extends Block
     {
         int[] settings = { type, red, green, blue };
         this.particles.put(meta, settings);
+    }
+
+    @Override
+    public boolean isBeaconBase(IBlockAccess worldObj, int x, int y, int z, int beaconX, int beaconY, int beaconZ)
+    {
+        int meta = worldObj.getBlockMetadata(x, y, z);
+
+        Integer type = blockTypes.get(meta);
+
+        if (type == null || type.intValue() == 0 || this == BlockList.getExtraStorageBlock()) 
+        {
+            return false;
+        }
+
+        return true;
     }
 
 }
