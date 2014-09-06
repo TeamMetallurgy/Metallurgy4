@@ -796,6 +796,16 @@ item.metallurgy.bucket.filled.desichalkos.molten.name=Molten Desichalkos Bucket
 item.metallurgy.bucket.filled.eximite.molten.name=Molten Eximite Bucket
 item.metallurgy.bucket.filled.meutoite.molten.name=Molten Meutoite Bucket
 
+#Explosive
+
+entity.Metallurgy.explosiveEntity.name=Primed Explosives
+
+tile.metallurgy.explosives.he.name=High Explosives
+tile.metallurgy.explosives.le.name=Light Explosives
+tile.metallurgy.explosives.m.name=Miners Explosives
+tile.metallurgy.explosives.de.name=Death Explosives
+tile.metallurgy.explosives.pe.name=Precision Explosives
+
 #Misc Items and blocks
 item.metallurgy.fertilizer.name=Fertilizer
 item.metallurgy.tar.name=Tar
