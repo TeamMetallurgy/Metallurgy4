@@ -796,6 +796,16 @@ item.metallurgy.bucket.filled.desichalkos.molten.name=融化的虚空魂石桶
 item.metallurgy.bucket.filled.eximite.molten.name=融化的虚空石桶
 item.metallurgy.bucket.filled.meutoite.molten.name=融化的龙魂石桶
 
+#Explosive
+
+entity.Metallurgy.explosiveEntity.name=已装填炸药
+
+tile.metallurgy.explosives.he.name=高性能炸药
+tile.metallurgy.explosives.le.name=轻型炸药
+tile.metallurgy.explosives.m.name=矿工炸药
+tile.metallurgy.explosives.de.name=死亡炸药
+tile.metallurgy.explosives.pe.name=精准炸药
+
 #Misc Items and blocks
 item.metallurgy.fertilizer.name=施肥机
 item.metallurgy.tar.name=焦油
