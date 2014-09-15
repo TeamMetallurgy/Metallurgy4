@@ -122,6 +122,7 @@ public final class BotaniaAPI {
 		addOreWeight("oreUranium", 1337); // IC2
 		addOreWeight("oreVinteum", 5925); // Ars Magica
 		addOreWeight("oreYellorite", 3520); // Big Reactors
+		addOreWeight("oreZinc", 6485); // Flaxbeard's Steam Power
 
 		addSeed(Items.wheat_seeds, Blocks.wheat);
 		addSeed(Items.potato, Blocks.potatoes);
@@ -250,6 +251,13 @@ public final class BotaniaAPI {
 	 */
 	public static List<LexiconCategory> getAllCategories() {
 		return categories;
+	}
+
+	/**
+	 * Gets all registered entries.
+	 */
+	public static List<LexiconEntry> getAllEntries() {
+		return allEntries;
 	}
 
 	/**
