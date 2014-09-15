@@ -2,6 +2,7 @@ package com.teammetallurgy.metallurgy.metals;
 
 import java.util.ArrayList;
 
+import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
 import com.teammetallurgy.metallurgycore.handlers.LogHandler;
 
 import net.minecraft.init.Blocks;
@@ -18,12 +19,18 @@ public class MetalMaterials
 
     public void addRecipes()
     {
-        addRailRecipes();
-        addMidasiumRecipes();
-        addIronDustRecipes();
-        addBlazeRodRecipe();
-        addEnderPerlRecipe();
-        addGunpowderRecipe();
+        if (ConfigHandler.recipeEnabled("alternative_rails"))
+            addRailRecipes();
+        if (ConfigHandler.recipeEnabled("midasium_to_gold"))
+            addMidasiumRecipes();
+        if (ConfigHandler.recipeEnabled("alternative_iron_dust"))
+            addIronDustRecipes();
+        if (ConfigHandler.recipeEnabled("alternative_blaze_rod"))
+            addBlazeRodRecipe();
+        if (ConfigHandler.recipeEnabled("alternative_ender_perl"))
+            addEnderPerlRecipe();
+        if (ConfigHandler.recipeEnabled("alternative_gunpowder"))
+            addGunpowderRecipe();
     }
 
     private void addRailRecipes()
