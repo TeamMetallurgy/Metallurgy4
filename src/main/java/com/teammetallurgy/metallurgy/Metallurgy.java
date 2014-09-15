@@ -3,6 +3,7 @@ package com.teammetallurgy.metallurgy;
 import java.io.File;
 import java.io.IOException;
 
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 
 import com.teammetallurgy.metallurgy.handlers.BucketsHandler;
@@ -68,10 +69,10 @@ public class Metallurgy
     private void initTabs()
     {
         creativeTabMachines.setItem(BlockList.getAlloyer());
-        creativeTabBlocks.setItemStack(BlockList.getSet("ender").getBlock("Eximite"));
-        creativeTabItems.setItemStack(BlockList.getSet("nether").getIngot("Ceruclase"));
-        creativeTabTools.setItemStack(BlockList.getSet("base").getSword("Damascus Steel"));
-        creativeTabArmor.setItemStack(BlockList.getSet("fantasy").getHelmet("Tartarite"));
+        creativeTabBlocks.setItemStack(new ItemStack(BlockList.tabBlock));
+        creativeTabItems.setItemStack(new ItemStack(ItemList.tabItem));
+        creativeTabTools.setItemStack(new ItemStack(ItemList.tabItem,1,1));
+        creativeTabArmor.setItemStack(new ItemStack(ItemList.tabItem,1,2));
     }
 
     public String modsPath()

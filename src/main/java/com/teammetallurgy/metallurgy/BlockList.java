@@ -48,6 +48,7 @@ public class BlockList
     private static Block forge;
     private static MetalBlock extraSorageBlock;
     private static BlockExplosive explosive;
+    public static MetalBlock tabBlock;
 
     private static Map<String, MetalSet> setList = new HashMap<String, MetalSet>();
     private static String[] setNames = { "base", "ender", "fantasy", "nether", "precious", "utility" };
@@ -100,6 +101,11 @@ public class BlockList
         GameRegistry.registerBlock(BlockList.explosive, BlockExplosiveItem.class, "explosive");
         // Explosive entity
         EntityRegistry.registerModEntity(EntityExplosive.class, "explosiveEntity", 0, Metallurgy.instance, 64, 10, true);
+        
+        BlockList.tabBlock = new MetalBlock("tab.block");
+        BlockList.tabBlock.addSubBlock(0, "tab2", 1, "metallurgy:ender/eximite_block");
+        BlockList.tabBlock.setCreativeTab(null);
+        GameRegistry.registerBlock(BlockList.tabBlock, ItemMetalBlock.class, "tab.block");
     }
 
     private static void initMetalSets()
@@ -267,5 +273,6 @@ public class BlockList
     {
         return explosive;
     }
+    
 
 }

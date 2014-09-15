@@ -11,6 +11,7 @@ import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
 import com.teammetallurgy.metallurgy.items.ItemDrawer;
 import com.teammetallurgy.metallurgy.items.ItemFeritilizer;
 import com.teammetallurgy.metallurgy.items.ItemTar;
+import com.teammetallurgy.metallurgy.metals.MetalItem;
 import com.teammetallurgy.metallurgy.metals.VanillaMetals;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -20,6 +21,7 @@ public class ItemList
     public static Item drawer;
     public static Item fertilizer;
     public static Item tar;
+    public static MetalItem tabItem;
     public static boolean drawerEnabled = true;
     public static boolean fertilizerEnabled = true;
     public static boolean tarEnabled = true;
@@ -53,6 +55,12 @@ public class ItemList
             ItemList.tar = new ItemTar();
             ItemList.registerItem(ItemList.tar, "tar");
         }
+
+        ItemList.tabItem = new MetalItem("tab.item");
+        ItemList.registerItem(ItemList.tabItem, "tab.item");
+        ItemList.tabItem.addSubItem(0, "tab3", 0, "metallurgy:nether/ceruclase_ingot");
+        ItemList.tabItem.addSubItem(1, "tab4", 0, "metallurgy:base/damascus_steel_sword");
+        ItemList.tabItem.addSubItem(2, "tab5", 0, "metallurgy:fantasy/tartarite_helmet");
 
     }
 
