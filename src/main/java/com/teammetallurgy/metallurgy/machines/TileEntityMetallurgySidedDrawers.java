@@ -4,7 +4,6 @@ import net.minecraft.item.ItemStack;
 
 import com.teammetallurgy.metallurgy.ItemList;
 import com.teammetallurgy.metallurgy.items.ItemDrawer;
-import com.teammetallurgy.metallurgy.machines.crusher.TileEntityCrusher;
 import com.teammetallurgy.metallurgycore.machines.TileEntityMetallurgySided;
 
 public abstract class TileEntityMetallurgySidedDrawers extends TileEntityMetallurgySided

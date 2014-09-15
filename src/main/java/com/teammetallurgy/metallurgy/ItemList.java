@@ -58,6 +58,7 @@ public class ItemList
 
         ItemList.tabItem = new MetalItem("tab.item");
         ItemList.registerItem(ItemList.tabItem, "tab.item");
+        ItemList.tabItem.setCreativeTab(null);
         ItemList.tabItem.addSubItem(0, "tab3", 0, "metallurgy:nether/ceruclase_ingot");
         ItemList.tabItem.addSubItem(1, "tab4", 0, "metallurgy:base/damascus_steel_sword");
         ItemList.tabItem.addSubItem(2, "tab5", 0, "metallurgy:fantasy/tartarite_helmet");
