@@ -797,6 +797,16 @@ item.metallurgy.bucket.filled.desichalkos.molten.name=Secchio di desichalkos fus
 item.metallurgy.bucket.filled.eximite.molten.name=Secchio di eximite fuso
 item.metallurgy.bucket.filled.meutoite.molten.name=Secchio di meutoite fuso
 
+#Explosive
+
+entity.Metallurgy.explosiveEntity.name=Esplosivo attivato
+
+tile.metallurgy.explosives.he.name=Esplosivo alto
+tile.metallurgy.explosives.le.name=Esplosivo leggero
+tile.metallurgy.explosives.m.name=Esplosivo dello scavatore
+tile.metallurgy.explosives.de.name=Esplosivo della morte
+tile.metallurgy.explosives.pe.name=Esplosivo preciso
+
 #Misc Items and blocks
 item.metallurgy.fertilizer.name=Fertilizzante
 item.metallurgy.tar.name=Catrame
