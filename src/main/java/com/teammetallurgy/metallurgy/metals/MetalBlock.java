@@ -18,6 +18,7 @@ import net.minecraft.world.World;
 import com.teammetallurgy.metallurgy.BlockList;
 import com.teammetallurgy.metallurgy.Metallurgy;
 import com.teammetallurgy.metallurgy.handlers.ParticleHandler;
+import com.teammetallurgy.metallurgy.lib.Configs;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -213,7 +214,7 @@ public class MetalBlock extends Block
 
         int meta = world.getBlockMetadata(blockX, blockY, blockZ);
 
-        if (!this.particles.containsKey(meta)) { return; }
+        if (!this.particles.containsKey(meta) || !Configs.enabledOreParticles) { return; }
 
         int[] particle = this.particles.get(meta);
 

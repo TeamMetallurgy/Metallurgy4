@@ -11,6 +11,7 @@ import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
 import com.teammetallurgy.metallurgy.handlers.EventHandlerMetallurgy;
 import com.teammetallurgy.metallurgy.handlers.GUIHandlerMetallurgy;
 import com.teammetallurgy.metallurgy.integrations.Integration;
+import com.teammetallurgy.metallurgy.lib.Configs;
 import com.teammetallurgy.metallurgy.metals.MetalMaterials;
 import com.teammetallurgy.metallurgy.metals.VanillaMetals;
 import com.teammetallurgy.metallurgy.networking.CommonProxy;
@@ -107,6 +108,7 @@ public class Metallurgy
             this.modsFolder = (File) value;
         }
 
+        Configs.init();
         BlockList.init();
         ItemList.init();
         BucketsHandler.instance.init();

@@ -202,4 +202,13 @@ public class ConfigHandler
         return blockLevel;
     }
 
+    public static boolean clientEnabled(String key, boolean defaultValue)
+    {
+        boolean config = ConfigHandler.getBoolean("client", key, defaultValue);
+
+        ConfigHandler.saveChanges();
+
+        return config;
+    }
+
 }
