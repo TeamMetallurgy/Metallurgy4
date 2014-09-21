@@ -1,8 +1,8 @@
-itemGroup.Metallurgy.Machines=冶金机器
-itemGroup.Metallurgy.Blocks=冶金方块
-itemGroup.Metallurgy.Items=冶金物品
-itemGroup.Metallurgy.Tools=冶金工具
-itemGroup.Metallurgy.Armor=冶金装甲
+itemGroup.Metallurgy.Machines=冶金|机器
+itemGroup.Metallurgy.Blocks=冶金|方块
+itemGroup.Metallurgy.Items=冶金|物品
+itemGroup.Metallurgy.Tools=冶金|工具
+itemGroup.Metallurgy.Armor=冶金|装甲
 
 tile.machine.frame.name=机架
 
@@ -15,17 +15,17 @@ container.alloyer=合金炉
 tile.forge.name=熔炉
 container.forge=熔炉
 
-item.metallurgy.drawer.name=支票
-container.drawer=支票
+item.metallurgy.drawer.name=抽屉
+container.drawer=抽屉
 
-tooltip.metallurgy.drawer.stacks=堆叠: %d / %d
+tooltip.metallurgy.drawer.stacks=堆叠:%d/%d
 tooltip.metallurgy.hold.shift=按住[Shift]显示内容
-tooltip.metallurgy.tankinfo=名称: %s || 总容量: %d mB
+tooltip.metallurgy.tankinfo=名称: %s||总容量: %d mB
 
 enchantment.metallurgy.heal=治疗
 enchantment.metallurgy.unknown=未知附魔
 
-tile.metallurgy.copper.ore.name=铜矿
+tile.metallurgy.copper.ore.name=铜矿石
 tile.metallurgy.copper.block.name=铜块
 tile.metallurgy.copper.brick.name=铜砖
 item.metallurgy.copper.dust.name=铜粉
@@ -40,13 +40,13 @@ item.metallurgy.copper.chestplate.name=铜胸甲
 item.metallurgy.copper.leggings.name=铜护腿
 item.metallurgy.copper.boots.name=铜靴
 
-tile.metallurgy.tin.ore.name=锡矿
+tile.metallurgy.tin.ore.name=锡矿石
 tile.metallurgy.tin.block.name=锡块
 tile.metallurgy.tin.brick.name=锡砖
 item.metallurgy.tin.dust.name=锡粉
 item.metallurgy.tin.ingot.name=锡锭
 
-tile.metallurgy.manganese.ore.name=锰矿
+tile.metallurgy.manganese.ore.name=锰矿石
 tile.metallurgy.manganese.block.name=锰块
 tile.metallurgy.manganese.brick.name=锰砖
 item.metallurgy.manganese.dust.name=锰粉
@@ -66,19 +66,19 @@ item.metallurgy.bronze.chestplate.name=青铜胸甲
 item.metallurgy.bronze.leggings.name=青铜护腿
 item.metallurgy.bronze.boots.name=青铜靴
 
-tile.metallurgy.hepatizon.block.name=幽魂结晶块
-tile.metallurgy.hepatizon.brick.name=幽魂结晶砖
-item.metallurgy.hepatizon.dust.name=幽魂结晶粉
-item.metallurgy.hepatizon.ingot.name=幽魂结晶锭
-item.metallurgy.hepatizon.axe.name=幽魂结晶斧
-item.metallurgy.hepatizon.hoe.name=幽魂结晶锄
-item.metallurgy.hepatizon.pickaxe.name=幽魂结晶镐
-item.metallurgy.hepatizon.shovel.name=幽魂结晶铲
-item.metallurgy.hepatizon.sword.name=幽魂结晶剑
-item.metallurgy.hepatizon.helmet.name=幽魂结晶头盔
-item.metallurgy.hepatizon.chestplate.name=幽魂结晶胸甲
-item.metallurgy.hepatizon.leggings.name=幽魂结晶护腿
-item.metallurgy.hepatizon.boots.name=幽魂结晶靴
+tile.metallurgy.hepatizon.block.name=魂晶块
+tile.metallurgy.hepatizon.brick.name=魂晶砖
+item.metallurgy.hepatizon.dust.name=魂晶粉
+item.metallurgy.hepatizon.ingot.name=魂晶锭
+item.metallurgy.hepatizon.axe.name=魂晶斧
+item.metallurgy.hepatizon.hoe.name=魂晶锄
+item.metallurgy.hepatizon.pickaxe.name=魂晶镐
+item.metallurgy.hepatizon.shovel.name=魂晶铲
+item.metallurgy.hepatizon.sword.name=魂晶剑
+item.metallurgy.hepatizon.helmet.name=魂晶头盔
+item.metallurgy.hepatizon.chestplate.name=魂晶胸甲
+item.metallurgy.hepatizon.leggings.name=魂晶护腿
+item.metallurgy.hepatizon.boots.name=魂晶靴
 
 tile.metallurgy.damascus.steel.block.name=大马士革钢块
 tile.metallurgy.damascus.steel.brick.name=大马士革钢砖
@@ -108,7 +108,7 @@ item.metallurgy.angmallen.chestplate.name=金铁胸甲
 item.metallurgy.angmallen.leggings.name=金铁护腿
 item.metallurgy.angmallen.boots.name=金铁靴
 
-tile.metallurgy.steel.ore.name=钢矿
+tile.metallurgy.steel.ore.name=钢矿石
 tile.metallurgy.steel.block.name=钢块
 tile.metallurgy.steel.brick.name=钢砖
 item.metallurgy.steel.dust.name=钢粉
@@ -123,7 +123,7 @@ item.metallurgy.steel.chestplate.name=钢胸甲
 item.metallurgy.steel.leggings.name=钢护腿
 item.metallurgy.steel.boots.name=钢靴
 
-tile.metallurgy.eximite.ore.name=虚空石矿
+tile.metallurgy.eximite.ore.name=虚空石矿石
 tile.metallurgy.eximite.block.name=虚空石块
 tile.metallurgy.eximite.brick.name=虚空石砖
 item.metallurgy.eximite.dust.name=虚空石粉
@@ -138,7 +138,7 @@ item.metallurgy.eximite.chestplate.name=虚空石胸甲
 item.metallurgy.eximite.leggings.name=虚空石护腿
 item.metallurgy.eximite.boots.name=虚空石靴
 
-tile.metallurgy.meutoite.ore.name=龙魂石矿
+tile.metallurgy.meutoite.ore.name=龙魂石矿石
 tile.metallurgy.meutoite.block.name=龙魂石块
 tile.metallurgy.meutoite.brick.name=龙魂石砖
 item.metallurgy.meutoite.dust.name=龙魂石粉
@@ -158,7 +158,7 @@ item.metallurgy.desichalkos.chestplate.name=虚空魂石胸甲
 item.metallurgy.desichalkos.leggings.name=虚空魂石护腿
 item.metallurgy.desichalkos.boots.name=虚空魂石靴
 
-tile.metallurgy.prometheum.ore.name=幻金矿
+tile.metallurgy.prometheum.ore.name=幻金矿石
 tile.metallurgy.prometheum.block.name=幻金块
 tile.metallurgy.prometheum.brick.name=幻金砖
 item.metallurgy.prometheum.dust.name=幻金粉
@@ -173,7 +173,7 @@ item.metallurgy.prometheum.chestplate.name=幻金胸甲
 item.metallurgy.prometheum.leggings.name=幻金护腿
 item.metallurgy.prometheum.boots.name=幻金靴
 
-tile.metallurgy.deep.iron.ore.name=深铁矿
+tile.metallurgy.deep.iron.ore.name=深铁矿石
 tile.metallurgy.deep.iron.block.name=深铁块
 tile.metallurgy.deep.iron.brick.name=深铁砖
 item.metallurgy.deep.iron.dust.name=深铁粉
@@ -188,13 +188,13 @@ item.metallurgy.deep.iron.chestplate.name=深铁胸甲
 item.metallurgy.deep.iron.leggings.name=深铁护腿
 item.metallurgy.deep.iron.boots.name=深铁靴
 
-tile.metallurgy.infuscolium.ore.name=魔金矿
+tile.metallurgy.infuscolium.ore.name=魔金矿石
 tile.metallurgy.infuscolium.block.name=魔金块
 tile.metallurgy.infuscolium.brick.name=魔金砖
 item.metallurgy.infuscolium.dust.name=魔金粉
 item.metallurgy.infuscolium.ingot.name=魔金锭
 
-tile.metallurgy.black.steel.ore.name=黑钢矿
+tile.metallurgy.black.steel.ore.name=黑钢矿石
 tile.metallurgy.black.steel.block.name=黑钢块
 tile.metallurgy.black.steel.brick.name=黑钢砖
 item.metallurgy.black.steel.dust.name=黑钢粉
@@ -649,7 +649,7 @@ fluid.angmallen.molten=熔融金铁
 fluid.bronze.molten=熔融青铜
 fluid.copper.molten=熔融铜
 fluid.damascus.steel.molten=熔融大马士革钢
-fluid.hepatizon.molten=熔融幽魂结晶
+fluid.hepatizon.molten=熔融魂晶
 fluid.manganese.molten=熔融锰
 fluid.silver.molten=熔融钢
 fluid.tin.molten=熔融锡
@@ -699,7 +699,7 @@ tile.metallurgy.angmallen.molten.name=熔融金铁
 tile.metallurgy.bronze.molten.name=熔融青铜
 tile.metallurgy.copper.molten.name=熔融铜
 tile.metallurgy.damascus.steel.molten.name=熔融大马士革钢
-tile.metallurgy.hepatizon.molten.name=熔融幽魂结晶
+tile.metallurgy.hepatizon.molten.name=熔融魂晶
 tile.metallurgy.manganese.molten.name=熔融锰
 tile.metallurgy.steel.molten.name=熔融钢
 tile.metallurgy.tin.molten.name=熔融锡
@@ -750,7 +750,7 @@ item.metallurgy.bucket.filled.angmallen.molten.name=熔融金铁桶
 item.metallurgy.bucket.filled.bronze.molten.name=熔融青铜桶
 item.metallurgy.bucket.filled.copper.molten.name=熔融铜桶
 item.metallurgy.bucket.filled.damascus.steel.molten.name=熔融大马士革钢桶
-item.metallurgy.bucket.filled.hepatizon.molten.name=熔融幽魂结晶桶
+item.metallurgy.bucket.filled.hepatizon.molten.name=熔融魂晶桶
 item.metallurgy.bucket.filled.manganese.molten.name=熔融锰桶
 item.metallurgy.bucket.filled.steel.molten.name=熔融钢桶
 item.metallurgy.bucket.filled.tin.molten.name=熔融锡桶
@@ -802,7 +802,7 @@ entity.Metallurgy.explosiveEntity.name=已装填炸药
 
 tile.metallurgy.explosives.he.name=高性能炸药
 tile.metallurgy.explosives.le.name=轻型炸药
-tile.metallurgy.explosives.m.name=矿石工炸药
+tile.metallurgy.explosives.m.name=矿工炸药
 tile.metallurgy.explosives.de.name=死亡炸药
 tile.metallurgy.explosives.pe.name=精准炸药
 
