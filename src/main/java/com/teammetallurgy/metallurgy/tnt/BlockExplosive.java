@@ -135,7 +135,7 @@ public class BlockExplosive extends BlockTNT
     }
 
     @Override
-    public void onBlockDestroyedByExplosion(World world, int xPos, int yPos, int zPos, Explosion explosion)
+    public void onBlockExploded(World world, int xPos, int yPos, int zPos, Explosion explosion)
     {
         if (!world.isRemote)
         {
@@ -146,6 +146,13 @@ public class BlockExplosive extends BlockTNT
             entityExplosive.setFuse(fuseLength);
             world.spawnEntityInWorld(entityExplosive);
         }
+        super.onBlockExploded(world, xPos, yPos, zPos, explosion);
+    }
+    
+    @Override
+    public void onBlockDestroyedByExplosion(World world, int xPos, int yPos, int zPos, Explosion explosion)
+    {
+        // Overriding to disable
     }
 
     @Override
