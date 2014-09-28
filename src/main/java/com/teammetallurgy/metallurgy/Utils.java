@@ -5,6 +5,7 @@ import java.util.List;
 
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
+import net.minecraftforge.oredict.ShapelessOreRecipe;
 
 import com.teammetallurgy.metallurgy.recipes.AlloyerRecipes;
 import com.teammetallurgy.metallurgy.recipes.CrusherRecipes;
@@ -39,7 +40,7 @@ public class Utils
                     outputStack.stackSize = 2;
                     if (!isAlloyerRequired)
                     {
-                        GameRegistry.addShapelessRecipe(outputStack, itemStack, otherItemStack);
+                        GameRegistry.addRecipe(new ShapelessOreRecipe(outputStack, ore1, ore2));
                     }
                 }
 
