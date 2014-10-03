@@ -134,6 +134,7 @@ public class BlockExplosive extends BlockTNT
         }
     }
 
+    // Overridden instead of onBlockDestroyedByExplosion to get the meta before the block gets destroyed
     @Override
     public void onBlockExploded(World world, int xPos, int yPos, int zPos, Explosion explosion)
     {

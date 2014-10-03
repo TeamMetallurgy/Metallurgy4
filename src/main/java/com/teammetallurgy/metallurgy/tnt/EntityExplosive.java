@@ -110,7 +110,35 @@ public class EntityExplosive extends Entity
 
     private void explode()
     {
-        this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, 4.0F, true);
+        switch (this.type)
+        {
+            case 0:
+            {
+                // High Explosive
+                this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, 20.0F, true);
+                break;
+            }
+            case 1:
+            {
+                //Light Explosive
+                
+            }
+            case 2:
+            {
+                // Miners Explosive
+            }
+            case 3:
+            {
+                // Death Explosive
+            }
+            case 4:
+            {
+                // Precision Explosives
+            }
+            default:
+                this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, 4.0F, true);
+        }
+        
     }
 
     public EntityLivingBase getTntPlacedBy()
