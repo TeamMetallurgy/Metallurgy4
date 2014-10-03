@@ -32,8 +32,8 @@ public class Metallurgy
 {
     public static final String MODNAME = "Metallurgy";
     public static final String MODID = "Metallurgy";
-    public static final String VERSION = "4.0.4";
-    public static final String DEPS = "required-after:MetallurgyCore@[4.0.3,];before:UndergroundBiomes;after:Botania;after:TConstruct";
+    public static final String VERSION = "4.0.5";
+    public static final String DEPS = "required-after:MetallurgyCore@[4.0.4,];before:UndergroundBiomes;after:Botania;after:TConstruct";
 
     @Mod.Instance(Metallurgy.MODID)
     public static Metallurgy instance;
