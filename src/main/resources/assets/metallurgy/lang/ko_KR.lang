@@ -1,5 +1,5 @@
 itemGroup.Metallurgy.Machines=메탈러지 기계[Metallurgy Machines]
-itemGroup.Metallurgy.블럭s=메탈러지 블럭[Metallurgy 블럭s]
+itemGroup.Metallurgy.Blocks=메탈러지 블럭[Metallurgy Blocks]
 itemGroup.Metallurgy.Items=메탈러지 아이템[Metallurgy Items]
 itemGroup.Metallurgy.Tools=메탈러지 도구[Metallurgy Tools]
 itemGroup.Metallurgy.Armor=메탈러지 갑옷[Metallurgy Armor]
@@ -22,8 +22,8 @@ tooltip.metallurgy.drawer.stacks=Stacks: %d / %d
 tooltip.metallurgy.hold.shift=Hold [Shift] to display contents
 tooltip.metallurgy.tankinfo=Name: %s || Amount: %d mB
 
-enchantment.metallurgy.heal=Heal
-enchantment.metallurgy.unknown=Unknown enchantment
+enchantment.metallurgy.heal=힐
+enchantment.metallurgy.unknown=알수없는 마법부여
 
 tile.metallurgy.copper.ore.name=구리 광석
 tile.metallurgy.copper.block.name=구리 블럭
