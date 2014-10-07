@@ -1,0 +1,813 @@
+itemGroup.Metallurgy.Machines=메탈러지 기계[Metallurgy Machines]
+itemGroup.Metallurgy.Blocks=메탈러지 블럭[Metallurgy Blocks]
+itemGroup.Metallurgy.Items=메탈러지 아이템[Metallurgy Items]
+itemGroup.Metallurgy.Tools=메탈러지 도구[Metallurgy Tools]
+itemGroup.Metallurgy.Armor=메탈러지 갑옷[Metallurgy Armor]
+
+tile.machine.frame.name=기계 틀
+
+tile.crusher.name=분쇄기
+container.crusher=분쇄기
+
+tile.alloyer.name=합금기
+container.alloyer=합금기
+
+tile.forge.name=용광로
+container.forge=용광로
+
+item.metallurgy.drawer.name=Drawer
+container.drawer=Drawer
+
+tooltip.metallurgy.drawer.stacks=Stacks: %d / %d
+tooltip.metallurgy.hold.shift=Hold [Shift] to display contents
+tooltip.metallurgy.tankinfo=Name: %s || Amount: %d mB
+
+enchantment.metallurgy.heal=힐
+enchantment.metallurgy.unknown=알수없는 마법부여
+
+tile.metallurgy.copper.ore.name=구리 광석
+tile.metallurgy.copper.block.name=구리 블럭
+tile.metallurgy.copper.brick.name=구리 벽돌
+item.metallurgy.copper.dust.name=구리 가루
+item.metallurgy.copper.ingot.name=구리 주괴
+item.metallurgy.copper.axe.name=구리 도끼
+item.metallurgy.copper.hoe.name=구리 괭이
+item.metallurgy.copper.pickaxe.name=구리 곡괭이
+item.metallurgy.copper.shovel.name=구리 삽
+item.metallurgy.copper.sword.name=구리 검
+item.metallurgy.copper.helmet.name=구리 투구
+item.metallurgy.copper.chestplate.name=구리 갑옷
+item.metallurgy.copper.leggings.name=구리 레깅스
+item.metallurgy.copper.boots.name=구리 부츠
+
+tile.metallurgy.tin.ore.name=주석 광석
+tile.metallurgy.tin.block.name=주석 블럭
+tile.metallurgy.tin.brick.name=주석 벽돌
+item.metallurgy.tin.dust.name=주석 가루
+item.metallurgy.tin.ingot.name=주석 주괴
+
+tile.metallurgy.manganese.ore.name=망간 광석
+tile.metallurgy.manganese.block.name=망간 블럭
+tile.metallurgy.manganese.brick.name=망간 벽돌
+item.metallurgy.manganese.dust.name=망간 가루
+item.metallurgy.manganese.ingot.name=망간 주괴
+
+tile.metallurgy.bronze.block.name=청동 블럭
+tile.metallurgy.bronze.brick.name=청동 벽돌
+item.metallurgy.bronze.dust.name=청동 가루
+item.metallurgy.bronze.ingot.name=청동 주괴
+item.metallurgy.bronze.axe.name=청동 도끼
+item.metallurgy.bronze.hoe.name=청동 괭이
+item.metallurgy.bronze.pickaxe.name=청동 곡괭이
+item.metallurgy.bronze.shovel.name=청동 삽
+item.metallurgy.bronze.sword.name=청동 검
+item.metallurgy.bronze.helmet.name=청동 투구
+item.metallurgy.bronze.chestplate.name=청동 갑옷
+item.metallurgy.bronze.leggings.name=청동 레깅스
+item.metallurgy.bronze.boots.name=청동 부츠
+
+tile.metallurgy.hepatizon.block.name=헤퍼타이전 블럭
+tile.metallurgy.hepatizon.brick.name=헤퍼타이전 벽돌
+item.metallurgy.hepatizon.dust.name=헤퍼타이전 가루
+item.metallurgy.hepatizon.ingot.name=헤퍼타이전 주괴
+item.metallurgy.hepatizon.axe.name=헤퍼타이전 도끼
+item.metallurgy.hepatizon.hoe.name=헤퍼타이전 괭이
+item.metallurgy.hepatizon.pickaxe.name=헤퍼타이전 곡괭이
+item.metallurgy.hepatizon.shovel.name=헤퍼타이전 삽
+item.metallurgy.hepatizon.sword.name=헤퍼타이전 검
+item.metallurgy.hepatizon.helmet.name=헤퍼타이전 투구
+item.metallurgy.hepatizon.chestplate.name=헤퍼타이전 갑옷
+item.metallurgy.hepatizon.leggings.name=헤퍼타이전 레깅스
+item.metallurgy.hepatizon.boots.name=헤퍼타이전 부츠
+
+tile.metallurgy.damascus.steel.block.name=다마스커스강 블럭
+tile.metallurgy.damascus.steel.brick.name=다마스커스강 벽돌
+item.metallurgy.damascus.steel.dust.name=다마스커스강 가루
+item.metallurgy.damascus.steel.ingot.name=다마스커스강 주괴
+item.metallurgy.damascus.steel.axe.name=다마스커스강 도끼
+item.metallurgy.damascus.steel.hoe.name=다마스커스강 괭이
+item.metallurgy.damascus.steel.pickaxe.name=다마스커스강 곡괭이
+item.metallurgy.damascus.steel.shovel.name=다마스커스강 삽
+item.metallurgy.damascus.steel.sword.name=다마스커스강 검
+item.metallurgy.damascus.steel.helmet.name=다마스커스강 투구
+item.metallurgy.damascus.steel.chestplate.name=다마스커스강 갑옷
+item.metallurgy.damascus.steel.leggings.name=다마스커스강 레깅스
+item.metallurgy.damascus.steel.boots.name=다마스커스강 부츠
+
+tile.metallurgy.angmallen.block.name=앙말렌 블럭
+tile.metallurgy.angmallen.brick.name=앙말렌 벽돌
+item.metallurgy.angmallen.dust.name=앙말렌 가루
+item.metallurgy.angmallen.ingot.name=앙말렌 주괴
+item.metallurgy.angmallen.axe.name=앙말렌 도끼
+item.metallurgy.angmallen.hoe.name=앙말렌 괭이
+item.metallurgy.angmallen.pickaxe.name=앙말렌 곡괭이
+item.metallurgy.angmallen.shovel.name=앙말렌 삽
+item.metallurgy.angmallen.sword.name=앙말렌 검
+item.metallurgy.angmallen.helmet.name=앙말렌 투구
+item.metallurgy.angmallen.chestplate.name=앙말렌 갑옷
+item.metallurgy.angmallen.leggings.name=앙말렌 레깅스
+item.metallurgy.angmallen.boots.name=앙말렌 부츠
+
+tile.metallurgy.steel.ore.name=강철 광석
+tile.metallurgy.steel.block.name=강철 블럭
+tile.metallurgy.steel.brick.name=강철 벽돌
+item.metallurgy.steel.dust.name=강철 가루
+item.metallurgy.steel.ingot.name=강철 주괴
+item.metallurgy.steel.axe.name=강철 도끼
+item.metallurgy.steel.hoe.name=강철 괭이
+item.metallurgy.steel.pickaxe.name=강철 곡괭이
+item.metallurgy.steel.shovel.name=강철 삽
+item.metallurgy.steel.sword.name=강철 검
+item.metallurgy.steel.helmet.name=강철 투구
+item.metallurgy.steel.chestplate.name=강철 갑옷
+item.metallurgy.steel.leggings.name=강철 레깅스
+item.metallurgy.steel.boots.name=강철 부츠
+
+tile.metallurgy.eximite.ore.name=엑시마이트 광석
+tile.metallurgy.eximite.block.name=엑시마이트 블럭
+tile.metallurgy.eximite.brick.name=엑시마이트 벽돌
+item.metallurgy.eximite.dust.name=엑시마이트 가루
+item.metallurgy.eximite.ingot.name=엑시마이트 주괴
+item.metallurgy.eximite.axe.name=엑시마이트 도끼
+item.metallurgy.eximite.hoe.name=엑시마이트 괭이
+item.metallurgy.eximite.pickaxe.name=엑시마이트 곡괭이
+item.metallurgy.eximite.shovel.name=엑시마이트 삽
+item.metallurgy.eximite.sword.name=엑시마이트 검
+item.metallurgy.eximite.helmet.name=엑시마이트 투구
+item.metallurgy.eximite.chestplate.name=엑시마이트 갑옷
+item.metallurgy.eximite.leggings.name=엑시마이트 레깅스
+item.metallurgy.eximite.boots.name=엑시마이트 부츠
+
+tile.metallurgy.meutoite.ore.name=뮤타이트 광석
+tile.metallurgy.meutoite.block.name=뮤타이트 블럭
+tile.metallurgy.meutoite.brick.name=뮤타이트 벽돌
+item.metallurgy.meutoite.dust.name=뮤타이트 가루
+item.metallurgy.meutoite.ingot.name=뮤타이트 주괴
+
+tile.metallurgy.desichalkos.block.name=디사이찰코스 블럭
+tile.metallurgy.desichalkos.brick.name=디사이찰코스 벽돌
+item.metallurgy.desichalkos.dust.name=디사이찰코스 가루
+item.metallurgy.desichalkos.ingot.name=디사이찰코스 주괴
+item.metallurgy.desichalkos.axe.name=디사이찰코스 도끼
+item.metallurgy.desichalkos.hoe.name=디사이찰코스 괭이
+item.metallurgy.desichalkos.pickaxe.name=디사이찰코스 곡괭이
+item.metallurgy.desichalkos.shovel.name=디사이찰코스 삽
+item.metallurgy.desichalkos.sword.name=디사이찰코스 검
+item.metallurgy.desichalkos.helmet.name=디사이찰코스 투구
+item.metallurgy.desichalkos.chestplate.name=디사이찰코스 갑옷
+item.metallurgy.desichalkos.leggings.name=디사이찰코스 레깅스
+item.metallurgy.desichalkos.boots.name=디사이찰코스 부츠
+
+tile.metallurgy.prometheum.ore.name=프로메듐 광석
+tile.metallurgy.prometheum.block.name=프로메듐 블럭
+tile.metallurgy.prometheum.brick.name=프로메듐 벽돌
+item.metallurgy.prometheum.dust.name=프로메듐 가루
+item.metallurgy.prometheum.ingot.name=프로메듐 주괴
+item.metallurgy.prometheum.axe.name=프로메듐 도끼
+item.metallurgy.prometheum.hoe.name=프로메듐 괭이
+item.metallurgy.prometheum.pickaxe.name=프로메듐 곡괭이
+item.metallurgy.prometheum.shovel.name=프로메듐 삽
+item.metallurgy.prometheum.sword.name=프로메듐 검
+item.metallurgy.prometheum.helmet.name=프로메듐 투구
+item.metallurgy.prometheum.chestplate.name=프로메듐 갑옷
+item.metallurgy.prometheum.leggings.name=프로메듐 레깅스
+item.metallurgy.prometheum.boots.name=프로메듐 부츠
+
+tile.metallurgy.deep.iron.ore.name=짙은 철 광석
+tile.metallurgy.deep.iron.block.name=짙은 철 블럭
+tile.metallurgy.deep.iron.brick.name=짙은 철 벽돌
+item.metallurgy.deep.iron.dust.name=짙은 철 가루
+item.metallurgy.deep.iron.ingot.name=짙은 철 주괴
+item.metallurgy.deep.iron.axe.name=짙은 철 도끼
+item.metallurgy.deep.iron.hoe.name=짙은 철 괭이
+item.metallurgy.deep.iron.pickaxe.name=짙은 철 곡괭이
+item.metallurgy.deep.iron.shovel.name=짙은 철 삽
+item.metallurgy.deep.iron.sword.name=짙은 철 검
+item.metallurgy.deep.iron.helmet.name=짙은 철 투구
+item.metallurgy.deep.iron.chestplate.name=짙은 철 갑옷
+item.metallurgy.deep.iron.leggings.name=짙은 철 레깅스
+item.metallurgy.deep.iron.boots.name=짙은 철 부츠
+
+tile.metallurgy.infuscolium.ore.name=인퓨솔롬 광석
+tile.metallurgy.infuscolium.block.name=인퓨솔롬 블럭
+tile.metallurgy.infuscolium.brick.name=인퓨솔롬 벽돌
+item.metallurgy.infuscolium.dust.name=인퓨솔롬 가루
+item.metallurgy.infuscolium.ingot.name=인퓨솔롬 주괴
+
+tile.metallurgy.black.steel.ore.name=검은 강철 광석
+tile.metallurgy.black.steel.block.name=검은 강철 블럭
+tile.metallurgy.black.steel.brick.name=검은 강철 벽돌
+item.metallurgy.black.steel.dust.name=검은 강철 가루
+item.metallurgy.black.steel.ingot.name=검은 강철 주괴
+item.metallurgy.black.steel.axe.name=검은 강철 도끼
+item.metallurgy.black.steel.hoe.name=검은 강철 괭이
+item.metallurgy.black.steel.pickaxe.name=검은 강철 곡괭이
+item.metallurgy.black.steel.shovel.name=검은 강철 삽
+item.metallurgy.black.steel.sword.name=검은 강철 검
+item.metallurgy.black.steel.helmet.name=검은 강철 투구
+item.metallurgy.black.steel.chestplate.name=검은 강철 갑옷
+item.metallurgy.black.steel.leggings.name=검은 강철 레깅스
+item.metallurgy.black.steel.boots.name=검은 강철 부츠
+
+tile.metallurgy.oureclase.ore.name=오리클레이즈 광석
+tile.metallurgy.oureclase.block.name=오리클레이즈 블럭
+tile.metallurgy.oureclase.brick.name=오리클레이즈 벽돌
+item.metallurgy.oureclase.dust.name=오리클레이즈 가루
+item.metallurgy.oureclase.ingot.name=오리클레이즈 주괴
+item.metallurgy.oureclase.axe.name=오리클레이즈 도끼
+item.metallurgy.oureclase.hoe.name=오리클레이즈 괭이
+item.metallurgy.oureclase.pickaxe.name=오리클레이즈 곡괭이
+item.metallurgy.oureclase.shovel.name=오리클레이즈 삽
+item.metallurgy.oureclase.sword.name=오리클레이즈 검
+item.metallurgy.oureclase.helmet.name=오리클레이즈 투구
+item.metallurgy.oureclase.chestplate.name=오리클레이즈 갑옷
+item.metallurgy.oureclase.leggings.name=오리클레이즈 레깅스
+item.metallurgy.oureclase.boots.name=오리클레이즈 부츠
+
+tile.metallurgy.astral.silver.ore.name=아스트랄 실버 광석
+tile.metallurgy.astral.silver.block.name=아스트랄 실버 블럭
+tile.metallurgy.astral.silver.brick.name=아스트랄 실버 벽돌
+item.metallurgy.astral.silver.dust.name=아스트랄 실버 가루
+item.metallurgy.astral.silver.ingot.name=아스트랄 실버 주괴
+item.metallurgy.astral.silver.axe.name=아스트랄 실버 도끼
+item.metallurgy.astral.silver.hoe.name=아스트랄 실버 괭이
+item.metallurgy.astral.silver.pickaxe.name=아스트랄 실버 곡괭이
+item.metallurgy.astral.silver.shovel.name=아스트랄 실버 삽
+item.metallurgy.astral.silver.sword.name=아스트랄 실버 검
+item.metallurgy.astral.silver.helmet.name=아스트랄 실버 투구
+item.metallurgy.astral.silver.chestplate.name=아스트랄 실버 갑옷
+item.metallurgy.astral.silver.leggings.name=아스트랄 실버 레깅스
+item.metallurgy.astral.silver.boots.name=아스트랄 실버 부츠
+
+tile.metallurgy.carmot.ore.name=카못 광석
+tile.metallurgy.carmot.block.name=카못 블럭
+tile.metallurgy.carmot.brick.name=카못 벽돌
+item.metallurgy.carmot.dust.name=카못 가루
+item.metallurgy.carmot.ingot.name=카못 주괴
+item.metallurgy.carmot.axe.name=카못 도끼
+item.metallurgy.carmot.hoe.name=카못 괭이
+item.metallurgy.carmot.pickaxe.name=카못 곡괭이
+item.metallurgy.carmot.shovel.name=카못 삽
+item.metallurgy.carmot.sword.name=카못 검
+item.metallurgy.carmot.helmet.name=카못 투구
+item.metallurgy.carmot.chestplate.name=카못 갑옷
+item.metallurgy.carmot.leggings.name=카못 레깅스
+item.metallurgy.carmot.boots.name=카못 부츠
+
+tile.metallurgy.mithril.ore.name=미스릴 광석
+tile.metallurgy.mithril.block.name=미스릴 블럭
+tile.metallurgy.mithril.brick.name=미스릴 벽돌
+item.metallurgy.mithril.dust.name=미스릴 가루
+item.metallurgy.mithril.ingot.name=미스릴 주괴
+item.metallurgy.mithril.axe.name=미스릴 도끼
+item.metallurgy.mithril.hoe.name=미스릴 괭이
+item.metallurgy.mithril.pickaxe.name=미스릴 곡괭이
+item.metallurgy.mithril.shovel.name=미스릴 삽
+item.metallurgy.mithril.sword.name=미스릴 검
+item.metallurgy.mithril.helmet.name=미스릴 투구
+item.metallurgy.mithril.chestplate.name=미스릴 갑옷
+item.metallurgy.mithril.leggings.name=미스릴 레깅스
+item.metallurgy.mithril.boots.name=미스릴 부츠
+
+tile.metallurgy.rubracium.ore.name=러브카키엄 광석
+tile.metallurgy.rubracium.block.name=러브카키엄 블럭
+tile.metallurgy.rubracium.brick.name=러브카키엄 벽돌
+item.metallurgy.rubracium.dust.name=러브카키엄 가루
+item.metallurgy.rubracium.ingot.name=러브카키엄 주괴
+
+tile.metallurgy.quicksilver.block.name=수은 블럭
+tile.metallurgy.quicksilver.brick.name=수은 벽돌
+item.metallurgy.quicksilver.dust.name=수은 가루
+item.metallurgy.quicksilver.ingot.name=수은 주괴
+item.metallurgy.quicksilver.axe.name=수은 도끼
+item.metallurgy.quicksilver.hoe.name=수은 괭이
+item.metallurgy.quicksilver.pickaxe.name=수은 곡괭이
+item.metallurgy.quicksilver.shovel.name=수은 삽
+item.metallurgy.quicksilver.sword.name=수은 검
+item.metallurgy.quicksilver.helmet.name=수은 투구
+item.metallurgy.quicksilver.chestplate.name=수은 갑옷
+item.metallurgy.quicksilver.leggings.name=수은 레깅스
+item.metallurgy.quicksilver.boots.name=수은 부츠
+
+tile.metallurgy.haderoth.block.name=하더라드 블럭
+tile.metallurgy.haderoth.brick.name=하더라드 벽돌
+item.metallurgy.haderoth.dust.name=하더라드 가루
+item.metallurgy.haderoth.ingot.name=하더라드 주괴
+item.metallurgy.haderoth.axe.name=하더라드 도끼
+item.metallurgy.haderoth.hoe.name=하더라드 괭이
+item.metallurgy.haderoth.pickaxe.name=하더라드 곡괭이
+item.metallurgy.haderoth.shovel.name=하더라드 삽
+item.metallurgy.haderoth.sword.name=하더라드 검
+item.metallurgy.haderoth.helmet.name=하더라드 투구
+item.metallurgy.haderoth.chestplate.name=하더라드 갑옷
+item.metallurgy.haderoth.leggings.name=하더라드 레깅스
+item.metallurgy.haderoth.boots.name=하더라드 부츠
+
+tile.metallurgy.orichalcum.ore.name=오리하르콘 광석
+tile.metallurgy.orichalcum.block.name=오리하르콘 블럭
+tile.metallurgy.orichalcum.brick.name=오리하르콘 벽돌
+item.metallurgy.orichalcum.dust.name=오리하르콘 가루
+item.metallurgy.orichalcum.ingot.name=오리하르콘 주괴
+item.metallurgy.orichalcum.axe.name=오리하르콘 도끼
+item.metallurgy.orichalcum.hoe.name=오리하르콘 괭이
+item.metallurgy.orichalcum.pickaxe.name=오리하르콘 곡괭이
+item.metallurgy.orichalcum.shovel.name=오리하르콘 삽
+item.metallurgy.orichalcum.sword.name=오리하르콘 검
+item.metallurgy.orichalcum.helmet.name=오리하르콘 투구
+item.metallurgy.orichalcum.chestplate.name=오리하르콘 갑옷
+item.metallurgy.orichalcum.leggings.name=오리하르콘 레깅스
+item.metallurgy.orichalcum.boots.name=오리하르콘 부츠
+
+tile.metallurgy.celenegil.block.name=킬리니자일 블럭
+tile.metallurgy.celenegil.brick.name=킬리니자일 벽돌
+item.metallurgy.celenegil.dust.name=킬리니자일 가루
+item.metallurgy.celenegil.ingot.name=킬리니자일 주괴
+item.metallurgy.celenegil.axe.name=킬리니자일 도끼
+item.metallurgy.celenegil.hoe.name=킬리니자일 괭이
+item.metallurgy.celenegil.pickaxe.name=킬리니자일 곡괭이
+item.metallurgy.celenegil.shovel.name=킬리니자일 삽
+item.metallurgy.celenegil.sword.name=킬리니자일 검
+item.metallurgy.celenegil.helmet.name=킬리니자일 투구
+item.metallurgy.celenegil.chestplate.name=킬리니자일 갑옷
+item.metallurgy.celenegil.leggings.name=킬리니자일 레깅스
+item.metallurgy.celenegil.boots.name=킬리니자일 부츠
+
+tile.metallurgy.adamantine.ore.name=아다만탄티움 광석
+tile.metallurgy.adamantine.block.name=아다만탄티움 블럭
+tile.metallurgy.adamantine.brick.name=아다만탄티움 벽돌
+item.metallurgy.adamantine.dust.name=아다만탄티움 가루
+item.metallurgy.adamantine.ingot.name=아다만탄티움 주괴
+item.metallurgy.adamantine.axe.name=아다만탄티움 도끼
+item.metallurgy.adamantine.hoe.name=아다만탄티움 괭이
+item.metallurgy.adamantine.pickaxe.name=아다만탄티움 곡괭이
+item.metallurgy.adamantine.shovel.name=아다만탄티움 삽
+item.metallurgy.adamantine.sword.name=아다만탄티움 검
+item.metallurgy.adamantine.helmet.name=아다만탄티움 투구
+item.metallurgy.adamantine.chestplate.name=아다만탄티움 갑옷
+item.metallurgy.adamantine.leggings.name=아다만탄티움 레깅스
+item.metallurgy.adamantine.boots.name=아다만탄티움 부츠
+
+tile.metallurgy.atlarus.ore.name=아틀라러스 광석
+tile.metallurgy.atlarus.block.name=아틀라러스 블럭
+tile.metallurgy.atlarus.brick.name=아틀라러스 벽돌
+item.metallurgy.atlarus.dust.name=아틀라러스 가루
+item.metallurgy.atlarus.ingot.name=아틀라러스 주괴
+item.metallurgy.atlarus.axe.name=아틀라러스 도끼
+item.metallurgy.atlarus.hoe.name=아틀라러스 괭이
+item.metallurgy.atlarus.pickaxe.name=아틀라러스 곡괭이
+item.metallurgy.atlarus.shovel.name=아틀라러스 삽
+item.metallurgy.atlarus.sword.name=아틀라러스 검
+item.metallurgy.atlarus.helmet.name=아틀라러스 투구
+item.metallurgy.atlarus.chestplate.name=아틀라러스 갑옷
+item.metallurgy.atlarus.leggings.name=아틀라러스 레깅스
+item.metallurgy.atlarus.boots.name=아틀라러스 부츠
+
+tile.metallurgy.tartarite.block.name=탈타라이트 블럭
+tile.metallurgy.tartarite.brick.name=탈타라이트 벽돌
+item.metallurgy.tartarite.dust.name=탈타라이트 가루
+item.metallurgy.tartarite.ingot.name=탈타라이트 주괴
+item.metallurgy.tartarite.axe.name=탈타라이트 도끼
+item.metallurgy.tartarite.hoe.name=탈타라이트 괭이
+item.metallurgy.tartarite.pickaxe.name=탈타라이트 곡괭이
+item.metallurgy.tartarite.shovel.name=탈타라이트 삽
+item.metallurgy.tartarite.sword.name=탈타라이트 검
+item.metallurgy.tartarite.helmet.name=탈타라이트 투구
+item.metallurgy.tartarite.chestplate.name=탈타라이트 갑옷
+item.metallurgy.tartarite.leggings.name=탈타라이트 레깅스
+item.metallurgy.tartarite.boots.name=탈타라이트 부츠
+
+tile.metallurgy.ignatius.ore.name=이그나티우스 광석
+tile.metallurgy.ignatius.block.name=이그나티우스 블럭
+tile.metallurgy.ignatius.brick.name=이그나티우스 벽돌
+item.metallurgy.ignatius.dust.name=이그나티우스 가루
+item.metallurgy.ignatius.ingot.name=이그나티우스 주괴
+item.metallurgy.ignatius.axe.name=이그나티우스 도끼
+item.metallurgy.ignatius.hoe.name=이그나티우스 괭이
+item.metallurgy.ignatius.pickaxe.name=이그나티우스 곡괭이
+item.metallurgy.ignatius.shovel.name=이그나티우스 삽
+item.metallurgy.ignatius.sword.name=이그나티우스 검
+item.metallurgy.ignatius.helmet.name=이그나티우스 투구
+item.metallurgy.ignatius.chestplate.name=이그나티우스 갑옷
+item.metallurgy.ignatius.leggings.name=이그나티우스 레깅스
+item.metallurgy.ignatius.boots.name=이그나티우스 부츠
+
+tile.metallurgy.shadow.iron.ore.name=그림자 철 광석
+tile.metallurgy.shadow.iron.block.name=그림자 철 블럭
+tile.metallurgy.shadow.iron.brick.name=그림자 철 벽돌
+item.metallurgy.shadow.iron.dust.name=그림자 철 가루
+item.metallurgy.shadow.iron.ingot.name=그림자 철 주괴
+item.metallurgy.shadow.iron.axe.name=그림자 철 도끼
+item.metallurgy.shadow.iron.hoe.name=그림자 철 괭이
+item.metallurgy.shadow.iron.pickaxe.name=그림자 철 곡괭이
+item.metallurgy.shadow.iron.shovel.name=그림자 철 삽
+item.metallurgy.shadow.iron.sword.name=그림자 철 검
+item.metallurgy.shadow.iron.helmet.name=그림자 철 투구
+item.metallurgy.shadow.iron.chestplate.name=그림자 철 갑옷
+item.metallurgy.shadow.iron.leggings.name=그림자 철 레깅스
+item.metallurgy.shadow.iron.boots.name=그림자 철 부츠
+
+tile.metallurgy.lemurite.ore.name=레머라이트 광석
+tile.metallurgy.lemurite.block.name=레머라이트 블럭
+tile.metallurgy.lemurite.brick.name=레머라이트 벽돌
+item.metallurgy.lemurite.dust.name=레머라이트 가루
+item.metallurgy.lemurite.ingot.name=레머라이트 주괴
+
+tile.metallurgy.midasium.ore.name=마이다시엄 광석
+tile.metallurgy.midasium.block.name=마이다시엄 블럭
+tile.metallurgy.midasium.brick.name=마이다시엄 벽돌
+item.metallurgy.midasium.dust.name=마이다시엄 가루
+item.metallurgy.midasium.ingot.name=마이다시엄 주괴
+item.metallurgy.midasium.axe.name=마이다시엄 도끼
+item.metallurgy.midasium.hoe.name=마이다시엄 괭이
+item.metallurgy.midasium.pickaxe.name=마이다시엄 곡괭이
+item.metallurgy.midasium.shovel.name=마이다시엄 삽
+item.metallurgy.midasium.sword.name=마이다시엄 검
+item.metallurgy.midasium.helmet.name=마이다시엄 투구
+item.metallurgy.midasium.chestplate.name=마이다시엄 갑옷
+item.metallurgy.midasium.leggings.name=마이다시엄 레깅스
+item.metallurgy.midasium.boots.name=마이다시엄 부츠
+
+tile.metallurgy.vyroxeres.ore.name=비락서리즈 광석
+tile.metallurgy.vyroxeres.block.name=비락서리즈 블럭
+tile.metallurgy.vyroxeres.brick.name=비락서리즈 벽돌
+item.metallurgy.vyroxeres.dust.name=비락서리즈 가루
+item.metallurgy.vyroxeres.ingot.name=비락서리즈 주괴
+item.metallurgy.vyroxeres.axe.name=비락서리즈 도끼
+item.metallurgy.vyroxeres.hoe.name=비락서리즈 괭이
+item.metallurgy.vyroxeres.pickaxe.name=비락서리즈 곡괭이
+item.metallurgy.vyroxeres.shovel.name=비락서리즈 삽
+item.metallurgy.vyroxeres.sword.name=비락서리즈 검
+item.metallurgy.vyroxeres.helmet.name=비락서리즈 투구
+item.metallurgy.vyroxeres.chestplate.name=비락서리즈 갑옷
+item.metallurgy.vyroxeres.leggings.name=비락서리즈 레깅스
+item.metallurgy.vyroxeres.boots.name=비락서리즈 부츠
+
+tile.metallurgy.ceruclase.ore.name=커러클레이즈 광석
+tile.metallurgy.ceruclase.block.name=커러클레이즈 블럭
+tile.metallurgy.ceruclase.brick.name=커러클레이즈 벽돌
+item.metallurgy.ceruclase.dust.name=커러클레이즈 가루
+item.metallurgy.ceruclase.ingot.name=커러클레이즈 주괴
+item.metallurgy.ceruclase.axe.name=커러클레이즈 도끼
+item.metallurgy.ceruclase.hoe.name=커러클레이즈 괭이
+item.metallurgy.ceruclase.pickaxe.name=커러클레이즈 곡괭이
+item.metallurgy.ceruclase.shovel.name=커러클레이즈 삽
+item.metallurgy.ceruclase.sword.name=커러클레이즈 검
+item.metallurgy.ceruclase.helmet.name=커러클레이즈 투구
+item.metallurgy.ceruclase.chestplate.name=커러클레이즈 갑옷
+item.metallurgy.ceruclase.leggings.name=커러클레이즈 레깅스
+item.metallurgy.ceruclase.boots.name=커러클레이즈 부츠
+
+tile.metallurgy.alduorite.ore.name=알듀어라이트 광석
+tile.metallurgy.alduorite.block.name=알듀어라이트 블럭
+tile.metallurgy.alduorite.brick.name=알듀어라이트 벽돌
+item.metallurgy.alduorite.dust.name=알듀어라이트 가루
+item.metallurgy.alduorite.ingot.name=알듀어라이트 주괴
+
+tile.metallurgy.kalendrite.ore.name=칼렌드라이트 광석
+tile.metallurgy.kalendrite.block.name=칼렌드라이트 블럭
+tile.metallurgy.kalendrite.brick.name=칼렌드라이트 벽돌
+item.metallurgy.kalendrite.dust.name=칼렌드라이트 가루
+item.metallurgy.kalendrite.ingot.name=칼렌드라이트 주괴
+item.metallurgy.kalendrite.axe.name=칼렌드라이트 도끼
+item.metallurgy.kalendrite.hoe.name=칼렌드라이트 괭이
+item.metallurgy.kalendrite.pickaxe.name=칼렌드라이트 곡괭이
+item.metallurgy.kalendrite.shovel.name=칼렌드라이트 삽
+item.metallurgy.kalendrite.sword.name=칼렌드라이트 검
+item.metallurgy.kalendrite.helmet.name=칼렌드라이트 투구
+item.metallurgy.kalendrite.chestplate.name=칼렌드라이트 갑옷
+item.metallurgy.kalendrite.leggings.name=칼렌드라이트 레깅스
+item.metallurgy.kalendrite.boots.name=칼렌드라이트 부츠
+
+tile.metallurgy.vulcanite.ore.name=에보나이트 광석
+tile.metallurgy.vulcanite.block.name=에보나이트 블럭
+tile.metallurgy.vulcanite.brick.name=에보나이트 벽돌
+item.metallurgy.vulcanite.dust.name=에보나이트 가루
+item.metallurgy.vulcanite.ingot.name=에보나이트 주괴
+item.metallurgy.vulcanite.axe.name=에보나이트 도끼
+item.metallurgy.vulcanite.hoe.name=에보나이트 괭이
+item.metallurgy.vulcanite.pickaxe.name=에보나이트 곡괭이
+item.metallurgy.vulcanite.shovel.name=에보나이트 삽
+item.metallurgy.vulcanite.sword.name=에보나이트 검
+item.metallurgy.vulcanite.helmet.name=에보나이트 투구
+item.metallurgy.vulcanite.chestplate.name=에보나이트 갑옷
+item.metallurgy.vulcanite.leggings.name=에보나이트 레깅스
+item.metallurgy.vulcanite.boots.name=에보나이트 부츠
+
+tile.metallurgy.sanguinite.ore.name=상와이나이트 광석
+tile.metallurgy.sanguinite.block.name=상와이나이트 블럭
+tile.metallurgy.sanguinite.brick.name=상와이나이트 벽돌
+item.metallurgy.sanguinite.dust.name=상와이나이트 가루
+item.metallurgy.sanguinite.ingot.name=상와이나이트 주괴
+item.metallurgy.sanguinite.axe.name=상와이나이트 도끼
+item.metallurgy.sanguinite.hoe.name=상와이나이트 괭이
+item.metallurgy.sanguinite.pickaxe.name=상와이나이트 곡괭이
+item.metallurgy.sanguinite.shovel.name=상와이나이트 삽
+item.metallurgy.sanguinite.sword.name=상와이나이트 검
+item.metallurgy.sanguinite.helmet.name=상와이나이트 투구
+item.metallurgy.sanguinite.chestplate.name=상와이나이트 갑옷
+item.metallurgy.sanguinite.leggings.name=상와이나이트 레깅스
+item.metallurgy.sanguinite.boots.name=상와이나이트 부츠
+
+tile.metallurgy.shadow.steel.block.name=그림자 강철 블럭
+tile.metallurgy.shadow.steel.brick.name=그림자 강철 벽돌
+item.metallurgy.shadow.steel.dust.name=그림자 강철 가루
+item.metallurgy.shadow.steel.ingot.name=그림자 강철 주괴
+item.metallurgy.shadow.steel.axe.name=그림자 강철 도끼
+item.metallurgy.shadow.steel.hoe.name=그림자 강철 괭이
+item.metallurgy.shadow.steel.pickaxe.name=그림자 강철 곡괭이
+item.metallurgy.shadow.steel.shovel.name=그림자 강철 삽
+item.metallurgy.shadow.steel.sword.name=그림자 강철 검
+item.metallurgy.shadow.steel.helmet.name=그림자 강철 투구
+item.metallurgy.shadow.steel.chestplate.name=그림자 강철 갑옷
+item.metallurgy.shadow.steel.leggings.name=그림자 강철 레깅스
+item.metallurgy.shadow.steel.boots.name=그림자 강철 부츠
+
+tile.metallurgy.inolashite.block.name=Inolashite 블럭
+tile.metallurgy.inolashite.brick.name=Inolashite 벽돌
+item.metallurgy.inolashite.dust.name=Inolashite 가루
+item.metallurgy.inolashite.ingot.name=Inolashite 주괴
+item.metallurgy.inolashite.axe.name=Inolashite 도끼
+item.metallurgy.inolashite.hoe.name=Inolashite 괭이
+item.metallurgy.inolashite.pickaxe.name=Inolashite 곡괭이
+item.metallurgy.inolashite.shovel.name=Inolashite 삽
+item.metallurgy.inolashite.sword.name=Inolashite 검
+item.metallurgy.inolashite.helmet.name=Inolashite 투구
+item.metallurgy.inolashite.chestplate.name=Inolashite 갑옷
+item.metallurgy.inolashite.leggings.name=Inolashite 레깅스
+item.metallurgy.inolashite.boots.name=Inolashite 부츠
+
+tile.metallurgy.amordrine.block.name=아모드린 블럭
+tile.metallurgy.amordrine.brick.name=아모드린 벽돌
+item.metallurgy.amordrine.dust.name=아모드린 가루
+item.metallurgy.amordrine.ingot.name=아모드린 주괴
+item.metallurgy.amordrine.axe.name=아모드린 도끼
+item.metallurgy.amordrine.hoe.name=아모드린 괭이
+item.metallurgy.amordrine.pickaxe.name=아모드린 곡괭이
+item.metallurgy.amordrine.shovel.name=아모드린 삽
+item.metallurgy.amordrine.sword.name=아모드린 검
+item.metallurgy.amordrine.helmet.name=아모드린 투구
+item.metallurgy.amordrine.chestplate.name=아모드린 갑옷
+item.metallurgy.amordrine.leggings.name=아모드린 레깅스
+item.metallurgy.amordrine.boots.name=아모드린 부츠
+
+tile.metallurgy.zinc.ore.name=아연 광석
+tile.metallurgy.zinc.block.name=아연 블럭
+tile.metallurgy.zinc.brick.name=아연 벽돌
+item.metallurgy.zinc.dust.name=아연 가루
+item.metallurgy.zinc.ingot.name=아연 주괴
+
+tile.metallurgy.silver.ore.name=은 광석
+tile.metallurgy.silver.block.name=은 블럭
+tile.metallurgy.silver.brick.name=은 벽돌
+item.metallurgy.silver.dust.name=은 가루
+item.metallurgy.silver.ingot.name=은 주괴
+item.metallurgy.silver.axe.name=은 도끼
+item.metallurgy.silver.hoe.name=은 괭이
+item.metallurgy.silver.pickaxe.name=은 곡괭이
+item.metallurgy.silver.shovel.name=은 삽
+item.metallurgy.silver.sword.name=은 검
+item.metallurgy.silver.helmet.name=은 투구
+item.metallurgy.silver.chestplate.name=은 갑옷
+item.metallurgy.silver.leggings.name=은 레깅스
+item.metallurgy.silver.boots.name=은 부츠
+
+tile.metallurgy.platinum.ore.name=백금 광석
+tile.metallurgy.platinum.block.name=백금 블럭
+tile.metallurgy.platinum.brick.name=백금 벽돌
+item.metallurgy.platinum.dust.name=백금 가루
+item.metallurgy.platinum.ingot.name=백금 주괴
+item.metallurgy.platinum.axe.name=백금 도끼
+item.metallurgy.platinum.hoe.name=백금 괭이
+item.metallurgy.platinum.pickaxe.name=백금 곡괭이
+item.metallurgy.platinum.shovel.name=백금 삽
+item.metallurgy.platinum.sword.name=백금 검
+item.metallurgy.platinum.helmet.name=백금 투구
+item.metallurgy.platinum.chestplate.name=백금 갑옷
+item.metallurgy.platinum.leggings.name=백금 레깅스
+item.metallurgy.platinum.boots.name=백금 부츠
+
+tile.metallurgy.brass.block.name=황동 블럭
+tile.metallurgy.brass.brick.name=황동 벽돌
+item.metallurgy.brass.dust.name=황동 가루
+item.metallurgy.brass.ingot.name=황동 주괴
+item.metallurgy.brass.axe.name=황동 도끼
+item.metallurgy.brass.hoe.name=황동 괭이
+item.metallurgy.brass.pickaxe.name=황동 곡괭이
+item.metallurgy.brass.shovel.name=황동 삽
+item.metallurgy.brass.sword.name=황동 검
+item.metallurgy.brass.helmet.name=황동 투구
+item.metallurgy.brass.chestplate.name=황동 갑옷
+item.metallurgy.brass.leggings.name=황동 레깅스
+item.metallurgy.brass.boots.name=황동 부츠
+
+tile.metallurgy.electrum.block.name=일렉트럼 블럭
+tile.metallurgy.electrum.brick.name=일렉트럼 벽돌
+item.metallurgy.electrum.dust.name=일렉트럼 가루
+item.metallurgy.electrum.ingot.name=일렉트럼 주괴
+item.metallurgy.electrum.axe.name=일렉트럼 도끼
+item.metallurgy.electrum.hoe.name=일렉트럼 괭이
+item.metallurgy.electrum.pickaxe.name=일렉트럼 곡괭이
+item.metallurgy.electrum.shovel.name=일렉트럼 삽
+item.metallurgy.electrum.sword.name=일렉트럼 검
+item.metallurgy.electrum.helmet.name=일렉트럼 투구
+item.metallurgy.electrum.chestplate.name=일렉트럼 갑옷
+item.metallurgy.electrum.leggings.name=일렉트럼 레깅스
+item.metallurgy.electrum.boots.name=일렉트럼 부츠
+
+tile.metallurgy.sulfur.ore.name=유황 광석
+tile.metallurgy.sulfur.block.name=유황 블럭
+item.metallurgy.sulfur.name=유황
+
+tile.metallurgy.phosphorite.ore.name=인광석
+tile.metallurgy.phosphorite.block.name=인광석 블럭
+item.metallurgy.phosphorus.name=인회토
+
+tile.metallurgy.saltpeter.ore.name=초석
+tile.metallurgy.saltpeter.block.name=초석 블럭
+item.metallurgy.saltpeter.name=초석
+
+tile.metallurgy.magnesium.ore.name=마그네슘 광석
+tile.metallurgy.magnesium.block.name=마그네슘 블럭
+item.metallurgy.magnesium.name=마그네슘
+
+tile.metallurgy.bitumen.ore.name=역청 광석
+tile.metallurgy.bitumen.block.name=역청 블럭
+item.metallurgy.bitumen.name=역청
+
+tile.metallurgy.potash.ore.name=탄산칼륨 광석
+tile.metallurgy.potash.block.name=탄산칼륨 블럭
+item.metallurgy.potash.name=탄산칼륨
+
+tile.metallurgy.gold.brick.name=금 벽돌
+item.metallurgy.gold.dust.name=금 가루
+
+tile.metallurgy.iron.brick.name=철 벽돌
+item.metallurgy.iron.dust.name=철 가루
+
+# Fluids
+fluid.angmallen.molten=녹은 앙말렌
+fluid.bronze.molten=녹은 청동
+fluid.copper.molten=녹은 구리
+fluid.damascus.steel.molten=녹은 다마스커스강
+fluid.hepatizon.molten=녹은 헤퍼타이전
+fluid.manganese.molten=녹은 망간
+fluid.silver.molten=녹은 강철
+fluid.tin.molten=녹은 주석
+
+fluid.brass.molten=녹은 황동
+fluid.electrum.molten=녹은 일렉트럼
+fluid.platinum.molten=녹은 백금
+fluid.silver.molten=녹은 은
+fluid.zinc.molten=녹은 아연
+
+fluid.amordrine.molten=녹은 아모드린
+fluid.alduorite.molten=녹은 알듀어라이트
+fluid.ceruclase.molten=녹은 커러클레이즈
+fluid.ignatius.molten=녹은 이그나티우스
+fluid.inolashite.molten=녹은 Inolashite
+fluid.kalendrite.molten=녹은 칼렌드라이트
+fluid.lemurite.molten=녹은 레머라이트
+fluid.midasium.molten=녹은 마이다시엄
+fluid.sanguinite.molten=녹은 상와이나이트
+fluid.shadow.iron.molten=녹은 그림자 철
+fluid.shadow.steel.molten=녹은 그림자 강철
+fluid.vulcanite.molten=녹은 에보나이트
+fluid.vyroxeres.molten=녹은 비락서리즈
+
+fluid.adamantine.molten=녹은 아다만탄티움
+fluid.astral.silver.molten=녹은 아스트랄 실버
+fluid.atlarus.molten=녹은 아틀라러스
+fluid.black.steel.molten=녹은 검은 강철
+fluid.carmot.molten=녹은 카못
+fluid.celenegil.molten=녹은 킬리니자일
+fluid.deep.iron.molten=녹은 짙은 철
+fluid.haderoth.molten=녹은 하더라드
+fluid.infuscolium.molten=녹은 인퓨솔롬
+fluid.mithril.molten=녹은 미스릴
+fluid.orichalcum.molten=녹은 오리하르콘
+fluid.oureclase.molten=녹은 오리클레이즈
+fluid.prometheum.molten=녹은 프로메듐
+fluid.quicksilver.molten=녹은 수은
+fluid.rubracium.molten=녹은 러브카키엄
+fluid.tartarite.molten=녹은 탈타라이트
+
+fluid.desichalkos.molten=녹은 디사이찰코스
+fluid.eximite.molten=녹은 엑시마이트
+fluid.meutoite.molten=녹은 뮤타이트
+
+tile.metallurgy.angmallen.molten.name=녹은 앙말렌
+tile.metallurgy.bronze.molten.name=녹은 청동
+tile.metallurgy.copper.molten.name=녹은 구리
+tile.metallurgy.damascus.steel.molten.name=녹은 다마스커스강
+tile.metallurgy.hepatizon.molten.name=녹은 헤퍼타이전
+tile.metallurgy.manganese.molten.name=녹은 망간
+tile.metallurgy.steel.molten.name=녹은 강철
+tile.metallurgy.tin.molten.name=녹은 주석
+
+tile.metallurgy.brass.molten.name=녹은 황동
+tile.metallurgy.electrum.molten.name=녹은 일렉트럼
+tile.metallurgy.platinum.molten.name=녹은 백금
+tile.metallurgy.silver.molten.name=녹은 은
+tile.metallurgy.zinc.molten.name=녹은 아연
+
+tile.metallurgy.amordrine.molten.name=녹은 아모드린
+tile.metallurgy.alduorite.molten.name=녹은 알듀어라이트
+tile.metallurgy.ceruclase.molten.name=녹은 커러클레이즈
+tile.metallurgy.ignatius.molten.name=녹은 이그나티우스
+tile.metallurgy.inolashite.molten.name=녹은 Inolashite
+tile.metallurgy.kalendrite.molten.name=녹은 칼렌드라이트
+tile.metallurgy.lemurite.molten.name=녹은 레머라이트
+tile.metallurgy.midasium.molten.name=녹은 마이다시엄
+tile.metallurgy.sanguinite.molten.name=녹은 상와이나이트
+tile.metallurgy.shadow.iron.molten.name=녹은 그림자 철
+tile.metallurgy.shadow.steel.molten.name=녹은 그림자 강철
+tile.metallurgy.vulcanite.molten.name=녹은 에보나이트
+tile.metallurgy.vyroxeres.molten.name=녹은 비락서리즈
+
+tile.metallurgy.adamantine.molten.name=녹은 아다만탄티움
+tile.metallurgy.astral.silver.molten.name=녹은 아스트랄 실버
+tile.metallurgy.atlarus.molten.name=녹은 아틀라러스
+tile.metallurgy.black.steel.molten.name=녹은 검은 강철
+tile.metallurgy.carmot.molten.name=녹은 카못
+tile.metallurgy.celenegil.molten.name=녹은 킬리니자일
+tile.metallurgy.deep.iron.molten.name=녹은 짙은 철
+tile.metallurgy.haderoth.molten.name=녹은 하더라드
+tile.metallurgy.infuscolium.molten.name=녹은 인퓨솔롬
+tile.metallurgy.mithril.molten.name=녹은 미스릴
+tile.metallurgy.orichalcum.molten.name=녹은 오리하르콘
+tile.metallurgy.oureclase.molten.name=녹은 오리클레이즈
+tile.metallurgy.prometheum.molten.name=녹은 프로메듐
+tile.metallurgy.quicksilver.molten.name=녹은 수은
+tile.metallurgy.rubracium.molten.name=녹은 러브카키엄
+tile.metallurgy.tartarite.molten.name=녹은 탈타라이트
+
+tile.metallurgy.desichalkos.molten.name=녹은 디사이찰코스
+tile.metallurgy.eximite.molten.name=녹은 엑시마이트
+tile.metallurgy.meutoite.molten.name=녹은 뮤타이트
+
+# Buckets
+item.metallurgy.bucket.filled.angmallen.molten.name=녹은 앙말렌 양동이
+item.metallurgy.bucket.filled.bronze.molten.name=녹은 청동 양동이
+item.metallurgy.bucket.filled.copper.molten.name=녹은 구리 양동이
+item.metallurgy.bucket.filled.damascus.steel.molten.name=녹은 다마스커스강 양동이
+item.metallurgy.bucket.filled.hepatizon.molten.name=녹은 헤퍼타이전 양동이
+item.metallurgy.bucket.filled.manganese.molten.name=녹은 망간 양동이
+item.metallurgy.bucket.filled.steel.molten.name=녹은 강철 양동이
+item.metallurgy.bucket.filled.tin.molten.name=녹은 주석 양동이
+
+item.metallurgy.bucket.filled.brass.molten.name=녹은 황동 양동이
+item.metallurgy.bucket.filled.electrum.molten.name=녹은 일렉트럼 양동이
+item.metallurgy.bucket.filled.platinum.molten.name=녹은 백금 양동이
+item.metallurgy.bucket.filled.silver.molten.name=녹은 은 양동이
+item.metallurgy.bucket.filled.zinc.molten.name=녹은 아연 양동이
+
+item.metallurgy.bucket.filled.amordrine.molten.name=녹은 아모드린 양동이
+item.metallurgy.bucket.filled.alduorite.molten.name=녹은 알듀어라이트 양동이
+item.metallurgy.bucket.filled.ceruclase.molten.name=녹은 커러클레이즈 양동이
+item.metallurgy.bucket.filled.ignatius.molten.name=녹은 이그나티우스 양동이
+item.metallurgy.bucket.filled.inolashite.molten.name=녹은 Inolashite 양동이
+item.metallurgy.bucket.filled.kalendrite.molten.name=녹은 칼렌드라이트 양동이
+item.metallurgy.bucket.filled.lemurite.molten.name=녹은 레머라이트 양동이
+item.metallurgy.bucket.filled.midasium.molten.name=녹은 마이다시엄 양동이
+item.metallurgy.bucket.filled.sanguinite.molten.name=녹은 상와이나이트 양동이
+item.metallurgy.bucket.filled.shadow.iron.molten.name=녹은 그림자 철 양동이
+item.metallurgy.bucket.filled.shadow.steel.molten.name=녹은 그림자 강철 양동이
+item.metallurgy.bucket.filled.vulcanite.molten.name=녹은 에보나이트 양동이
+item.metallurgy.bucket.filled.vyroxeres.molten.name=녹은 비락서리즈 양동이
+
+item.metallurgy.bucket.filled.adamantine.molten.name=녹은 아다만탄티움 양동이
+item.metallurgy.bucket.filled.astral.silver.molten.name=녹은 아스트랄 실버 양동이
+item.metallurgy.bucket.filled.atlarus.molten.name=녹은 아틀라러스 양동이
+item.metallurgy.bucket.filled.black.steel.molten.name=녹은 검은 강철 양동이
+item.metallurgy.bucket.filled.carmot.molten.name=녹은 카못 양동이
+item.metallurgy.bucket.filled.celenegil.molten.name=녹은 킬리니자일 양동이
+item.metallurgy.bucket.filled.deep.iron.molten.name=녹은 짙은 철 양동이
+item.metallurgy.bucket.filled.haderoth.molten.name=녹은 하더라드 양동이
+item.metallurgy.bucket.filled.infuscolium.molten.name=녹은 인퓨솔롬 양동이
+item.metallurgy.bucket.filled.mithril.molten.name=녹은 미스릴 양동이
+item.metallurgy.bucket.filled.orichalcum.molten.name=녹은 오리하르콘 양동이
+item.metallurgy.bucket.filled.oureclase.molten.name=녹은 오리클레이즈 양동이
+item.metallurgy.bucket.filled.prometheum.molten.name=녹은 프로메듐 양동이
+item.metallurgy.bucket.filled.quicksilver.molten.name=녹은 수은 양동이
+item.metallurgy.bucket.filled.rubracium.molten.name=녹은 러브카키엄 양동이
+item.metallurgy.bucket.filled.tartarite.molten.name=녹은 탈타라이트 양동이
+
+item.metallurgy.bucket.filled.desichalkos.molten.name=녹은 디사이찰코스 양동이
+item.metallurgy.bucket.filled.eximite.molten.name=녹은 엑시마이트 양동이
+item.metallurgy.bucket.filled.meutoite.molten.name=녹은 뮤타이트 양동이
+
+#Explosive
+
+entity.Metallurgy.explosiveEntity.name=폭팔물 터지는중
+
+tile.metallurgy.explosives.he.name=높은 폭팔물
+tile.metallurgy.explosives.le.name=빛나는 폭팔물
+tile.metallurgy.explosives.m.name=광부의 폭팔물
+tile.metallurgy.explosives.de.name=죽음의 폭팔물
+tile.metallurgy.explosives.pe.name=정밀한 폭팔물
+
+#Misc Items and blocks
+item.metallurgy.fertilizer.name=비료
+item.metallurgy.tar.name=타르
+
+tile.metallurgy.charcoal.block.name=목탄 블럭
