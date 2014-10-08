@@ -38,7 +38,7 @@ public class MetalMaterials
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.rail, 4), "X X", "XSX", "X X", 'X', "ingotCopper", 'S', "stickWood"));
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.rail, 10), "X X", "XSX", "X X", 'X', "ingotBronze", 'S', "stickWood"));
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.rail, 14), "X X", "XSX", "X X", 'X', "ingotHepatizon", 'S', "stickWood"));
-        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.rail, 26), "X X", "XSX", "X X", 'X', "ingotDamascus Steel", 'S', "stickWood"));
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.rail, 26), "X X", "XSX", "X X", 'X', "ingotDamascusSteel", 'S', "stickWood"));
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.rail, 32), "X X", "XSX", "X X", 'X', "ingotAngmallen", 'S', "stickWood"));
 
     }

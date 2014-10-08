@@ -70,6 +70,10 @@ public class ItemList
         if (fertilizerEnabled)
         {
             GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.fertilizer, 8), "dustPhosphorus", "dustSaltpeter", "dustPotash", "dustMagnesium"));
+            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.fertilizer, 6), "dustSaltpeter", "dustPotash", "dustMagnesium"));
+            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.fertilizer, 6), "dustPhosphorus", "dustPotash", "dustMagnesium"));
+            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.fertilizer, 6), "dustPhosphorus", "dustSaltpeter", "dustMagnesium"));
+            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.fertilizer, 6), "dustPhosphorus", "dustSaltpeter", "dustPotash"));
         }
 
         if (tarEnabled)
