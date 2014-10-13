@@ -4,7 +4,7 @@ itemGroup.Metallurgy.Items=冶金|物品
 itemGroup.Metallurgy.Tools=冶金|工具
 itemGroup.Metallurgy.Armor=冶金|装甲
 
-tile.machine.frame.name=机架
+tile.machine.frame.name=机器框架
 
 tile.crusher.name=碎石机
 container.crusher=碎石机
@@ -807,7 +807,7 @@ tile.metallurgy.explosives.de.name=死亡炸药
 tile.metallurgy.explosives.pe.name=精准炸药
 
 #Misc Items and blocks
-item.metallurgy.fertilizer.name=施肥机
+item.metallurgy.fertilizer.name=肥料
 item.metallurgy.tar.name=焦油
 
 tile.metallurgy.charcoal.block.name=木炭块
