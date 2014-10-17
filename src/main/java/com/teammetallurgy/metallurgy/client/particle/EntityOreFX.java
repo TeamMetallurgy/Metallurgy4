@@ -89,7 +89,7 @@ public class EntityOreFX extends EntityFX
     @Override
     public int getFXLayer()
     {
-        return 0;
+        return 3;
     }
 
     /**
@@ -141,7 +141,7 @@ public class EntityOreFX extends EntityFX
         float scale = 0.1F * this.effectScale;
 
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-        Tessellator tess = new Tessellator();
+        Tessellator tess = tessellator;
         this.textureManager.bindTexture(this.particles);
 
         float newPosX = (float) (this.prevPosX + (this.posX - this.prevPosX) * ticker - EntityFX.interpPosX);
