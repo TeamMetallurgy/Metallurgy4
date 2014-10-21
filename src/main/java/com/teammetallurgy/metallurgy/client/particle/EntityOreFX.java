@@ -141,23 +141,22 @@ public class EntityOreFX extends EntityFX
         float scale = 0.1F * this.effectScale;
 
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-        Tessellator tess = tessellator;
         this.textureManager.bindTexture(this.particles);
 
         float newPosX = (float) (this.prevPosX + (this.posX - this.prevPosX) * ticker - EntityFX.interpPosX);
         float newPosY = (float) (this.prevPosY + (this.posY - this.prevPosY) * ticker - EntityFX.interpPosY);
         float newPosZ = (float) (this.prevPosZ + (this.posZ - this.prevPosZ) * ticker - EntityFX.interpPosZ);
 
-        tess.startDrawingQuads();
-        tess.setBrightness(this.getBrightnessForRender(ticker));
-        tess.setColorRGBA_F(this.particleRed, this.particleGreen, this.particleBlue, this.particleAlpha);
+        tessellator.startDrawingQuads();
+        tessellator.setBrightness(this.getBrightnessForRender(ticker));
+        tessellator.setColorRGBA_F(this.particleRed, this.particleGreen, this.particleBlue, this.particleAlpha);
 
-        tess.addVertexWithUV(newPosX - par3 * scale - par6 * scale, newPosY - par4 * scale, newPosZ - par5 * scale - par7 * scale, maxU, maxV);
-        tess.addVertexWithUV(newPosX - par3 * scale + par6 * scale, newPosY + par4 * scale, newPosZ - par5 * scale + par7 * scale, maxU, minV);
-        tess.addVertexWithUV(newPosX + par3 * scale + par6 * scale, newPosY + par4 * scale, newPosZ + par5 * scale + par7 * scale, minU, minV);
-        tess.addVertexWithUV(newPosX + par3 * scale - par6 * scale, newPosY - par4 * scale, newPosZ + par5 * scale - par7 * scale, minU, maxV);
+        tessellator.addVertexWithUV(newPosX - par3 * scale - par6 * scale, newPosY - par4 * scale, newPosZ - par5 * scale - par7 * scale, maxU, maxV);
+        tessellator.addVertexWithUV(newPosX - par3 * scale + par6 * scale, newPosY + par4 * scale, newPosZ - par5 * scale + par7 * scale, maxU, minV);
+        tessellator.addVertexWithUV(newPosX + par3 * scale + par6 * scale, newPosY + par4 * scale, newPosZ + par5 * scale + par7 * scale, minU, minV);
+        tessellator.addVertexWithUV(newPosX + par3 * scale - par6 * scale, newPosY - par4 * scale, newPosZ + par5 * scale - par7 * scale, minU, maxV);
 
-        tess.draw();
+        tessellator.draw();
 
         this.textureManager.bindTexture(this.mc_particles);
 
