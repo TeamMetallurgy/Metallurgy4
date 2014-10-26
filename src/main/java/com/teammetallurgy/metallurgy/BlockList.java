@@ -21,6 +21,8 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 
 import com.teammetallurgy.metallurgy.api.IMetalSet;
 import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
+import com.teammetallurgy.metallurgy.machines.abstractor.BlockAbstrator;
+import com.teammetallurgy.metallurgy.machines.abstractor.TileEntityAbstractor;
 import com.teammetallurgy.metallurgy.machines.alloyer.BlockAlloyer;
 import com.teammetallurgy.metallurgy.machines.alloyer.TileEntityAlloyer;
 import com.teammetallurgy.metallurgy.machines.crusher.BlockCrusher;
@@ -48,6 +50,7 @@ public class BlockList
     private static Block forge;
     private static MetalBlock extraSorageBlock;
     private static BlockExplosive explosive;
+    private static Block abstractor;
     public static MetalBlock tabBlock;
 
     private static Map<String, MetalSet> setList = new HashMap<String, MetalSet>();
@@ -88,6 +91,10 @@ public class BlockList
         BlockList.forge = new BlockForge().setBlockName(blockName);
         BlockList.registerBlockWithTileEntity(BlockList.forge, TileEntityForge.class, blockName);
 
+        blockName = "abstractor";
+        BlockList.abstractor = new BlockAbstrator().setBlockName(blockName);
+        BlockList.registerBlockWithTileEntity(BlockList.abstractor, TileEntityAbstractor.class, blockName);
+
         initMetalSets();
 
         VanillaMetals.initBlocks();
@@ -101,11 +108,12 @@ public class BlockList
         GameRegistry.registerBlock(BlockList.explosive, BlockExplosiveItem.class, "explosive");
         // Explosive entity
         EntityRegistry.registerModEntity(EntityExplosive.class, "explosiveEntity", 0, Metallurgy.instance, 64, 10, true);
-        
+
         BlockList.tabBlock = new MetalBlock("tab.block");
         BlockList.tabBlock.addSubBlock(0, "tab2", 1, "metallurgy:ender/eximite_block");
         BlockList.tabBlock.setCreativeTab(null);
         GameRegistry.registerBlock(BlockList.tabBlock, ItemMetalBlock.class, "tab.block");
+
     }
 
     private static void initMetalSets()
@@ -264,6 +272,11 @@ public class BlockList
         return forge;
     }
 
+    public static Block getAbstractor()
+    {
+        return abstractor;
+    }
+
     public static Block getExtraStorageBlock()
     {
         return extraSorageBlock;
@@ -273,6 +286,5 @@ public class BlockList
     {
         return explosive;
     }
-    
 
 }
