@@ -160,7 +160,7 @@ public class ConfigHandler
         int harvestLevel = ConfigHandler.configuration.get("metal_stats." + metal, "pick_harvest_level", defaultStats[0]).getInt(defaultStats[0]);
         int maxUses = ConfigHandler.configuration.get("metal_stats." + metal, "tool_durability", defaultStats[1]).getInt(defaultStats[1]);
         int efficiency = ConfigHandler.configuration.get("metal_stats." + metal, "tool_efficiency", defaultStats[2]).getInt(defaultStats[2]);
-        int damage = ConfigHandler.configuration.get("metal_stats." + metal, "tool_damage", defaultStats[3]).getInt(defaultStats[3]);
+        int damage = ConfigHandler.configuration.get("metal_stats." + metal, "tool_attack_damage", defaultStats[3]).getInt(defaultStats[3]);
         int enchantability = ConfigHandler.configuration.get("metal_stats." + metal, "tool_enchantability", defaultStats[4]).getInt(defaultStats[4]);
 
         ConfigHandler.saveChanges();
@@ -174,9 +174,9 @@ public class ConfigHandler
         int mutiplier = ConfigHandler.configuration.get("metal_stats." + metal, "armour_multiplier", defaultStats[0]).getInt(defaultStats[0]);
         int helmetDmgReduction = ConfigHandler.configuration.get("metal_stats." + metal, "helmet_reduction", defaultStats[1]).getInt(defaultStats[1]);
         int chestDmgReduction = ConfigHandler.configuration.get("metal_stats." + metal, "chestplate_reduction", defaultStats[2]).getInt(defaultStats[2]);
-        int leggingsDmgReduction = ConfigHandler.configuration.get("metal_stats." + metal, "leggins_reduction", defaultStats[3]).getInt(defaultStats[3]);
+        int leggingsDmgReduction = ConfigHandler.configuration.get("metal_stats." + metal, "leggings_reduction", defaultStats[3]).getInt(defaultStats[3]);
         int bootDmgReduction = ConfigHandler.configuration.get("metal_stats." + metal, "boots_reduction", defaultStats[4]).getInt(defaultStats[4]);
-        int enchantablilty = ConfigHandler.configuration.get("metal_stats." + metal, "armour_enchatability", defaultStats[5]).getInt(defaultStats[5]);
+        int enchantablilty = ConfigHandler.configuration.get("metal_stats." + metal, "armour_enchantability", defaultStats[5]).getInt(defaultStats[5]);
 
         ConfigHandler.saveChanges();
 
