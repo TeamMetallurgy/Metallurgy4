@@ -16,6 +16,9 @@ container.alloyer=Legheria
 tile.forge.name=Forgia
 container.forge= Forgia
 
+tile.abstractor.name=Astrattore
+container.abstractor=Astrattore
+
 item.metallurgy.drawer.name=Cassetto
 container.drawer=Cassetto
 
