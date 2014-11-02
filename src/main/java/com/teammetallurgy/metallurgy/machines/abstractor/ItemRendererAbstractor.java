@@ -15,7 +15,7 @@ public class ItemRendererAbstractor implements IItemRenderer
 {
 
     private ModelAbstractorInActive model = new ModelAbstractorInActive();
-    private ResourceLocation texture = new ResourceLocation("metallurgy:textures/models/machines/abstractor_inActive.png");
+    private ResourceLocation texture = new ResourceLocation("metallurgy:textures/models/machines/abstractor_off.png");
 
     @Override
     public boolean handleRenderType(ItemStack itemStack, ItemRenderType type)
