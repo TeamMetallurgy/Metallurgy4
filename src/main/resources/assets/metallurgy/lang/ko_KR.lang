@@ -15,14 +15,17 @@ container.alloyer=합금기
 tile.forge.name=용광로
 container.forge=용광로
 
+tile.abstractor.name=추출기
+container.abstractor=추출기
+
 item.metallurgy.drawer.name=Drawer
 container.drawer=Drawer
 
 tooltip.metallurgy.drawer.stacks=Stacks: %d / %d
 tooltip.metallurgy.hold.shift=Hold [Shift] to display contents
-tooltip.metallurgy.tankinfo=Name: %s || Amount: %d mB
+tooltip.metallurgy.tankinfo=이름: %s || 량: %d mB
 
-enchantment.metallurgy.heal=힐
+enchantment.metallurgy.heal=회복
 enchantment.metallurgy.unknown=알수없는 마법부여
 
 tile.metallurgy.copper.ore.name=구리 광석
