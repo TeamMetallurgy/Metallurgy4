@@ -43,7 +43,7 @@ public class IntegrationUBC
                 overlayName += "/" + metalName.toLowerCase().trim().replace(" ", "_");
                 overlayName += "_ore_overlay";
 
-                String blockName = metalName + " Ore";
+                String blockName = itemStack.getUnlocalizedName();
 
                 UBAPIHook.ubAPIHook.ubOreTexturizer.requestUBOreSetup(oreBlock, metadata, overlayName, blockName);
             }
