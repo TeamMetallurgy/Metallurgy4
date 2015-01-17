@@ -17,7 +17,7 @@ public class TileEntityCrusher extends TileEntityMetallurgySidedDrawers
 
     public TileEntityCrusher()
     {
-        super(6, new int[] { INPUT_SLOT, TileEntityCrusher.FUEL_SLOT }, new int[] { INPUT_SLOT, TileEntityCrusher.FUEL_SLOT }, new int[] { TileEntityCrusher.FUEL_SLOT, TileEntityCrusher.OUTPUT_START, 3, TileEntityCrusher.OUTPUT_END });
+        super(6, new int[] { INPUT_SLOT }, new int[] { TileEntityCrusher.FUEL_SLOT }, new int[] { TileEntityCrusher.FUEL_SLOT, TileEntityCrusher.OUTPUT_START, 3, TileEntityCrusher.OUTPUT_END });
     }
 
     @Override

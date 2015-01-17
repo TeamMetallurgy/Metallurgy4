@@ -12,7 +12,7 @@ public class TileEntityAlloyer extends TileEntityMetallurgySided
 
     public TileEntityAlloyer()
     {
-        super(4, new int[] { 0, TileEntityAlloyer.FUEL_SLOT, 2 }, new int[] { 0, TileEntityAlloyer.FUEL_SLOT, 2 }, new int[] { TileEntityAlloyer.FUEL_SLOT, 3 });
+        super(4, new int[] { 0, 2 }, new int[] { TileEntityAlloyer.FUEL_SLOT }, new int[] { TileEntityAlloyer.FUEL_SLOT, 3 });
     }
 
     @Override
