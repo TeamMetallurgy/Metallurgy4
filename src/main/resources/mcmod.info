@@ -3,7 +3,7 @@
   "modid": "Metallurgy",
   "name": "Metallurgy 4",
   "description": "Metallurgy",
-  "credits": "",
+  "credits": "RhinoKneel, T10a (Abstractor and Cabinet models)",
   "logoFile": "",
   "version": "4.0.6",
   "mcversion": "${mcversion}",
