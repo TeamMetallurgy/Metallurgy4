@@ -2,6 +2,7 @@ package com.teammetallurgy.metallurgy.machines.abstractor;
 
 import org.lwjgl.opengl.GL11;
 
+import cpw.mods.fml.client.registry.RenderingRegistry;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
@@ -12,6 +13,17 @@ public class RendererAbstractor extends TileEntitySpecialRenderer
     private ModelAbstractorActive modelOn = new ModelAbstractorActive();
     private ResourceLocation textureOff = new ResourceLocation("metallurgy:textures/models/machines/abstractor_off.png");
     private ResourceLocation textureOn = new ResourceLocation("metallurgy:textures/models/machines/abstractor_on.png");
+    private static int rendererId = 0;
+    
+    public RendererAbstractor()
+    {
+        RendererAbstractor.rendererId = RenderingRegistry.getNextAvailableRenderId();
+    }
+    
+    public static int getRendererId()
+    {
+        return rendererId;
+    }
 
     public void renderAbstractorAt(TileEntityAbstractor teAbstractor, double xPos, double yPos, double zPos, float delta)
     {

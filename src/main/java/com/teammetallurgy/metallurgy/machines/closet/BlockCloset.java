@@ -1,4 +1,4 @@
-package com.teammetallurgy.metallurgy.machines.abstractor;
+package com.teammetallurgy.metallurgy.machines.closet;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
@@ -6,12 +6,13 @@ import net.minecraft.world.World;
 
 import com.teammetallurgy.metallurgy.machines.BlockMetallurgy;
 
-public class BlockAbstrator extends BlockMetallurgy
+public class BlockCloset extends BlockMetallurgy
 {
+
     @Override
     public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_)
     {
-        return new TileEntityAbstractor();
+        return new TileEntityCloset();
     }
 
     @Override
@@ -30,7 +31,7 @@ public class BlockAbstrator extends BlockMetallurgy
     @Override
     public int getRenderType()
     {
-        return RendererAbstractor.getRendererId();
+        return RendererCloset.getRendererId();
     }
 
     @Override
@@ -38,5 +39,4 @@ public class BlockAbstrator extends BlockMetallurgy
     {
         return false;
     }
-
 }
