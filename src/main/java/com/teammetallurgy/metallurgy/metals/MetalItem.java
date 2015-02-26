@@ -31,7 +31,7 @@ public class MetalItem extends Item
     {
         this.names.put(meta, name);
 
-        if (itemType < 0 || itemType > 2)
+        if (itemType < 0 || itemType > 3)
         {
             itemType = 0;
         }
@@ -87,6 +87,9 @@ public class MetalItem extends Item
                 case 2:
                     // for item/drop
                     itemType = "";
+                    break;
+                case 3:
+                    itemType = ".nugget";
                     break;
             }
 

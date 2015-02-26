@@ -36,6 +36,8 @@ public interface IMetalSet
     public IMetalInfo getMetal(String metal);
 
     public String[] getMetalNames();
+    
+    public ItemStack getNugget(String metal);
 
     public ItemStack getOre(String metal);
 

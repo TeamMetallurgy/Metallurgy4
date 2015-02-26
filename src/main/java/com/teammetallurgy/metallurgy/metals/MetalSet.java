@@ -50,6 +50,7 @@ public class MetalSet implements IMetalSet
 
     private MetalItem defaultDust;
     private MetalItem defaultDrops;
+    private MetalItem defaultNugget;
 
     private HashMap<String, ItemStack> oreStacks = new HashMap<String, ItemStack>();
     private HashMap<String, ItemStack> blockStacks = new HashMap<String, ItemStack>();
@@ -58,6 +59,7 @@ public class MetalSet implements IMetalSet
     private HashMap<String, ItemStack> ingotStacks = new HashMap<String, ItemStack>();
     private HashMap<String, ItemStack> dustStacks = new HashMap<String, ItemStack>();
     private HashMap<String, ItemStack> dropStacks = new HashMap<String, ItemStack>();
+    private HashMap<String, ItemStack> nuggetStacks = new HashMap<String, ItemStack>();
 
     private HashMap<String, ItemStack> axeStacks = new HashMap<String, ItemStack>();
     private HashMap<String, ItemStack> hoeStacks = new HashMap<String, ItemStack>();
@@ -278,6 +280,12 @@ public class MetalSet implements IMetalSet
 
         return outputNames;
     }
+    
+    @Override
+    public ItemStack getNugget(String metal)
+    {
+        return this.nuggetStacks.get(metal);
+    }
 
     @Override
     public ItemStack getOre(String metal)
@@ -314,6 +322,7 @@ public class MetalSet implements IMetalSet
 
         this.defaultDust = new MetalItem(postfix + ".dust");
         this.defaultDrops = new MetalItem(postfix + ".item");
+        this.defaultNugget = new MetalItem(postfix + ".nugget");
     }
 
     public void load(InputStream inputStream)
@@ -346,6 +355,7 @@ public class MetalSet implements IMetalSet
             MetalItem dust = null;
             MetalItem ingot = null;
             MetalItem item = null;
+            MetalItem nugget = null;
 
             String texture = metal.getName().replace(" ", "_");
             texture = Metallurgy.MODID + ":" + this.name + "/" + texture.toLowerCase();
@@ -386,6 +396,25 @@ public class MetalSet implements IMetalSet
                 GameRegistry.registerItem(ingot, registryName);
                 this.ingotStacks.put(metal.getName(), new ItemStack(ingot));
 
+            }
+            
+            if (metal.type != MetalType.Drop)
+            {
+                String identifier = "nugget";
+
+                String[] oreDicAliases = createOreDicAliases(identifier, metal.getAliases());
+
+                nugget = this.createItem(this.defaultNugget, metaId, tag, identifier, true, oreDicAliases);
+                nugget.addSubItem(metaId, metal.getName(), 3, texture + "_" + identifier);
+                ItemStack nuggetStack = new ItemStack(nugget, 1, metaId);
+                this.nuggetStacks.put(metal.getName(), nuggetStack.copy());
+
+                ItemStack returnedItems = nuggetStack.copy();
+                returnedItems.stackSize = 9;
+                
+                GameRegistry.addShapedRecipe(new ItemStack(ingot), new Object[] { "iii", "iii", "iii", 'i', nuggetStack.copy() });
+                GameRegistry.addShapelessRecipe(returnedItems, new ItemStack(ingot));
+                
             }
 
             if (metal.type == MetalType.Drop)
