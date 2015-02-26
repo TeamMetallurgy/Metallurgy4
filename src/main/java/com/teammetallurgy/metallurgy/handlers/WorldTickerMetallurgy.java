@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.Random;
 
 import net.minecraft.world.WorldServer;
-import net.minecraftforge.event.world.WorldEvent;
 
 import com.teammetallurgy.metallurgy.world.WorldGenMetals;
 import com.teammetallurgy.metallurgycore.handlers.ChunkLoc;
@@ -13,14 +12,15 @@ import com.teammetallurgy.metallurgycore.handlers.LogHandler;
 import com.teammetallurgy.metallurgycore.handlers.WorldTicker;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.gameevent.TickEvent.WorldTickEvent;
 
 public class WorldTickerMetallurgy extends WorldTicker
 {
     public static HashMap<Integer, ArrayList<ChunkLoc>> chunksToGenerate = new HashMap<Integer, ArrayList<ChunkLoc>>();
 
     @SubscribeEvent
-    @Override
-    public void worldRetroGen(WorldEvent.Load event)
+
+    public void worldRetroGen(WorldTickEvent event)
     {
         if (!(event.world instanceof WorldServer))
         {
@@ -32,12 +32,12 @@ public class WorldTickerMetallurgy extends WorldTicker
         System.currentTimeMillis();
 
         int count = 0;
-        ArrayList<ChunkLoc> chunks = WorldTicker.chunksToGenerate.get(Integer.valueOf(dim));
+        ArrayList<ChunkLoc> chunks = WorldTickerMetallurgy.chunksToGenerate.get(Integer.valueOf(dim));
         if (chunks != null && chunks.size() > 0)
         {
             for (int a = 0; a < 10; a++)
             {
-                chunks = WorldTicker.chunksToGenerate.get(Integer.valueOf(dim));
+                chunks = WorldTickerMetallurgy.chunksToGenerate.get(Integer.valueOf(dim));
                 if (chunks == null || chunks.size() <= 0)
                 {
                     break;
@@ -51,7 +51,7 @@ public class WorldTickerMetallurgy extends WorldTicker
                 fmlRandom.setSeed(xSeed * loc.chunkXPos + zSeed * loc.chunkZPos ^ worldSeed);
                 this.worldGenerator(world, loc, fmlRandom);
                 chunks.remove(0);
-                WorldTicker.chunksToGenerate.put(Integer.valueOf(dim), chunks);
+                WorldTickerMetallurgy.chunksToGenerate.put(Integer.valueOf(dim), chunks);
             }
 
             if (count > 0)

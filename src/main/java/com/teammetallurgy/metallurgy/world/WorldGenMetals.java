@@ -1,6 +1,5 @@
 package com.teammetallurgy.metallurgy.world;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -11,7 +10,7 @@ import net.minecraft.world.WorldServer;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 
-import com.teammetallurgy.metallurgycore.handlers.ConfigHandler;
+import com.teammetallurgy.metallurgy.lib.Configs;
 
 import cpw.mods.fml.common.IWorldGenerator;
 
@@ -32,13 +31,12 @@ public class WorldGenMetals implements IWorldGenerator
 
     public static void generateAll(Random fmlRandom, int chunkXPos, int chunkZPos, WorldServer world, boolean b)
     {
-        synchronized (WorldGenMetals.generators)
+       
+        for (WorldGenMetals gen : WorldGenMetals.generators)
         {
-            for (WorldGenMetals gen : WorldGenMetals.generators)
-            {
-                gen.generate(fmlRandom, chunkXPos, chunkZPos, world, b);
-            }
+            gen.generate(fmlRandom, chunkXPos, chunkZPos, world, b);
         }
+   
     }
 
     public WorldGenMetals(Block block, int metaId, int[] generationInfo, String dimensionsInfo)
@@ -64,6 +62,8 @@ public class WorldGenMetals implements IWorldGenerator
         this.blockSeed = this.genBlockSeed(block, metaId);
 
         this.mineable = new WorldGenMinable(block, metaId, this.generation[1], targetId);
+        
+        WorldGenMetals.generators.add(this);
     }
 
     private long genBlockSeed(Block block, int meta)
@@ -92,7 +92,7 @@ public class WorldGenMetals implements IWorldGenerator
 
     public void generate(Random random, int chunkX, int chunkZ, World world, boolean firstGenerate)
     {
-        if (firstGenerate || ConfigHandler.regen())
+        if (firstGenerate || Configs.regen)
         {
 
             Random chunkRand = this.getRandom(random, chunkX, chunkZ);
@@ -117,7 +117,7 @@ public class WorldGenMetals implements IWorldGenerator
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider)
     {
-        WorldGenMetals.generators.add(this);
+        
         this.generate(random, chunkX, chunkZ, world, true);
     }
 

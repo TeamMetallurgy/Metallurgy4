@@ -29,7 +29,7 @@ public class ConfigHandler
 
     private static String getName(String categories, String key, String defaultValue)
     {
-        String string = ConfigHandler.configuration.get(categories, key, defaultValue).toString();
+        String string = ConfigHandler.configuration.get(categories, key, defaultValue).getString();
 
         ConfigHandler.saveChanges();
 

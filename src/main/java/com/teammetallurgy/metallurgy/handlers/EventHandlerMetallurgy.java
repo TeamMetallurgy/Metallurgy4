@@ -3,14 +3,14 @@ package com.teammetallurgy.metallurgy.handlers;
 import java.util.ArrayList;
 
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.world.ChunkCoordIntPair;
+import net.minecraft.world.chunk.Chunk;
 import net.minecraftforge.event.entity.player.FillBucketEvent;
 import net.minecraftforge.event.world.ChunkDataEvent;
 
+import com.teammetallurgy.metallurgy.lib.Configs;
 import com.teammetallurgy.metallurgycore.handlers.ChunkLoc;
 import com.teammetallurgy.metallurgycore.handlers.EventHandler;
 import com.teammetallurgy.metallurgycore.handlers.LogHandler;
-import com.teammetallurgy.metallurgycore.handlers.WorldTicker;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
@@ -23,25 +23,27 @@ public class EventHandlerMetallurgy extends EventHandler
     {
         int dim = event.world.provider.dimensionId;
 
-        ChunkCoordIntPair loc = event.getChunk().getChunkCoordIntPair();
+        Chunk regenChunk = event.getChunk();
 
-        if (!event.getData().getCompoundTag(this.getModTag()).hasKey(ConfigHandler.regenKey()) && ConfigHandler.regen())
+        NBTTagCompound chunkNBT = event.getData().getCompoundTag(this.getModTag());
+        if (!Configs.regen_key.equals("") && !Configs.regen_key.equals(chunkNBT.getString("regen_key")) && Configs.regen)
         {
-            LogHandler.log("Worlg gen was never run for chunk at " + loc);
+            LogHandler.log("World gen was never run for chunk at (" + regenChunk.xPosition + ", " + regenChunk.zPosition + ") Dim: " + dim);
 
-            ArrayList<ChunkLoc> chunks = WorldTicker.chunksToGenerate.get(dim);
+            ArrayList<ChunkLoc> chunks = WorldTickerMetallurgy.chunksToGenerate.get(dim);
 
             if (chunks == null)
             {
-                WorldTicker.chunksToGenerate.put(dim, new ArrayList<ChunkLoc>());
-                chunks = WorldTicker.chunksToGenerate.get(dim);
+                WorldTickerMetallurgy.chunksToGenerate.put(dim, new ArrayList<ChunkLoc>());
+                chunks = WorldTickerMetallurgy.chunksToGenerate.get(dim);
             }
 
             if (chunks != null)
             {
-                chunks.add(new ChunkLoc(loc.chunkXPos, loc.chunkZPos));
-                WorldTicker.chunksToGenerate.put(dim, chunks);
+                chunks.add(new ChunkLoc(regenChunk.xPosition, regenChunk.zPosition));
+                WorldTickerMetallurgy.chunksToGenerate.put(dim, chunks);
             }
+            
         }
     }
 
@@ -51,13 +53,13 @@ public class EventHandlerMetallurgy extends EventHandler
     {
         NBTTagCompound tagCompound = new NBTTagCompound();
         event.getData().setTag(this.getModTag(), tagCompound);
-        tagCompound.setBoolean(ConfigHandler.regenKey(), true);
+        tagCompound.setString("regen_key", Configs.regen_key);
     }
 
     @Override
     public String getModTag()
     {
-        return "Metallurgy4";
+        return "Metallurgy";
     }
 
     @SubscribeEvent
