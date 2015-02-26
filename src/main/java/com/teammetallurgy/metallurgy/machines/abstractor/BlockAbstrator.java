@@ -30,7 +30,7 @@ public class BlockAbstrator extends BlockMetallurgy
     @Override
     public int getRenderType()
     {
-        return RendererAbstractor.getRendererId();
+        return -1;
     }
 
     @Override

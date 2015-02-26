@@ -1,25 +1,28 @@
 package com.teammetallurgy.metallurgy.machines.closet;
 
-import net.minecraft.entity.player.EntityPlayer;
+import com.teammetallurgy.metallurgy.Metallurgy;
+
+import net.minecraft.block.BlockContainer;
+import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-import com.teammetallurgy.metallurgy.machines.BlockMetallurgy;
 
-public class BlockCloset extends BlockMetallurgy
+public class BlockCloset extends BlockContainer
 {
+
+    public BlockCloset()
+    {
+        super(Material.iron);
+        this.textureName = "metallurgy:metal_block_default";
+        this.setHardness(3.5F);
+        this.setCreativeTab(Metallurgy.instance.creativeTabMachines);
+    }
 
     @Override
     public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_)
     {
         return new TileEntityCloset();
-    }
-
-    @Override
-    protected void doOnActivate(World arg0, int arg1, int arg2, int arg3, EntityPlayer arg4, int arg5, float arg6, float arg7, float arg8)
-    {
-        // TODO Auto-generated method stub
-
     }
 
     @Override
@@ -31,7 +34,7 @@ public class BlockCloset extends BlockMetallurgy
     @Override
     public int getRenderType()
     {
-        return RendererCloset.getRendererId();
+        return -1;
     }
 
     @Override

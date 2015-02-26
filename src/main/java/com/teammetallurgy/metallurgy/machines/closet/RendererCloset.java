@@ -6,23 +6,10 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
-import cpw.mods.fml.client.registry.RenderingRegistry;
-
 public class RendererCloset extends TileEntitySpecialRenderer
 {
     private ModelCloset model = new ModelCloset(); 
     private ResourceLocation texture = new ResourceLocation("metallurgy:textures/models/machines/cabinet_platinum.png");
-    private static int rendererId = 0;
-    
-    public RendererCloset()
-    {
-        RendererCloset.rendererId = RenderingRegistry.getNextAvailableRenderId();
-    }
-    
-    public static int getRendererId()
-    {
-        return rendererId;
-    }
 
     public void renderClosetAt(TileEntityCloset teCloset, double xPos, double yPos, double zPos, float delta)
     {
