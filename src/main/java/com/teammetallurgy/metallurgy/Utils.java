@@ -56,11 +56,11 @@ public class Utils
 
     }
 
-    private static void injectCrusherDustRecipe(ItemStack oreItem, String replacement, String name)
+    private static void injectCrusherDustRecipe(ItemStack oreItem, String replacement, String dustOreDicName)
     {
-        if (replacement.equals("dust")) { return; }
+        if (replacement.startsWith("dust")) { return; }
 
-        List<ItemStack> retList = OreDictionary.getOres(name);
+        List<ItemStack> retList = OreDictionary.getOres(dustOreDicName);
         if (retList.size() > 0)
         {
             ItemStack ret = retList.get(0).copy();
@@ -76,13 +76,15 @@ public class Utils
     {
         for (String name : OreDictionary.getOreNames())
         {
+            if (!name.startsWith("ore") && !name.startsWith("ingot"))
+                continue;
+            
             for (final ItemStack oreItem : OreDictionary.getOres(name))
             {
 
                 String replacement = "";
-                replacement = name.contains("ore") ? "ore" : replacement;
-                replacement = name.contains("ingot") ? "ingot" : replacement;
-                replacement = name.contains("dust") ? "dust" : replacement;
+                replacement = name.startsWith("ore") ? "ore" : replacement;
+                replacement = name.startsWith("ingot") ? "ingot" : replacement;
 
                 if (replacement.equals(""))
                 {
