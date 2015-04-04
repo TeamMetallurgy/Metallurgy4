@@ -18,6 +18,9 @@ container.forge=Forge
 tile.abstractor.name=Abstractor
 container.abstractor=Abstractor
 
+tile.closet.name=Closet
+container.closet=Closet
+
 item.metallurgy.drawer.name=Drawer
 container.drawer=Drawer
 
