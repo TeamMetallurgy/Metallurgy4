@@ -46,6 +46,16 @@ public class ItemRendererCloset implements IItemRenderer
         GL11.glPushMatrix();
         GL11.glTranslatef(0.5F, 1.5F, 0.5F);
         GL11.glRotatef(180.0F, 1.0F, 0.0F, 0.0F);
+        if (type == ItemRenderType.INVENTORY)
+        {
+            GL11.glRotatef(-90.0F, 0.0F, 1.0F, 0.0F);
+            GL11.glScalef(0.65F, 0.65F, 0.65F);
+            GL11.glTranslatef(0F, 1.2F, 0F);
+        }
+        if (type == ItemRenderType.EQUIPPED_FIRST_PERSON)
+        {
+            GL11.glRotatef(90.0F, 0.0F, 1.0F, 0.0F);
+        }
         FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture);
         this.model.renderAllModels();
         GL11.glPopMatrix();
