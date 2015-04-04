@@ -17,6 +17,7 @@ public class BlockCloset extends BlockContainer
         this.textureName = "metallurgy:metal_block_default";
         this.setHardness(3.5F);
         this.setCreativeTab(Metallurgy.instance.creativeTabMachines);
+        this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 2.0F, 1.0F);
     }
 
     @Override
