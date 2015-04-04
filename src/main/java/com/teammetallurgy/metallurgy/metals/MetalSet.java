@@ -626,7 +626,7 @@ public class MetalSet implements IMetalSet
 
                 Item.ToolMaterial toolMaterial = EnumHelper.addToolMaterial(statsName, harvestLevel, maxUses, efficiency, damage, enchantability);
 
-                toolMaterial.customCraftingMaterial = ingot;
+                toolMaterial.setRepairItem(new ItemStack(ingot));
 
                 String ingotOreDicName = "ingot" + tag;
 
