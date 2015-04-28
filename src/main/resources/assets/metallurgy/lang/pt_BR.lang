@@ -1,0 +1,865 @@
+itemGroup.Metallurgy.Machines=Metallurgy - Máquinas
+itemGroup.Metallurgy.Blocks=Metallurgy - Blocos
+itemGroup.Metallurgy.Items=Metallurgy - Itens
+itemGroup.Metallurgy.Tools=Metallurgy - Ferramantas
+itemGroup.Metallurgy.Armor=Metallurgy - Armaduras
+
+tile.machine.frame.name=Estrutura de máquina
+
+tile.crusher.name=Triturador
+container.crusher=Triturador
+
+tile.alloyer.name=Fornalha de ligas
+container.alloyer=Fornalha de ligas
+
+tile.forge.name=Forja
+container.forge=Forja
+
+tile.abstractor.name=Abstrador
+container.abstractor=Abstrador
+
+tile.closet.name=Armário
+container.closet=Armário
+
+item.metallurgy.drawer.name=Gaveta
+container.drawer=Gaveta
+
+tooltip.metallurgy.drawer.stacks=Stacks: %d / %d
+tooltip.metallurgy.hold.shift=Segure [Shift] para mostrar os conteúdos
+tooltip.metallurgy.tankinfo=Nome: %s || Quantidade: %d mB
+
+enchantment.metallurgy.heal=Cura
+enchantment.metallurgy.unknown=Encantamento desconhecido
+
+tile.metallurgy.copper.ore.name=Minério de Cobre
+tile.metallurgy.copper.block.name=Bloco de Cobre
+tile.metallurgy.copper.brick.name=Tijolos de Cobre
+item.metallurgy.copper.dust.name=Pó de Cobre
+item.metallurgy.copper.ingot.name=Barra de Cobre
+item.metallurgy.copper.nugget.name=Pepita de Cobre
+item.metallurgy.copper.axe.name=Machado de Cobre
+item.metallurgy.copper.hoe.name=Enxada de Cobre
+item.metallurgy.copper.pickaxe.name=Picareta de Cobre
+item.metallurgy.copper.shovel.name=Pá de Cobre
+item.metallurgy.copper.sword.name=Espada de Cobre
+item.metallurgy.copper.helmet.name=Elmo de Cobre
+item.metallurgy.copper.chestplate.name=Peitoral de Cobre
+item.metallurgy.copper.leggings.name=Calças de Cobre
+item.metallurgy.copper.boots.name=Botas de Cobre
+
+tile.metallurgy.tin.ore.name=Minério de Estanho
+tile.metallurgy.tin.block.name=Bloco de Estanho
+tile.metallurgy.tin.brick.name=Tijolos de Estanho
+item.metallurgy.tin.dust.name=Pó de Estanho
+item.metallurgy.tin.ingot.name=Barra de Estanho
+item.metallurgy.tin.nugget.name=Pepita de Estanho
+
+tile.metallurgy.manganese.ore.name=Minério de Manganês
+tile.metallurgy.manganese.block.name=Bloco de Manganês
+tile.metallurgy.manganese.brick.name=Tijolos de Manganês
+item.metallurgy.manganese.dust.name=Pó de Manganês
+item.metallurgy.manganese.ingot.name=Barra de Manganês
+item.metallurgy.manganese.nugget.name=Pepita de Manganês
+
+tile.metallurgy.bronze.block.name=Bloco de Bronze
+tile.metallurgy.bronze.brick.name=Tijolos de Bronze
+item.metallurgy.bronze.dust.name=Pó de Bronze
+item.metallurgy.bronze.ingot.name=Barra de Bronze
+item.metallurgy.bronze.nugget.name=Pepita de Bronze
+item.metallurgy.bronze.axe.name=Machado de Bronze
+item.metallurgy.bronze.hoe.name=Enxada de Bronze
+item.metallurgy.bronze.pickaxe.name=Picareta de Bronze
+item.metallurgy.bronze.shovel.name=Pá de Bronze
+item.metallurgy.bronze.sword.name=Espada de Bronze
+item.metallurgy.bronze.helmet.name=Elmo de Bronze
+item.metallurgy.bronze.chestplate.name=Peitoral de Bronze
+item.metallurgy.bronze.leggings.name=Calças de Bronze
+item.metallurgy.bronze.boots.name=Botas de Bronze
+
+tile.metallurgy.hepatizon.block.name=Bloco de Hepatizon
+tile.metallurgy.hepatizon.brick.name=Tijolos de Hepatizon
+item.metallurgy.hepatizon.dust.name=Pó de Hepatizon
+item.metallurgy.hepatizon.ingot.name=Barra de Hepatizon
+item.metallurgy.hepatizon.nugget.name=Pepita de Hepatizon
+item.metallurgy.hepatizon.axe.name=Machado de Hepatizon
+item.metallurgy.hepatizon.hoe.name=Enxada de Hepatizon
+item.metallurgy.hepatizon.pickaxe.name=Picareta de Hepatizon
+item.metallurgy.hepatizon.shovel.name=Pá de Hepatizon
+item.metallurgy.hepatizon.sword.name=Espada de Hepatizon
+item.metallurgy.hepatizon.helmet.name=Elmo de Hepatizon
+item.metallurgy.hepatizon.chestplate.name=Peitoral de Hepatizon
+item.metallurgy.hepatizon.leggings.name=Calças de Hepatizon
+item.metallurgy.hepatizon.boots.name=Botas de Hepatizon
+
+tile.metallurgy.damascus.steel.block.name=Bloce de Aço Damasco
+tile.metallurgy.damascus.steel.brick.name=Tijolos de Aço Damasco
+item.metallurgy.damascus.steel.dust.name=Pó de Aço Damasco
+item.metallurgy.damascus.steel.ingot.name=Barra de Aço Damasco
+item.metallurgy.damascus.steel.nugget.name=Pepita de Aço Damasco
+item.metallurgy.damascus.steel.axe.name=Machado de Aço Damasco
+item.metallurgy.damascus.steel.hoe.name=Enxada de Aço Damasco
+item.metallurgy.damascus.steel.pickaxe.name=Picareta de Aço Damasco
+item.metallurgy.damascus.steel.shovel.name=Pá de Aço Damasco
+item.metallurgy.damascus.steel.sword.name=Espada de Aço Damasco
+item.metallurgy.damascus.steel.helmet.name=Elmo de Aço Damasco
+item.metallurgy.damascus.steel.chestplate.name=Peitoral de Aço Damasco
+item.metallurgy.damascus.steel.leggings.name=Calças de Aço Damasco
+item.metallurgy.damascus.steel.boots.name=Botas de Aço Damasco
+
+tile.metallurgy.angmallen.block.name=Bloco de Angmallen
+tile.metallurgy.angmallen.brick.name=Tijolos de Angmallen
+item.metallurgy.angmallen.dust.name=Pó de Angmallen
+item.metallurgy.angmallen.ingot.name=Barra de Angmallen
+item.metallurgy.angmallen.nugget.name=Pepita de Angmallen
+item.metallurgy.angmallen.axe.name=Machado de Angmallen
+item.metallurgy.angmallen.hoe.name=Enxada de Angmallen
+item.metallurgy.angmallen.pickaxe.name=Picareta de Angmallen
+item.metallurgy.angmallen.shovel.name=Pá de Angmallen
+item.metallurgy.angmallen.sword.name=Espada de Angmallen
+item.metallurgy.angmallen.helmet.name=Elmo de Angmallen
+item.metallurgy.angmallen.chestplate.name=Peitoral de Angmallen
+item.metallurgy.angmallen.leggings.name=Calças de Angmallen
+item.metallurgy.angmallen.boots.name=Botas de Angmallen
+
+tile.metallurgy.steel.ore.name=Minério de Aço
+tile.metallurgy.steel.block.name=Bloco de Aço
+tile.metallurgy.steel.brick.name=Tijolos de Aço
+item.metallurgy.steel.dust.name=Pó de Aço
+item.metallurgy.steel.ingot.name=Barra de Aço
+item.metallurgy.steel.nugget.name=Pepita de Aço
+item.metallurgy.steel.axe.name=Machado de Aço
+item.metallurgy.steel.hoe.name=Enxada de Aço
+item.metallurgy.steel.pickaxe.name=Picareta de Aço
+item.metallurgy.steel.shovel.name=Pá de Aço
+item.metallurgy.steel.sword.name=Espada de Aço
+item.metallurgy.steel.helmet.name=Elmo de Aço
+item.metallurgy.steel.chestplate.name=Peitoral de Aço
+item.metallurgy.steel.leggings.name=Calças de Aço
+item.metallurgy.steel.boots.name=Botas de Aço
+
+tile.metallurgy.eximite.ore.name=Minério de Eximite
+tile.metallurgy.eximite.block.name=Bloco de Eximite
+tile.metallurgy.eximite.brick.name=Tijolos de Eximite
+item.metallurgy.eximite.dust.name=Pó de Eximite
+item.metallurgy.eximite.ingot.name=Barra de Eximite
+item.metallurgy.eximite.nugget.name=Pepita de Eximite
+item.metallurgy.eximite.axe.name=Machado de Eximite
+item.metallurgy.eximite.hoe.name=Enxada de Eximite
+item.metallurgy.eximite.pickaxe.name=Picareta de Eximite
+item.metallurgy.eximite.shovel.name=Pá de Eximite
+item.metallurgy.eximite.sword.name=Espada de Eximite
+item.metallurgy.eximite.helmet.name=Elmo de Eximite
+item.metallurgy.eximite.chestplate.name=Peitoral de Eximite
+item.metallurgy.eximite.leggings.name=Calças de Eximite
+item.metallurgy.eximite.boots.name=Botas de Eximite
+
+tile.metallurgy.meutoite.ore.name=Minério de Meutoite
+tile.metallurgy.meutoite.block.name=Bloco de Meutoite
+tile.metallurgy.meutoite.brick.name=Tijolos de Meutoite
+item.metallurgy.meutoite.dust.name=Pó de Meutoite
+item.metallurgy.meutoite.ingot.name=Barra de Meutoite
+item.metallurgy.meutoite.nugget.name=Pepita de Meutoite
+
+tile.metallurgy.desichalkos.block.name=Bloce de Desichalco
+tile.metallurgy.desichalkos.brick.name=Tijolos de Desichalco
+item.metallurgy.desichalkos.dust.name=Pó de Desichalco
+item.metallurgy.desichalkos.ingot.name=Barra de Desichalco
+item.metallurgy.desichalkos.nugget.name=Pepita de Desichalco
+item.metallurgy.desichalkos.axe.name=Machado de Desichaco
+item.metallurgy.desichalkos.hoe.name=Enxada de Desichaco
+item.metallurgy.desichalkos.pickaxe.name=Picareta de Desichalco
+item.metallurgy.desichalkos.shovel.name=Pá de Desichalco
+item.metallurgy.desichalkos.sword.name=Esapada de Desichalco
+item.metallurgy.desichalkos.helmet.name=Elmo de Desichalco
+item.metallurgy.desichalkos.chestplate.name=Peitoral de Desichalco
+item.metallurgy.desichalkos.leggings.name=Calças de Desichalco
+item.metallurgy.desichalkos.boots.name=Botas de Desichalco
+
+tile.metallurgy.prometheum.ore.name=Minério de Prometheum
+tile.metallurgy.prometheum.block.name=Bloco de Prometheum
+tile.metallurgy.prometheum.brick.name=Tijolos de Prometheum
+item.metallurgy.prometheum.dust.name=Pó de Prometheum
+item.metallurgy.prometheum.ingot.name=Barra de Prometheum
+item.metallurgy.prometheum.nugget.name=Pepita de Prometheum
+item.metallurgy.prometheum.axe.name=Machado de Prometheum
+item.metallurgy.prometheum.hoe.name=Enxada de Prometheum
+item.metallurgy.prometheum.pickaxe.name=Picareta de Prometheum
+item.metallurgy.prometheum.shovel.name=Pá de Prometheum
+item.metallurgy.prometheum.sword.name=Espada de Prometheum
+item.metallurgy.prometheum.helmet.name=Elmo de Prometheum
+item.metallurgy.prometheum.chestplate.name=Peitoral de Prometheum
+item.metallurgy.prometheum.leggings.name=Calças de Prometheum
+item.metallurgy.prometheum.boots.name=Botas de Prometheum
+
+tile.metallurgy.deep.iron.ore.name=Minério de Ferro Profundo
+tile.metallurgy.deep.iron.block.name=Bloce de Ferro Profundo
+tile.metallurgy.deep.iron.brick.name=Tijolos de Ferro Profundo
+item.metallurgy.deep.iron.dust.name=Pó de Ferro Profundo
+item.metallurgy.deep.iron.ingot.name=Barra de Ferro Profundo
+item.metallurgy.deep.iron.nugget.name=Pepita de Ferro Profundo
+item.metallurgy.deep.iron.axe.name=Machado de Ferro Profundo
+item.metallurgy.deep.iron.hoe.name=Enxada de Ferro Profundo
+item.metallurgy.deep.iron.pickaxe.name=Picareta de Ferro Profundo
+item.metallurgy.deep.iron.shovel.name=Pá de Ferro Profundo
+item.metallurgy.deep.iron.sword.name=Espada de Ferro Profundo
+item.metallurgy.deep.iron.helmet.name=Elmo de Ferro Profundo
+item.metallurgy.deep.iron.chestplate.name=Peitoral de Ferro Profundo
+item.metallurgy.deep.iron.leggings.name=Calças de Ferro Profundo
+item.metallurgy.deep.iron.boots.name=Botas de Ferro Profundo
+
+tile.metallurgy.infuscolium.ore.name=Minério de Infuscólio
+tile.metallurgy.infuscolium.block.name=Bloco de Infuscólio
+tile.metallurgy.infuscolium.brick.name=Tijolos de Infuscólio
+item.metallurgy.infuscolium.dust.name=Pó de Infuscólio
+item.metallurgy.infuscolium.ingot.name=Barra de Infuscólio
+item.metallurgy.infuscolium.nugget.name=Pepita de Infuscólio
+
+tile.metallurgy.black.steel.ore.name=Minério de Aço Escuro
+tile.metallurgy.black.steel.block.name=Bloco de Aço Escuro
+tile.metallurgy.black.steel.brick.name=Tijolos de Aço Escuro
+item.metallurgy.black.steel.dust.name=Pó de Aço Escuro
+item.metallurgy.black.steel.ingot.name=Barra de Aço Escuro
+item.metallurgy.black.steel.nugget.name=Pepita de Aço Escuro
+item.metallurgy.black.steel.axe.name=Machado de Aço Escuro
+item.metallurgy.black.steel.hoe.name=Enxada de Aço Escuro
+item.metallurgy.black.steel.pickaxe.name=Picareta de Aço Escuro
+item.metallurgy.black.steel.shovel.name=Pá de Aço Escuro
+item.metallurgy.black.steel.sword.name=Espada de Aço Escuro
+item.metallurgy.black.steel.helmet.name=Elmo de Aço Escuro
+item.metallurgy.black.steel.chestplate.name=Peitoral de Aço Escuro
+item.metallurgy.black.steel.leggings.name=Calças de Aço Escuro
+item.metallurgy.black.steel.boots.name=Botas de Aço Escuro
+
+tile.metallurgy.oureclase.ore.name= Minério de Oureclase
+tile.metallurgy.oureclase.block.name=Bloco de Oureclase
+tile.metallurgy.oureclase.brick.name=Tijolos de Oureclase
+item.metallurgy.oureclase.dust.name=Pó de Oureclase
+item.metallurgy.oureclase.ingot.name=Barra de Oureclase
+item.metallurgy.oureclase.nugget.name=Pepita de Oureclase
+item.metallurgy.oureclase.axe.name=Machado de Oureclase
+item.metallurgy.oureclase.hoe.name=Enxada de Oureclase
+item.metallurgy.oureclase.pickaxe.name=Picareta de Oureclase
+item.metallurgy.oureclase.shovel.name=Pá de Oureclase
+item.metallurgy.oureclase.sword.name=Espada de Oureclase
+item.metallurgy.oureclase.helmet.name=Elmo de Oureclase
+item.metallurgy.oureclase.chestplate.name=Peitoral de Oureclase
+item.metallurgy.oureclase.leggings.name=Calças de Oureclase
+item.metallurgy.oureclase.boots.name=Botas de Oureclase
+
+tile.metallurgy.astral.silver.ore.name=Minério de Prata Astral
+tile.metallurgy.astral.silver.block.name=Bloco de Prata Astral
+tile.metallurgy.astral.silver.brick.name=Tijolos de Prata Astral
+item.metallurgy.astral.silver.dust.name=Pó de Prata Astral
+item.metallurgy.astral.silver.ingot.name=Barra de Prata Astral
+item.metallurgy.astral.silver.nugget.name=Pepita de Prata Astral
+item.metallurgy.astral.silver.axe.name=Machado de Prata Astral
+item.metallurgy.astral.silver.hoe.name=Enxada de Prata Astral
+item.metallurgy.astral.silver.pickaxe.name=Picareta de Prata Astral
+item.metallurgy.astral.silver.shovel.name=Pá de Prata Astral
+item.metallurgy.astral.silver.sword.name=Espada de Prata Astral
+item.metallurgy.astral.silver.helmet.name=Elmo de Prata Astral
+item.metallurgy.astral.silver.chestplate.name=Peitoral de Prata Astral
+item.metallurgy.astral.silver.leggings.name=Calças de Prata Astral
+item.metallurgy.astral.silver.boots.name=Botas de Prata Astral
+
+tile.metallurgy.carmot.ore.name=Minério de Carmot
+tile.metallurgy.carmot.block.name=Bloco de Carmot
+tile.metallurgy.carmot.brick.name=Tijolos de Carmot
+item.metallurgy.carmot.dust.name=Pó de Carmot
+item.metallurgy.carmot.ingot.name=Barra de Carmot
+item.metallurgy.carmot.nugget.name=Pepita de Carmot
+item.metallurgy.carmot.axe.name=Machado de Carmot
+item.metallurgy.carmot.hoe.name=Enxada de Carmot
+item.metallurgy.carmot.pickaxe.name=Picareta de Carmot
+item.metallurgy.carmot.shovel.name=Pá de Carmot
+item.metallurgy.carmot.sword.name=Espada de Carmot
+item.metallurgy.carmot.helmet.name=Elmo de Carmot
+item.metallurgy.carmot.chestplate.name=Peitoral de Carmot
+item.metallurgy.carmot.leggings.name=Calças de Carmot
+item.metallurgy.carmot.boots.name=Botas de Carmot
+
+tile.metallurgy.mithril.ore.name=Minério de Mithril
+tile.metallurgy.mithril.block.name=Bloco de Mithril
+tile.metallurgy.mithril.brick.name=Tijolos de Mithril
+item.metallurgy.mithril.dust.name=Pó de Mithril
+item.metallurgy.mithril.ingot.name=Barra de Mithril
+item.metallurgy.mithril.nugget.name=Pepita de Mithril
+item.metallurgy.mithril.axe.name=Machado de Mithril
+item.metallurgy.mithril.hoe.name=Enxada de Mithril
+item.metallurgy.mithril.pickaxe.name=Picareta de Mithril
+item.metallurgy.mithril.shovel.name=Pá de Mithril
+item.metallurgy.mithril.sword.name=Espada de Mithril
+item.metallurgy.mithril.helmet.name=Elmo de Mithril
+item.metallurgy.mithril.chestplate.name=Peitoral de Mithril
+item.metallurgy.mithril.leggings.name=Calças de Mithril
+item.metallurgy.mithril.boots.name=Botas de Mithril
+
+ile.metallurgy.rubracium.ore.name=Minério de Rubrácio
+tile.metallurgy.rubracium.block.name=Bloco de Rubrácio
+tile.metallurgy.rubracium.brick.name=Tijolos de Rubrácio
+item.metallurgy.rubracium.dust.name=Pó de Rubrácio
+item.metallurgy.rubracium.ingot.name=Barra de Rubrácio
+item.metallurgy.rubracium.nugget.name=Pepita de Rubrácio
+
+tile.metallurgy.quicksilver.block.name=Bloco de Mercúrio
+tile.metallurgy.quicksilver.brick.name=Tijolos de Mercúrio
+item.metallurgy.quicksilver.dust.name=Pó de Mercúrio
+item.metallurgy.quicksilver.ingot.name=Barra de Mercúrio
+item.metallurgy.quicksilver.nugget.name=Pepita de Mercúrio
+item.metallurgy.quicksilver.axe.name=Machado de Mercúrio
+item.metallurgy.quicksilver.hoe.name=Enxada de Mercúrio
+item.metallurgy.quicksilver.pickaxe.name=Picareta de Mercúrio
+item.metallurgy.quicksilver.shovel.name=Pá de Mercúrio
+item.metallurgy.quicksilver.sword.name=Espada de Mercúrio
+item.metallurgy.quicksilver.helmet.name=Elmo de Mercúrio
+item.metallurgy.quicksilver.chestplate.name=Peitoral de Mercúrio
+item.metallurgy.quicksilver.leggings.name=Calças de Mercúrio
+item.metallurgy.quicksilver.boots.name=Botas de Mercúrio
+
+tile.metallurgy.haderoth.block.name=Bloco de Haderoth
+tile.metallurgy.haderoth.brick.name=Tijolos de Haderoth
+item.metallurgy.haderoth.dust.name=Pó de Haderoth
+item.metallurgy.haderoth.ingot.name=Barra de Haderoth
+item.metallurgy.haderoth.nugget.name=Pepita de Haderoth
+item.metallurgy.haderoth.axe.name=Machado de Haderoth
+item.metallurgy.haderoth.hoe.name=Enxada de Haderoth
+item.metallurgy.haderoth.pickaxe.name=Picareta de Haderoth
+item.metallurgy.haderoth.shovel.name=Pá de Haderoth
+item.metallurgy.haderoth.sword.name=Espada de Haderoth
+item.metallurgy.haderoth.helmet.name=Elmo de Haderoth
+item.metallurgy.haderoth.chestplate.name=Peitoral de Haderoth
+item.metallurgy.haderoth.leggings.name=Calças de Haderoth
+item.metallurgy.haderoth.boots.name=Botas de Haderoth
+
+tile.metallurgy.orichalcum.ore.name=Minério de Oricalco
+tile.metallurgy.orichalcum.block.name=Bloco de Oricalco
+tile.metallurgy.orichalcum.brick.name=Tijolos de Oricalco
+item.metallurgy.orichalcum.dust.name=Pó de Oricalco
+item.metallurgy.orichalcum.ingot.name=Barra de Oricalco
+item.metallurgy.orichalcum.nugget.name=Pepita de Oricalco
+item.metallurgy.orichalcum.axe.name=Machado de Oricalco
+item.metallurgy.orichalcum.hoe.name=Enxada de Oricalco
+item.metallurgy.orichalcum.pickaxe.name=Picareta de Oricalco
+item.metallurgy.orichalcum.shovel.name=Pá de Oricalco
+item.metallurgy.orichalcum.sword.name=Espada de Oricalco
+item.metallurgy.orichalcum.helmet.name=Elmo de Oricalco
+item.metallurgy.orichalcum.chestplate.name=Peitoral de Oricalco
+item.metallurgy.orichalcum.leggings.name=Calças de Oricalco
+item.metallurgy.orichalcum.boots.name=Botas de Oricalco
+
+tile.metallurgy.celenegil.block.name=Bloco de Celenegil
+tile.metallurgy.celenegil.brick.name=Tijolos de Celenegil
+item.metallurgy.celenegil.dust.name=Pó de Celenegil
+item.metallurgy.celenegil.ingot.name=Barra de Celenegil
+item.metallurgy.celenegil.nugget.name=Pepita de Celenegil
+item.metallurgy.celenegil.axe.name=Machado de Celenegil
+item.metallurgy.celenegil.hoe.name=Enxada de Celenegil
+item.metallurgy.celenegil.pickaxe.name=Picareta de Celenegil
+item.metallurgy.celenegil.shovel.name=Pá de Celenegil
+item.metallurgy.celenegil.sword.name=Espada de Celenegil
+item.metallurgy.celenegil.helmet.name=Elmo de Celenegil
+item.metallurgy.celenegil.chestplate.name=Peitoral de Celenegil
+item.metallurgy.celenegil.leggings.name=Calças de Celenegil
+item.metallurgy.celenegil.boots.name=Botas de Celenegil
+
+tile.metallurgy.adamantine.ore.name=Minério de Adamantina
+tile.metallurgy.adamantine.block.name=Bloco de Adamantina
+tile.metallurgy.adamantine.brick.name=Tijolos deAdamantina
+item.metallurgy.adamantine.dust.name=Pó de Adamantina
+item.metallurgy.adamantine.ingot.name=Barra de Adamantina
+item.metallurgy.adamantine.nugget.name=Pepita de Adamantina
+item.metallurgy.adamantine.axe.name=Machado de Adamantina
+item.metallurgy.adamantine.hoe.name=Enxada de Adamantina
+item.metallurgy.adamantine.pickaxe.name=Picareta de Adamantina
+item.metallurgy.adamantine.shovel.name=Pá de Adamantina
+item.metallurgy.adamantine.sword.name=Espada de Adamantina
+item.metallurgy.adamantine.helmet.name=Elmo de Adamantina
+item.metallurgy.adamantine.chestplate.name=Peitoral de Adamantina
+item.metallurgy.adamantine.leggings.name=Calças de Adamantina
+item.metallurgy.adamantine.boots.name=Botas de Adamantina
+
+tile.metallurgy.atlarus.ore.name=Minério de Atlarus
+tile.metallurgy.atlarus.block.name=Bloco de Atlarus
+tile.metallurgy.atlarus.brick.name=Tijolos de Atlarus
+item.metallurgy.atlarus.dust.name=Pó de Atlarus
+item.metallurgy.atlarus.ingot.name=Barra de Atlarus
+item.metallurgy.atlarus.nugget.name=Pepita de Atlarus
+item.metallurgy.atlarus.axe.name=Machado de Atlarus
+item.metallurgy.atlarus.hoe.name=Enxada de Atlarus
+item.metallurgy.atlarus.pickaxe.name=Picareta de Atlarus
+item.metallurgy.atlarus.shovel.name=Pá de Atlarus
+item.metallurgy.atlarus.sword.name=Espada de Atlarus
+item.metallurgy.atlarus.helmet.name=Elmo de Atlarus
+item.metallurgy.atlarus.chestplate.name=Peitoral de Atlarus
+item.metallurgy.atlarus.leggings.name=Calças de Atlarus
+item.metallurgy.atlarus.boots.name=Botas de Atlarus
+
+tile.metallurgy.tartarite.block.name=Bloco de Tartarita
+tile.metallurgy.tartarite.brick.name=Tijolos de Tartarita
+item.metallurgy.tartarite.dust.name=Pó de Tartarita
+item.metallurgy.tartarite.ingot.name=Barra de Tartarita
+item.metallurgy.tartarite.nugget.name=Pepita de Tartarita
+item.metallurgy.tartarite.axe.name=Machado de Tartarita
+item.metallurgy.tartarite.hoe.name=Enxada de Tartarita
+item.metallurgy.tartarite.pickaxe.name=Picareta de Tartarita
+item.metallurgy.tartarite.shovel.name=Pá de Tartarita
+item.metallurgy.tartarite.sword.name=Espada de Tartarita
+item.metallurgy.tartarite.helmet.name=Elmo de Tartarita
+item.metallurgy.tartarite.chestplate.name=Peitoral de Tartarita
+item.metallurgy.tartarite.leggings.name=Calças de Tartarita
+item.metallurgy.tartarite.boots.name=Botas de Tartarita
+
+tile.metallurgy.ignatius.ore.name=Minério de Ignatius
+tile.metallurgy.ignatius.block.name=Bloco de Ignatius
+tile.metallurgy.ignatius.brick.name=Tijolos de Ignatius
+item.metallurgy.ignatius.dust.name=Pó de Ignatius
+item.metallurgy.ignatius.ingot.name=Barra de Ignatius
+item.metallurgy.ignatius.nugget.name=Pepita de Ignatius
+item.metallurgy.ignatius.axe.name=Machado de Ignatius
+item.metallurgy.ignatius.hoe.name=Enxada de Ignatius
+item.metallurgy.ignatius.pickaxe.name=Picareta de Ignatius
+item.metallurgy.ignatius.shovel.name=Pá de Ignatius
+item.metallurgy.ignatius.sword.name=Espada de Ignatius
+item.metallurgy.ignatius.helmet.name=Elmo de Ignatius
+item.metallurgy.ignatius.chestplate.name=Peitoral de Ignatius
+item.metallurgy.ignatius.leggings.name=Calças de Ignatius
+item.metallurgy.ignatius.boots.name=Botas de Ignatius
+
+tile.metallurgy.shadow.iron.ore.name=Minério de Ferro Sombrio
+tile.metallurgy.shadow.iron.block.name=Bloco de Ferro Sombrio
+tile.metallurgy.shadow.iron.brick.name=Tijolos de Ferro Sombrio
+item.metallurgy.shadow.iron.dust.name=Pó de Ferro Sombrio
+item.metallurgy.shadow.iron.ingot.name=Barra de Ferro Sombrio
+item.metallurgy.shadow.iron.nugget.name=Pepita de Ferro Sombrio
+item.metallurgy.shadow.iron.axe.name=Machado de Ferro Sombrio
+item.metallurgy.shadow.iron.hoe.name=Enxada de Ferro Sombrio
+item.metallurgy.shadow.iron.pickaxe.name=Picareta de Ferro Sombrio
+item.metallurgy.shadow.iron.shovel.name=Pá de Ferro Sombrio
+item.metallurgy.shadow.iron.sword.name=Espada de Ferro Sombrio
+item.metallurgy.shadow.iron.helmet.name=Elmo de Ferro Sombrio
+item.metallurgy.shadow.iron.chestplate.name=Peitoral de Ferro Sombrio
+item.metallurgy.shadow.iron.leggings.name=Calças de Ferro Sombrio
+item.metallurgy.shadow.iron.boots.name=Botas de Ferro Sombrio
+
+tile.metallurgy.lemurite.ore.name=Minério de Lemurita
+tile.metallurgy.lemurite.block.name=Bloco de Lemurita
+tile.metallurgy.lemurite.brick.name=Tijolos de Lemurita
+item.metallurgy.lemurite.dust.name=Pó de Lemurita
+item.metallurgy.lemurite.ingot.name=Barra de Lemurita
+item.metallurgy.lemurite.nugget.name=Pepita de Lemurita
+
+tile.metallurgy.midasium.ore.name=Minério de Midásio
+tile.metallurgy.midasium.block.name=Bloco de Midásio
+tile.metallurgy.midasium.brick.name=Tijolos de Midásio
+item.metallurgy.midasium.dust.name=Pó de Midásio
+item.metallurgy.midasium.ingot.name=Barra de Midásio
+item.metallurgy.midasium.nugget.name=Pepita de Midásio
+item.metallurgy.midasium.axe.name=Machado de Midásio
+item.metallurgy.midasium.hoe.name=Enxada de Midásio
+item.metallurgy.midasium.pickaxe.name=Picareta de Midásio
+item.metallurgy.midasium.shovel.name=Pá de Midásio
+item.metallurgy.midasium.sword.name=Espada de Midásio
+item.metallurgy.midasium.helmet.name=Elmo de Midásio
+item.metallurgy.midasium.chestplate.name=Peitoral de Midásio
+item.metallurgy.midasium.leggings.name=Calças de Midásio
+item.metallurgy.midasium.boots.name=Botas de Midásio
+
+tile.metallurgy.vyroxeres.ore.name=Minério de Vyroxeres
+tile.metallurgy.vyroxeres.block.name=Bloco de Vyroxeres
+tile.metallurgy.vyroxeres.brick.name=Tijolos de Vyroxeres
+item.metallurgy.vyroxeres.dust.name=Pó de Vyroxeres
+item.metallurgy.vyroxeres.ingot.name=Barra de Vyroxeres
+item.metallurgy.vyroxeres.nugget.name=Pepita de Vyroxeres
+item.metallurgy.vyroxeres.axe.name=Machado de Vyroxeres
+item.metallurgy.vyroxeres.hoe.name=Enxada de Vyroxeres
+item.metallurgy.vyroxeres.pickaxe.name=Picareta de Vyroxeres
+item.metallurgy.vyroxeres.shovel.name=Pá de Vyroxeres
+item.metallurgy.vyroxeres.sword.name=Espada de Vyroxeres
+item.metallurgy.vyroxeres.helmet.name=Elmo de Vyroxeres
+item.metallurgy.vyroxeres.chestplate.name=Peitoral de Vyroxeres
+item.metallurgy.vyroxeres.leggings.name=Calças de Vyroxeres
+item.metallurgy.vyroxeres.boots.name=Botas de Vyroxeres
+
+tile.metallurgy.ceruclase.ore.name=Minério de Ceruclase
+tile.metallurgy.ceruclase.block.name=Bloco de Ceruclase
+tile.metallurgy.ceruclase.brick.name=Tijolos de Ceruclase
+item.metallurgy.ceruclase.dust.name=Pó de Ceruclase
+item.metallurgy.ceruclase.ingot.name=Barra de Ceruclase
+item.metallurgy.ceruclase.nugget.name=Pepita de Ceruclase
+item.metallurgy.ceruclase.axe.name=Machado de Ceruclase
+item.metallurgy.ceruclase.hoe.name=Enxada de Ceruclase
+item.metallurgy.ceruclase.pickaxe.name=Picareta de Ceruclase
+item.metallurgy.ceruclase.shovel.name=Pá de Ceruclase
+item.metallurgy.ceruclase.sword.name=Espada de Ceruclase
+item.metallurgy.ceruclase.helmet.name=Elmo de Ceruclase
+item.metallurgy.ceruclase.chestplate.name=Peitoral de Ceruclase
+item.metallurgy.ceruclase.leggings.name=Calças de Ceruclase
+item.metallurgy.ceruclase.boots.name=Botas de Ceruclase
+
+tile.metallurgy.alduorite.ore.name=Minério de Alduorite
+tile.metallurgy.alduorite.block.name=Bloco de Alduorite
+tile.metallurgy.alduorite.brick.name=Tijolos de Alduorite
+item.metallurgy.alduorite.dust.name=Pó de Alduorite
+item.metallurgy.alduorite.ingot.name=Barra de Alduorite
+item.metallurgy.alduorite.nugget.name=Pepita de Alduorite
+
+tile.metallurgy.kalendrite.ore.name=Minério de Kalendrite
+tile.metallurgy.kalendrite.block.name=Bloco de Kalendrite
+tile.metallurgy.kalendrite.brick.name=Tijolos de Kalendrite
+item.metallurgy.kalendrite.dust.name=Pó de Kalendrite
+item.metallurgy.kalendrite.ingot.name=Barra de Kalendrite
+item.metallurgy.kalendrite.nugget.name=Pepita de Kalendrite
+item.metallurgy.kalendrite.axe.name=Machado de Kalendrite
+item.metallurgy.kalendrite.hoe.name=Enxada de Kalendrite
+item.metallurgy.kalendrite.pickaxe.name=Picareta de Kalendrite
+item.metallurgy.kalendrite.shovel.name=Pá de Kalendrite
+item.metallurgy.kalendrite.sword.name=Espada de Kalendrite
+item.metallurgy.kalendrite.helmet.name=Elmo de Kalendrite
+item.metallurgy.kalendrite.chestplate.name=Peitoral de Kalendrite
+item.metallurgy.kalendrite.leggings.name=Calças de Kalendrite
+item.metallurgy.kalendrite.boots.name=Botas de Kalendrite
+
+tile.metallurgy.vulcanite.ore.name=Minério de Vulcanita
+tile.metallurgy.vulcanite.block.name=Bloco de Vulcanita
+tile.metallurgy.vulcanite.brick.name=Tijolos de Vulcanita
+item.metallurgy.vulcanite.dust.name=Pó de Vulcanita
+item.metallurgy.vulcanite.ingot.name=Barra de Vulcanita
+item.metallurgy.vulcanite.nugget.name=Pepita de Vulcanita
+item.metallurgy.vulcanite.axe.name=Machado de Vulcanita
+item.metallurgy.vulcanite.hoe.name=Enxada de Vulcanita
+item.metallurgy.vulcanite.pickaxe.name=Picareta de Vulcanita
+item.metallurgy.vulcanite.shovel.name=Pá de Vulcanita
+item.metallurgy.vulcanite.sword.name=Espada de Vulcanita
+item.metallurgy.vulcanite.helmet.name=Elmo de Vulcanita
+item.metallurgy.vulcanite.chestplate.name=Peitoral de Vulcanita
+item.metallurgy.vulcanite.leggings.name=Calças de Vulcanita
+item.metallurgy.vulcanite.boots.name=Botas de Vulcanita
+
+tile.metallurgy.sanguinite.ore.name=Minério de Sanguinita
+tile.metallurgy.sanguinite.block.name=Bloco de Sanguinita
+tile.metallurgy.sanguinite.brick.name=Tijolos de Sanguinita
+item.metallurgy.sanguinite.dust.name=Pó de Sanguinita
+item.metallurgy.sanguinite.ingot.name=Barra de Sanguinita
+item.metallurgy.sanguinite.nugget.name=Pepita de Sanguinita
+item.metallurgy.sanguinite.axe.name=Machado de Sanguinita
+item.metallurgy.sanguinite.hoe.name=Enxada de Sanguinita
+item.metallurgy.sanguinite.pickaxe.name=Picareta de Sanguinita
+item.metallurgy.sanguinite.shovel.name=Pá de Sanguinita
+item.metallurgy.sanguinite.sword.name=Espada de Sanguinita
+item.metallurgy.sanguinite.helmet.name=Elmo de Sanguinita
+item.metallurgy.sanguinite.chestplate.name=Peitoral de Sanguinita
+item.metallurgy.sanguinite.leggings.name=Calças de Sanguinita
+item.metallurgy.sanguinite.boots.name=Botas de Sanguinita
+
+tile.metallurgy.shadow.steel.block.name=Bloco de Aço Sombrio
+tile.metallurgy.shadow.steel.brick.name=Tijolos de Aço Sombrio
+item.metallurgy.shadow.steel.dust.name=Pó de Aço Sombrio 
+item.metallurgy.shadow.steel.ingot.name=Barra de Aço Sombrio
+item.metallurgy.shadow.steel.nugget.name=Pepita de Aço Sombrio
+item.metallurgy.shadow.steel.axe.name=Machado de Aço Sombrio
+item.metallurgy.shadow.steel.hoe.name=Enxada de Aço Sombrio
+item.metallurgy.shadow.steel.pickaxe.name=Picareta de Aço Sombrio
+item.metallurgy.shadow.steel.shovel.name=Pá de Aço Sombrio
+item.metallurgy.shadow.steel.sword.name=Espada de Aço Sombrio
+item.metallurgy.shadow.steel.helmet.name=Elmo de Aço Sombrio
+item.metallurgy.shadow.steel.chestplate.name=Peitoral de Aço Sombrio
+item.metallurgy.shadow.steel.leggings.name=Calças de Aço Sombrio
+item.metallurgy.shadow.steel.boots.name=Botas de Aço Sombrio
+
+tile.metallurgy.inolashite.block.name=Bloco de Inolashite
+tile.metallurgy.inolashite.brick.name=Tijolos de Inolashite
+item.metallurgy.inolashite.dust.name=Pó de Inolashite
+item.metallurgy.inolashite.ingot.name=Barra de Inolashite
+item.metallurgy.inolashite.nugget.name=Pepita de Inolashite
+item.metallurgy.inolashite.axe.name=Machado de Inolashite
+item.metallurgy.inolashite.hoe.name=Enxada de Inolashite
+item.metallurgy.inolashite.pickaxe.name=Picareta de Inolashite
+item.metallurgy.inolashite.shovel.name=Pá de Inolashite
+item.metallurgy.inolashite.sword.name=Espada de Inolashite
+item.metallurgy.inolashite.helmet.name=Elmo de Inolashite
+item.metallurgy.inolashite.chestplate.name=Peitoral de Inolashite
+item.metallurgy.inolashite.leggings.name=Calças de Inolashite
+item.metallurgy.inolashite.boots.name=Botas de Inolashite
+
+tile.metallurgy.amordrine.block.name=Bloco de Amordrine
+tile.metallurgy.amordrine.brick.name=Tijolos de Amordrine
+item.metallurgy.amordrine.dust.name=Pó de Amordrine
+item.metallurgy.amordrine.ingot.name=Barra de Amordrine
+item.metallurgy.amordrine.nugget.name=Pepita de Amordrine
+item.metallurgy.amordrine.axe.name=Machado de Amordrine
+item.metallurgy.amordrine.hoe.name=Enxada de Amordrine
+item.metallurgy.amordrine.pickaxe.name=Picareta de Amordrine
+item.metallurgy.amordrine.shovel.name=Pá de Amordrine
+item.metallurgy.amordrine.sword.name=Espada de Amordrine
+item.metallurgy.amordrine.helmet.name=Elmo de Amordrine
+item.metallurgy.amordrine.chestplate.name=Peitoral de Amordrine
+item.metallurgy.amordrine.leggings.name=Calças de Amordrine
+item.metallurgy.amordrine.boots.name=Botas de Amordrine
+
+tile.metallurgy.zinc.ore.name=Minério de Zinco
+tile.metallurgy.zinc.block.name=Bloco de Zinco
+tile.metallurgy.zinc.brick.name=Tijolos de Zinco
+item.metallurgy.zinc.dust.name=Pó de Zinco
+item.metallurgy.zinc.ingot.name=Barra de Zinco
+item.metallurgy.zinc.nugget.name=Pepita de Zinco
+
+tile.metallurgy.silver.ore.name=Minério de Prata
+tile.metallurgy.silver.block.name=Bloco de Prata
+tile.metallurgy.silver.brick.name=Tijolos de Prata
+item.metallurgy.silver.dust.name=Pó de Prata
+item.metallurgy.silver.ingot.name=Barra de Prata
+item.metallurgy.silver.nugget.name=Pepita de Prata
+item.metallurgy.silver.axe.name=Machado de Prata
+item.metallurgy.silver.hoe.name=Enxada de Prata
+item.metallurgy.silver.pickaxe.name=Picareta de Prata
+item.metallurgy.silver.shovel.name=Pá de Prata
+item.metallurgy.silver.sword.name=Espada de Prata
+item.metallurgy.silver.helmet.name=Elmo de Prata
+item.metallurgy.silver.chestplate.name=Peitoral de Prata
+item.metallurgy.silver.leggings.name=Calças de Prata
+item.metallurgy.silver.boots.name=Botas de Prata
+
+tile.metallurgy.platinum.ore.name=Minério de Platina
+tile.metallurgy.platinum.block.name=Bloco de Platina
+tile.metallurgy.platinum.brick.name=Tijolos de Platina
+item.metallurgy.platinum.dust.name=Pó de Platina
+item.metallurgy.platinum.ingot.name=Barra de Platina
+item.metallurgy.platinum.nugget.name=Pepita de Platina
+item.metallurgy.platinum.axe.name=Machada de Platina
+item.metallurgy.platinum.hoe.name=Enxada de Platina
+item.metallurgy.platinum.pickaxe.name=Picareta de Platina
+item.metallurgy.platinum.shovel.name=Pá de Platina
+item.metallurgy.platinum.sword.name=Espada de Platina
+item.metallurgy.platinum.helmet.name=Elmo de Platina
+item.metallurgy.platinum.chestplate.name=Peitoral de Platina
+item.metallurgy.platinum.leggings.name=Calças de Platina
+item.metallurgy.platinum.boots.name=Botas de Platina
+
+tile.metallurgy.brass.block.name=Bloco de Latão
+tile.metallurgy.brass.brick.name=Tijolos de Latão
+item.metallurgy.brass.dust.name=Pó de Latão
+item.metallurgy.brass.ingot.name=Barra de Latão
+item.metallurgy.brass.nugget.name=Pepita de Latão
+item.metallurgy.brass.axe.name=Machado de Latão
+item.metallurgy.brass.hoe.name=Enxada de Latão
+item.metallurgy.brass.pickaxe.name=Picareta de Latão
+item.metallurgy.brass.shovel.name=Pá de Latão
+item.metallurgy.brass.sword.name=Espada de Latão
+item.metallurgy.brass.helmet.name=Elmo de Latão
+item.metallurgy.brass.chestplate.name=Peitoral de Latão
+item.metallurgy.brass.leggings.name=Calças de Latão
+item.metallurgy.brass.boots.name=Botas de Latão
+
+tile.metallurgy.electrum.block.name=Bloco de Eléctro
+tile.metallurgy.electrum.brick.name=Tijolos de Eléctro
+item.metallurgy.electrum.dust.name=Pó de Eléctro
+item.metallurgy.electrum.ingot.name=Barra de Eléctro
+item.metallurgy.electrum.nugget.name=Pepita de Eléctro
+item.metallurgy.electrum.axe.name=Machado de Eléctro
+item.metallurgy.electrum.hoe.name=Enxada de Eléctro
+item.metallurgy.electrum.pickaxe.name=Picareta de Eléctro
+item.metallurgy.electrum.shovel.name=Pá de Eléctro
+item.metallurgy.electrum.sword.name=Espada de Eléctro
+item.metallurgy.electrum.helmet.name=Elmo de Eléctro
+item.metallurgy.electrum.chestplate.name=Peitoral de Eléctro
+item.metallurgy.electrum.leggings.name=Calças de Eléctro
+item.metallurgy.electrum.boots.name=Botas de Eléctro
+
+tile.metallurgy.sulfur.ore.name=Minério de Enxofre
+tile.metallurgy.sulfur.block.name=Bloco de Enxofre
+item.metallurgy.sulfur.name=Enxofre
+
+tile.metallurgy.phosphorite.ore.name=Minério de Fósforo
+tile.metallurgy.phosphorite.block.name=Bloco de Fósforo
+item.metallurgy.phosphorus.name=Fósforo
+
+tile.metallurgy.saltpeter.ore.name=Minério de Salitre
+tile.metallurgy.saltpeter.block.name=Bloco de Salitre
+item.metallurgy.saltpeter.name=Salitre
+
+tile.metallurgy.magnesium.ore.name=Minério de Magnésio
+tile.metallurgy.magnesium.block.name=Bloco de Magnésio
+item.metallurgy.magnesium.name=Magnésio
+
+tile.metallurgy.bitumen.ore.name=Minério de Betume
+tile.metallurgy.bitumen.block.name=Bloco de Betume
+item.metallurgy.bitumen.name=Betume
+
+tile.metallurgy.potash.ore.name=Minério de Potássio
+tile.metallurgy.potash.block.name=Bloco de Potássio
+item.metallurgy.potash.name=Potássio
+
+tile.metallurgy.gold.brick.name=Tijolos de Ouro
+item.metallurgy.gold.dust.name=Pó de Ouro
+
+tile.metallurgy.iron.brick.name=Tijolos de Ferro
+item.metallurgy.iron.dust.name=Pó de Ferro
+
+# Fluids
+fluid.angmallen.molten=Angmallen Derretido
+fluid.bronze.molten=Bronze Derretido
+fluid.copper.molten=Cobre Derretido
+fluid.damascus.steel.molten=Aço Damasco Derretido
+fluid.hepatizon.molten=Hepatizon Derretido
+fluid.manganese.molten=Manganês Derretido
+fluid.silver.molten=Aço Derretido
+fluid.tin.molten=Estanho Derretido
+
+fluid.brass.molten=Latão Derretido
+fluid.electrum.molten=Eléctro Derretido
+fluid.platinum.molten=Platina Derretida
+fluid.silver.molten=Prata Derretida
+fluid.zinc.molten=Zinco Derretido
+
+fluid.amordrine.molten=Amordrine Derretido
+fluid.alduorite.molten=Alduorite Derretido
+fluid.ceruclase.molten=Ceruclase Derretido
+fluid.ignatius.molten=Ignatius Derretido
+fluid.inolashite.molten=Inolashite Derretido
+fluid.kalendrite.molten=Kalendrite Derretido
+fluid.lemurite.molten=Lemurita Derretida
+fluid.midasium.molten=Midásio Derretido
+fluid.sanguinite.molten=Sanguinita Derretida
+fluid.shadow.iron.molten=Ferro Sombrio Derretido
+fluid.shadow.steel.molten=Aço Sombrio Derretido
+fluid.vulcanite.molten=Vulcanita Derretida
+fluid.vyroxeres.molten=Vyroxeres Derretido
+
+fluid.adamantine.molten=Adamantina Derretida
+fluid.astral.silver.molten=Prata Astral Derretida
+fluid.atlarus.molten=Atlarus Derretido
+fluid.black.steel.molten=Aço Escuro Derretido
+fluid.carmot.molten=Carmot Derretido
+fluid.celenegil.molten=Celenegil Derretido
+fluid.deep.iron.molten=Ferro Profundo Derretido
+fluid.haderoth.molten=Haderoth Derretido
+fluid.infuscolium.molten=Infuscóio Derretido
+fluid.mithril.molten=Mithril Derretido
+fluid.orichalcum.molten=Oricalco Derretido
+fluid.oureclase.molten=Oureclase Derretido
+fluid.prometheum.molten=Prometheum Derretido
+fluid.quicksilver.molten=Mercúrio Derretido
+fluid.rubracium.molten=Rubrácio Derretido
+fluid.tartarite.molten=Tartarita Derretida
+
+fluid.desichalkos.molten=Desichalkos Derretido
+fluid.eximite.molten=Eximite Derretido
+fluid.meutoite.molten=Meutoite Derretido
+
+# Fluids
+tile.metallurgy.angmallen.molten=Angmallen Derretido
+tile.metallurgy.bronze.molten=Bronze Derretido
+tile.metallurgy.copper.molten=Cobre Derretido
+tile.metallurgy.damascus.steel.molten=Aço Damasco Derretido
+tile.metallurgy.hepatizon.molten=Hepatizon Derretido
+tile.metallurgy.manganese.molten=Manganês Derretido
+tile.metallurgy.silver.molten=Aço Derretido
+tile.metallurgy.tin.molten=Estanho Derretido
+
+tile.metallurgy.brass.molten=Latão Derretido
+tile.metallurgy.electrum.molten=Eléctro Derretido
+tile.metallurgy.platinum.molten=Platina Derretida
+tile.metallurgy.silver.molten=Prata Derretida
+tile.metallurgy.zinc.molten=Zinco Derretido
+
+tile.metallurgy.amordrine.molten=Amordrine Derretido
+tile.metallurgy.alduorite.molten=Alduorite Derretido
+tile.metallurgy.ceruclase.molten=Ceruclase Derretido
+tile.metallurgy.ignatius.molten=Ignatius Derretido
+tile.metallurgy.inolashite.molten=Inolashite Derretido
+tile.metallurgy.kalendrite.molten=Kalendrite Derretido
+tile.metallurgy.lemurite.molten=Lemurita Derretida
+tile.metallurgy.midasium.molten=Midásio Derretido
+tile.metallurgy.sanguinite.molten=Sanguinita Derretida
+tile.metallurgy.shadow.iron.molten=Ferro Sombrio Derretido
+tile.metallurgy.shadow.steel.molten=Aço Sombrio Derretido
+tile.metallurgy.vulcanite.molten=Vulcanita Derretida
+tile.metallurgy.vyroxeres.molten=Vyroxeres Derretido
+
+tile.metallurgy.adamantine.molten=Adamantina Derretida
+tile.metallurgy.astral.silver.molten=Prata Astral Derretida
+tile.metallurgy.atlarus.molten=Atlarus Derretido
+tile.metallurgy.black.steel.molten=Aço Escuro Derretido
+tile.metallurgy.carmot.molten=Carmot Derretido
+tile.metallurgy.celenegil.molten=Celenegil Derretido
+tile.metallurgy.deep.iron.molten=Ferro Profundo Derretido
+tile.metallurgy.haderoth.molten=Haderoth Derretido
+tile.metallurgy.infuscolium.molten=Infuscóio Derretido
+tile.metallurgy.mithril.molten=Mithril Derretido
+tile.metallurgy.orichalcum.molten=Oricalco Derretido
+tile.metallurgy.oureclase.molten=Oureclase Derretido
+tile.metallurgy.prometheum.molten=Prometheum Derretido
+tile.metallurgy.quicksilver.molten=Mercúrio Derretido
+tile.metallurgy.rubracium.molten=Rubrácio Derretido
+tile.metallurgy.tartarite.molten=Tartarita Derretida
+
+tile.metallurgy.desichalkos.molten=Desichalkos Derretido
+tile.metallurgy.eximite.molten=Eximite Derretido
+tile.metallurgy.meutoite.molten=Meutoite Derretido
+
+# Buckets
+item.metallurgy.bucket.filled.angmallen.molten=Balde de Angmallen Derretido
+item.metallurgy.bucket.filled.bronze.molten=Balde de Bronze Derretido
+item.metallurgy.bucket.filled.copper.molten=Balde de Cobre Derretido
+item.metallurgy.bucket.filled.damascus.steel.molten=Balde de Aço Damasco Derretido
+item.metallurgy.bucket.filled.hepatizon.molten=Balde de Hepatizon Derretido
+item.metallurgy.bucket.filled.manganese.molten=Balde de Manganês Derretido
+item.metallurgy.bucket.filled.silver.molten=Balde de Aço Derretido
+item.metallurgy.bucket.filled.tin.molten=Balde de Estanho Derretido
+
+item.metallurgy.bucket.filled.brass.molten=Balde de Latão Derretido
+item.metallurgy.bucket.filled.electrum.molten=Balde de Eléctro Derretido
+item.metallurgy.bucket.filled.platinum.molten=Balde de Platina Derretida
+item.metallurgy.bucket.filled.silver.molten=Balde de Prata Derretida
+item.metallurgy.bucket.filled.zinc.molten=Balde de Zinco Derretido
+
+item.metallurgy.bucket.filled.amordrine.molten=Balde de Amordrine Derretido
+item.metallurgy.bucket.filled.alduorite.molten=Balde de Alduorite Derretido
+item.metallurgy.bucket.filled.ceruclase.molten=Balde de Ceruclase Derretido
+item.metallurgy.bucket.filled.ignatius.molten=Balde de Ignatius Derretido
+item.metallurgy.bucket.filled.inolashite.molten=Balde de Inolashite Derretido
+item.metallurgy.bucket.filled.kalendrite.molten=Balde de Kalendrite Derretido
+item.metallurgy.bucket.filled.lemurite.molten=Balde de Lemurita Derretida
+item.metallurgy.bucket.filled.midasium.molten=Balde de Midásio Derretido
+item.metallurgy.bucket.filled.sanguinite.molten=Balde de Sanguinita Derretida
+item.metallurgy.bucket.filled.shadow.iron.molten=Balde de Ferro Sombrio Derretido
+item.metallurgy.bucket.filled.shadow.steel.molten=Balde de Aço Sombrio Derretido
+item.metallurgy.bucket.filled.vulcanite.molten=Balde de Vulcanita Derretida
+item.metallurgy.bucket.filled.vyroxeres.molten=Balde de Vyroxeres Derretido
+
+item.metallurgy.bucket.filled.adamantine.molten=Balde de Adamantina Derretida
+item.metallurgy.bucket.filled.astral.silver.molten=Balde de Prata Astral Derretida
+item.metallurgy.bucket.filled.atlarus.molten=Balde de Atlarus Derretido
+item.metallurgy.bucket.filled.black.steel.molten=Balde de Aço Escuro Derretido
+item.metallurgy.bucket.filled.carmot.molten=Balde de Carmot Derretido
+item.metallurgy.bucket.filled.celenegil.molten=Balde de Celenegil Derretido
+item.metallurgy.bucket.filled.deep.iron.molten=Balde de Ferro Profundo Derretido
+item.metallurgy.bucket.filled.haderoth.molten=Balde de Haderoth Derretido
+item.metallurgy.bucket.filled.infuscolium.molten=Balde de Infuscóio Derretido
+item.metallurgy.bucket.filled.mithril.molten=Balde de Mithril Derretido
+item.metallurgy.bucket.filled.orichalcum.molten=Balde de Oricalco Derretido
+item.metallurgy.bucket.filled.oureclase.molten=Balde de Oureclase Derretido
+item.metallurgy.bucket.filled.prometheum.molten=Balde de Prometheum Derretido
+item.metallurgy.bucket.filled.quicksilver.molten=Balde de Mercúrio Derretido
+item.metallurgy.bucket.filled.rubracium.molten=Balde de Rubrácio Derretido
+item.metallurgy.bucket.filled.tartarite.molten=Balde de Tartarita Derretida
+
+item.metallurgy.bucket.filled.desichalkos.molten=Balde de Desichaco Derretido
+item.metallurgy.bucket.filled.eximite.molten=Balde de Eximite Derretido
+item.metallurgy.bucket.filled.meutoite.molten=Balde de Meutoite Derretido
+
+#Explosive
+
+entity.Metallurgy.explosiveEntity.name=Explosivo aceso
+
+tile.metallurgy.explosives.he.name=Explosivo pesado
+tile.metallurgy.explosives.le.name=Explosivo leve
+tile.metallurgy.explosives.m.name=Explosivo de mineração
+tile.metallurgy.explosives.de.name=Explosivo mortal
+tile.metallurgy.explosives.pe.name=Explosivo preciso
+
+#Misc Items and blocks
+item.metallurgy.fertilizer.name=Fertilizante
+item.metallurgy.tar.name=Alcatrão
+
+tile.metallurgy.charcoal.block.name=Bloco de Carvão Vegetal
