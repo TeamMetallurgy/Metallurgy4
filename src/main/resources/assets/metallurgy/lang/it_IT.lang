@@ -19,6 +19,9 @@ container.forge= Forgia
 tile.abstractor.name=Astrattore
 container.abstractor=Astrattore
 
+tile.closet.name=Armadio
+container.closet=Armadio
+
 item.metallurgy.drawer.name=Cassetto
 container.drawer=Cassetto
 
