@@ -25,8 +25,6 @@ import com.teammetallurgy.metallurgy.machines.abstractor.BlockAbstrator;
 import com.teammetallurgy.metallurgy.machines.abstractor.TileEntityAbstractor;
 import com.teammetallurgy.metallurgy.machines.alloyer.BlockAlloyer;
 import com.teammetallurgy.metallurgy.machines.alloyer.TileEntityAlloyer;
-import com.teammetallurgy.metallurgy.machines.closet.BlockCloset;
-import com.teammetallurgy.metallurgy.machines.closet.TileEntityCloset;
 import com.teammetallurgy.metallurgy.machines.crusher.BlockCrusher;
 import com.teammetallurgy.metallurgy.machines.crusher.TileEntityCrusher;
 import com.teammetallurgy.metallurgy.machines.forge.BlockForge;
@@ -97,10 +95,6 @@ public class BlockList
         blockName = "abstractor";
         BlockList.abstractor = new BlockAbstrator().setBlockName(blockName);
         BlockList.registerBlockWithTileEntity(BlockList.abstractor, TileEntityAbstractor.class, blockName);
-
-        blockName = "closet";
-        BlockList.closet = new BlockCloset().setBlockName(blockName);
-        BlockList.registerBlockWithTileEntity(BlockList.closet, TileEntityCloset.class, blockName);
         
         initMetalSets();
 

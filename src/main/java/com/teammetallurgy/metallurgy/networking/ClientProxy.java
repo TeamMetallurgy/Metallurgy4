@@ -6,7 +6,6 @@ import java.util.List;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.FileResourcePack;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemReed;
 import net.minecraftforge.client.MinecraftForgeClient;
 
 import com.teammetallurgy.metallurgy.BlockList;
@@ -14,9 +13,6 @@ import com.teammetallurgy.metallurgy.machines.RenderBlockMachine;
 import com.teammetallurgy.metallurgy.machines.abstractor.ItemRendererAbstractor;
 import com.teammetallurgy.metallurgy.machines.abstractor.RendererAbstractor;
 import com.teammetallurgy.metallurgy.machines.abstractor.TileEntityAbstractor;
-import com.teammetallurgy.metallurgy.machines.closet.ItemRendererCloset;
-import com.teammetallurgy.metallurgy.machines.closet.RendererCloset;
-import com.teammetallurgy.metallurgy.machines.closet.TileEntityCloset;
 import com.teammetallurgy.metallurgy.tnt.EntityExplosive;
 import com.teammetallurgy.metallurgy.tnt.RenderExplosive;
 
@@ -51,8 +47,6 @@ public class ClientProxy extends CommonProxy
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityAbstractor.class, new RendererAbstractor());
         MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockList.getAbstractor()), new ItemRendererAbstractor());
         
-        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCloset.class, new RendererCloset());
-        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockList.getCloset()), new ItemRendererCloset());
     }
 
     @Override

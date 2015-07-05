@@ -18,9 +18,6 @@ container.forge=Forja
 tile.abstractor.name=Abstrador
 container.abstractor=Abstrador
 
-tile.closet.name=Armário
-container.closet=Armário
-
 item.metallurgy.drawer.name=Gaveta
 container.drawer=Gaveta
 
