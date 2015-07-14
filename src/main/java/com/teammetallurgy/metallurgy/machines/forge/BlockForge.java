@@ -8,6 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.FluidContainerRegistry;
@@ -17,6 +18,10 @@ import net.minecraftforge.fluids.FluidStack;
 import com.teammetallurgy.metallurgy.Metallurgy;
 import com.teammetallurgy.metallurgy.lib.GUIIds;
 import com.teammetallurgy.metallurgy.machines.BlockMetallurgy;
+import com.teammetallurgy.metallurgycore.machines.TileEntityMetallurgy;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockForge extends BlockMetallurgy
 {
@@ -25,12 +30,14 @@ public class BlockForge extends BlockMetallurgy
     private String sideConnectedTexture = "metallurgy:machines/smelter_side_connected";
     private String frontTexture = "metallurgy:machines/smelter_front";
     private String bottomTexture = "metallurgy:machines/smelter_bottom";
+    private String frontOnTexture = "metallurgy:machines/smelter_front_on";
 
     private IIcon topIcon;
     private IIcon sideIcon;
     private IIcon sideConnectedIcon;
     private IIcon frontIcon;
     private IIcon bottomIcon;
+    private IIcon frontOnIcon;
 
     public BlockForge()
     {
@@ -108,6 +115,7 @@ public class BlockForge extends BlockMetallurgy
     }
 
     @Override
+    @SideOnly(Side.CLIENT)
     public IIcon getIcon(int side, int meta)
     {
         if (side == meta) { return this.frontIcon; }
@@ -124,6 +132,38 @@ public class BlockForge extends BlockMetallurgy
     }
     
     @Override
+    @SideOnly(Side.CLIENT)
+    public IIcon getIcon(IBlockAccess world, int x, int y, int z, int side)
+    {
+
+        int meta = world.getBlockMetadata(x, y, z);
+        TileEntity tileEntiy = world.getTileEntity(x, y, z);
+        
+        if (!(tileEntiy instanceof TileEntityMetallurgy))
+        return this.sideIcon;
+        
+        boolean running = ((TileEntityMetallurgy)tileEntiy).isBurning();  
+        
+        if (side == meta){
+            if (running)
+                return frontOnIcon;
+            else
+                return frontIcon;
+        }
+        
+        switch (side){
+            case 0:
+                return this.bottomIcon;
+            case 1:
+                return this.topIcon;
+            default:
+                    return this.sideIcon;
+        }
+
+    }
+    
+    @Override
+    @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister register)
     {
         this.bottomIcon = register.registerIcon(this.bottomTexture);
@@ -131,6 +171,7 @@ public class BlockForge extends BlockMetallurgy
         this.sideIcon = register.registerIcon(this.sideTexture);
         this.frontIcon = register.registerIcon(this.frontTexture);
         this.sideConnectedIcon = register.registerIcon(this.sideConnectedTexture);
+        this.frontOnIcon = register.registerIcon(this.frontOnTexture);
     }
 
 }
