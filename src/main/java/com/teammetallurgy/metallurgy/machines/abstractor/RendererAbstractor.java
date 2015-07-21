@@ -15,9 +15,29 @@ public class RendererAbstractor extends TileEntitySpecialRenderer
 
     public void renderAbstractorAt(TileEntityAbstractor teAbstractor, double xPos, double yPos, double zPos, float delta)
     {
+        int rotation = 0;
+        switch (teAbstractor.getBlockMetadata())
+        {
+            case 2: // north
+                rotation = 2;
+                break;
+            case 5: // east
+                rotation = 3;
+                break;
+            case 3: // south
+                rotation = 0;
+                break;
+            case 4: // west
+                rotation = 1;
+                break;
+            default:
+                rotation = 0;
+        }
+
         GL11.glPushMatrix();
         GL11.glTranslatef((float) xPos + 0.5F, (float) yPos + 1.5F, (float) zPos + 0.5F);
         GL11.glRotatef(180.0F, 1.0F, 0.0F, 0.0F);
+        GL11.glRotatef(rotation * 90.0F, 0.0F, 1.0F, 0.0F);
         if (teAbstractor.isBurning())
         {
             this.bindTexture(textureOn);
