@@ -8,6 +8,13 @@ import com.teammetallurgy.metallurgy.machines.BlockMetallurgy;
 
 public class BlockAbstrator extends BlockMetallurgy
 {
+
+    public BlockAbstrator()
+    {
+        super();
+        this.textureName = "metallurgy:machines/abstractor";
+    }
+
     @Override
     public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_)
     {
