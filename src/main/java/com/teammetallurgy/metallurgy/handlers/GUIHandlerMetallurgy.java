@@ -7,6 +7,8 @@ import net.minecraft.world.World;
 import com.teammetallurgy.metallurgy.items.ContainerDrawer;
 import com.teammetallurgy.metallurgy.items.GUIDrawer;
 import com.teammetallurgy.metallurgy.lib.GUIIds;
+import com.teammetallurgy.metallurgy.machines.abstractor.ContainerAbstrator;
+import com.teammetallurgy.metallurgy.machines.abstractor.GUIAbstrator;
 import com.teammetallurgy.metallurgy.machines.alloyer.ContainerAlloyer;
 import com.teammetallurgy.metallurgy.machines.alloyer.GUIAlloyer;
 import com.teammetallurgy.metallurgy.machines.crusher.ContainerCrusher;
@@ -30,6 +32,8 @@ public class GUIHandlerMetallurgy extends GUIHandler
                 return new ContainerAlloyer(player.inventory, te);
             case GUIIds.FORGE:
                 return new ContainerForge(player.inventory, te);
+            case GUIIds.ABSTRACTOR:
+                return new ContainerAbstrator(player.inventory, te);
             default:
                 return null;
         }
@@ -95,6 +99,8 @@ public class GUIHandlerMetallurgy extends GUIHandler
                 return new GUIAlloyer(new ContainerAlloyer(player.inventory, te));
             case GUIIds.FORGE:
                 return new GUIForge(new ContainerForge(player.inventory, te));
+            case GUIIds.ABSTRACTOR:
+                return new GUIAbstrator(new ContainerAbstrator(player.inventory, te));
             default:
                 return null;
         }

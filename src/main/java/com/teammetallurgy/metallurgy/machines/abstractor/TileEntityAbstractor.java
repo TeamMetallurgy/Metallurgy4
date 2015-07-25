@@ -6,13 +6,13 @@ import com.teammetallurgy.metallurgycore.machines.TileEntityMetallurgySided;
 
 public class TileEntityAbstractor extends TileEntityMetallurgySided
 {
-    private static final int FuelSlot = 1;
-    private static int[] inputSlots = new int[] { 0 };
-    private static int[] outputSlots = new int[] { 2 };
+    private static final int FuelSlot = 0;
+    private static int[] inputSlots = new int[] { 1,2,3 };
+    private static int[] outputSlots = new int[] { 4 };
 
     public TileEntityAbstractor()
     {
-        super(3, inputSlots, new int[] { FuelSlot }, outputSlots);
+        super(5, inputSlots, new int[] { FuelSlot }, outputSlots);
     }
 
     @Override

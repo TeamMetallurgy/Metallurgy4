@@ -7,6 +7,8 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
+import com.teammetallurgy.metallurgy.Metallurgy;
+import com.teammetallurgy.metallurgy.lib.GUIIds;
 import com.teammetallurgy.metallurgy.machines.BlockMetallurgy;
 
 public class BlockAbstrator extends BlockMetallurgy
@@ -19,15 +21,15 @@ public class BlockAbstrator extends BlockMetallurgy
     }
 
     @Override
-    public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_)
+    public TileEntity createNewTileEntity(World world, int meta)
     {
         return new TileEntityAbstractor();
     }
 
     @Override
-    protected void doOnActivate(World arg0, int arg1, int arg2, int arg3, EntityPlayer arg4, int arg5, float arg6, float arg7, float arg8)
+    protected void doOnActivate(World world, int x, int y, int z, EntityPlayer player, int side, float xOffset, float yOffset, float zOffset)
     {
-        // TODO Auto-generated method stub
+        player.openGui(Metallurgy.instance, GUIIds.ABSTRACTOR, world, x, y, z);
 
     }
 
