@@ -27,6 +27,7 @@ import com.teammetallurgy.metallurgy.api.IMetalSet;
 import com.teammetallurgy.metallurgy.api.MetalType;
 import com.teammetallurgy.metallurgy.armor.ItemMetallurgyArmor;
 import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
+import com.teammetallurgy.metallurgy.recipes.AbstractorRecipes;
 import com.teammetallurgy.metallurgy.tools.Axe;
 import com.teammetallurgy.metallurgy.tools.Hoe;
 import com.teammetallurgy.metallurgy.tools.Pickaxe;
@@ -834,6 +835,12 @@ public class MetalSet implements IMetalSet
                 {
                     GameRegistry.addSmelting(new ItemStack(ore, 1, metaId), new ItemStack(ingot), 0.7F);
                 }
+            }
+            
+            // Abstractor Recipes
+            if (ingot != null && metal.type != MetalType.Drop)
+            {
+                AbstractorRecipes.getInstance().addBase(new ItemStack(ingot), metal.abstractorXp);
             }
         }
     }

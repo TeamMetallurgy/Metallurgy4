@@ -3,6 +3,7 @@ package com.teammetallurgy.metallurgy.metals;
 import java.util.ArrayList;
 
 import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
+import com.teammetallurgy.metallurgy.recipes.AbstractorRecipes;
 import com.teammetallurgy.metallurgycore.handlers.LogHandler;
 
 import net.minecraft.init.Blocks;
@@ -31,6 +32,8 @@ public class MetalMaterials
             addEnderPerlRecipe();
         if (ConfigHandler.recipeEnabled("alternative_gunpowder"))
             addGunpowderRecipe();
+        
+        addAbstractorCatalysts();
     }
 
     private void addRailRecipes()
@@ -113,5 +116,28 @@ public class MetalMaterials
     private void addGunpowderRecipe()
     {
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.gunpowder, 4), new ItemStack(Items.coal,1,1), "dustSulfur", "dustSaltpeter"));
+    }
+    
+    private void addAbstractorCatalysts()
+    {
+        ArrayList<ItemStack> prometheumDusts = OreDictionary.getOres("dustPrometheum");
+        ArrayList<ItemStack> astralSilverDusts = OreDictionary.getOres("dustAstralSilver");
+        ArrayList<ItemStack> carmotDusts = OreDictionary.getOres("dustCarmot");
+        
+        for (ItemStack dust : prometheumDusts)
+        {
+            AbstractorRecipes.getInstance().addCatalyst(dust.copy(), 1);
+        }
+        
+        for (ItemStack dust : astralSilverDusts)
+        {
+            AbstractorRecipes.getInstance().addCatalyst(dust.copy(), 2);
+        }
+        
+        for (ItemStack dust : carmotDusts)
+        {
+            AbstractorRecipes.getInstance().addCatalyst(dust.copy(), 3);
+        }
+            
     }
 }
