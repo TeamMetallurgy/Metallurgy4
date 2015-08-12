@@ -5,6 +5,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
 import com.teammetallurgy.metallurgy.Metallurgy;
+import com.teammetallurgy.metallurgy.recipes.AbstractorRecipes;
 import com.teammetallurgy.metallurgy.recipes.CrusherRecipes;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -65,6 +66,9 @@ public class VanillaMetals
         
         GameRegistry.addSmelting(new ItemStack(vanillaDust,1,0), new ItemStack(Items.gold_ingot), 0.7F);
         GameRegistry.addSmelting(new ItemStack(vanillaDust,1,1), new ItemStack(Items.iron_ingot), 0.7F);
+        
+        AbstractorRecipes.getInstance().addBase(new ItemStack(Items.iron_ingot), 3);
+        AbstractorRecipes.getInstance().addBase(new ItemStack(Items.gold_ingot), 9);
     }
     
 }
