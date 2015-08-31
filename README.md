@@ -7,4 +7,4 @@ Our goal is to create a balanced atmosphere for players to explore and enjoy min
 Metallurgy is under dual license, 
 
  - Source code, localizations, and machine GUI textures are under LGPLv3 provided in the license file.
- - Assets (Textures, Models) are Copyrighted {All Rights Reserved) ©2011 - 2015, unless noted.
+ - Assets (Textures, Models) are Copyrighted (All Rights Reserved) ©2011 - 2015, unless noted.
