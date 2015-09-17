@@ -663,7 +663,7 @@ item.metallurgy.electrum.leggings.name=Electrum Leggings
 item.metallurgy.electrum.boots.name=Electrum Boots
 
 tile.metallurgy.sulfur.ore.name=Sulfur Ore
-tile.metallurgy.sulfur.block.name=Sulfur block
+tile.metallurgy.sulfur.block.name=Sulfur Block
 item.metallurgy.sulfur.name=Sulfur
 
 tile.metallurgy.phosphorite.ore.name=Phosphorite Ore
