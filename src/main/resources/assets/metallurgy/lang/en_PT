@@ -1,0 +1,861 @@
+itemGroup.Metallurgy.Machines=Metallarrgy Musheens
+itemGroup.Metallurgy.Blocks=Metallarrrgy Bloks
+itemGroup.Metallurgy.Items=Metallarrrgy Irtems
+itemGroup.Metallurgy.Tools=Metallarrrgy Toorls
+itemGroup.Metallurgy.Armor=Metallarrrgy Arrmor
+
+tile.machine.frame.name=Musheen Frame
+
+tile.crusher.name=Crusharr
+container.crusher=Crusharr
+
+tile.alloyer.name=Alloyarr
+container.alloyer=Alloyarr
+
+tile.forge.name=Forge
+container.forge=Forge
+
+tile.abstractor.name=Abstractarr
+container.abstractor=Abstractarr
+
+item.metallurgy.drawer.name=Drawarr
+container.drawer=Drawarr
+
+tooltip.metallurgy.drawer.stacks=Stacks: %d / %d
+tooltip.metallurgy.hold.shift=Hold [Shift] to display contents
+tooltip.metallurgy.tankinfo=Name: %s || Amount: %d mB
+
+enchantment.metallurgy.heal=Healin'
+enchantment.metallurgy.unknown=Some kind o' curse
+
+tile.metallurgy.copper.ore.name=Copper Arr
+tile.metallurgy.copper.block.name=Copper Blok
+tile.metallurgy.copper.brick.name=Copper Brick
+item.metallurgy.copper.dust.name=Copper Dust
+item.metallurgy.copper.ingot.name=Copper Ingot
+item.metallurgy.copper.nugget.name=Copper Nugget
+item.metallurgy.copper.axe.name=Copper Axe
+item.metallurgy.copper.hoe.name=Copper Hoe
+item.metallurgy.copper.pickaxe.name=Copper Pickaxe
+item.metallurgy.copper.shovel.name=Copper Shovel
+item.metallurgy.copper.sword.name=Copper Sword
+item.metallurgy.copper.helmet.name=Copper Helmet
+item.metallurgy.copper.chestplate.name=Copper Chestplate
+item.metallurgy.copper.leggings.name=Copper Leggings
+item.metallurgy.copper.boots.name=Copper Boots
+
+tile.metallurgy.tin.ore.name=Tin Arr
+tile.metallurgy.tin.block.name=Tin Blok
+tile.metallurgy.tin.brick.name=Tin Brick
+item.metallurgy.tin.dust.name=Tin Dust
+item.metallurgy.tin.ingot.name=Tin Ingot
+item.metallurgy.tin.nugget.name=Tin Nugget
+
+tile.metallurgy.manganese.ore.name=Manganese Arr
+tile.metallurgy.manganese.block.name=Manganese Blok
+tile.metallurgy.manganese.brick.name=Manganese Brick
+item.metallurgy.manganese.dust.name=Manganese Dust
+item.metallurgy.manganese.ingot.name=Manganese Ingot
+item.metallurgy.manganese.nugget.name=Manganese Nugget
+
+tile.metallurgy.bronze.block.name=Bronze Blok
+tile.metallurgy.bronze.brick.name=Bronze Brick
+item.metallurgy.bronze.dust.name=Bronze Dust
+item.metallurgy.bronze.ingot.name=Bronze Ingot
+item.metallurgy.bronze.nugget.name=Bronze Nugget
+item.metallurgy.bronze.axe.name=Bronze Axe
+item.metallurgy.bronze.hoe.name=Bronze Hoe
+item.metallurgy.bronze.pickaxe.name=Bronze Pickaxe
+item.metallurgy.bronze.shovel.name=Bronze Shovel
+item.metallurgy.bronze.sword.name=Bronze Sword
+item.metallurgy.bronze.helmet.name=Bronze Helmet
+item.metallurgy.bronze.chestplate.name=Bronze Chestplate
+item.metallurgy.bronze.leggings.name=Bronze Leggings
+item.metallurgy.bronze.boots.name=Bronze Boots
+
+tile.metallurgy.hepatizon.block.name=Hepatizon Blok
+tile.metallurgy.hepatizon.brick.name=Hepatizon Brick
+item.metallurgy.hepatizon.dust.name=Hepatizon Dust
+item.metallurgy.hepatizon.ingot.name=Hepatizon Ingot
+item.metallurgy.hepatizon.nugget.name=Hepatizon Nugget
+item.metallurgy.hepatizon.axe.name=Hepatizon Axe
+item.metallurgy.hepatizon.hoe.name=Hepatizon Hoe
+item.metallurgy.hepatizon.pickaxe.name=Hepatizon Pickaxe
+item.metallurgy.hepatizon.shovel.name=Hepatizon Shovel
+item.metallurgy.hepatizon.sword.name=Hepatizon Sword
+item.metallurgy.hepatizon.helmet.name=Hepatizon Helmet
+item.metallurgy.hepatizon.chestplate.name=Hepatizon Chestplate
+item.metallurgy.hepatizon.leggings.name=Hepatizon Leggings
+item.metallurgy.hepatizon.boots.name=Hepatizon Boots
+
+tile.metallurgy.damascus.steel.block.name=Damascus Steel Blok
+tile.metallurgy.damascus.steel.brick.name=Damascus Steel Brick
+item.metallurgy.damascus.steel.dust.name=Damascus Steel Dust
+item.metallurgy.damascus.steel.ingot.name=Damascus Steel Ingot
+item.metallurgy.damascus.steel.nugget.name=Damascus Steel Nugget
+item.metallurgy.damascus.steel.axe.name=Damascus Steel Axe
+item.metallurgy.damascus.steel.hoe.name=Damascus Steel Hoe
+item.metallurgy.damascus.steel.pickaxe.name=Damascus Steel Pickaxe
+item.metallurgy.damascus.steel.shovel.name=Damascus Steel Shovel
+item.metallurgy.damascus.steel.sword.name=Damascus Steel Sword
+item.metallurgy.damascus.steel.helmet.name=Damascus Steel Helmet
+item.metallurgy.damascus.steel.chestplate.name=Damascus Steel Chestplate
+item.metallurgy.damascus.steel.leggings.name=Damascus Steel Leggings
+item.metallurgy.damascus.steel.boots.name=Damascus Steel Boots
+
+tile.metallurgy.angmallen.block.name=Angmallen Blok
+tile.metallurgy.angmallen.brick.name=Angmallen Brick
+item.metallurgy.angmallen.dust.name=Angmallen Dust
+item.metallurgy.angmallen.ingot.name=Angmallen Ingot
+item.metallurgy.angmallen.nugget.name=Angmallen Nugget
+item.metallurgy.angmallen.axe.name=Angmallen Axe
+item.metallurgy.angmallen.hoe.name=Angmallen Hoe
+item.metallurgy.angmallen.pickaxe.name=Angmallen Pickaxe
+item.metallurgy.angmallen.shovel.name=Angmallen Shovel
+item.metallurgy.angmallen.sword.name=Angmallen Sword
+item.metallurgy.angmallen.helmet.name=Angmallen Helmet
+item.metallurgy.angmallen.chestplate.name=Angmallen Chestplate
+item.metallurgy.angmallen.leggings.name=Angmallen Leggings
+item.metallurgy.angmallen.boots.name=Angmallen Boots
+
+tile.metallurgy.steel.ore.name=Steel Arr
+tile.metallurgy.steel.block.name=Steel Blok
+tile.metallurgy.steel.brick.name=Steel Brick
+item.metallurgy.steel.dust.name=Steel Dust
+item.metallurgy.steel.ingot.name=Steel Ingot
+item.metallurgy.steel.nugget.name=Steel Nugget
+item.metallurgy.steel.axe.name=Steel Axe
+item.metallurgy.steel.hoe.name=Steel Hoe
+item.metallurgy.steel.pickaxe.name=Steel Pickaxe
+item.metallurgy.steel.shovel.name=Steel Shovel
+item.metallurgy.steel.sword.name=Steel Sword
+item.metallurgy.steel.helmet.name=Steel Helmet
+item.metallurgy.steel.chestplate.name=Steel Chestplate
+item.metallurgy.steel.leggings.name=Steel Leggings
+item.metallurgy.steel.boots.name=Steel Boots
+
+tile.metallurgy.eximite.ore.name=Eximite Arr
+tile.metallurgy.eximite.block.name=Eximite Blok
+tile.metallurgy.eximite.brick.name=Eximite Brick
+item.metallurgy.eximite.dust.name=Eximite Dust
+item.metallurgy.eximite.ingot.name=Eximite Ingot
+item.metallurgy.eximite.nugget.name=Eximite Nugget
+item.metallurgy.eximite.axe.name=Eximite Axe
+item.metallurgy.eximite.hoe.name=Eximite Hoe
+item.metallurgy.eximite.pickaxe.name=Eximite Pickaxe
+item.metallurgy.eximite.shovel.name=Eximite Shovel
+item.metallurgy.eximite.sword.name=Eximite Sword
+item.metallurgy.eximite.helmet.name=Eximite Helmet
+item.metallurgy.eximite.chestplate.name=Eximite Chestplate
+item.metallurgy.eximite.leggings.name=Eximite Leggings
+item.metallurgy.eximite.boots.name=Eximite Boots
+
+tile.metallurgy.meutoite.ore.name=Meutoite Arr
+tile.metallurgy.meutoite.block.name=Meutoite Blok
+tile.metallurgy.meutoite.brick.name=Meutoite Brick
+item.metallurgy.meutoite.dust.name=Meutoite Dust
+item.metallurgy.meutoite.ingot.name=Meutoite Ingot
+item.metallurgy.meutoite.nugget.name=Meutoite Nugget
+
+tile.metallurgy.desichalkos.block.name=Desichalkos Blok
+tile.metallurgy.desichalkos.brick.name=Desichalkos Brick
+item.metallurgy.desichalkos.dust.name=Desichalkos Dust
+item.metallurgy.desichalkos.ingot.name=Desichalkos Ingot
+item.metallurgy.desichalkos.nugget.name=Desichalkos Nugget
+item.metallurgy.desichalkos.axe.name=Desichalkos Axe
+item.metallurgy.desichalkos.hoe.name=Desichalkos Hoe
+item.metallurgy.desichalkos.pickaxe.name=Desichalkos Pickaxe
+item.metallurgy.desichalkos.shovel.name=Desichalkos Shovel
+item.metallurgy.desichalkos.sword.name=Desichalkos Sword
+item.metallurgy.desichalkos.helmet.name=Desichalkos Helmet
+item.metallurgy.desichalkos.chestplate.name=Desichalkos Chestplate
+item.metallurgy.desichalkos.leggings.name=Desichalkos Leggings
+item.metallurgy.desichalkos.boots.name=Desichalkos Boots
+
+tile.metallurgy.prometheum.ore.name=Prometheum Arr
+tile.metallurgy.prometheum.block.name=Prometheum Blok
+tile.metallurgy.prometheum.brick.name=Prometheum Brick
+item.metallurgy.prometheum.dust.name=Prometheum Dust
+item.metallurgy.prometheum.ingot.name=Prometheum Ingot
+item.metallurgy.prometheum.nugget.name=Prometheum Nugget
+item.metallurgy.prometheum.axe.name=Prometheum Axe
+item.metallurgy.prometheum.hoe.name=Prometheum Hoe
+item.metallurgy.prometheum.pickaxe.name=Prometheum Pickaxe
+item.metallurgy.prometheum.shovel.name=Prometheum Shovel
+item.metallurgy.prometheum.sword.name=Prometheum Sword
+item.metallurgy.prometheum.helmet.name=Prometheum Helmet
+item.metallurgy.prometheum.chestplate.name=Prometheum Chestplate
+item.metallurgy.prometheum.leggings.name=Prometheum Leggings
+item.metallurgy.prometheum.boots.name=Prometheum Boots
+
+tile.metallurgy.deep.iron.ore.name=Deep Iron Arr
+tile.metallurgy.deep.iron.block.name=Deep Iron Blok
+tile.metallurgy.deep.iron.brick.name=Deep Iron Brick
+item.metallurgy.deep.iron.dust.name=Deep Iron Dust
+item.metallurgy.deep.iron.ingot.name=Deep Iron Ingot
+item.metallurgy.deep.iron.nugget.name=Deep Iron Nugget
+item.metallurgy.deep.iron.axe.name=Deep Iron Axe
+item.metallurgy.deep.iron.hoe.name=Deep Iron Hoe
+item.metallurgy.deep.iron.pickaxe.name=Deep Iron Pickaxe
+item.metallurgy.deep.iron.shovel.name=Deep Iron Shovel
+item.metallurgy.deep.iron.sword.name=Deep Iron Sword
+item.metallurgy.deep.iron.helmet.name=Deep Iron Helmet
+item.metallurgy.deep.iron.chestplate.name=Deep Iron Chestplate
+item.metallurgy.deep.iron.leggings.name=Deep Iron Leggings
+item.metallurgy.deep.iron.boots.name=Deep Iron Boots
+
+tile.metallurgy.infuscolium.ore.name=Infuscolium Arr
+tile.metallurgy.infuscolium.block.name=Infuscolium Blok
+tile.metallurgy.infuscolium.brick.name=Infuscolium Brick
+item.metallurgy.infuscolium.dust.name=Infuscolium Dust
+item.metallurgy.infuscolium.ingot.name=Infuscolium Ingot
+item.metallurgy.infuscolium.nugget.name=Infuscolium Nugget
+
+tile.metallurgy.black.steel.ore.name=Black Steel Arr
+tile.metallurgy.black.steel.block.name=Black Steel Blok
+tile.metallurgy.black.steel.brick.name=Black Steel Brick
+item.metallurgy.black.steel.dust.name=Black Steel Dust
+item.metallurgy.black.steel.ingot.name=Black Steel Ingot
+item.metallurgy.black.steel.nugget.name=Black Steel Nugget
+item.metallurgy.black.steel.axe.name=Black Steel Axe
+item.metallurgy.black.steel.hoe.name=Black Steel Hoe
+item.metallurgy.black.steel.pickaxe.name=Black Steel Pickaxe
+item.metallurgy.black.steel.shovel.name=Black Steel Shovel
+item.metallurgy.black.steel.sword.name=Black Steel Sword
+item.metallurgy.black.steel.helmet.name=Black Steel Helmet
+item.metallurgy.black.steel.chestplate.name=Black Steel Chestplate
+item.metallurgy.black.steel.leggings.name=Black Steel Leggings
+item.metallurgy.black.steel.boots.name=Black Steel Boots
+
+tile.metallurgy.oureclase.ore.name=Oureclase Arr
+tile.metallurgy.oureclase.block.name=Oureclase Blok
+tile.metallurgy.oureclase.brick.name=Oureclase Brick
+item.metallurgy.oureclase.dust.name=Oureclase Dust
+item.metallurgy.oureclase.ingot.name=Oureclase Ingot
+item.metallurgy.oureclase.nugget.name=Oureclase Nugget
+item.metallurgy.oureclase.axe.name=Oureclase Axe
+item.metallurgy.oureclase.hoe.name=Oureclase Hoe
+item.metallurgy.oureclase.pickaxe.name=Oureclase Pickaxe
+item.metallurgy.oureclase.shovel.name=Oureclase Shovel
+item.metallurgy.oureclase.sword.name=Oureclase Sword
+item.metallurgy.oureclase.helmet.name=Oureclase Helmet
+item.metallurgy.oureclase.chestplate.name=Oureclase Chestplate
+item.metallurgy.oureclase.leggings.name=Oureclase Leggings
+item.metallurgy.oureclase.boots.name=Oureclase Boots
+
+tile.metallurgy.astral.silver.ore.name=Astral Silver Arr
+tile.metallurgy.astral.silver.block.name=Astral Silver Blok
+tile.metallurgy.astral.silver.brick.name=Astral Silver Brick
+item.metallurgy.astral.silver.dust.name=Astral Silver Dust
+item.metallurgy.astral.silver.ingot.name=Astral Silver Ingot
+item.metallurgy.astral.silver.nugget.name=Astral Silver Nugget
+item.metallurgy.astral.silver.axe.name=Astral Silver Axe
+item.metallurgy.astral.silver.hoe.name=Astral Silver Hoe
+item.metallurgy.astral.silver.pickaxe.name=Astral Silver Pickaxe
+item.metallurgy.astral.silver.shovel.name=Astral Silver Shovel
+item.metallurgy.astral.silver.sword.name=Astral Silver Sword
+item.metallurgy.astral.silver.helmet.name=Astral Silver Helmet
+item.metallurgy.astral.silver.chestplate.name=Astral Silver Chestplate
+item.metallurgy.astral.silver.leggings.name=Astral Silver Leggings
+item.metallurgy.astral.silver.boots.name=Astral Silver Boots
+
+tile.metallurgy.carmot.ore.name=Carmot Arr
+tile.metallurgy.carmot.block.name=Carmot Blok
+tile.metallurgy.carmot.brick.name=Carmot Brick
+item.metallurgy.carmot.dust.name=Carmot Dust
+item.metallurgy.carmot.ingot.name=Carmot Ingot
+item.metallurgy.carmot.nugget.name=Carmot Nugget
+item.metallurgy.carmot.axe.name=Carmot Axe
+item.metallurgy.carmot.hoe.name=Carmot Hoe
+item.metallurgy.carmot.pickaxe.name=Carmot Pickaxe
+item.metallurgy.carmot.shovel.name=Carmot Shovel
+item.metallurgy.carmot.sword.name=Carmot Sword
+item.metallurgy.carmot.helmet.name=Carmot Helmet
+item.metallurgy.carmot.chestplate.name=Carmot Chestplate
+item.metallurgy.carmot.leggings.name=Carmot Leggings
+item.metallurgy.carmot.boots.name=Carmot Boots
+
+tile.metallurgy.mithril.ore.name=Mithril Arr
+tile.metallurgy.mithril.block.name=Mithril Blok
+tile.metallurgy.mithril.brick.name=Mithril Brick
+item.metallurgy.mithril.dust.name=Mithril Dust
+item.metallurgy.mithril.ingot.name=Mithril Ingot
+item.metallurgy.mithril.nugget.name=Mithril Nugget
+item.metallurgy.mithril.axe.name=Mithril Axe
+item.metallurgy.mithril.hoe.name=Mithril Hoe
+item.metallurgy.mithril.pickaxe.name=Mithril Pickaxe
+item.metallurgy.mithril.shovel.name=Mithril Shovel
+item.metallurgy.mithril.sword.name=Mithril Sword
+item.metallurgy.mithril.helmet.name=Mithril Helmet
+item.metallurgy.mithril.chestplate.name=Mithril Chestplate
+item.metallurgy.mithril.leggings.name=Mithril Leggings
+item.metallurgy.mithril.boots.name=Mithril Boots
+
+tile.metallurgy.rubracium.ore.name=Rubracium Arr
+tile.metallurgy.rubracium.block.name=Rubracium Blok
+tile.metallurgy.rubracium.brick.name=Rubracium Brick
+item.metallurgy.rubracium.dust.name=Rubracium Dust
+item.metallurgy.rubracium.ingot.name=Rubracium Ingot
+item.metallurgy.rubracium.nugget.name=Rubracium Nugget
+
+tile.metallurgy.quicksilver.block.name=Quicksilver Blok
+tile.metallurgy.quicksilver.brick.name=Quicksilver Brick
+item.metallurgy.quicksilver.dust.name=Quicksilver Dust
+item.metallurgy.quicksilver.ingot.name=Quicksilver Ingot
+item.metallurgy.quicksilver.nugget.name=Quicksilver Nugget
+item.metallurgy.quicksilver.axe.name=Quicksilver Axe
+item.metallurgy.quicksilver.hoe.name=Quicksilver Hoe
+item.metallurgy.quicksilver.pickaxe.name=Quicksilver Pickaxe
+item.metallurgy.quicksilver.shovel.name=Quicksilver Shovel
+item.metallurgy.quicksilver.sword.name=Quicksilver Sword
+item.metallurgy.quicksilver.helmet.name=Quicksilver Helmet
+item.metallurgy.quicksilver.chestplate.name=Quicksilver Chestplate
+item.metallurgy.quicksilver.leggings.name=Quicksilver Leggings
+item.metallurgy.quicksilver.boots.name=Quicksilver Boots
+
+tile.metallurgy.haderoth.block.name=Haderoth Blok
+tile.metallurgy.haderoth.brick.name=Haderoth Brick
+item.metallurgy.haderoth.dust.name=Haderoth Dust
+item.metallurgy.haderoth.ingot.name=Haderoth Ingot
+item.metallurgy.haderoth.nugget.name=Haderoth Nugget
+item.metallurgy.haderoth.axe.name=Haderoth Axe
+item.metallurgy.haderoth.hoe.name=Haderoth Hoe
+item.metallurgy.haderoth.pickaxe.name=Haderoth Pickaxe
+item.metallurgy.haderoth.shovel.name=Haderoth Shovel
+item.metallurgy.haderoth.sword.name=Haderoth Sword
+item.metallurgy.haderoth.helmet.name=Haderoth Helmet
+item.metallurgy.haderoth.chestplate.name=Haderoth Chestplate
+item.metallurgy.haderoth.leggings.name=Haderoth Leggings
+item.metallurgy.haderoth.boots.name=Haderoth Boots
+
+tile.metallurgy.orichalcum.ore.name=Orichalcum Arr
+tile.metallurgy.orichalcum.block.name=Orichalcum Blok
+tile.metallurgy.orichalcum.brick.name=Orichalcum Brick
+item.metallurgy.orichalcum.dust.name=Orichalcum Dust
+item.metallurgy.orichalcum.ingot.name=Orichalcum Ingot
+item.metallurgy.orichalcum.nugget.name=Orichalcum Nugget
+item.metallurgy.orichalcum.axe.name=Orichalcum Axe
+item.metallurgy.orichalcum.hoe.name=Orichalcum Hoe
+item.metallurgy.orichalcum.pickaxe.name=Orichalcum Pickaxe
+item.metallurgy.orichalcum.shovel.name=Orichalcum Shovel
+item.metallurgy.orichalcum.sword.name=Orichalcum Sword
+item.metallurgy.orichalcum.helmet.name=Orichalcum Helmet
+item.metallurgy.orichalcum.chestplate.name=Orichalcum Chestplate
+item.metallurgy.orichalcum.leggings.name=Orichalcum Leggings
+item.metallurgy.orichalcum.boots.name=Orichalcum Boots
+
+tile.metallurgy.celenegil.block.name=Celenegil Blok
+tile.metallurgy.celenegil.brick.name=Celenegil Brick
+item.metallurgy.celenegil.dust.name=Celenegil Dust
+item.metallurgy.celenegil.ingot.name=Celenegil Ingot
+item.metallurgy.celenegil.nugget.name=Celenegil Nugget
+item.metallurgy.celenegil.axe.name=Celenegil Axe
+item.metallurgy.celenegil.hoe.name=Celenegil Hoe
+item.metallurgy.celenegil.pickaxe.name=Celenegil Pickaxe
+item.metallurgy.celenegil.shovel.name=Celenegil Shovel
+item.metallurgy.celenegil.sword.name=Celenegil Sword
+item.metallurgy.celenegil.helmet.name=Celenegil Helmet
+item.metallurgy.celenegil.chestplate.name=Celenegil Chestplate
+item.metallurgy.celenegil.leggings.name=Celenegil Leggings
+item.metallurgy.celenegil.boots.name=Celenegil Boots
+
+tile.metallurgy.adamantine.ore.name=Adamantine Arr
+tile.metallurgy.adamantine.block.name=Adamantine Blok
+tile.metallurgy.adamantine.brick.name=Adamantine Brick
+item.metallurgy.adamantine.dust.name=Adamantine Dust
+item.metallurgy.adamantine.ingot.name=Adamantine Ingot
+item.metallurgy.adamantine.nugget.name=Adamantine Nugget
+item.metallurgy.adamantine.axe.name=Adamantine Axe
+item.metallurgy.adamantine.hoe.name=Adamantine Hoe
+item.metallurgy.adamantine.pickaxe.name=Adamantine Pickaxe
+item.metallurgy.adamantine.shovel.name=Adamantine Shovel
+item.metallurgy.adamantine.sword.name=Adamantine Sword
+item.metallurgy.adamantine.helmet.name=Adamantine Helmet
+item.metallurgy.adamantine.chestplate.name=Adamantine Chestplate
+item.metallurgy.adamantine.leggings.name=Adamantine Leggings
+item.metallurgy.adamantine.boots.name=Adamantine Boots
+
+tile.metallurgy.atlarus.ore.name=Atlarus Arr
+tile.metallurgy.atlarus.block.name=Atlarus Blok
+tile.metallurgy.atlarus.brick.name=Atlarus Brick
+item.metallurgy.atlarus.dust.name=Atlarus Dust
+item.metallurgy.atlarus.ingot.name=Atlarus Ingot
+item.metallurgy.atlarus.nugget.name=Atlarus Nugget
+item.metallurgy.atlarus.axe.name=Atlarus Axe
+item.metallurgy.atlarus.hoe.name=Atlarus Hoe
+item.metallurgy.atlarus.pickaxe.name=Atlarus Pickaxe
+item.metallurgy.atlarus.shovel.name=Atlarus Shovel
+item.metallurgy.atlarus.sword.name=Atlarus Sword
+item.metallurgy.atlarus.helmet.name=Atlarus Helmet
+item.metallurgy.atlarus.chestplate.name=Atlarus Chestplate
+item.metallurgy.atlarus.leggings.name=Atlarus Leggings
+item.metallurgy.atlarus.boots.name=Atlarus Boots
+
+tile.metallurgy.tartarite.block.name=Tartarite Blok
+tile.metallurgy.tartarite.brick.name=Tartarite Brick
+item.metallurgy.tartarite.dust.name=Tartarite Dust
+item.metallurgy.tartarite.ingot.name=Tartarite Ingot
+item.metallurgy.tartarite.nugget.name=Tartarite Nugget
+item.metallurgy.tartarite.axe.name=Tartarite Axe
+item.metallurgy.tartarite.hoe.name=Tartarite Hoe
+item.metallurgy.tartarite.pickaxe.name=Tartarite Pickaxe
+item.metallurgy.tartarite.shovel.name=Tartarite Shovel
+item.metallurgy.tartarite.sword.name=Tartarite Sword
+item.metallurgy.tartarite.helmet.name=Tartarite Helmet
+item.metallurgy.tartarite.chestplate.name=Tartarite Chestplate
+item.metallurgy.tartarite.leggings.name=Tartarite Leggings
+item.metallurgy.tartarite.boots.name=Tartarite Boots
+
+tile.metallurgy.ignatius.ore.name=Ignatius Arr
+tile.metallurgy.ignatius.block.name=Ignatius Blok
+tile.metallurgy.ignatius.brick.name=Ignatius Brick
+item.metallurgy.ignatius.dust.name=Ignatius Dust
+item.metallurgy.ignatius.ingot.name=Ignatius Ingot
+item.metallurgy.ignatius.nugget.name=Ignatius Nugget
+item.metallurgy.ignatius.axe.name=Ignatius Axe
+item.metallurgy.ignatius.hoe.name=Ignatius Hoe
+item.metallurgy.ignatius.pickaxe.name=Ignatius Pickaxe
+item.metallurgy.ignatius.shovel.name=Ignatius Shovel
+item.metallurgy.ignatius.sword.name=Ignatius Sword
+item.metallurgy.ignatius.helmet.name=Ignatius Helmet
+item.metallurgy.ignatius.chestplate.name=Ignatius Chestplate
+item.metallurgy.ignatius.leggings.name=Ignatius Leggings
+item.metallurgy.ignatius.boots.name=Ignatius Boots
+
+tile.metallurgy.shadow.iron.ore.name=Shadow Iron Arr
+tile.metallurgy.shadow.iron.block.name=Shadow Iron Blok
+tile.metallurgy.shadow.iron.brick.name=Shadow Iron Brick
+item.metallurgy.shadow.iron.dust.name=Shadow Iron Dust
+item.metallurgy.shadow.iron.ingot.name=Shadow Iron Ingot
+item.metallurgy.shadow.iron.nugget.name=Shadow Iron Nugget
+item.metallurgy.shadow.iron.axe.name=Shadow Iron Axe
+item.metallurgy.shadow.iron.hoe.name=Shadow Iron Hoe
+item.metallurgy.shadow.iron.pickaxe.name=Shadow Iron Pickaxe
+item.metallurgy.shadow.iron.shovel.name=Shadow Iron Shovel
+item.metallurgy.shadow.iron.sword.name=Shadow Iron Sword
+item.metallurgy.shadow.iron.helmet.name=Shadow Iron Helmet
+item.metallurgy.shadow.iron.chestplate.name=Shadow Iron Chestplate
+item.metallurgy.shadow.iron.leggings.name=Shadow Iron Leggings
+item.metallurgy.shadow.iron.boots.name=Shadow Iron Boots
+
+tile.metallurgy.lemurite.ore.name=Lemurite Arr
+tile.metallurgy.lemurite.block.name=Lemurite Blok
+tile.metallurgy.lemurite.brick.name=Lemurite Brick
+item.metallurgy.lemurite.dust.name=Lemurite Dust
+item.metallurgy.lemurite.ingot.name=Lemurite Ingot
+item.metallurgy.lemurite.nugget.name=Lemurite Nugget
+
+tile.metallurgy.midasium.ore.name=Midasium Arr
+tile.metallurgy.midasium.block.name=Midasium Blok
+tile.metallurgy.midasium.brick.name=Midasium Brick
+item.metallurgy.midasium.dust.name=Midasium Dust
+item.metallurgy.midasium.ingot.name=Midasium Ingot
+item.metallurgy.midasium.nugget.name=Midasium Nugget
+item.metallurgy.midasium.axe.name=Midasium Axe
+item.metallurgy.midasium.hoe.name=Midasium Hoe
+item.metallurgy.midasium.pickaxe.name=Midasium Pickaxe
+item.metallurgy.midasium.shovel.name=Midasium Shovel
+item.metallurgy.midasium.sword.name=Midasium Sword
+item.metallurgy.midasium.helmet.name=Midasium Helmet
+item.metallurgy.midasium.chestplate.name=Midasium Chestplate
+item.metallurgy.midasium.leggings.name=Midasium Leggings
+item.metallurgy.midasium.boots.name=Midasium Boots
+
+tile.metallurgy.vyroxeres.ore.name=Vyroxeres Arr
+tile.metallurgy.vyroxeres.block.name=Vyroxeres Blok
+tile.metallurgy.vyroxeres.brick.name=Vyroxeres Brick
+item.metallurgy.vyroxeres.dust.name=Vyroxeres Dust
+item.metallurgy.vyroxeres.ingot.name=Vyroxeres Ingot
+item.metallurgy.vyroxeres.nugget.name=Vyroxeres Nugget
+item.metallurgy.vyroxeres.axe.name=Vyroxeres Axe
+item.metallurgy.vyroxeres.hoe.name=Vyroxeres Hoe
+item.metallurgy.vyroxeres.pickaxe.name=Vyroxeres Pickaxe
+item.metallurgy.vyroxeres.shovel.name=Vyroxeres Shovel
+item.metallurgy.vyroxeres.sword.name=Vyroxeres Sword
+item.metallurgy.vyroxeres.helmet.name=Vyroxeres Helmet
+item.metallurgy.vyroxeres.chestplate.name=Vyroxeres Chestplate
+item.metallurgy.vyroxeres.leggings.name=Vyroxeres Leggings
+item.metallurgy.vyroxeres.boots.name=Vyroxeres Boots
+
+tile.metallurgy.ceruclase.ore.name=Ceruclase Arr
+tile.metallurgy.ceruclase.block.name=Ceruclase Blok
+tile.metallurgy.ceruclase.brick.name=Ceruclase Brick
+item.metallurgy.ceruclase.dust.name=Ceruclase Dust
+item.metallurgy.ceruclase.ingot.name=Ceruclase Ingot
+item.metallurgy.ceruclase.nugget.name=Ceruclase Nugget
+item.metallurgy.ceruclase.axe.name=Ceruclase Axe
+item.metallurgy.ceruclase.hoe.name=Ceruclase Hoe
+item.metallurgy.ceruclase.pickaxe.name=Ceruclase Pickaxe
+item.metallurgy.ceruclase.shovel.name=Ceruclase Shovel
+item.metallurgy.ceruclase.sword.name=Ceruclase Sword
+item.metallurgy.ceruclase.helmet.name=Ceruclase Helmet
+item.metallurgy.ceruclase.chestplate.name=Ceruclase Chestplate
+item.metallurgy.ceruclase.leggings.name=Ceruclase Leggings
+item.metallurgy.ceruclase.boots.name=Ceruclase Boots
+
+tile.metallurgy.alduorite.ore.name=Alduorite Arr
+tile.metallurgy.alduorite.block.name=Alduorite Blok
+tile.metallurgy.alduorite.brick.name=Alduorite Brick
+item.metallurgy.alduorite.dust.name=Alduorite Dust
+item.metallurgy.alduorite.ingot.name=Alduorite Ingot
+item.metallurgy.alduorite.nugget.name=Alduorite Nugget
+
+tile.metallurgy.kalendrite.ore.name=Kalendrite Arr
+tile.metallurgy.kalendrite.block.name=Kalendrite Blok
+tile.metallurgy.kalendrite.brick.name=Kalendrite Brick
+item.metallurgy.kalendrite.dust.name=Kalendrite Dust
+item.metallurgy.kalendrite.ingot.name=Kalendrite Ingot
+item.metallurgy.kalendrite.nugget.name=Kalendrite Nugget
+item.metallurgy.kalendrite.axe.name=Kalendrite Axe
+item.metallurgy.kalendrite.hoe.name=Kalendrite Hoe
+item.metallurgy.kalendrite.pickaxe.name=Kalendrite Pickaxe
+item.metallurgy.kalendrite.shovel.name=Kalendrite Shovel
+item.metallurgy.kalendrite.sword.name=Kalendrite Sword
+item.metallurgy.kalendrite.helmet.name=Kalendrite Helmet
+item.metallurgy.kalendrite.chestplate.name=Kalendrite Chestplate
+item.metallurgy.kalendrite.leggings.name=Kalendrite Leggings
+item.metallurgy.kalendrite.boots.name=Kalendrite Boots
+
+tile.metallurgy.vulcanite.ore.name=Vulcanite Arr
+tile.metallurgy.vulcanite.block.name=Vulcanite Blok
+tile.metallurgy.vulcanite.brick.name=Vulcanite Brick
+item.metallurgy.vulcanite.dust.name=Vulcanite Dust
+item.metallurgy.vulcanite.ingot.name=Vulcanite Ingot
+item.metallurgy.vulcanite.nugget.name=Vulcanite Nugget
+item.metallurgy.vulcanite.axe.name=Vulcanite Axe
+item.metallurgy.vulcanite.hoe.name=Vulcanite Hoe
+item.metallurgy.vulcanite.pickaxe.name=Vulcanite Pickaxe
+item.metallurgy.vulcanite.shovel.name=Vulcanite Shovel
+item.metallurgy.vulcanite.sword.name=Vulcanite Sword
+item.metallurgy.vulcanite.helmet.name=Vulcanite Helmet
+item.metallurgy.vulcanite.chestplate.name=Vulcanite Chestplate
+item.metallurgy.vulcanite.leggings.name=Vulcanite Leggings
+item.metallurgy.vulcanite.boots.name=Vulcanite Boots
+
+tile.metallurgy.sanguinite.ore.name=Sanguinite Arr
+tile.metallurgy.sanguinite.block.name=Sanguinite Blok
+tile.metallurgy.sanguinite.brick.name=Sanguinite Brick
+item.metallurgy.sanguinite.dust.name=Sanguinite Dust
+item.metallurgy.sanguinite.ingot.name=Sanguinite Ingot
+item.metallurgy.sanguinite.nugget.name=Sanguinite Nugget
+item.metallurgy.sanguinite.axe.name=Sanguinite Axe
+item.metallurgy.sanguinite.hoe.name=Sanguinite Hoe
+item.metallurgy.sanguinite.pickaxe.name=Sanguinite Pickaxe
+item.metallurgy.sanguinite.shovel.name=Sanguinite Shovel
+item.metallurgy.sanguinite.sword.name=Sanguinite Sword
+item.metallurgy.sanguinite.helmet.name=Sanguinite Helmet
+item.metallurgy.sanguinite.chestplate.name=Sanguinite Chestplate
+item.metallurgy.sanguinite.leggings.name=Sanguinite Leggings
+item.metallurgy.sanguinite.boots.name=Sanguinite Boots
+
+tile.metallurgy.shadow.steel.block.name=Shadow Steel Blok
+tile.metallurgy.shadow.steel.brick.name=Shadow Steel Brick
+item.metallurgy.shadow.steel.dust.name=Shadow Steel Dust
+item.metallurgy.shadow.steel.ingot.name=Shadow Steel Ingot
+item.metallurgy.shadow.steel.nugget.name=Shadow Steel Nugget
+item.metallurgy.shadow.steel.axe.name=Shadow Steel Axe
+item.metallurgy.shadow.steel.hoe.name=Shadow Steel Hoe
+item.metallurgy.shadow.steel.pickaxe.name=Shadow Steel Pickaxe
+item.metallurgy.shadow.steel.shovel.name=Shadow Steel Shovel
+item.metallurgy.shadow.steel.sword.name=Shadow Steel Sword
+item.metallurgy.shadow.steel.helmet.name=Shadow Steel Helmet
+item.metallurgy.shadow.steel.chestplate.name=Shadow Steel Chestplate
+item.metallurgy.shadow.steel.leggings.name=Shadow Steel Leggings
+item.metallurgy.shadow.steel.boots.name=Shadow Steel Boots
+
+tile.metallurgy.inolashite.block.name=Inolashite Blok
+tile.metallurgy.inolashite.brick.name=Inolashite Brick
+item.metallurgy.inolashite.dust.name=Inolashite Dust
+item.metallurgy.inolashite.ingot.name=Inolashite Ingot
+item.metallurgy.inolashite.nugget.name=Inolashite Nugget
+item.metallurgy.inolashite.axe.name=Inolashite Axe
+item.metallurgy.inolashite.hoe.name=Inolashite Hoe
+item.metallurgy.inolashite.pickaxe.name=Inolashite Pickaxe
+item.metallurgy.inolashite.shovel.name=Inolashite Shovel
+item.metallurgy.inolashite.sword.name=Inolashite Sword
+item.metallurgy.inolashite.helmet.name=Inolashite Helmet
+item.metallurgy.inolashite.chestplate.name=Inolashite Chestplate
+item.metallurgy.inolashite.leggings.name=Inolashite Leggings
+item.metallurgy.inolashite.boots.name=Inolashite Boots
+
+tile.metallurgy.amordrine.block.name=Amordrine Blok
+tile.metallurgy.amordrine.brick.name=Amordrine Brick
+item.metallurgy.amordrine.dust.name=Amordrine Dust
+item.metallurgy.amordrine.ingot.name=Amordrine Ingot
+item.metallurgy.amordrine.nugget.name=Amordrine Nugget
+item.metallurgy.amordrine.axe.name=Amordrine Axe
+item.metallurgy.amordrine.hoe.name=Amordrine Hoe
+item.metallurgy.amordrine.pickaxe.name=Amordrine Pickaxe
+item.metallurgy.amordrine.shovel.name=Amordrine Shovel
+item.metallurgy.amordrine.sword.name=Amordrine Sword
+item.metallurgy.amordrine.helmet.name=Amordrine Helmet
+item.metallurgy.amordrine.chestplate.name=Amordrine Chestplate
+item.metallurgy.amordrine.leggings.name=Amordrine Leggings
+item.metallurgy.amordrine.boots.name=Amordrine Boots
+
+tile.metallurgy.zinc.ore.name=Zinc Arr
+tile.metallurgy.zinc.block.name=Zinc Blok
+tile.metallurgy.zinc.brick.name=Zinc Brick
+item.metallurgy.zinc.dust.name=Zinc Dust
+item.metallurgy.zinc.ingot.name=Zinc Ingot
+item.metallurgy.zinc.nugget.name=Zinc Nugget
+
+tile.metallurgy.silver.ore.name=Silver Arr
+tile.metallurgy.silver.block.name=Silver Blok
+tile.metallurgy.silver.brick.name=Silver Brick
+item.metallurgy.silver.dust.name=Silver Dust
+item.metallurgy.silver.ingot.name=Silver Ingot
+item.metallurgy.silver.nugget.name=Silver Nugget
+item.metallurgy.silver.axe.name=Silver Axe
+item.metallurgy.silver.hoe.name=Silver Hoe
+item.metallurgy.silver.pickaxe.name=Silver Pickaxe
+item.metallurgy.silver.shovel.name=Silver Shovel
+item.metallurgy.silver.sword.name=Silver Sword
+item.metallurgy.silver.helmet.name=Silver Helmet
+item.metallurgy.silver.chestplate.name=Silver Chestplate
+item.metallurgy.silver.leggings.name=Silver Leggings
+item.metallurgy.silver.boots.name=Silver Boots
+
+tile.metallurgy.platinum.ore.name=Platinum Arr
+tile.metallurgy.platinum.block.name=Platinum Blok
+tile.metallurgy.platinum.brick.name=Platinum Brick
+item.metallurgy.platinum.dust.name=Platinum Dust
+item.metallurgy.platinum.ingot.name=Platinum Ingot
+item.metallurgy.platinum.nugget.name=Platinum Nugget
+item.metallurgy.platinum.axe.name=Platinum Axe
+item.metallurgy.platinum.hoe.name=Platinum Hoe
+item.metallurgy.platinum.pickaxe.name=Platinum Pickaxe
+item.metallurgy.platinum.shovel.name=Platinum Shovel
+item.metallurgy.platinum.sword.name=Platinum Sword
+item.metallurgy.platinum.helmet.name=Platinum Helmet
+item.metallurgy.platinum.chestplate.name=Platinum Chestplate
+item.metallurgy.platinum.leggings.name=Platinum Leggings
+item.metallurgy.platinum.boots.name=Platinum Boots
+
+tile.metallurgy.brass.block.name=Brass Blok
+tile.metallurgy.brass.brick.name=Brass Brick
+item.metallurgy.brass.dust.name=Brass Dust
+item.metallurgy.brass.ingot.name=Brass Ingot
+item.metallurgy.brass.nugget.name=Brass Nugget
+item.metallurgy.brass.axe.name=Brass Axe
+item.metallurgy.brass.hoe.name=Brass Hoe
+item.metallurgy.brass.pickaxe.name=Brass Pickaxe
+item.metallurgy.brass.shovel.name=Brass Shovel
+item.metallurgy.brass.sword.name=Brass Sword
+item.metallurgy.brass.helmet.name=Brass Helmet
+item.metallurgy.brass.chestplate.name=Brass Chestplate
+item.metallurgy.brass.leggings.name=Brass Leggings
+item.metallurgy.brass.boots.name=Brass Boots
+
+tile.metallurgy.electrum.block.name=Electrum Blok
+tile.metallurgy.electrum.brick.name=Electrum Brick
+item.metallurgy.electrum.dust.name=Electrum Dust
+item.metallurgy.electrum.ingot.name=Electrum Ingot
+item.metallurgy.electrum.nugget.name=Electrum Nugget
+item.metallurgy.electrum.axe.name=Electrum Axe
+item.metallurgy.electrum.hoe.name=Electrum Hoe
+item.metallurgy.electrum.pickaxe.name=Electrum Pickaxe
+item.metallurgy.electrum.shovel.name=Electrum Shovel
+item.metallurgy.electrum.sword.name=Electrum Sword
+item.metallurgy.electrum.helmet.name=Electrum Helmet
+item.metallurgy.electrum.chestplate.name=Electrum Chestplate
+item.metallurgy.electrum.leggings.name=Electrum Leggings
+item.metallurgy.electrum.boots.name=Electrum Boots
+
+tile.metallurgy.sulfur.ore.name=Sulfur Arr
+tile.metallurgy.sulfur.block.name=Sulfur Blok
+item.metallurgy.sulfur.name=Sulfur
+
+tile.metallurgy.phosphorite.ore.name=Phosphorite Arr
+tile.metallurgy.phosphorite.block.name=Phosphorite Blok
+item.metallurgy.phosphorus.name=Phosphorus
+
+tile.metallurgy.saltpeter.ore.name=Saltpeter Arr
+tile.metallurgy.saltpeter.block.name=Saltpeter Blok
+item.metallurgy.saltpeter.name=Saltpeter
+
+tile.metallurgy.magnesium.ore.name=Magnesium Arr
+tile.metallurgy.magnesium.block.name=Magnesium Blok
+item.metallurgy.magnesium.name=Magnesium
+
+tile.metallurgy.bitumen.ore.name=Bitumen Arr
+tile.metallurgy.bitumen.block.name=Bitumen Blok
+item.metallurgy.bitumen.name=Bitumen
+
+tile.metallurgy.potash.ore.name=Potash Arr
+tile.metallurgy.potash.block.name=Potash Blok
+item.metallurgy.potash.name=Potash
+
+tile.metallurgy.gold.brick.name=Gold Brick
+item.metallurgy.gold.dust.name=Gold Dust
+
+tile.metallurgy.iron.brick.name=Iron Brick
+item.metallurgy.iron.dust.name=Iron Dust
+
+# Fluids
+fluid.angmallen.molten=Molten Angmallen
+fluid.bronze.molten=Molten Bronze
+fluid.copper.molten=Molten Copper
+fluid.damascus.steel.molten=Molten Damascus Steel
+fluid.hepatizon.molten=Molten Hepatizon
+fluid.manganese.molten=Molten Manganese
+fluid.silver.molten=Molten Steel
+fluid.tin.molten=Molten Tin
+
+fluid.brass.molten=Molten Brass
+fluid.electrum.molten=Molten Electrum
+fluid.platinum.molten=Molten Platinum
+fluid.silver.molten=Molten Silver
+fluid.zinc.molten=Molten Zinc
+
+fluid.amordrine.molten=Molten Amordrine
+fluid.alduorite.molten=Molten Alduorite
+fluid.ceruclase.molten=Molten Ceruclase
+fluid.ignatius.molten=Molten Ignatius
+fluid.inolashite.molten=Molten Inolashite
+fluid.kalendrite.molten=Molten Kalendrite
+fluid.lemurite.molten=Molten Lemurite
+fluid.midasium.molten=Molten Midasium
+fluid.sanguinite.molten=Molten Sanguinite
+fluid.shadow.iron.molten=Molten Shadow Iron
+fluid.shadow.steel.molten=Molten Shadow Steel
+fluid.vulcanite.molten=Molten Vulcanite
+fluid.vyroxeres.molten=Molten Vyroxeres
+
+fluid.adamantine.molten=Molten Adamantine
+fluid.astral.silver.molten=Molten Astral Silver
+fluid.atlarus.molten=Molten Atlarus
+fluid.black.steel.molten=Molten Black Steel
+fluid.carmot.molten=Molten Carmot
+fluid.celenegil.molten=Molten Celenegil
+fluid.deep.iron.molten=Molten Deep Iron
+fluid.haderoth.molten=Molten Haderoth
+fluid.infuscolium.molten=Molten Infuscolium
+fluid.mithril.molten=Molten Mithril
+fluid.orichalcum.molten=Molten Orichalcum
+fluid.oureclase.molten=Molten Oureclase
+fluid.prometheum.molten=Molten Prometheum
+fluid.quicksilver.molten=Molten Quicksilver
+fluid.rubracium.molten=Molten Rubracium
+fluid.tartarite.molten=Molten Tartarite
+
+fluid.desichalkos.molten=Molten Desichalkos
+fluid.eximite.molten=Molten Eximite
+fluid.meutoite.molten=Molten Meutoite
+
+tile.metallurgy.angmallen.molten.name=Molten Angmallen
+tile.metallurgy.bronze.molten.name=Molten Bronze
+tile.metallurgy.copper.molten.name=Molten Copper
+tile.metallurgy.damascus.steel.molten.name=Molten Damascus Steel
+tile.metallurgy.hepatizon.molten.name=Molten Hepatizon
+tile.metallurgy.manganese.molten.name=Molten Manganese
+tile.metallurgy.steel.molten.name=Molten Steel
+tile.metallurgy.tin.molten.name=Molten Tin
+
+tile.metallurgy.brass.molten.name=Molten Brass
+tile.metallurgy.electrum.molten.name=Molten Electrum
+tile.metallurgy.platinum.molten.name=Molten Platinum
+tile.metallurgy.silver.molten.name=Molten Silver
+tile.metallurgy.zinc.molten.name=Molten Zinc
+
+tile.metallurgy.amordrine.molten.name=Molten Amordrine
+tile.metallurgy.alduorite.molten.name=Molten Alduorite
+tile.metallurgy.ceruclase.molten.name=Molten Ceruclase
+tile.metallurgy.ignatius.molten.name=Molten Ignatius
+tile.metallurgy.inolashite.molten.name=Molten Inolashite
+tile.metallurgy.kalendrite.molten.name=Molten Kalendrite
+tile.metallurgy.lemurite.molten.name=Molten Lemurite
+tile.metallurgy.midasium.molten.name=Molten Midasium
+tile.metallurgy.sanguinite.molten.name=Molten Sanguinite
+tile.metallurgy.shadow.iron.molten.name=Molten Shadow Iron
+tile.metallurgy.shadow.steel.molten.name=Molten Shadow Steel
+tile.metallurgy.vulcanite.molten.name=Molten Vulcanite
+tile.metallurgy.vyroxeres.molten.name=Molten Vyroxeres
+
+tile.metallurgy.adamantine.molten.name=Molten Adamantine
+tile.metallurgy.astral.silver.molten.name=Molten Astral Silver
+tile.metallurgy.atlarus.molten.name=Molten Atlarus
+tile.metallurgy.black.steel.molten.name=Molten Black Steel
+tile.metallurgy.carmot.molten.name=Molten Carmot
+tile.metallurgy.celenegil.molten.name=Molten Celenegil
+tile.metallurgy.deep.iron.molten.name=Molten Deep Iron
+tile.metallurgy.haderoth.molten.name=Molten Haderoth
+tile.metallurgy.infuscolium.molten.name=Molten Infuscolium
+tile.metallurgy.mithril.molten.name=Molten Mithril
+tile.metallurgy.orichalcum.molten.name=Molten Orichalcum
+tile.metallurgy.oureclase.molten.name=Molten Oureclase
+tile.metallurgy.prometheum.molten.name=Molten Prometheum
+tile.metallurgy.quicksilver.molten.name=Molten Quicksilver
+tile.metallurgy.rubracium.molten.name=Molten Rubracium
+tile.metallurgy.tartarite.molten.name=Molten Tartarite
+
+tile.metallurgy.desichalkos.molten.name=Molten Desichalkos
+tile.metallurgy.eximite.molten.name=Molten Eximite
+tile.metallurgy.meutoite.molten.name=Molten Meutoite
+
+# Buckets
+item.metallurgy.bucket.filled.angmallen.molten.name=Molten Angmallen Bucket
+item.metallurgy.bucket.filled.bronze.molten.name=Molten Bronze Bucket
+item.metallurgy.bucket.filled.copper.molten.name=Molten Copper Bucket
+item.metallurgy.bucket.filled.damascus.steel.molten.name=Molten Damascus Steel Bucket
+item.metallurgy.bucket.filled.hepatizon.molten.name=Molten Hepatizon Bucket
+item.metallurgy.bucket.filled.manganese.molten.name=Molten Manganese Bucket
+item.metallurgy.bucket.filled.steel.molten.name=Molten Steel Bucket
+item.metallurgy.bucket.filled.tin.molten.name=Molten Tin Bucket
+
+item.metallurgy.bucket.filled.brass.molten.name=Molten Brass Bucket
+item.metallurgy.bucket.filled.electrum.molten.name=Molten Electrum Bucket
+item.metallurgy.bucket.filled.platinum.molten.name=Molten Platinum Bucket
+item.metallurgy.bucket.filled.silver.molten.name=Molten Silver Bucket
+item.metallurgy.bucket.filled.zinc.molten.name=Molten Zinc Bucket
+
+item.metallurgy.bucket.filled.amordrine.molten.name=Molten Amordrine Bucket
+item.metallurgy.bucket.filled.alduorite.molten.name=Molten Alduorite Bucket
+item.metallurgy.bucket.filled.ceruclase.molten.name=Molten Ceruclase Bucket
+item.metallurgy.bucket.filled.ignatius.molten.name=Molten Ignatius Bucket
+item.metallurgy.bucket.filled.inolashite.molten.name=Molten Inolashite Bucket
+item.metallurgy.bucket.filled.kalendrite.molten.name=Molten Kalendrite Bucket
+item.metallurgy.bucket.filled.lemurite.molten.name=Molten Lemurite Bucket
+item.metallurgy.bucket.filled.midasium.molten.name=Molten Midasium Bucket
+item.metallurgy.bucket.filled.sanguinite.molten.name=Molten Sanguinite Bucket
+item.metallurgy.bucket.filled.shadow.iron.molten.name=Molten Shadow Iron Bucket
+item.metallurgy.bucket.filled.shadow.steel.molten.name=Molten Shadow Steel Bucket
+item.metallurgy.bucket.filled.vulcanite.molten.name=Molten Vulcanite Bucket
+item.metallurgy.bucket.filled.vyroxeres.molten.name=Molten Vyroxeres Bucket
+
+item.metallurgy.bucket.filled.adamantine.molten.name=Molten Adamantine Bucket
+item.metallurgy.bucket.filled.astral.silver.molten.name=Molten Astral Silver Bucket
+item.metallurgy.bucket.filled.atlarus.molten.name=Molten Atlarus Bucket
+item.metallurgy.bucket.filled.black.steel.molten.name=Molten Black Steel Bucket
+item.metallurgy.bucket.filled.carmot.molten.name=Molten Carmot Bucket
+item.metallurgy.bucket.filled.celenegil.molten.name=Molten Celenegil Bucket
+item.metallurgy.bucket.filled.deep.iron.molten.name=Molten Deep Iron Bucket
+item.metallurgy.bucket.filled.haderoth.molten.name=Molten Haderoth Bucket
+item.metallurgy.bucket.filled.infuscolium.molten.name=Molten Infuscolium Bucket
+item.metallurgy.bucket.filled.mithril.molten.name=Molten Mithril Bucket
+item.metallurgy.bucket.filled.orichalcum.molten.name=Molten Orichalcum Bucket
+item.metallurgy.bucket.filled.oureclase.molten.name=Molten Oureclase Bucket
+item.metallurgy.bucket.filled.prometheum.molten.name=Molten Prometheum Bucket
+item.metallurgy.bucket.filled.quicksilver.molten.name=Molten Quicksilver Bucket
+item.metallurgy.bucket.filled.rubracium.molten.name=Molten Rubracium Bucket
+item.metallurgy.bucket.filled.tartarite.molten.name=Molten Tartarite Bucket
+
+item.metallurgy.bucket.filled.desichalkos.molten.name=Molten Desichalkos Bucket
+item.metallurgy.bucket.filled.eximite.molten.name=Molten Eximite Bucket
+item.metallurgy.bucket.filled.meutoite.molten.name=Molten Meutoite Bucket
+
+#Explosive
+
+entity.Metallurgy.explosiveEntity.name=Primed Explosives
+
+tile.metallurgy.explosives.he.name=Big Boom
+tile.metallurgy.explosives.le.name=Little Boom
+tile.metallurgy.explosives.m.name=Diggar's Boom
+tile.metallurgy.explosives.de.name=Killar's Boom
+tile.metallurgy.explosives.pe.name=Tiny Boom
+
+#Misc Items and blocks
+item.metallurgy.fertilizer.name=Fertilizarr
+item.metallurgy.tar.name=Tarr
+
+tile.metallurgy.charcoal.block.name=Blok 'o Charrcoal
