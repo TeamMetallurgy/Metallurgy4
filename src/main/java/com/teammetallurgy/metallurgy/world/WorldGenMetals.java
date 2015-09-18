@@ -17,11 +17,7 @@ import cpw.mods.fml.common.IWorldGenerator;
 public class WorldGenMetals implements IWorldGenerator
 {
     Block genBlock;
-    int genMetaId;
-    /**
-     * 0: Veins Pre Chunk, 1: ores Pre Chunk, 2: minLvl, 3:maxLvl, <br />
-     * 4: Vein Chance PreChunk, 5: Vine Density
-     */
+    int genMetaId; /* 0: Veins Pre Chunk, 1: ores Pre Chunk, 2: minLvl, 3:maxLvl, 4: Vein Chance PreChunk, 5: Vine Density */
     private int[] generation;
     private String dimensions;
     private WorldGenMinable mineable;
