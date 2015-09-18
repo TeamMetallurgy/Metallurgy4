@@ -6,8 +6,8 @@ itemGroup.Metallurgy.Armor=Metallurgy: Броня
 
 tile.machine.frame.name=Корпус механизма
 
-tile.crusher.name=Дробилка
-container.crusher=Дробилка
+tile.crusher.name=Дробитель
+container.crusher=Дробитель
 
 tile.alloyer.name=Плавильня
 container.alloyer=Плавильня
