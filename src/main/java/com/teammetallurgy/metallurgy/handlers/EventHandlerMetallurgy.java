@@ -26,7 +26,7 @@ public class EventHandlerMetallurgy extends EventHandler
         Chunk regenChunk = event.getChunk();
 
         NBTTagCompound chunkNBT = event.getData().getCompoundTag(this.getModTag());
-        if (!Configs.regen_key.equals("") && !Configs.regen_key.equals(chunkNBT.getString("regen_key")) && Configs.regen)
+        if (Configs.regen && !Configs.regen_key.equals("") && !Configs.regen_key.equals(chunkNBT.getString("regen_key")))
         {
             LogHandler.log("World gen was never run for chunk at (" + regenChunk.xPosition + ", " + regenChunk.zPosition + ") Dim: " + dim);
 
