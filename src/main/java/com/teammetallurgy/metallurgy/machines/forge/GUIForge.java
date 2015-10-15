@@ -3,13 +3,9 @@ package com.teammetallurgy.metallurgy.machines.forge;
 import java.util.Arrays;
 import java.util.List;
 
-import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.util.StatCollector;
-import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
-
-import org.lwjgl.input.Mouse;
 
 import com.teammetallurgy.metallurgycore.guiwidgets.FluidWidget;
 import com.teammetallurgy.metallurgycore.machines.ContainerMetallurgyMachine;
@@ -48,19 +44,15 @@ public class GUIForge extends GUIMetallurgyMachine
     }
 
     @Override
-    protected void drawGuiContainerForegroundLayer(int par1, int par2)
+    protected void drawGuiContainerForegroundLayer(int mouseX, int mouseZ)
     {
         this.drawTitle(30, 8);
-    }
 
-    @Override
-    public void drawScreen(int par1, int par2, float par3)
-    {
-        super.drawScreen(par1, par2, par3);
+        boolean isMouseInTank = mouseX >= this.guiLeft + 8 && mouseZ >= this.guiTop + 14 && mouseX <= this.guiLeft + 24 && mouseZ <= this.guiTop + 78;
 
-        if (GuiScreen.isShiftKeyDown())
+        if (isMouseInTank)
         {
-            this.drawTankInfo(Mouse.getX() * this.width / this.mc.displayWidth - this.guiLeft, this.height - Mouse.getY() * this.height / this.mc.displayHeight - 1 - this.guiTop);
+            this.drawTankInfo(mouseX - this.guiLeft, mouseZ - this.guiTop);
         }
     }
 
@@ -84,7 +76,7 @@ public class GUIForge extends GUIMetallurgyMachine
 
         final List<String> ret = Arrays.asList(new String[] { localizedTankInfo.substring(0, lineSeprator), localizedTankInfo.substring(lineSeprator + 3) });
 
-        this.drawHoveringText(ret, x - 5 + this.guiLeft / 4, y + this.guiTop, this.fontRendererObj);
+        this.drawHoveringText(ret, x, y, this.fontRendererObj);
 
     }
 
