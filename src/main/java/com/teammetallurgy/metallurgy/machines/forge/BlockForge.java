@@ -1,5 +1,7 @@
 package com.teammetallurgy.metallurgy.machines.forge;
 
+import java.util.Random;
+
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -174,4 +176,41 @@ public class BlockForge extends BlockMetallurgy
         this.frontOnIcon = register.registerIcon(this.frontOnTexture);
     }
 
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void randomDisplayTick(World world, int x, int y, int z, Random random)
+    {
+        super.randomDisplayTick(world, x, y, z, random);
+
+        TileEntity tileEntity = world.getTileEntity(x, y, z);
+        if (!(tileEntity instanceof TileEntityForge)) return;
+
+        if (!((TileEntityForge) tileEntity).isBurning()) return;
+
+        int facing = world.getBlockMetadata(x, y, z);
+        double centerX = x + 0.5D;
+        double randomY = y + 0.0D + random.nextFloat() * 6.0D / 16.0D;
+        double centerZ = z + 0.5D;
+        double faceOffset = 0.6D;
+        double randomOffset = random.nextFloat() * 0.6D - 0.3D;
+
+        switch (facing)
+        {
+            case 2:
+                world.spawnParticle("smoke", centerX + randomOffset, randomY, centerZ - faceOffset, 0.0D, 0.0D, 0.0D);
+                world.spawnParticle("flame", centerX + randomOffset, randomY, centerZ - faceOffset, 0.0D, 0.0D, 0.0D);
+                break;
+            case 3:
+                world.spawnParticle("smoke", centerX + randomOffset, randomY, centerZ + faceOffset, 0.0D, 0.0D, 0.0D);
+                world.spawnParticle("flame", centerX + randomOffset, randomY, centerZ + faceOffset, 0.0D, 0.0D, 0.0D);
+                break;
+            case 4:
+                world.spawnParticle("smoke", centerX - faceOffset, randomY, centerZ + randomOffset, 0.0D, 0.0D, 0.0D);
+                world.spawnParticle("flame", centerX - faceOffset, randomY, centerZ + randomOffset, 0.0D, 0.0D, 0.0D);
+                break;
+            case 5:
+                world.spawnParticle("smoke", centerX + faceOffset, randomY, centerZ + randomOffset, 0.0D, 0.0D, 0.0D);
+                world.spawnParticle("flame", centerX + faceOffset, randomY, centerZ + randomOffset, 0.0D, 0.0D, 0.0D);
+        }
+    }
 }
