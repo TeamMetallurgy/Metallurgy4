@@ -29,7 +29,7 @@ public class GUIForge extends GUIMetallurgyMachine
     {
         super(container, "metallurgy:textures/gui/forge.png");
         this.tank = ((TileEntityForge) this.tileEntity).getTank();
-        this.fluidWidget = new FluidWidget(this.tank, 8, 14, 179, 21, 16, 50);
+        this.fluidWidget = new FluidWidget(this.tank, 8, 14, 179, 21, 16, 65);
     }
 
     @Override
