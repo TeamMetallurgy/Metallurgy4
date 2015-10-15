@@ -3,8 +3,8 @@ package com.teammetallurgy.metallurgy.metals;
 import java.util.ArrayList;
 
 import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
+import com.teammetallurgy.metallurgy.handlers.LogHandler;
 import com.teammetallurgy.metallurgy.recipes.AbstractorRecipes;
-import com.teammetallurgy.metallurgycore.handlers.LogHandler;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;

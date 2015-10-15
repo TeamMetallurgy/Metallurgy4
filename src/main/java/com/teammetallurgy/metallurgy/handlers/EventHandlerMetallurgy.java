@@ -10,7 +10,6 @@ import net.minecraftforge.event.world.ChunkDataEvent;
 import com.teammetallurgy.metallurgy.lib.Configs;
 import com.teammetallurgy.metallurgycore.handlers.ChunkLoc;
 import com.teammetallurgy.metallurgycore.handlers.EventHandler;
-import com.teammetallurgy.metallurgycore.handlers.LogHandler;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 

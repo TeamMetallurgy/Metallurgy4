@@ -8,7 +8,6 @@ import net.minecraft.world.WorldServer;
 
 import com.teammetallurgy.metallurgy.world.WorldGenMetals;
 import com.teammetallurgy.metallurgycore.handlers.ChunkLoc;
-import com.teammetallurgy.metallurgycore.handlers.LogHandler;
 import com.teammetallurgy.metallurgycore.handlers.WorldTicker;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;

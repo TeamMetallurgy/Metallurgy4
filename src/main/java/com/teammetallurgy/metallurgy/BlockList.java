@@ -21,6 +21,7 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 
 import com.teammetallurgy.metallurgy.api.IMetalSet;
 import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
+import com.teammetallurgy.metallurgy.handlers.LogHandler;
 import com.teammetallurgy.metallurgy.machines.abstractor.BlockAbstrator;
 import com.teammetallurgy.metallurgy.machines.abstractor.TileEntityAbstractor;
 import com.teammetallurgy.metallurgy.machines.alloyer.BlockAlloyer;
@@ -37,7 +38,6 @@ import com.teammetallurgy.metallurgy.metals.VanillaMetals;
 import com.teammetallurgy.metallurgy.tnt.BlockExplosive;
 import com.teammetallurgy.metallurgy.tnt.BlockExplosiveItem;
 import com.teammetallurgy.metallurgy.tnt.EntityExplosive;
-import com.teammetallurgy.metallurgycore.handlers.LogHandler;
 
 import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;

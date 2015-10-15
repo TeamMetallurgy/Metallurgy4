@@ -27,6 +27,7 @@ import com.teammetallurgy.metallurgy.api.IMetalSet;
 import com.teammetallurgy.metallurgy.api.MetalType;
 import com.teammetallurgy.metallurgy.armor.ItemMetallurgyArmor;
 import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
+import com.teammetallurgy.metallurgy.handlers.LogHandler;
 import com.teammetallurgy.metallurgy.recipes.AbstractorRecipes;
 import com.teammetallurgy.metallurgy.tools.Axe;
 import com.teammetallurgy.metallurgy.tools.Hoe;
@@ -34,7 +35,6 @@ import com.teammetallurgy.metallurgy.tools.Pickaxe;
 import com.teammetallurgy.metallurgy.tools.Shovel;
 import com.teammetallurgy.metallurgy.tools.Sword;
 import com.teammetallurgy.metallurgy.world.WorldGenMetals;
-import com.teammetallurgy.metallurgycore.handlers.LogHandler;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 

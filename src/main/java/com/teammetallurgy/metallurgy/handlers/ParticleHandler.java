@@ -7,7 +7,6 @@ import net.minecraft.client.particle.EffectRenderer;
 import net.minecraft.world.World;
 
 import com.teammetallurgy.metallurgy.client.particle.EntityOreFX;
-import com.teammetallurgy.metallurgycore.handlers.LogHandler;
 
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
