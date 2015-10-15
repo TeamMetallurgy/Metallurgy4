@@ -66,7 +66,7 @@ public class GUIForge extends GUIMetallurgyMachine
 
         if (fluidInfo == null) { return; }
 
-        final String fluidName = fluidInfo.getFluid().getLocalizedName();
+        final String fluidName = fluidInfo.getLocalizedName();
         final int amount = fluidInfo.amount;
 
         String localizedTankInfo = StatCollector.translateToLocal("tooltip.metallurgy.tankinfo");
