@@ -58,11 +58,9 @@ public class GUIForge extends GUIMetallurgyMachine
 
     public void drawTankInfo(int x, final int y)
     {
-        final FluidTank localTank = this.getTankAtCoord(x, y);
+        if (this.tank == null) { return; }
 
-        if (localTank == null) { return; }
-
-        final FluidStack fluidInfo = GUIForge.getFluidInfo(localTank);
+        final FluidStack fluidInfo = GUIForge.getFluidInfo(this.tank);
 
         if (fluidInfo == null) { return; }
 
@@ -78,13 +76,6 @@ public class GUIForge extends GUIMetallurgyMachine
 
         this.drawHoveringText(ret, x, y, this.fontRendererObj);
 
-    }
-
-    public FluidTank getTankAtCoord(int x, int y)
-    {
-        if (x >= 8 && x <= 16 + 8 && y >= 14 && y <= 14 + 65) { return this.tank; }
-
-        return null;
     }
 
     @Override
