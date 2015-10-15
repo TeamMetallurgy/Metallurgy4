@@ -281,7 +281,7 @@ public class MetalSet implements IMetalSet
 
         return outputNames;
     }
-    
+
     @Override
     public ItemStack getNugget(String metal)
     {
@@ -388,17 +388,18 @@ public class MetalSet implements IMetalSet
                 ingot = new MetalItem(configTag + "." + identifier);
                 ingot.addSubItem(0, metal.getName(), 1, texture + "_" + identifier);
 
-                OreDictionary.registerOre(identifier + tag, new ItemStack(ingot, 1, 0));
-
                 String registryName = metal.getName().toLowerCase();
                 registryName = registryName.replace(" ", ".");
                 registryName = registryName + "." + identifier;
 
                 GameRegistry.registerItem(ingot, registryName);
+
+                OreDictionary.registerOre(identifier + tag, new ItemStack(ingot));
+
                 this.ingotStacks.put(metal.getName(), new ItemStack(ingot));
 
             }
-            
+
             if (metal.type != MetalType.Drop)
             {
                 String identifier = "nugget";
@@ -412,10 +413,10 @@ public class MetalSet implements IMetalSet
 
                 ItemStack returnedItems = nuggetStack.copy();
                 returnedItems.stackSize = 9;
-                
+
                 GameRegistry.addShapedRecipe(new ItemStack(ingot), new Object[] { "iii", "iii", "iii", 'i', nuggetStack.copy() });
                 GameRegistry.addShapelessRecipe(returnedItems, new ItemStack(ingot));
-                
+
             }
 
             if (metal.type == MetalType.Drop)
@@ -836,7 +837,7 @@ public class MetalSet implements IMetalSet
                     GameRegistry.addSmelting(new ItemStack(ore, 1, metaId), new ItemStack(ingot), 0.7F);
                 }
             }
-            
+
             // Abstractor Recipes
             if (ingot != null && metal.type != MetalType.Drop)
             {
