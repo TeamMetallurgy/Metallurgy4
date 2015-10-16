@@ -15,8 +15,8 @@ public class ContainerAbstrator extends ContainerMetallurgyMachine
         this.addSlotToContainer((new SlotMetallurgyMachine(tileEntity, 0, 26, 56)));
         this.addSlotToContainer((new SlotMetallurgyMachine(tileEntity, 1, 17, 19)));
         this.addSlotToContainer((new SlotMetallurgyMachine(tileEntity, 2, 36, 19)));
-        this.addSlotToContainer((new SlotMetallurgyMachine(tileEntity, 3, 98, 19)));
-        this.addSlotToContainer((new SlotMetallurgyMachine(tileEntity, 4, 143, 19)));
+        this.addSlotToContainer((new SlotMetallurgyMachine(tileEntity, 3, 62, 56)));
+        this.addSlotToContainer((new SlotMetallurgyMachine(tileEntity, 4, 134, 56)));
         this.addPlayersInventoryToContainer(inventoryPlayer, 8, 84);
     }
 
