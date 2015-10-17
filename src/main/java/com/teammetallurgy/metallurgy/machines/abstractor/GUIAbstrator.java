@@ -46,22 +46,38 @@ public class GUIAbstrator extends GUIMetallurgyMachine
         // Progress bars
         
         // Burning
-        this.drawTexturedModalRect(this.guiLeft + 27, this.guiTop + 40, 176, 0, 15, 15);
-        
-        // Abstracting
-        this.drawTexturedModalRect(this.guiLeft + 59, this.guiTop + 20, 177, 15, 30, 14);
-        
-        // Essence Level
-        int level = 50;
-        
-        int maxLevel = 53;
-        if (level < 0)
-            level = 1;
-        if (level > maxLevel)
-            level = maxLevel;
-        
-        this.drawTexturedModalRect(this.guiLeft + 98, this.guiTop + 19 + 53 - level, 176, 65, 16, level);
-        
+        int burning = 0;
+        int maxBurning = 15;
+
+        if (burning < 0)
+            burning = 0;
+        if (burning > maxBurning)
+            burning = maxBurning;
+
+        this.drawTexturedModalRect(this.guiLeft + 27, this.guiTop + 40 + maxBurning - burning, 176, 0, 15, burning);
+
+        // Processing
+        int processing = 0;
+        int maxProcessing = 30;
+
+        if (processing < 0)
+            processing = 0;
+        if (processing > maxProcessing)
+            processing = maxProcessing;
+
+        this.drawTexturedModalRect(this.guiLeft + 59, this.guiTop + 20, 177, 15, processing, 14);
+
+        // Essence Tank
+        int essenceLevel = 0;
+        int maxEssenceLevel = 53;
+
+        if (essenceLevel < 0)
+            essenceLevel = 0;
+        if (essenceLevel > maxEssenceLevel)
+            essenceLevel = maxEssenceLevel;
+
+        this.drawTexturedModalRect(this.guiLeft + 98, this.guiTop + 19 + maxEssenceLevel - essenceLevel, 176, 65, 16, essenceLevel);
+
     }
     
     @Override
