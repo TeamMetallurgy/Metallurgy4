@@ -1,11 +1,15 @@
 package com.teammetallurgy.metallurgy.api;
 
 import net.minecraft.block.Block;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 
 public interface IMetalSet
 {
     public ItemStack getAxe(String metal);
+
+    public ItemArmor.ArmorMaterial getArmorMaterial(String metal);
 
     public ItemStack getBlock(String metal);
 
@@ -46,5 +50,7 @@ public interface IMetalSet
     public ItemStack getShovel(String metal);
 
     public ItemStack getSword(String metal);
+
+    public Item.ToolMaterial getToolMaterial(String metal);
 
 }

@@ -11,6 +11,8 @@ import java.util.HashMap;
 import net.minecraft.block.Block;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
@@ -62,11 +64,15 @@ public class MetalSet implements IMetalSet
     private HashMap<String, ItemStack> dropStacks = new HashMap<String, ItemStack>();
     private HashMap<String, ItemStack> nuggetStacks = new HashMap<String, ItemStack>();
 
+    private HashMap<String, Item.ToolMaterial> toolMaterials = new HashMap<String, Item.ToolMaterial>();
+
     private HashMap<String, ItemStack> axeStacks = new HashMap<String, ItemStack>();
     private HashMap<String, ItemStack> hoeStacks = new HashMap<String, ItemStack>();
     private HashMap<String, ItemStack> pickaxeStacks = new HashMap<String, ItemStack>();
     private HashMap<String, ItemStack> shovelStacks = new HashMap<String, ItemStack>();
     private HashMap<String, ItemStack> swordStacks = new HashMap<String, ItemStack>();
+
+    private HashMap<String, ItemArmor.ArmorMaterial> armorMaterials = new HashMap<String, ItemArmor.ArmorMaterial>();
 
     private HashMap<String, ItemStack> helmetStacks = new HashMap<String, ItemStack>();
     private HashMap<String, ItemStack> chestplateStacks = new HashMap<String, ItemStack>();
@@ -161,6 +167,12 @@ public class MetalSet implements IMetalSet
     public ItemStack getAxe(String metal)
     {
         return this.axeStacks.get(metal);
+    }
+
+    @Override
+    public ArmorMaterial getArmorMaterial(String metal)
+    {
+        return this.armorMaterials.get(metal);
     }
 
     @Override
@@ -310,6 +322,12 @@ public class MetalSet implements IMetalSet
     public ItemStack getSword(String metal)
     {
         return this.swordStacks.get(metal);
+    }
+
+    @Override
+    public ToolMaterial getToolMaterial(String metal)
+    {
+        return this.toolMaterials.get(metal);
     }
 
     private void initDefaults()
@@ -630,6 +648,8 @@ public class MetalSet implements IMetalSet
 
                 toolMaterial.setRepairItem(new ItemStack(ingot));
 
+                toolMaterials.put(metal.getName(), toolMaterial);
+
                 String ingotOreDicName = "ingot" + tag;
 
                 // Unlocalized Name
@@ -745,6 +765,8 @@ public class MetalSet implements IMetalSet
                 ItemArmor.ArmorMaterial armorMaterial = EnumHelper.addArmorMaterial(armorUName, mutiplier, damageReduction, enchantablilty);
 
                 armorMaterial.customCraftingMaterial = ingot;
+
+                armorMaterials.put(metal.getName(), armorMaterial);
 
                 String ingotOreDicName = "ingot" + tag;
 
