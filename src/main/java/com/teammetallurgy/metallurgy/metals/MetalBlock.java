@@ -2,6 +2,7 @@ package com.teammetallurgy.metallurgy.metals;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Random;
 
@@ -173,7 +174,7 @@ public class MetalBlock extends Block
         if (this.names.get(meta) != null)
         {
             String unlocalizedName = this.names.get(meta);
-            unlocalizedName = unlocalizedName.replace(" ", ".").toLowerCase();
+            unlocalizedName = unlocalizedName.replace(" ", ".").toLowerCase(Locale.US);
 
             String blockType = "";
             switch (this.blockTypes.get(meta))
@@ -188,7 +189,7 @@ public class MetalBlock extends Block
                     blockType = ".brick";
             }
 
-            String prefix = "tile." + Metallurgy.MODID.toLowerCase() + ".";
+            String prefix = "tile." + Metallurgy.MODID.toLowerCase(Locale.US) + ".";
             return prefix + unlocalizedName + blockType;
         }
         else

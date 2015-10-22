@@ -1,6 +1,7 @@
 package com.teammetallurgy.metallurgy.metals;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 import com.teammetallurgy.metallurgy.handlers.ConfigHandler;
 import com.teammetallurgy.metallurgy.handlers.LogHandler;
@@ -68,8 +69,8 @@ public class MetalMaterials
         final String[] ores = OreDictionary.getOreNames();
         for (final String name : ores)
         {
-            if (name.contains("dust") && !name.toLowerCase().contains("tiny") && !name.toLowerCase().contains("clay") && !name.toLowerCase().contains("quartz")
-                    && !name.toLowerCase().contentEquals("dustgold"))
+            if (name.contains("dust") && !name.toLowerCase(Locale.US).contains("tiny") && !name.toLowerCase(Locale.US).contains("clay") && !name.toLowerCase(Locale.US).contains("quartz")
+                    && !name.toLowerCase(Locale.US).contentEquals("dustgold"))
             {
                 // TODO: add finer logging
                 // LogHandler.log("Adding recipe for " + name + " midasium = gold");

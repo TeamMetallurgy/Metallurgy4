@@ -2,6 +2,7 @@ package com.teammetallurgy.metallurgy.metals;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -29,7 +30,7 @@ public class ItemMoltenMetalBucket extends ItemBucket
     private HashMap<Integer, String> textures = new HashMap<Integer, String>();
     private HashMap<Integer, String> unlocalizedNames = new HashMap<Integer, String>();
     private HashMap<Integer, IIcon> icons = new HashMap<Integer, IIcon>();
-    private String defaultFillingTexture = Metallurgy.MODID.toLowerCase() + ":fantasy/adamantine_bucket_fill";
+    private String defaultFillingTexture = Metallurgy.MODID.toLowerCase(Locale.US) + ":fantasy/adamantine_bucket_fill";
     private IIcon defaultFilling;
 
     public ItemMoltenMetalBucket()

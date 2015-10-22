@@ -1,6 +1,7 @@
 package com.teammetallurgy.metallurgy.handlers;
 
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 
@@ -67,7 +68,7 @@ public class BucketsHandler
 
     public void addBucketMapping(int id, String unlocalizedName, String texture)
     {
-        bucket.addMaping(id, "metallurgy.bucket.filled." + unlocalizedName, Metallurgy.MODID.toLowerCase() + ":" + texture);
+        bucket.addMaping(id, "metallurgy.bucket.filled." + unlocalizedName, Metallurgy.MODID.toLowerCase(Locale.US) + ":" + texture);
     }
 
     public void init()
@@ -102,11 +103,11 @@ public class BucketsHandler
 
             for (int i = 0; i < materials.length; i++)
             {
-                String unlocalizedName = materials[i].trim().replace(" ", ".").toLowerCase();
+                String unlocalizedName = materials[i].trim().replace(" ", ".").toLowerCase(Locale.US);
                 unlocalizedName += ".molten";
 
-                String texture = set.trim().replace(" ", "_").toLowerCase() + "/";
-                texture += materials[i].trim().replace(" ", "_").toLowerCase();
+                String texture = set.trim().replace(" ", "_").toLowerCase(Locale.US) + "/";
+                texture += materials[i].trim().replace(" ", "_").toLowerCase(Locale.US);
                 texture += "_bucket_fill";
 
                 FluidStack fluidStack = FluidRegistry.getFluidStack(unlocalizedName, bucketVol);

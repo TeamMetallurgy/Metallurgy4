@@ -7,6 +7,7 @@ import java.io.Reader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Locale;
 
 import net.minecraft.block.Block;
 import net.minecraft.init.Items;
@@ -82,7 +83,7 @@ public class MetalSet implements IMetalSet
     public MetalSet(String setName)
     {
         this.name = setName;
-        this.setTag = this.name.substring(0, 1).toUpperCase() + this.name.substring(1);
+        this.setTag = this.name.substring(0, 1).toUpperCase(Locale.US) + this.name.substring(1);
         this.initDefaults();
     }
 
@@ -332,7 +333,7 @@ public class MetalSet implements IMetalSet
 
     private void initDefaults()
     {
-        String postfix = this.name.toLowerCase();
+        String postfix = this.name.toLowerCase(Locale.US);
         postfix = postfix.replace(" ", ".");
 
         this.defaultOre = new MetalBlock(postfix + ".ore");
@@ -377,14 +378,14 @@ public class MetalSet implements IMetalSet
             MetalItem nugget = null;
 
             String texture = metal.getName().replace(" ", "_");
-            texture = Metallurgy.MODID + ":" + this.name + "/" + texture.toLowerCase();
+            texture = Metallurgy.MODID + ":" + this.name + "/" + texture.toLowerCase(Locale.US);
 
             String tag = metal.getName().replace(" ", "");
-            String configTag = tag.substring(0, 1).toUpperCase() + tag.substring(1);
+            String configTag = tag.substring(0, 1).toUpperCase(Locale.US) + tag.substring(1);
 
             int metaId = metal.meta;
 
-            String metalTag = metal.getName().trim().toLowerCase().replace(" ", "_");
+            String metalTag = metal.getName().trim().toLowerCase(Locale.US).replace(" ", "_");
             int blockLvl = ConfigHandler.blockHarvestLevel(metalTag, metal.blockLvl);
 
             if (metal.type != MetalType.Drop)
@@ -406,7 +407,7 @@ public class MetalSet implements IMetalSet
                 ingot = new MetalItem(configTag + "." + identifier);
                 ingot.addSubItem(0, metal.getName(), 1, texture + "_" + identifier);
 
-                String registryName = metal.getName().toLowerCase();
+                String registryName = metal.getName().toLowerCase(Locale.US);
                 registryName = registryName.replace(" ", ".");
                 registryName = registryName + "." + identifier;
 
@@ -471,7 +472,7 @@ public class MetalSet implements IMetalSet
                 // Some items have different names than the ores
                 String itemName = metal.dropName;
                 String itemTexture = metal.dropName.replace(" ", "_");
-                itemTexture = Metallurgy.MODID + ":" + this.name + "/" + itemTexture.toLowerCase();
+                itemTexture = Metallurgy.MODID + ":" + this.name + "/" + itemTexture.toLowerCase(Locale.US);
 
                 if (itemName.compareTo("") == 0)
                 {
@@ -572,19 +573,19 @@ public class MetalSet implements IMetalSet
                 GameRegistry.addShapelessRecipe(new ItemStack(ingot, 4), new ItemStack(brick, 1, metaId));
 
                 // Molten Metals
-                String fluidName = ((metal.getName()).trim().replace(" ", ".").toLowerCase()) + ".molten";
+                String fluidName = ((metal.getName()).trim().replace(" ", ".").toLowerCase(Locale.US)) + ".molten";
                 Fluid fluid = new Fluid(fluidName).setLuminosity(15).setDensity(3000).setViscosity(6000).setTemperature(1300);
 
                 boolean registered = FluidRegistry.registerFluid(fluid);
 
-                String registryName = metal.getName().toLowerCase();
+                String registryName = metal.getName().toLowerCase(Locale.US);
                 registryName = registryName.trim().replace(" ", ".") + ".molten";
 
-                String unlocalizedName = Metallurgy.MODID.toLowerCase() + "." + registryName;
+                String unlocalizedName = Metallurgy.MODID.toLowerCase(Locale.US) + "." + registryName;
 
-                String moltenTexture = Metallurgy.MODID.toLowerCase() + ":";
-                moltenTexture += this.name.replace(" ", "_").toLowerCase() + "/";
-                moltenTexture += metal.getName().trim().replace(" ", "_").toLowerCase();
+                String moltenTexture = Metallurgy.MODID.toLowerCase(Locale.US) + ":";
+                moltenTexture += this.name.replace(" ", "_").toLowerCase(Locale.US) + "/";
+                moltenTexture += metal.getName().trim().replace(" ", "_").toLowerCase(Locale.US);
 
                 MoltenMetalBlock moltenMetal = new MoltenMetalBlock(fluid, unlocalizedName, moltenTexture);
 
@@ -623,10 +624,10 @@ public class MetalSet implements IMetalSet
 
             if (ingot != null && metal.haveTools())
             {
-                String statsName = metal.getName().toUpperCase();
+                String statsName = metal.getName().toUpperCase(Locale.US);
                 statsName = statsName.replace(" ", "_");
 
-                boolean weaponEnabled = ConfigHandler.weaponsEnabled(statsName.toLowerCase());
+                boolean weaponEnabled = ConfigHandler.weaponsEnabled(statsName.toLowerCase(Locale.US));
 
                 int harvestLevel = metal.getToolHarvestLevel();
                 int maxUses = metal.getToolDurability();
@@ -636,7 +637,7 @@ public class MetalSet implements IMetalSet
 
                 int[] stats = { harvestLevel, maxUses, efficiency, damage, enchantability };
 
-                stats = ConfigHandler.toolsStats(statsName.toLowerCase(), stats);
+                stats = ConfigHandler.toolsStats(statsName.toLowerCase(Locale.US), stats);
 
                 harvestLevel = stats[0];
                 maxUses = stats[1];
@@ -653,7 +654,7 @@ public class MetalSet implements IMetalSet
                 String ingotOreDicName = "ingot" + tag;
 
                 // Unlocalized Name
-                String toolUName = metal.getName().toLowerCase();
+                String toolUName = metal.getName().toLowerCase(Locale.US);
                 toolUName = toolUName.replace(" ", ".");
 
                 // Axe
@@ -716,7 +717,7 @@ public class MetalSet implements IMetalSet
 
                 if (metal.haveEntityEffects())
                 {
-                    boolean enableEffect = ConfigHandler.swordEffectEnabled(statsName.toLowerCase());
+                    boolean enableEffect = ConfigHandler.swordEffectEnabled(statsName.toLowerCase(Locale.US));
 
                     if (enableEffect)
                     {
@@ -740,14 +741,14 @@ public class MetalSet implements IMetalSet
             // Armor
             if (ingot != null && metal.haveArmor())
             {
-                String modelTexture = metal.getName().replace(" ", "_").toLowerCase();
-                modelTexture = this.name.toLowerCase() + "/" + modelTexture;
+                String modelTexture = metal.getName().replace(" ", "_").toLowerCase(Locale.US);
+                modelTexture = this.name.toLowerCase(Locale.US) + "/" + modelTexture;
 
-                String armorUName = metal.getName().toLowerCase();
+                String armorUName = metal.getName().toLowerCase(Locale.US);
                 armorUName = armorUName.replace(" ", ".");
-                armorUName = Metallurgy.MODID.toLowerCase() + "." + armorUName;
+                armorUName = Metallurgy.MODID.toLowerCase(Locale.US) + "." + armorUName;
 
-                String armorConfName = metal.getName().toLowerCase().replace(" ", "_");
+                String armorConfName = metal.getName().toLowerCase(Locale.US).replace(" ", "_");
                 boolean armorEnabled = ConfigHandler.armorEnabled(armorConfName);
 
                 int mutiplier = metal.getArmorMultiplier();

@@ -2,6 +2,7 @@ package com.teammetallurgy.metallurgy.metals;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -73,7 +74,7 @@ public class MetalItem extends Item
         if (this.names.get(meta) != null)
         {
             String unlocalizedName = this.names.get(meta);
-            unlocalizedName = unlocalizedName.replace(" ", ".").toLowerCase();
+            unlocalizedName = unlocalizedName.replace(" ", ".").toLowerCase(Locale.US);
 
             String itemType = "";
             switch (this.itemTypes.get(meta))
@@ -93,7 +94,7 @@ public class MetalItem extends Item
                     break;
             }
 
-            String prefix = "item." + Metallurgy.MODID.toLowerCase() + ".";
+            String prefix = "item." + Metallurgy.MODID.toLowerCase(Locale.US) + ".";
             return prefix + unlocalizedName + itemType;
         }
         else

@@ -1,5 +1,7 @@
 package com.teammetallurgy.metallurgy.integrations;
 
+import java.util.Locale;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 
@@ -18,7 +20,7 @@ public class IntegrationUBC
         for (int i = 0; i < loadedSets.length; i++)
         {
             String setName = loadedSets[i];
-            String setTextureName = setName.toLowerCase().trim().replace(" ", "_");
+            String setTextureName = setName.toLowerCase(Locale.US).trim().replace(" ", "_");
 
             IMetalSet metalSet = BlockList.getSet(setName);
 
@@ -40,7 +42,7 @@ public class IntegrationUBC
 
                 String overlayName = "metallurgy:";
                 overlayName += setTextureName;
-                overlayName += "/" + metalName.toLowerCase().trim().replace(" ", "_");
+                overlayName += "/" + metalName.toLowerCase(Locale.US).trim().replace(" ", "_");
                 overlayName += "_ore_overlay";
 
                 String blockName = itemStack.getUnlocalizedName();

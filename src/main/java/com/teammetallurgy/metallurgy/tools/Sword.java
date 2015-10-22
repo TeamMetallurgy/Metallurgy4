@@ -1,6 +1,7 @@
 package com.teammetallurgy.metallurgy.tools;
 
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 
 import net.minecraft.entity.EntityLivingBase;
@@ -29,7 +30,7 @@ public class Sword extends ItemSword
     {
         super(toolMaterial);
         this.setTextureName(texture);
-        this.setUnlocalizedName(Metallurgy.MODID.toLowerCase() + "." + unlocalizedName);
+        this.setUnlocalizedName(Metallurgy.MODID.toLowerCase(Locale.US) + "." + unlocalizedName);
         this.setCreativeTab(Metallurgy.instance.creativeTabTools);
     }
 
