@@ -47,12 +47,19 @@ public class GUIForge extends GUIMetallurgyMachine
     protected void drawGuiContainerForegroundLayer(int mouseX, int mouseZ)
     {
         this.drawTitle(30, 8);
-
+    }
+    
+    @Override
+    public void drawScreen(int mouseX, int mouseZ, float particalRenderTicks)
+    {
+        super.drawScreen(mouseX, mouseZ, particalRenderTicks);
+        
+        // Drawing Tank tooltip
         boolean isMouseInTank = mouseX >= this.guiLeft + 8 && mouseZ >= this.guiTop + 14 && mouseX <= this.guiLeft + 24 && mouseZ <= this.guiTop + 78;
 
         if (isMouseInTank)
         {
-            this.drawTankInfo(mouseX - this.guiLeft, mouseZ - this.guiTop);
+            this.drawTankInfo(mouseX, mouseZ);
         }
     }
 
