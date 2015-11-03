@@ -148,4 +148,9 @@ public class AlloyerRecipes
         }
         return list;
     }
+
+    public ArrayList<AlloyRecipe> getRecipes()
+    {
+        return recipes;
+    }
 }

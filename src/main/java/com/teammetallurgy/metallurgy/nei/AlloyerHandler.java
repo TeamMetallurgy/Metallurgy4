@@ -8,12 +8,14 @@ import codechicken.nei.recipe.TemplateRecipeHandler;
 
 import com.teammetallurgy.metallurgy.machines.alloyer.GUIAlloyer;
 import com.teammetallurgy.metallurgy.recipes.AlloyerRecipes;
+import com.teammetallurgy.metallurgy.recipes.AlloyerRecipes.AlloyRecipe;
 
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.item.ItemStack;
 
 import org.lwjgl.opengl.GL11;
 
+import java.awt.Rectangle;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +24,12 @@ import java.util.List;
  */
 public class AlloyerHandler extends TemplateRecipeHandler
 {
+
+    @Override
+    public void loadTransferRects()
+    {
+        transferRects.add(new RecipeTransferRect(new Rectangle(57, 22, 50, 24), "metallurgy.alloyer"));
+    }
 
     @Override public String getGuiTexture()
     {
@@ -44,6 +52,23 @@ public class AlloyerHandler extends TemplateRecipeHandler
         return GUIAlloyer.class;
     }
 
+    @Override
+    public void loadCraftingRecipes(String outputId, Object... results)
+    {
+        if (outputId.equals("metallurgy.alloyer") && getClass() == AlloyerHandler.class)
+        {
+            ArrayList<AlloyRecipe> recipes = AlloyerRecipes.getInstance().getRecipes();
+            for (AlloyRecipe recipe : recipes)
+            {
+                arecipes.add(new NEIRecipe(recipe.getIngredients(), recipe.getCraftingResult(), null));
+            }
+        }
+        else
+        {
+            super.loadCraftingRecipes(outputId, results);
+        }
+    }
+
     @Override public void loadCraftingRecipes(ItemStack output)
     {
         ArrayList<AlloyerRecipes.AlloyRecipe> recipesFor = AlloyerRecipes.getInstance().getRecipesFor(output);
@@ -64,6 +89,12 @@ public class AlloyerHandler extends TemplateRecipeHandler
             NEIRecipe neiRecipe = new NEIRecipe(recipe.getIngredients(), recipe.getCraftingResult(), ingredient);
             arecipes.add(neiRecipe);
         }
+    }
+
+    @Override
+    public String getOverlayIdentifier()
+    {
+        return "metallurgy.alloyer";
     }
 
     private class NEIRecipe extends CachedRecipe
