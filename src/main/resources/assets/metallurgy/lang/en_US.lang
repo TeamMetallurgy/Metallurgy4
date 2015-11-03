@@ -859,3 +859,9 @@ item.metallurgy.fertilizer.name=Fertilizer
 item.metallurgy.tar.name=Tar
 
 tile.metallurgy.charcoal.block.name=Block of Charcoal
+
+#NEI
+nei.recipe.metallurgy.abstractor=Abstractor Recipe
+nei.recipe.metallurgy.alloyer=Alloyer Recipe
+nei.recipe.metallurgy.crusher=Crusher Recipe
+nei.recipe.metallurgy.forge=Forge Recipe

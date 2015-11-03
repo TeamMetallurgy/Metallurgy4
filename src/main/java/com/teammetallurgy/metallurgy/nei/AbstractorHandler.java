@@ -6,6 +6,7 @@ import com.teammetallurgy.metallurgy.machines.abstractor.GUIAbstrator;
 
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.item.ItemStack;
+import codechicken.nei.NEIClientUtils;
 import codechicken.nei.PositionedStack;
 import codechicken.nei.recipe.TemplateRecipeHandler;
 
@@ -15,7 +16,7 @@ public class AbstractorHandler extends TemplateRecipeHandler
     @Override
     public String getRecipeName()
     {
-        return "Abstractor Recipe";
+        return NEIClientUtils.translate("recipe.metallurgy.abstractor");
     }
 
     @Override

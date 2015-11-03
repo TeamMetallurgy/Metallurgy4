@@ -1,5 +1,6 @@
 package com.teammetallurgy.metallurgy.nei;
 
+import codechicken.nei.NEIClientUtils;
 import codechicken.nei.recipe.IUsageHandler;
 import codechicken.nei.recipe.TemplateRecipeHandler;
 
@@ -15,6 +16,6 @@ public class ForgeHandler extends TemplateRecipeHandler
 
     @Override public String getRecipeName()
     {
-        return "Forge Recipe";
+        return NEIClientUtils.translate("recipe.metallurgy.forge");
     }
 }

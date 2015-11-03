@@ -1,13 +1,17 @@
 package com.teammetallurgy.metallurgy.nei;
 
+import codechicken.nei.NEIClientUtils;
 import codechicken.nei.PositionedStack;
 import codechicken.nei.api.IOverlayHandler;
 import codechicken.nei.recipe.IUsageHandler;
 import codechicken.nei.recipe.TemplateRecipeHandler;
+
 import com.teammetallurgy.metallurgy.machines.alloyer.GUIAlloyer;
 import com.teammetallurgy.metallurgy.recipes.AlloyerRecipes;
+
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.item.ItemStack;
+
 import org.lwjgl.opengl.GL11;
 
 import java.util.ArrayList;
@@ -26,7 +30,7 @@ public class AlloyerHandler extends TemplateRecipeHandler
 
     @Override public String getRecipeName()
     {
-        return "Alloy Recipe";
+        return NEIClientUtils.translate("recipe.metallurgy.alloyer");
     }
 
     @Override public Class<? extends GuiContainer> getGuiClass()

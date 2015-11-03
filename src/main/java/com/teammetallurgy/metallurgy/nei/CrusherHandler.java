@@ -7,6 +7,7 @@ import java.util.Map.Entry;
 
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.item.ItemStack;
+import codechicken.nei.NEIClientUtils;
 import codechicken.nei.PositionedStack;
 import codechicken.nei.recipe.TemplateRecipeHandler;
 
@@ -27,7 +28,7 @@ public class CrusherHandler extends TemplateRecipeHandler
     @Override
     public String getRecipeName()
     {
-        return "Crusher Recipe";
+        return NEIClientUtils.translate("recipe.metallurgy.crusher");
     }
 
     @Override
