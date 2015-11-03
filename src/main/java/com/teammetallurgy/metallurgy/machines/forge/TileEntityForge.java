@@ -124,12 +124,6 @@ public class TileEntityForge extends TileEntityMetallurgySided implements IFluid
     }
 
     @Override
-    public boolean isBurning()
-    {
-        return this.tank.getFluidAmount() > 0;
-    }
-
-    @Override
     public boolean isItemValidForSlot(int i, ItemStack itemstack)
     {
         return i != 1;
