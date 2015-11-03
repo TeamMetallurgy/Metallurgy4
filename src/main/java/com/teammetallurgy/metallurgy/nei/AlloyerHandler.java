@@ -28,6 +28,12 @@ public class AlloyerHandler extends TemplateRecipeHandler
         return "metallurgy:textures/gui/nei_alloyer.png";
     }
 
+    @Override
+    public void drawExtras(int recipe)
+    {
+        drawProgressBar(62, 22, 176, 14, 50, 24, 48, 1);
+    }
+
     @Override public String getRecipeName()
     {
         return NEIClientUtils.translate("recipe.metallurgy.alloyer");

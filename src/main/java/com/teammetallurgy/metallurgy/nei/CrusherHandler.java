@@ -26,6 +26,12 @@ public class CrusherHandler extends TemplateRecipeHandler
     }
 
     @Override
+    public void drawExtras(int recipe)
+    {
+        drawProgressBar(77, 22, 176, 14, 12, 24, 48, 1);
+    }
+
+    @Override
     public String getRecipeName()
     {
         return NEIClientUtils.translate("recipe.metallurgy.crusher");
