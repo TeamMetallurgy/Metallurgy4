@@ -1,6 +1,7 @@
 package com.teammetallurgy.metallurgy.recipes;
 
 import java.util.HashMap;
+import java.util.Map.Entry;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -81,6 +82,25 @@ public class CrusherRecipes
         }
 
         return result;
+    }
+
+    public HashMap<ItemStack, ItemStack> getRecipes()
+    {
+        HashMap<ItemStack, ItemStack> recipes = new HashMap<ItemStack, ItemStack>();
+
+        for (Entry<String, ItemStack[]> entry : inputList.entrySet())
+        {
+            ItemStack[] inputs = entry.getValue();
+            if (inputs != null && inputs.length > 0)
+            {
+                for (ItemStack input : inputs)
+                {
+                    recipes.put(input, getCrushingResult(input));
+
+                }
+            }
+        }
+        return recipes;
     }
 
 }

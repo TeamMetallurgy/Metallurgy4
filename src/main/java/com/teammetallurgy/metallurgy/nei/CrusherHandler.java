@@ -1,6 +1,8 @@
 package com.teammetallurgy.metallurgy.nei;
 
+import java.awt.Rectangle;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map.Entry;
@@ -19,6 +21,12 @@ import com.teammetallurgy.metallurgy.recipes.CrusherRecipes;
  */
 public class CrusherHandler extends TemplateRecipeHandler
 {
+    @Override
+    public void loadTransferRects()
+    {
+        transferRects.add(new RecipeTransferRect(new Rectangle(77, 22, 12, 24), "metallurgy.crusher"));
+    }
+
     @Override
     public String getGuiTexture()
     {
@@ -41,6 +49,23 @@ public class CrusherHandler extends TemplateRecipeHandler
     public Class<? extends GuiContainer> getGuiClass()
     {
         return GUICrusher.class;
+    }
+
+    @Override
+    public void loadCraftingRecipes(String outputId, Object... results)
+    {
+        if (outputId.equals("metallurgy.crusher") && getClass() == CrusherHandler.class)
+        {
+            HashMap<ItemStack, ItemStack> recipes = CrusherRecipes.getInstance().getRecipes();
+            for (Entry<ItemStack, ItemStack> recipe : recipes.entrySet())
+            {
+                arecipes.add(new NEICrusherRecipe(recipe.getKey(), recipe.getValue()));
+            }
+        }
+        else
+        {
+            super.loadCraftingRecipes(outputId, results);
+        }
     }
 
     @Override
@@ -72,31 +97,28 @@ public class CrusherHandler extends TemplateRecipeHandler
 
     }
 
+    @Override
+    public String getOverlayIdentifier()
+    {
+        return "metallurgy.crusher";
+    }
+
     private class NEICrusherRecipe extends CachedRecipe
     {
 
-        public ArrayList<PositionedStack> ingredients;
+        public PositionedStack ingredient;
         public PositionedStack result;
 
         public NEICrusherRecipe(ItemStack input, ItemStack craftingResult)
         {
             result = new PositionedStack(craftingResult, 75, 48);
-            ingredients = new ArrayList<PositionedStack>();
-            setIngredients(input, craftingResult);
+            ingredient = new PositionedStack(input, 75, 3);
         }
 
         @Override
         public List<PositionedStack> getIngredients()
         {
-            return getCycledIngredients(CrusherHandler.this.cycleticks / 20, ingredients);
-        }
-
-        private void setIngredients(ItemStack input, ItemStack output)
-        {
-            PositionedStack stack = new PositionedStack(input, 75, 3);
-            stack.setMaxSize(1);
-            ingredients.add(stack);
-
+            return getCycledIngredients(CrusherHandler.this.cycleticks / 48, Arrays.asList(ingredient));
         }
 
         @Override
