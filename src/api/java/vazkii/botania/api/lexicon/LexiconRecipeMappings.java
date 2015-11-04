@@ -3,9 +3,8 @@
  * part of the Botania Mod. Get the Source Code in github:
  * https://github.com/Vazkii/Botania
  * 
- * Botania is Open Source and distributed under a
- * Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License
- * (http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_GB)
+ * Botania is Open Source and distributed under the
+ * Botania License: http://botaniamod.net/license.php
  * 
  * File Created @ [Mar 6, 2014, 3:54:12 PM (GMT)]
  */
@@ -15,6 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import net.minecraft.item.ItemStack;
+import vazkii.botania.api.mana.IManaItem;
 
 /**
  * This class contains mappings for which entry and page correspond to each
@@ -34,12 +34,17 @@ public final class LexiconRecipeMappings {
 
 		if(force || !mappings.containsKey(str))
 			mappings.put(str, data);
+		if(entry.getIcon() == null)
+			entry.setIcon(stack.copy());
 	}
 
 	public static void map(ItemStack stack, LexiconEntry entry, int page) {
 		map(stack, entry, page, false);
 	}
 
+	public static void remove(ItemStack stack) {
+		mappings.remove(stackToString(stack));
+	}
 
 	public static EntryData getDataForStack(ItemStack stack) {
 		return mappings.get(stackToString(stack));
@@ -49,7 +54,11 @@ public final class LexiconRecipeMappings {
 		if(stack.hasTagCompound() && stack.getItem() instanceof IRecipeKeyProvider)
 			return ((IRecipeKeyProvider) stack.getItem()).getKey(stack);
 
-		return stack.getUnlocalizedName() + "~" + stack.getItemDamage();
+		return stack.getUnlocalizedName() + (ignoreMeta(stack) ? "" : "~" + stack.getItemDamage());
+	}
+
+	public static boolean ignoreMeta(ItemStack stack) {
+		return stack.isItemStackDamageable() || stack.getItem() instanceof IManaItem;
 	}
 
 	public static class EntryData {

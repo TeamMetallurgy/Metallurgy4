@@ -3,13 +3,14 @@
  * part of the Botania Mod. Get the Source Code in github:
  * https://github.com/Vazkii/Botania
  * 
- * Botania is Open Source and distributed under a
- * Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License
- * (http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_GB)
+ * Botania is Open Source and distributed under the
+ * Botania License: http://botaniamod.net/license.php
  * 
  * File Created @ [Jan 31, 2014, 4:36:13 PM (GMT)]
  */
 package vazkii.botania.api.internal;
+
+import java.util.UUID;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChunkCoordinates;
@@ -57,6 +58,16 @@ public interface IManaBurst {
 
 	public boolean hasAlreadyCollidedAt(int x, int y, int z);
 
+	public void setCollidedAt(int x, int y, int z);
+
 	public int getTicksExisted();
+
+	public void setFake(boolean fake);
+
+	public void setShooterUUID(UUID uuid);
+
+	public UUID getShooterUIID();
+
+	public void ping();
 
 }

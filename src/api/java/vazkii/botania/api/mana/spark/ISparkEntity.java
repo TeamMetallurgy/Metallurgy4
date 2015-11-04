@@ -3,18 +3,14 @@
  * part of the Botania Mod. Get the Source Code in github:
  * https://github.com/Vazkii/Botania
  * 
- * Botania is Open Source and distributed under a
- * Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License
- * (http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_GB)
+ * Botania is Open Source and distributed under the
+ * Botania License: http://botaniamod.net/license.php
  * 
  * File Created @ [Aug 21, 2014, 5:44:07 PM (GMT)]
  */
 package vazkii.botania.api.mana.spark;
 
 import java.util.Collection;
-
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.MathHelper;
 
 /**
  * An Entity that implements this is considered a Spark.

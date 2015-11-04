@@ -3,9 +3,8 @@
  * part of the Botania Mod. Get the Source Code in github:
  * https://github.com/Vazkii/Botania
  * 
- * Botania is Open Source and distributed under a
- * Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License
- * (http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_GB)
+ * Botania is Open Source and distributed under the
+ * Botania License: http://botaniamod.net/license.php
  * 
  * File Created @ [Jan 14, 2014, 6:43:03 PM (GMT)]
  */
@@ -14,23 +13,36 @@ package vazkii.botania.api.internal;
 import java.util.List;
 
 import net.minecraft.client.gui.ScaledResolution;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.inventory.IInventory;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
+import vazkii.botania.api.boss.IBotaniaBoss;
 import vazkii.botania.api.lexicon.LexiconPage;
+import vazkii.botania.api.lexicon.multiblock.MultiblockSet;
+import vazkii.botania.api.recipe.RecipeBrew;
 import vazkii.botania.api.recipe.RecipeElvenTrade;
 import vazkii.botania.api.recipe.RecipeManaInfusion;
 import vazkii.botania.api.recipe.RecipePetals;
 import vazkii.botania.api.recipe.RecipeRuneAltar;
+import vazkii.botania.api.subtile.SubTileEntity;
 
 public class DummyMethodHandler implements IInternalMethodHandler {
 
 	@Override
 	public LexiconPage textPage(String key) {
+		return dummyPage(key);
+	}
+
+	@Override
+	public LexiconPage elfPaperTextPage(String key) {
 		return dummyPage(key);
 	}
 
@@ -89,6 +101,16 @@ public class DummyMethodHandler implements IInternalMethodHandler {
 		return dummyPage(key);
 	}
 
+	@Override
+	public LexiconPage brewPage(String key, String bottomText, RecipeBrew recipe) {
+		return dummyPage(key);
+	}
+
+	@Override
+	public LexiconPage multiblockPage(String key, MultiblockSet mb) {
+		return dummyPage(key);
+	}
+
 	private LexiconPage dummyPage(String key) {
 		return new DummyPage(key);
 	}
@@ -99,8 +121,23 @@ public class DummyMethodHandler implements IInternalMethodHandler {
 	}
 
 	@Override
+	public ItemStack getSubTileAsFloatingFlowerStack(String subTile) {
+		return getSubTileAsStack(subTile);
+	}
+
+	@Override
+	public String getStackSubTileKey(ItemStack stack) {
+		return null;
+	}
+
+	@Override
 	public IIcon getSubTileIconForName(String name) {
 		return Blocks.red_flower.getIcon(0, 0);
+	}
+
+	@Override
+	public void registerBasicSignatureIcons(String name, IIconRegister register) {
+		// NO-OP
 	}
 
 	@Override
@@ -110,6 +147,21 @@ public class DummyMethodHandler implements IInternalMethodHandler {
 
 	@Override
 	public void drawSimpleManaHUD(int color, int mana, int maxMana, String name, ScaledResolution res) {
+		// NO-OP
+	}
+
+	@Override
+	public void drawComplexManaHUD(int color, int mana, int maxMana, String name, ScaledResolution res, ItemStack bindDisplay, boolean properlyBound) {
+		// NO-OP
+	}
+
+	@Override
+	public ItemStack getBindDisplayForFlowerType(SubTileEntity e) {
+		return new ItemStack(Blocks.stone, 0, 0);
+	}
+
+	@Override
+	public void renderLexiconText(int x, int y, int width, int height, String unlocalizedText) {
 		// NO-OP
 	}
 
@@ -127,4 +179,46 @@ public class DummyMethodHandler implements IInternalMethodHandler {
 	public boolean shouldForceCheck() {
 		return true;
 	}
+
+	@Override
+	public int getPassiveFlowerDecay() {
+		return 0;
+	}
+
+	@Override
+	public ResourceLocation getDefaultBossBarTexture() {
+		return null;
+	}
+
+	@Override
+	public void setBossStatus(IBotaniaBoss status) {
+		// NO-OP
+	}
+
+	@Override
+	public boolean isBuildcraftPipe(TileEntity tile) {
+		return false;
+	}
+
+
+	@Override
+	public void breakOnAllCursors(EntityPlayer player, Item item, ItemStack stack, int x, int y, int z, int side) {
+		// NO-OP
+	}
+
+	@Override
+	public long getWorldElapsedTicks() {
+		return 0;
+	}
+
+	@Override
+	public boolean isBotaniaFlower(World world, int x, int y, int z) {
+		return false;
+	}
+
+	@Override
+	public void sendBaubleUpdatePacket(EntityPlayer player, int slot) {
+		// NO-OP
+	}
+
 }

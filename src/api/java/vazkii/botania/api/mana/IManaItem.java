@@ -3,9 +3,8 @@
  * part of the Botania Mod. Get the Source Code in github:
  * https://github.com/Vazkii/Botania
  * 
- * Botania is Open Source and distributed under a
- * Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License
- * (http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_GB)
+ * Botania is Open Source and distributed under the
+ * Botania License: http://botaniamod.net/license.php
  * 
  * File Created @ [Mar 6, 2014, 9:07:40 AM (GMT)]
  */
@@ -60,7 +59,9 @@ public interface IManaItem {
 	public boolean canExportManaToItem(ItemStack stack, ItemStack otherStack);
 
 	/**
-	 * If this item simply does not export mana in any have, set this to true.
+	 * If this item simply does not export mana at all, set this to true. This is
+	 * used to skip items that contain mana but can't export it when drawing the
+	 * mana bar above the XP bar.
 	 */
 	public boolean isNoExport(ItemStack stack);
 

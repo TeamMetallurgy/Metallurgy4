@@ -3,19 +3,14 @@
  * part of the Botania Mod. Get the Source Code in github:
  * https://github.com/Vazkii/Botania
  * 
- * Botania is Open Source and distributed under a
- * Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License
- * (http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_GB)
+ * Botania is Open Source and distributed under the
+ * Botania License: http://botaniamod.net/license.php
  * 
  * File Created @ [Aug 21, 2014, 5:44:13 PM (GMT)]
  */
 package vazkii.botania.api.mana.spark;
 
-import java.util.List;
-
-import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.AxisAlignedBB;
 import vazkii.botania.api.mana.IManaReceiver;
 
 /**
@@ -34,6 +29,12 @@ public interface ISparkAttachable extends IManaReceiver {
 	 * Called when the Spark is attached.
 	 */
 	public void attachSpark(ISparkEntity entity);
+
+	/**
+	 * Returns how much space for mana is available in this block, normally the total - the current.
+	 * Should NEVER return negative values. Make sure to check against that.
+	 */
+	public int getAvailableSpaceForMana();
 
 	/**
 	 * Gets the Spark that is attached to this block. A common implementation is
