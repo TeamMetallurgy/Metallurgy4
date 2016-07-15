@@ -5,6 +5,7 @@ import java.util.List;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.FileResourcePack;
+import net.minecraft.client.resources.IResourcePack;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.MinecraftForgeClient;
 
@@ -25,19 +26,16 @@ public class ClientProxy extends CommonProxy
 {
 
     @Override
-    @SuppressWarnings({ "unchecked", "rawtypes" })
     public void injectZipAsResource(String zipDir)
     {
 
-        Object value = ObfuscationReflectionHelper.getPrivateValue(Minecraft.class, FMLClientHandler.instance().getClient(), "defaultResourcePacks");
+    	List<IResourcePack> defaultResourcePacks = ObfuscationReflectionHelper.getPrivateValue(Minecraft.class, FMLClientHandler.instance().getClient(), "defaultResourcePacks", "field_110449_ao");
 
-        if (value instanceof List)
+        if (defaultResourcePacks != null)
         {
-            FileResourcePack pack = new FileResourcePack(new File(zipDir));
-
-            ((List) value).add(pack);
+            defaultResourcePacks.add(new FileResourcePack(new File(zipDir)));
+            FMLClientHandler.instance().getClient().refreshResources();
         }
-        FMLClientHandler.instance().getClient().refreshResources();
     }
 
     @Override
