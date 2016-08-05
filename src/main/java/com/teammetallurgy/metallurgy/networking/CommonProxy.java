@@ -16,6 +16,11 @@ public class CommonProxy
 
     }
 
+    public void reloadResources()
+    {
+        // Client only
+    }
+
     public void registerTickHandlers()
     {
         if (Configs.regen)

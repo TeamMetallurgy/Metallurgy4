@@ -157,6 +157,12 @@ public class BlockList
             }
         }
 
+        if (zipDirs.size() > 0)
+        {
+            LogHandler.log("Metallurgy Addons were found, Reloading resources.");
+            Metallurgy.proxy.reloadResources();
+        }
+
         for (String set : setNames)
         {
 

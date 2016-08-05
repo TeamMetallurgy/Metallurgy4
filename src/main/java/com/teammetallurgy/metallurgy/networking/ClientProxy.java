@@ -29,7 +29,7 @@ public class ClientProxy extends CommonProxy
     public void injectZipAsResource(String zipDir)
     {
 
-        Object value = ObfuscationReflectionHelper.getPrivateValue(Minecraft.class, FMLClientHandler.instance().getClient(), "defaultResourcePacks");
+        Object value = ObfuscationReflectionHelper.getPrivateValue(Minecraft.class, FMLClientHandler.instance().getClient(), "field_110449_ao", "defaultResourcePacks");
 
         if (value instanceof List)
         {
@@ -37,6 +37,11 @@ public class ClientProxy extends CommonProxy
 
             ((List) value).add(pack);
         }
+    }
+
+    @Override
+    public void reloadResources()
+    {
         FMLClientHandler.instance().getClient().refreshResources();
     }
 
