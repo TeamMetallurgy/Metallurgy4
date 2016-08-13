@@ -16,10 +16,10 @@
   ],
   "parent":"",
   "requiredMods" : [
-     "MetallurgyCore@[4.0.4,]"
+     "MetallurgyCore@[4.0.5,]"
   ],
   "dependencies": [
-    "MetallurgyCore@[4.0.4,]",
+    "MetallurgyCore@[4.0.5,]",
     "Botania",
     "TConstruct"
    ],
